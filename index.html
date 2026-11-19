@@ -1,0 +1,2015 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Kawan E-9: Direktori Nodongbu, Shelter &amp; Panduan Korea</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+  <style>
+    :root {
+      --bg-mesh: radial-gradient(at 0% 0%, #dbeafe 0px, transparent 52%),
+                 radial-gradient(at 100% 0%, #e0e7ff 0px, transparent 50%),
+                 radial-gradient(at 80% 100%, #dcfce7 0px, transparent 52%),
+                 #f1f5f9;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, "Noto Sans KR", sans-serif;
+      background: var(--bg-mesh);
+      color: #0f172a;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    html.large-font {
+      font-size: 112%;
+    }
+
+    /* iPhone Liquid Glass Frosted Card */
+    .liquid-glass {
+      background: rgba(255, 255, 255, 0.86);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.92);
+      box-shadow: 0 8px 30px -6px rgba(15, 23, 42, 0.08), inset 0 1px 0 0 rgba(255, 255, 255, 0.95);
+    }
+
+    /* Dynamic Island Dark Capsule */
+    .dynamic-island {
+      background: linear-gradient(145deg, #090d16 0%, #131c31 60%, #0b1120 100%);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      box-shadow: 0 20px 45px -12px rgba(2, 6, 23, 0.45), inset 0 1px 0 0 rgba(255, 255, 255, 0.18);
+    }
+
+    .squircle {
+      border-radius: 22px;
+    }
+
+    .squircle-sm {
+      border-radius: 14px;
+    }
+
+    .kakao-btn {
+      background: #FEE500;
+      color: #191919;
+    }
+
+    .kakao-btn:hover {
+      background: #f5dc00;
+    }
+
+    .naver-btn {
+      background: #03C75A;
+      color: #ffffff;
+    }
+
+    .naver-btn:hover {
+      background: #02b350;
+    }
+
+    .card-saved {
+      border-color: #10b981 !important;
+      background: linear-gradient(180deg, rgba(236, 253, 245, 0.96) 0%, rgba(255, 255, 255, 0.96) 100%) !important;
+      box-shadow: 0 8px 22px -4px rgba(16, 185, 129, 0.2) !important;
+    }
+
+    .tab-pill-active {
+      background: #0f172a;
+      color: #ffffff;
+      box-shadow: 0 6px 16px -4px rgba(15, 23, 42, 0.35);
+    }
+
+    .tab-pill-inactive {
+      background: rgba(255, 255, 255, 0.8);
+      color: #334155;
+      border: 1px solid rgba(203, 213, 225, 0.75);
+    }
+
+    .tab-pill-inactive:hover {
+      background: #ffffff;
+    }
+  </style>
+</head>
+<body class="min-h-screen pb-24">
+
+  <!-- Top Emergency & Support Hotlines Bar -->
+  <div class="max-w-5xl mx-auto px-3.5 sm:px-5 pt-3.5">
+    <div class="liquid-glass squircle p-3.5 space-y-2.5">
+      <div class="flex flex-wrap items-center justify-between gap-2">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-900 text-white text-[11px] font-bold tracking-tight">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-amber-400"></i>
+          <span>Kawan E-9 · Panduan Pindah Pabrik &amp; Cari Kerja</span>
+        </span>
+        <span class="text-[11px] font-semibold text-slate-500">Ketuk nomor untuk panggilan darurat langsung</span>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
+        <a href="tel:1577-0071" class="flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-950 border border-amber-200/90 font-extrabold transition">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5 text-amber-600 shrink-0"></i>
+          <span>1577-0071 <span class="font-medium text-[11px] text-amber-800">(Shelter Ansan)</span></span>
+        </a>
+        <a href="tel:1350" class="flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-950 border border-blue-200/90 font-extrabold transition">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5 text-blue-600 shrink-0"></i>
+          <span>1350 <span class="font-medium text-[11px] text-blue-800">(MOEL)</span></span>
+        </a>
+        <a href="tel:1345" class="flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-950 border border-emerald-200/90 font-extrabold transition">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5 text-emerald-600 shrink-0"></i>
+          <span>1345 <span class="font-medium text-[11px] text-emerald-800">(Imigrasi)</span></span>
+        </a>
+        <a href="tel:02-222-49000" class="flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-950 border border-rose-200/90 font-extrabold transition">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5 text-rose-600 shrink-0"></i>
+          <span>02-222-49000 <span class="font-medium text-[11px] text-rose-800">(KBRI Seoul)</span></span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- iPhone Dynamic Island Hero Capsule -->
+  <header class="max-w-5xl mx-auto px-3.5 sm:px-5 pt-3">
+    <div class="dynamic-island squircle p-4 sm:p-5 text-white space-y-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div class="space-y-1.5 min-w-0">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-400 text-slate-950 text-[11px] font-black">
+              <i data-lucide="compass" class="w-3 h-3"></i>
+              <span>노동부 &amp; 쉼터 안내</span>
+            </span>
+            <span id="islandClockChip" class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/10 text-emerald-300 text-[11px] font-bold border border-white/10">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              <span id="islandClockText">Memuat KST...</span>
+            </span>
+          </div>
+          <h1 class="text-lg sm:text-2xl font-extrabold tracking-tight leading-snug text-white">Kawan E-9: Direktori Nodongbu, Shelter &amp; Panduan Korea</h1>
+          <p class="text-xs text-slate-300 leading-relaxed">Dirancang khusus untuk pekerja E-9 yang sedang proses pindah pabrik atau mencari tempat kerja baru (D-30 / D-90), shelter, dan masjid di Korea Selatan.</p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2 shrink-0">
+          <button id="btnToggleFont" type="button" class="inline-flex items-center gap-1 px-3 py-2 rounded-full bg-white/10 hover:bg-white/20 text-amber-300 border border-white/15 text-xs font-extrabold transition cursor-pointer">
+            <i data-lucide="type" class="w-3.5 h-3.5"></i>
+            <span>A+</span>
+          </button>
+          <button id="btnSharePortal" type="button" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-blue-600 hover:bg-blue-500 text-white text-xs font-extrabold transition shadow-sm cursor-pointer">
+            <i data-lucide="share-2" class="w-3.5 h-3.5"></i>
+            <span>Bagikan</span>
+          </button>
+          <button id="btnOpenAiHeader" type="button" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-black transition shadow-sm cursor-pointer">
+            <i data-lucide="bot" class="w-3.5 h-3.5"></i>
+            <span>Tanya AI E-9</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- KakaoMap Save Progress Capsule -->
+      <div class="bg-white/10 rounded-2xl px-4 py-2.5 border border-white/10 flex items-center justify-between gap-4">
+        <div class="flex items-center gap-2.5 min-w-0">
+          <div class="w-8 h-8 rounded-xl bg-amber-400/20 border border-amber-400/30 flex items-center justify-center shrink-0">
+            <i data-lucide="bookmark-check" class="w-4 h-4 text-amber-300"></i>
+          </div>
+          <div class="text-xs min-w-0">
+            <div class="text-slate-300 font-medium truncate">Simpan KakaoMap <strong class="text-amber-300">노동부</strong></div>
+            <div class="font-extrabold text-sm text-white"><span id="progressCount">0</span> / 62 Kantor</div>
+          </div>
+        </div>
+        <div class="w-28 sm:w-44 h-2.5 bg-slate-800 rounded-full overflow-hidden border border-white/10 shrink-0">
+          <div id="progressBar" class="h-full bg-emerald-400 transition-all duration-300" style="width: 0%;"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Workspace -->
+  <main class="max-w-5xl mx-auto px-3.5 sm:px-5 pt-4 space-y-4">
+
+    <!-- Full-Width Mobile-Safe KST Nodongbu Schedule Status Card & Quick Map Search -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+      <div id="kstStatusCard" class="liquid-glass squircle p-4 w-full flex flex-col gap-2.5">
+        <div class="flex items-start gap-3 w-full">
+          <div id="kstIconWrap" class="w-9 h-9 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center shrink-0 mt-0.5">
+            <i data-lucide="clock" class="w-4 h-4 text-slate-700"></i>
+          </div>
+          <div class="flex-1 min-w-0">
+            <h2 id="kstStatusTitle" class="text-sm font-extrabold text-slate-900 leading-snug">Memeriksa Jadwal Loket Nodongbu (KST)...</h2>
+            <p id="kstStatusSub" class="text-xs text-slate-600 mt-0.5 leading-relaxed">Loket buka Senin–Jumat pukul 09.00–18.00 KST (istirahat makan siang 12.00–13.00 KST).</p>
+          </div>
+        </div>
+        <div class="pt-2 border-t border-slate-200/70 flex flex-wrap items-center justify-between gap-2 text-xs">
+          <span class="text-slate-500 font-medium">Hari Libur Terdekat:</span>
+          <span id="kstHolidayBadge" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-900 text-white font-bold text-[11px]">
+            <i data-lucide="calendar" class="w-3 h-3 text-amber-400"></i>
+            <span>Memuat...</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="liquid-glass squircle p-4 w-full flex flex-col justify-between gap-2.5">
+        <div class="flex items-center gap-1.5 text-xs font-extrabold text-slate-800">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-rose-600"></i>
+          <span>Cari Terdekat di KakaoMap:</span>
+        </div>
+        <div class="grid grid-cols-3 gap-1.5 text-xs">
+          <a href="https://map.kakao.com/link/search/%EC%95%BD%EA%B5%AD" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-1.5 py-2 px-2 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-950 border border-emerald-200 font-bold">
+            <i data-lucide="pill" class="w-3.5 h-3.5 text-emerald-600 shrink-0"></i>
+            <span>Apotek</span>
+          </a>
+          <a href="https://map.kakao.com/link/search/%EB%B3%91%EC%9B%90" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-1.5 py-2 px-2 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-950 border border-rose-200 font-bold">
+            <i data-lucide="hospital" class="w-3.5 h-3.5 text-rose-600 shrink-0"></i>
+            <span>RS/Klinik</span>
+          </a>
+          <a href="https://map.kakao.com/link/search/%EC%A3%BC%EB%AF%BC%EC%84%BC%ED%84%B0" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-1.5 py-2 px-2 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-950 border border-blue-200 font-bold">
+            <i data-lucide="landmark" class="w-3.5 h-3.5 text-blue-600 shrink-0"></i>
+            <span>Jumin</span>
+          </a>
+          <a href="https://map.kakao.com/link/search/%EC%9D%80%ED%96%89%20ATM" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-1.5 py-2 px-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-900 border border-slate-300 font-bold">
+            <i data-lucide="credit-card" class="w-3.5 h-3.5 text-slate-700 shrink-0"></i>
+            <span>ATM/Bank</span>
+          </a>
+          <a href="https://map.kakao.com/link/search/%EC%9A%B0%EC%B2%B4%EA%B5%AD" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-1.5 py-2 px-2 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-950 border border-amber-200 font-bold">
+            <i data-lucide="package" class="w-3.5 h-3.5 text-amber-600 shrink-0"></i>
+            <span>Kantor Pos</span>
+          </a>
+          <a href="https://map.kakao.com/link/search/%ED%95%A0%EB%9E%84%EB%A7%88%ED%8A%B8" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-1.5 py-2 px-2 rounded-xl bg-teal-50 hover:bg-teal-100 text-teal-950 border border-teal-200 font-bold">
+            <i data-lucide="shopping-bag" class="w-3.5 h-3.5 text-teal-600 shrink-0"></i>
+            <span>Toko Halal</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Official Portals Strip -->
+    <div class="liquid-glass squircle p-3.5 space-y-2.5 text-xs">
+      <div class="flex flex-wrap items-center justify-between gap-2">
+        <span class="inline-flex items-center gap-1.5 font-extrabold text-slate-700">
+          <i data-lucide="external-link" class="w-3.5 h-3.5 text-blue-600"></i>
+          <span>Portal Resmi Lowongan &amp; Administrasi:</span>
+        </span>
+        <div class="flex flex-wrap items-center gap-1.5">
+          <a href="https://www.eps.go.kr/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-white hover:bg-blue-50 text-slate-800 font-bold border border-slate-200 transition">
+            <i data-lucide="globe" class="w-3 h-3 text-blue-600"></i>
+            <span>EPS (eps.go.kr)</span>
+          </a>
+          <a href="https://m.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systClId=SC00000339&systCnntId=CI00002290&systId=SI00000446" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-white hover:bg-blue-50 text-slate-800 font-bold border border-slate-200 transition">
+            <i data-lucide="briefcase" class="w-3 h-3 text-indigo-600"></i>
+            <span>Work24 (고용24)</span>
+          </a>
+          <a href="https://www.hikorea.go.kr/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-white hover:bg-blue-50 text-slate-800 font-bold border border-slate-200 transition">
+            <i data-lucide="badge-check" class="w-3 h-3 text-emerald-600"></i>
+            <span>HiKorea</span>
+          </a>
+          <a href="https://labor.moel.go.kr/minwonSysInfo/wagesolway.do" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-white hover:bg-rose-50 text-slate-800 font-bold border border-slate-200 transition">
+            <i data-lucide="scale" class="w-3 h-3 text-rose-600"></i>
+            <span>Pengaduan Gaji (MOEL)</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8 Main Navigation Tabs -->
+    <nav aria-label="Menu Utama Kawan E-9" class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2">
+      <button type="button" data-main-tab="TAB_DIREKTORI" class="main-nav-tab tab-pill-active p-2.5 squircle-sm text-xs font-extrabold transition flex flex-col items-center justify-center gap-1 text-center cursor-pointer">
+        <i data-lucide="building-2" class="w-4 h-4"></i>
+        <span>Alamat Nodongbu</span>
+        <span class="text-[10px] font-medium opacity-75">고용센터 62</span>
+      </button>
+      <button type="button" data-main-tab="TAB_SHELTER" class="main-nav-tab tab-pill-inactive p-2.5 squircle-sm text-xs font-bold transition flex flex-col items-center justify-center gap-1 text-center cursor-pointer">
+        <i data-lucide="home" class="w-4 h-4 text-emerald-600"></i>
+        <span>Alamat Shelter</span>
+        <span class="text-[10px] font-medium opacity-75">쉼터·지원센터 18</span>
+      </button>
+      <button type="button" data-main-tab="TAB_MASJID" class="main-nav-tab tab-pill-inactive p-2.5 squircle-sm text-xs font-bold transition flex flex-col items-center justify-center gap-1 text-center cursor-pointer">
+        <i data-lucide="moon-star" class="w-4 h-4 text-teal-600"></i>
+        <span>Alamat Masjid</span>
+        <span class="text-[10px] font-medium opacity-75">모스크 23</span>
+      </button>
+      <button type="button" data-main-tab="TAB_KALKULATOR" class="main-nav-tab tab-pill-inactive p-2.5 squircle-sm text-xs font-bold transition flex flex-col items-center justify-center gap-1 text-center cursor-pointer">
+        <i data-lucide="timer" class="w-4 h-4 text-blue-600"></i>
+        <span>Cek Pindah Pabrik</span>
+        <span class="text-[10px] font-medium opacity-75">D-30·D-90·쿼터</span>
+      </button>
+      <button type="button" data-main-tab="TAB_ZONASI" class="main-nav-tab tab-pill-inactive p-2.5 squircle-sm text-xs font-bold transition flex flex-col items-center justify-center gap-1 text-center cursor-pointer">
+        <i data-lucide="map" class="w-4 h-4 text-amber-600"></i>
+        <span>Aturan Zonasi</span>
+        <span class="text-[10px] font-medium opacity-75">5대 권역 제한</span>
+      </button>
+      <button type="button" data-main-tab="TAB_MANUFAKTUR" class="main-nav-tab tab-pill-inactive p-2.5 squircle-sm text-xs font-bold transition flex flex-col items-center justify-center gap-1 text-center cursor-pointer">
+        <i data-lucide="factory" class="w-4 h-4 text-indigo-600"></i>
+        <span>Pilih Pabrik</span>
+        <span class="text-[10px] font-medium opacity-75">업종·희망조건</span>
+      </button>
+      <button type="button" data-main-tab="TAB_KAMUS" class="main-nav-tab tab-pill-inactive p-2.5 squircle-sm text-xs font-bold transition flex flex-col items-center justify-center gap-1 text-center cursor-pointer">
+        <i data-lucide="languages" class="w-4 h-4 text-purple-600"></i>
+        <span>Kamus Korea</span>
+        <span class="text-[10px] font-medium opacity-75">현장·병원·생활</span>
+      </button>
+      <button type="button" data-main-tab="TAB_BANTUAN" class="main-nav-tab tab-pill-inactive p-2.5 squircle-sm text-xs font-bold transition flex flex-col items-center justify-center gap-1 text-center cursor-pointer">
+        <i data-lucide="calculator" class="w-4 h-4 text-rose-600"></i>
+        <span>Gaji, Visa &amp; Q&amp;A</span>
+        <span class="text-[10px] font-medium opacity-75">퇴직금·체류·질문</span>
+      </button>
+    </nav>
+
+    <!-- =================================================================== -->
+    <!-- TAB 1: ALAMAT NODONGBU (62 KANTOR)                                  -->
+    <!-- =================================================================== -->
+    <div id="view_TAB_DIREKTORI" class="space-y-4">
+      <section class="liquid-glass squircle p-4 sm:p-5 space-y-3.5">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 border-b border-slate-200/70 pb-3">
+          <div>
+            <h2 class="text-base sm:text-lg font-extrabold text-slate-900 flex items-center gap-2">
+              <i data-lucide="building-2" class="w-5 h-5 text-blue-700 shrink-0"></i>
+              <span>Alamat Nodongbu E-9 (고용복지+센터 외국인력팀)</span>
+            </h2>
+            <p class="text-xs text-slate-600 mt-0.5">Pelaporan pindah pabrik wajib dilakukan di kantor Nodongbu sesuai <strong>alamat pabrik terakhir</strong> Anda.</p>
+          </div>
+          <div class="flex flex-wrap items-center gap-1.5 shrink-0">
+            <button id="btnExportCsv" type="button" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-900 hover:bg-slate-800 text-white transition cursor-pointer">
+              <i data-lucide="download" class="w-3.5 h-3.5"></i>
+              <span>Unduh CSV</span>
+            </button>
+            <button id="btnCopyFiltered" type="button" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-blue-50 hover:bg-blue-100 text-blue-900 border border-blue-200 transition cursor-pointer">
+              <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+              <span>Salin Daftar</span>
+            </button>
+            <button id="btnResetSaved" type="button" class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-xl text-xs font-semibold text-slate-600 hover:bg-slate-100 border border-slate-200 transition cursor-pointer">
+              <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i>
+              <span>Reset</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-2.5">
+          <div class="md:col-span-2 relative">
+            <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-3"></i>
+            <input id="searchInput" type="text" placeholder="Cari kota/distrik (Ansan, Hwaseong, Pyeongtaek, Gimhae, Gumi, Cheonan, Eumseong)..." class="w-full pl-10 pr-16 py-2.5 text-sm rounded-xl border border-slate-300 bg-white/90 focus:outline-none focus:ring-2 focus:ring-blue-600">
+            <button id="btnClearSearch" type="button" class="hidden absolute right-2.5 top-2 text-xs font-bold px-2 py-1 rounded-lg bg-slate-200 text-slate-700 hover:bg-slate-300 cursor-pointer">Hapus</button>
+          </div>
+          <div>
+            <select id="statusSelect" class="w-full px-3 py-2.5 text-sm rounded-xl border border-slate-300 bg-white/90 font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-600">
+              <option value="ALL">Semua Status (62 Kantor)</option>
+              <option value="UNSAVED">Belum Disimpan</option>
+              <option value="SAVED">Sudah Disimpan</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-1.5">
+          <span class="text-[11px] font-bold text-slate-500 mr-0.5">Kota Populer:</span>
+          <button type="button" data-quick-city="Ansan" class="quick-city-btn px-2.5 py-1 rounded-full text-xs font-bold bg-blue-50 text-blue-900 border border-blue-200 hover:bg-blue-100 cursor-pointer">Ansan (Lt. 1 Baru)</button>
+          <button type="button" data-quick-city="Hwaseong" class="quick-city-btn px-2.5 py-1 rounded-full text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 cursor-pointer">Hwaseong</button>
+          <button type="button" data-quick-city="Pyeongtaek" class="quick-city-btn px-2.5 py-1 rounded-full text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 cursor-pointer">Pyeongtaek</button>
+          <button type="button" data-quick-city="Siheung" class="quick-city-btn px-2.5 py-1 rounded-full text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 cursor-pointer">Siheung</button>
+          <button type="button" data-quick-city="Gimpo" class="quick-city-btn px-2.5 py-1 rounded-full text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 cursor-pointer">Gimpo</button>
+          <button type="button" data-quick-city="Incheon" class="quick-city-btn px-2.5 py-1 rounded-full text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 cursor-pointer">Incheon</button>
+          <button type="button" data-quick-city="Cheonan" class="quick-city-btn px-2.5 py-1 rounded-full text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 cursor-pointer">Cheonan</button>
+          <button type="button" data-quick-city="Eumseong" class="quick-city-btn px-2.5 py-1 rounded-full text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 cursor-pointer">Eumseong</button>
+          <button type="button" data-quick-city="Gimhae" class="quick-city-btn px-2.5 py-1 rounded-full text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 cursor-pointer">Gimhae</button>
+          <button type="button" data-quick-city="Changwon" class="quick-city-btn px-2.5 py-1 rounded-full text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 cursor-pointer">Changwon</button>
+          <button type="button" data-quick-city="Gumi" class="quick-city-btn px-2.5 py-1 rounded-full text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 cursor-pointer">Gumi</button>
+          <button type="button" data-quick-city="Daegu" class="quick-city-btn px-2.5 py-1 rounded-full text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 cursor-pointer">Daegu</button>
+          <button type="button" data-quick-city="Gwangju" class="quick-city-btn px-2.5 py-1 rounded-full text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 cursor-pointer">Gwangju</button>
+        </div>
+
+        <div id="zoneTabs" class="flex flex-wrap gap-1.5 pt-2 border-t border-slate-200/70">
+          <button type="button" data-zone="ALL" class="zone-tab px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-900 text-white cursor-pointer">Semua Wilayah (62)</button>
+          <button type="button" data-zone="ZONA_1" class="zone-tab px-3 py-1.5 rounded-xl text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 cursor-pointer">Zona 1: Seoul·Gyeonggi·Incheon (24)</button>
+          <button type="button" data-zone="ZONA_2" class="zone-tab px-3 py-1.5 rounded-xl text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 cursor-pointer">Zona 2: Chungcheong·Daejeon (7)</button>
+          <button type="button" data-zone="ZONA_3" class="zone-tab px-3 py-1.5 rounded-xl text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 cursor-pointer">Zona 3: Jeolla·Gwangju·Jeju (8)</button>
+          <button type="button" data-zone="ZONA_4" class="zone-tab px-3 py-1.5 rounded-xl text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 cursor-pointer">Zona 4: Gyeongbuk·Daegu·Gangwon (13)</button>
+          <button type="button" data-zone="ZONA_5" class="zone-tab px-3 py-1.5 rounded-xl text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 cursor-pointer">Zona 5: Gyeongnam·Busan·Ulsan (10)</button>
+        </div>
+      </section>
+
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 px-1">
+        <p id="resultSummary" class="text-xs font-extrabold text-slate-800">Menampilkan 62 dari 62 kantor Nodongbu E-9</p>
+        <p class="text-[11px] text-slate-500">Ketuk <strong>Tandai</strong> atau <strong>KakaoMap</strong> untuk melacak progres simpan Anda.</p>
+      </div>
+
+      <section id="centersGrid" class="grid grid-cols-1 md:grid-cols-2 gap-4"></section>
+    </div>
+
+    <!-- =================================================================== -->
+    <!-- TAB 2: ALAMAT SHELTER (18 PUSAT BANTUAN)                             -->
+    <!-- =================================================================== -->
+    <div id="view_TAB_SHELTER" class="hidden space-y-4">
+      <section class="liquid-glass squircle p-4 sm:p-5 space-y-3.5">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 border-b border-slate-200/70 pb-3">
+          <div>
+            <h2 class="text-base sm:text-lg font-extrabold text-slate-900 flex items-center gap-2">
+              <i data-lucide="home" class="w-5 h-5 text-emerald-700 shrink-0"></i>
+              <span>Alamat Shelter &amp; Pusat Bantuan Pekerja Asing (외국인근로자지원센터)</span>
+            </h2>
+            <p class="text-xs text-slate-600 mt-0.5">Konsultasi ketenagakerjaan, penerjemah Bahasa Indonesia, mediasi pabrik, dan tempat singgah sementara saat proses pindah kerja.</p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 shrink-0">
+            <a href="tel:1577-0071" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-blue-700 hover:bg-blue-800 text-white text-xs font-extrabold transition">
+              <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+              <span>1577-0071 (Ansan)</span>
+            </a>
+            <a href="tel:041-622-9314" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-extrabold transition">
+              <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+              <span>041-622-9314 (Cheonan)</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-2.5 items-stretch sm:items-center">
+          <div class="relative flex-1">
+            <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-3"></i>
+            <input id="shelterSearchInput" type="text" placeholder="Cari kota shelter atau kontak (Ansan, Cheonan, Ibu Arzety, Incheon, Busan, Gimhae)..." class="w-full pl-10 pr-3.5 py-2.5 text-sm rounded-xl border border-slate-300 bg-white/90 focus:outline-none focus:ring-2 focus:ring-blue-600">
+          </div>
+          <span id="shelterCountBadge" class="text-xs font-extrabold text-slate-700 bg-white px-3.5 py-2.5 rounded-xl border border-slate-200 text-center shrink-0">18 Pusat Bantuan</span>
+        </div>
+      </section>
+
+      <section id="sheltersGrid" class="grid grid-cols-1 md:grid-cols-2 gap-4"></section>
+    </div>
+
+    <!-- =================================================================== -->
+    <!-- TAB 3: ALAMAT MASJID (23 TITIK DI KOREA SELATAN)                    -->
+    <!-- =================================================================== -->
+    <div id="view_TAB_MASJID" class="hidden space-y-4">
+      <section class="liquid-glass squircle p-4 sm:p-5 space-y-4">
+        <div class="border-b border-slate-200/70 pb-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-emerald-100 text-emerald-900">
+              <i data-lucide="moon-star" class="w-3.5 h-3.5"></i>
+              <span>모스크 · 23 TITIK SELURUH KOREA</span>
+            </span>
+            <h2 class="text-base sm:text-lg font-extrabold text-slate-900 mt-1">Direktori Masjid &amp; Pusat Komunitas Muslim Korea Selatan</h2>
+            <p class="text-xs text-slate-600 mt-0.5">Lengkap dengan alamat Korea, nomor kontak yang tersedia, serta tautan langsung KakaoMap &amp; Naver Map.</p>
+          </div>
+          <span id="mosqueSummary" class="text-xs font-extrabold text-emerald-900 bg-emerald-50 px-3 py-1.5 rounded-xl border border-emerald-200 shrink-0">23 Masjid Terdaftar</span>
+        </div>
+
+        <div class="relative">
+          <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-3"></i>
+          <input id="mosqueSearchInput" type="text" placeholder="Cari kota atau nama masjid (Geumwang, Mugeuk, Al-Barokah, Hwaseong, Changwon, Gumi, Ansan)..." class="w-full pl-10 pr-3.5 py-2.5 text-sm rounded-xl border border-slate-300 bg-white/90 focus:outline-none focus:ring-2 focus:ring-emerald-600">
+        </div>
+
+        <div id="mosquesGrid" class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs"></div>
+      </section>
+    </div>
+
+    <!-- =================================================================== -->
+    <!-- TAB 4: CEK PINDAH PABRIK (D-30, D-90, KUOTA, 6 LANGKAH & TRACKER)   -->
+    <!-- =================================================================== -->
+    <div id="view_TAB_KALKULATOR" class="hidden space-y-4">
+      <section class="liquid-glass squircle p-4 sm:p-5 space-y-4">
+        <div>
+          <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-bold bg-blue-100 text-blue-900">
+            <i data-lucide="timer" class="w-3.5 h-3.5"></i>
+            <span>PASAL 25 AYAT 3 UU PEKERJA ASING (법 제25조 제3항)</span>
+          </span>
+          <h2 class="text-base sm:text-lg font-extrabold text-slate-900 mt-1">Kalkulator Tenggat Waktu Pindah Pabrik (D-30 &amp; D-90)</h2>
+          <p class="text-xs text-slate-600 mt-0.5">Hitung batas maksimal <strong>1 Bulan (D-30)</strong> untuk melapor ke Nodongbu dan <strong>3 Bulan (D-90)</strong> untuk memperoleh pabrik baru &amp; izin Imigrasi.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-white/85 rounded-2xl p-4 border border-slate-200 space-y-3">
+            <label for="inputEndContractDate" class="block text-xs font-extrabold text-slate-900">1. Tanggal Resmi Berakhirnya Kontrak Kerja (근로계약 종료일):</label>
+            <input id="inputEndContractDate" type="date" class="w-full px-3 py-2.5 text-sm rounded-xl border border-slate-300 bg-white font-semibold">
+            <div id="resultD30Box" class="bg-slate-50 rounded-xl p-3 border border-slate-200 text-xs text-slate-600">Pilih tanggal berakhirnya kontrak kerja untuk menghitung tenggat D-30.</div>
+          </div>
+
+          <div class="bg-white/85 rounded-2xl p-4 border border-slate-200 space-y-3">
+            <label for="inputReportNodongbuDate" class="block text-xs font-extrabold text-slate-900">2. Tanggal Pengajuan Pindah di Nodongbu (사업장변경 신청일):</label>
+            <input id="inputReportNodongbuDate" type="date" class="w-full px-3 py-2.5 text-sm rounded-xl border border-slate-300 bg-white font-semibold">
+            <div id="resultD90Box" class="bg-slate-50 rounded-xl p-3 border border-slate-200 text-xs text-slate-600">Pilih tanggal pengajuan di Nodongbu untuk menghitung tenggat D-90.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Kuota Pindah Pabrik -->
+      <section class="liquid-glass squircle p-4 sm:p-5 space-y-4">
+        <h3 class="text-base font-extrabold text-slate-900 flex items-center gap-2">
+          <i data-lucide="list-checks" class="w-4 h-4 text-purple-700"></i>
+          <span>Cek Kuota Pindah Pabrik (3 Kali / 2 Kali) &amp; Alasan Tanpa Potong Kuota</span>
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+          <div>
+            <label for="selectLeaveReason" class="block font-bold text-slate-800 mb-1">Alasan Keluar Pabrik:</label>
+            <select id="selectLeaveReason" class="w-full px-3 py-2.5 rounded-xl border border-slate-300 bg-white font-semibold">
+              <option value="MUTUAL_OR_EXPIRED">Kesepakatan Bersama / Kontrak Habis (합의해지 / 계약만료)</option>
+              <option value="COMPANY_FAULT">Kesalahan Pabrik: Gaji Macet / Tutup / Kekerasan / Pelanggaran Mess</option>
+              <option value="INJURY_ILLNESS">Kecelakaan Kerja / Sakit Tidak Bisa Lanjut (산재 / 상해·질병)</option>
+            </select>
+          </div>
+          <div>
+            <label for="selectContractStage" class="block font-bold text-slate-800 mb-1">Masa Kontrak Saat Ini:</label>
+            <select id="selectContractStage" class="w-full px-3 py-2.5 rounded-xl border border-slate-300 bg-white font-semibold">
+              <option value="INITIAL_3Y">Kontrak 3 Tahun Pertama (Batas Normal: 3 Kali)</option>
+              <option value="EXTENDED_1Y10M">Perpanjangan 1 Tahun 10 Bulan (Batas Normal: 2 Kali)</option>
+            </select>
+          </div>
+          <div>
+            <label for="selectUsedQuota" class="block font-bold text-slate-800 mb-1">Kuota Normal Terpakai:</label>
+            <select id="selectUsedQuota" class="w-full px-3 py-2.5 rounded-xl border border-slate-300 bg-white font-semibold">
+              <option value="0">Belum Pernah (0 Kali)</option>
+              <option value="1">Sudah 1 Kali</option>
+              <option value="2">Sudah 2 Kali</option>
+              <option value="3">Sudah 3 Kali</option>
+            </select>
+          </div>
+        </div>
+        <div id="quotaCheckerOutput" class="rounded-xl p-4 border border-purple-200 bg-purple-50/80 space-y-1 text-xs"></div>
+      </section>
+
+      <!-- 6-Step Official Job Transfer Checklist -->
+      <section class="liquid-glass squircle p-4 sm:p-5 space-y-3">
+        <h3 class="text-base font-extrabold text-slate-900 flex items-center gap-2">
+          <i data-lucide="check-square" class="w-4 h-4 text-emerald-700"></i>
+          <span>Checklist 6 Langkah Resmi Pindah Pabrik E-9</span>
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5 text-xs">
+          <div class="bg-white/85 rounded-2xl p-3.5 border border-slate-200">
+            <div class="font-extrabold text-slate-900">1. Pastikan Laporan Keluar Kerja (고용변동신고)</div>
+            <p class="text-slate-600 mt-1">Perusahaan wajib melaporkan pemutusan hubungan kerja maksimal 15 hari sejak Anda keluar. Cek lewat EPS, Work24, atau hubungi 1350.</p>
+          </div>
+          <div class="bg-white/85 rounded-2xl p-3.5 border border-slate-200">
+            <div class="font-extrabold text-slate-900">2. Datang ke Nodongbu Sebelum D-30 Habis</div>
+            <p class="text-slate-600 mt-1">Bawa ARC asli, paspor asli, nomor HP aktif, serta bukti (mutasi gaji, foto mess, atau surat dokter) bila keluar tanpa tanda tangan bos.</p>
+          </div>
+          <div class="bg-white/85 rounded-2xl p-3.5 border border-slate-200">
+            <div class="font-extrabold text-slate-900">3. Daftar Pencari Kerja (구직등록필증) &amp; Mulai D-90</div>
+            <p class="text-slate-600 mt-1">Pilih sektor/sub-sektor dan syarat kerja yang diinginkan. Masa cari kerja 3 bulan (D-90) berlaku sejak pengajuan tercatat.</p>
+          </div>
+          <div class="bg-white/85 rounded-2xl p-3.5 border border-slate-200">
+            <div class="font-extrabold text-slate-900">4. Pantau SMS &amp; Panggilan Lowongan (알선)</div>
+            <p class="text-slate-600 mt-1">Pastikan nomor HP selalu aktif dan angkat panggilan/SMS resmi dari Nodongbu atau pabrik yang mengundang wawancara.</p>
+          </div>
+          <div class="bg-white/85 rounded-2xl p-3.5 border border-slate-200">
+            <div class="font-extrabold text-slate-900">5. Tanda Tangan Kontrak &amp; Izin Imigrasi (근무처변경허가)</div>
+            <p class="text-slate-600 mt-1">Setelah mendapat pabrik baru dan 고용허가서, urus izin perubahan tempat kerja di Imigrasi sebelum hari ke-90 berakhir.</p>
+          </div>
+          <div class="bg-white/85 rounded-2xl p-3.5 border border-rose-200 bg-rose-50/50">
+            <div class="font-extrabold text-rose-900">6. Dilarang Kerja Serabutan Sebelum Izin Terbit</div>
+            <p class="text-rose-800 mt-1">Bekerja paruh waktu atau harian tanpa izin resmi Imigrasi selama masa D-90 melanggar aturan keimigrasian.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pelacak Wawancara Pabrik D-90 -->
+      <section class="liquid-glass squircle p-4 sm:p-5 space-y-3">
+        <h3 class="text-base font-extrabold text-slate-900 flex items-center gap-2">
+          <i data-lucide="clipboard-list" class="w-4 h-4 text-blue-700"></i>
+          <span>Pelacak Wawancara Pabrik (D-90 Job Tracker)</span>
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs">
+          <input id="jtFactoryName" type="text" placeholder="Nama Pabrik / Kota" class="px-3 py-2 rounded-xl border border-slate-300 bg-white">
+          <select id="jtStatus" class="px-3 py-2 rounded-xl border border-slate-300 bg-white font-semibold">
+            <option value="Menunggu">Menunggu Kabar</option>
+            <option value="Wawancara">Sudah Wawancara</option>
+            <option value="Diterima">Diterima</option>
+            <option value="Ditolak">Tidak Cocok</option>
+          </select>
+          <button id="btnAddJobTrack" type="button" class="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-extrabold cursor-pointer">
+            <i data-lucide="plus" class="w-3.5 h-3.5"></i>
+            <span>Tambah Catatan</span>
+          </button>
+        </div>
+        <div id="jobTrackList" class="space-y-1.5 text-xs"></div>
+      </section>
+    </div>
+
+    <!-- =================================================================== -->
+    <!-- TAB 5: ATURAN ZONASI 5 WILAYAH                                      -->
+    <!-- =================================================================== -->
+    <div id="view_TAB_ZONASI" class="hidden space-y-4">
+      <section class="liquid-glass squircle p-4 sm:p-5 space-y-4">
+        <div>
+          <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-900">
+            <i data-lucide="map" class="w-3.5 h-3.5"></i>
+            <span>KEBIJAKAN ZONASI 19 OKTOBER 2023 (권역 내 사업장 변경)</span>
+          </span>
+          <h2 class="text-base sm:text-lg font-extrabold text-slate-900 mt-1">Pemeriksaan Status Zonasi Pindah Pabrik E-9</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label for="selectEntryPeriod" class="block text-xs font-bold text-slate-800 mb-1">1. Periode Penerbitan Izin Kerja Awal (고용허가서):</label>
+            <select id="selectEntryPeriod" class="w-full px-3 py-2.5 text-sm rounded-xl border border-slate-300 bg-white font-semibold">
+              <option value="AFTER_OCT2023">Mulai 19 Oktober 2023 ke atas (Kuota Tahap 4 2023 / Re-entry baru)</option>
+              <option value="BEFORE_OCT2023">Sebelum 19 Oktober 2023 (Termasuk perpanjangan angkatan lama)</option>
+            </select>
+          </div>
+          <div>
+            <label for="selectInitialZone" class="block text-xs font-bold text-slate-800 mb-1">2. Wilayah Pabrik Pertama Saat Masuk Korea:</label>
+            <select id="selectInitialZone" class="w-full px-3 py-2.5 text-sm rounded-xl border border-slate-300 bg-white font-semibold">
+              <option value="ZONA_1">Zona 1 — 수도권 (Seoul, Gyeonggi-do, Incheon)</option>
+              <option value="ZONA_2">Zona 2 — 충청권 (Daejeon, Sejong, Chungnam, Chungbuk)</option>
+              <option value="ZONA_3">Zona 3 — 전라·제주권 (Gwangju, Jeonnam, Jeonbuk, Jeju)</option>
+              <option value="ZONA_4">Zona 4 — 경북·강원권 (Daegu, Gyeongbuk, Gangwon-do)</option>
+              <option value="ZONA_5">Zona 5 — 경남권 (Busan, Ulsan, Gyeongnam)</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="zoningCheckerOutput" class="rounded-2xl p-4 border border-blue-200 bg-blue-50/80 space-y-1.5 text-xs"></div>
+
+        <div class="overflow-x-auto pt-1">
+          <table class="w-full text-left border-collapse text-xs bg-white rounded-xl overflow-hidden">
+            <thead>
+              <tr class="bg-slate-900 text-white">
+                <th class="p-3">Nama Zona (권역)</th>
+                <th class="p-3">Cakupan Provinsi &amp; Kota</th>
+                <th class="p-3">Pusat Industri Utama</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              <tr><td class="p-3 font-extrabold text-blue-900">Zona 1 · 수도권</td><td class="p-3">Seoul, Gyeonggi-do, Incheon</td><td class="p-3 text-slate-600">Ansan, Hwaseong, Pyeongtaek, Siheung, Gimpo, Incheon (24 Kantor)</td></tr>
+              <tr class="bg-slate-50"><td class="p-3 font-extrabold text-blue-900">Zona 2 · 충청권</td><td class="p-3">Daejeon, Sejong, Chungnam, Chungbuk</td><td class="p-3 text-slate-600">Cheonan, Asan, Dangjin, Cheongju, Jincheon, Eumseong (7 Kantor)</td></tr>
+              <tr><td class="p-3 font-extrabold text-blue-900">Zona 3 · 전라·제주권</td><td class="p-3">Gwangju, Jeonnam, Jeonbuk, Jeju</td><td class="p-3 text-slate-600">Gwangju, Jeonju, Iksan, Gunsan, Mokpo, Yeosu, Jeju (8 Kantor)</td></tr>
+              <tr class="bg-slate-50"><td class="p-3 font-extrabold text-blue-900">Zona 4 · 경북·강원권</td><td class="p-3">Daegu, Gyeongbuk, Gangwon-do</td><td class="p-3 text-slate-600">Daegu, Gumi, Gyeongsan, Pohang, Wonju, Chuncheon (13 Kantor)</td></tr>
+              <tr><td class="p-3 font-extrabold text-blue-900">Zona 5 · 경남권</td><td class="p-3">Busan, Ulsan, Gyeongnam</td><td class="p-3 text-slate-600">Gimhae, Changwon, Haman, Yangsan, Busan, Ulsan (10 Kantor)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <!-- =================================================================== -->
+    <!-- TAB 6: PILIH PABRIK & GENERATOR LOKET NODONGBU                      -->
+    <!-- =================================================================== -->
+    <div id="view_TAB_MANUFAKTUR" class="hidden space-y-4">
+      <section class="liquid-glass squircle p-4 sm:p-5 space-y-4">
+        <div>
+          <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-blue-100 text-blue-900">
+            <i data-lucide="message-square-text" class="w-3.5 h-3.5"></i>
+            <span>알선 희망조건 요청기 · GENERATOR LOKET</span>
+          </span>
+          <h2 class="text-base sm:text-lg font-extrabold text-slate-900 mt-1">Kalimat Tunjuk di Loket Nodongbu Saat Meminta Rekomendasi Pabrik</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+          <div>
+            <label for="reqFieldSelect" class="block font-bold text-slate-700 mb-1">Bidang Pabrik:</label>
+            <select id="reqFieldSelect" class="w-full px-3 py-2.5 rounded-xl border border-slate-300 bg-white font-semibold">
+              <option value="제조업 전체 (아무 분야나 괜찮습니다)">Bebas / Manufaktur Apa Saja</option>
+              <option value="식료품 제조업 (식품 공장)">Pabrik Makanan / Minuman</option>
+              <option value="플라스틱·고무제품 제조업">Pabrik Plastik / Karet</option>
+              <option value="자동차 부품 제조업">Pabrik Onderdil Mobil</option>
+              <option value="금속가공·기계 제조업">Pabrik Logam / Mesin CNC</option>
+              <option value="전자부품·조립 제조업">Pabrik Elektronik / Perakitan</option>
+            </select>
+          </div>
+          <div>
+            <label for="reqAreaInput" class="block font-bold text-slate-700 mb-1">Daerah Harapan:</label>
+            <input id="reqAreaInput" type="text" value="현재 지역 근처 또는 같은 권역" class="w-full px-3 py-2.5 rounded-xl border border-slate-300 bg-white font-semibold">
+          </div>
+          <div>
+            <label for="reqCondSelect" class="block font-bold text-slate-700 mb-1">Syarat Kerja:</label>
+            <select id="reqCondSelect" class="w-full px-3 py-2.5 rounded-xl border border-slate-300 bg-white font-semibold">
+              <option value="기숙사가 있고 잔업이 있는 곳">Ada Mess &amp; Ada Lembur</option>
+              <option value="기숙사가 제공되는 곳">Wajib Ada Mess / Asrama</option>
+              <option value="주간 근무 위주인 곳 (야간 교대 제외)">Shift Siang Saja (Non-Malam)</option>
+              <option value="잔업과 특근이 많은 곳">Banyak Lembur &amp; Kerja Libur</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="dynamic-island rounded-2xl p-4 sm:p-5 text-white space-y-2.5">
+          <div class="flex items-center justify-between gap-2">
+            <span class="text-xs font-extrabold text-amber-300">Tunjukkan layar ini ke petugas loket Nodongbu:</span>
+            <div class="flex items-center gap-1.5">
+              <button id="btnSpeakReqJob" type="button" class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold cursor-pointer">
+                <i data-lucide="volume-2" class="w-3.5 h-3.5"></i>
+                <span>Suara</span>
+              </button>
+              <button id="btnCopyReqJob" type="button" class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-amber-400 hover:bg-amber-300 text-slate-950 text-xs font-black cursor-pointer">
+                <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                <span>Salin</span>
+              </button>
+            </div>
+          </div>
+          <p id="reqJobKrText" class="text-base sm:text-lg font-black leading-relaxed select-all"></p>
+          <p id="reqJobIdText" class="text-xs text-slate-300 italic"></p>
+        </div>
+      </section>
+
+      <section class="liquid-glass squircle p-4 sm:p-5 space-y-3">
+        <h3 class="text-base font-extrabold text-slate-900">Daftar Kode Sub-Sektor Manufaktur (KSIC)</h3>
+        <div id="mfgGrid" class="grid grid-cols-1 md:grid-cols-2 gap-3"></div>
+      </section>
+    </div>
+
+    <!-- =================================================================== -->
+    <!-- TAB 7: KAMUS BAHASA KOREA TERPADU                                   -->
+    <!-- =================================================================== -->
+    <div id="view_TAB_KAMUS" class="hidden space-y-4">
+      <section class="liquid-glass squircle p-4 sm:p-5 space-y-4">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200/70 pb-3">
+          <div>
+            <h2 class="text-base sm:text-lg font-extrabold text-slate-900 flex items-center gap-2">
+              <i data-lucide="languages" class="w-5 h-5 text-purple-700"></i>
+              <span>Kamus Bahasa Korea Terpadu (Nodongbu, Pabrik, RS &amp; Harian)</span>
+            </h2>
+            <p class="text-xs text-slate-600 mt-0.5">Ketuk <strong>Salin</strong> untuk mengirim lewat KakaoTalk atau <strong>Suara</strong> untuk mendengarkan pelafalan.</p>
+          </div>
+          <a href="tel:1339" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-teal-700 hover:bg-teal-800 text-white text-xs font-extrabold self-start">
+            <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+            <span>1339 (Bantuan Medis)</span>
+          </a>
+        </div>
+
+        <div class="relative">
+          <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-3"></i>
+          <input id="kamusSearchInput" type="text" placeholder="Cari kata atau kalimat (mesin, lembur, gaji, sakit, diagnosis, bank, alamat)..." class="w-full pl-10 pr-3.5 py-2.5 text-sm rounded-xl border border-slate-300 bg-white/90 focus:outline-none focus:ring-2 focus:ring-purple-600">
+        </div>
+
+        <div id="kamusCatBar" class="flex flex-wrap gap-1.5">
+          <button type="button" data-kcat="ALL" class="kamus-cat-btn px-3 py-1.5 rounded-xl text-xs font-extrabold bg-slate-900 text-white cursor-pointer">Semua Tema</button>
+          <button type="button" data-kcat="NODONGBU" class="kamus-cat-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-white text-slate-700 border border-slate-200 cursor-pointer">Nodongbu &amp; Pindah</button>
+          <button type="button" data-kcat="PABRIK" class="kamus-cat-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-white text-slate-700 border border-slate-200 cursor-pointer">Pabrik &amp; Mesin</button>
+          <button type="button" data-kcat="MEDIS" class="kamus-cat-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-white text-slate-700 border border-slate-200 cursor-pointer">RS &amp; Sanjae</button>
+          <button type="button" data-kcat="HARIAN" class="kamus-cat-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-white text-slate-700 border border-slate-200 cursor-pointer">Sehari-hari &amp; Bank</button>
+        </div>
+
+        <div id="kamusGrid" class="grid grid-cols-1 md:grid-cols-2 gap-3"></div>
+      </section>
+    </div>
+
+    <!-- =================================================================== -->
+    <!-- TAB 8: GAJI, PESANGON, VISA & Q&A                                   -->
+    <!-- =================================================================== -->
+    <div id="view_TAB_BANTUAN" class="hidden space-y-4">
+      <section class="liquid-glass squircle p-4 sm:p-5 space-y-4">
+        <div>
+          <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-emerald-100 text-emerald-900">
+            <i data-lucide="calculator" class="w-3.5 h-3.5"></i>
+            <span>퇴직금 &amp; 급여 계산기 · PATOKAN UMP 2026: 10,320 KRW/JAM</span>
+          </span>
+          <h2 class="text-base sm:text-lg font-extrabold text-slate-900 mt-1">Kalkulator Pesangon (퇴직금), Lembur &amp; Kurs KRW ke IDR</h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div class="bg-white/85 rounded-2xl border border-slate-200 p-4 space-y-3">
+            <h3 class="text-sm font-extrabold text-slate-900">1. Estimasi Pesangon (퇴직금 — Min. 1 Tahun Kerja)</h3>
+            <div class="grid grid-cols-3 gap-2 text-xs">
+              <div><label class="block font-bold text-slate-700 mb-1">Gaji/Bln (KRW)</label><input id="pesangonAvgWage" type="number" value="2500000" step="50000" class="w-full px-2.5 py-2 rounded-xl border border-slate-300"></div>
+              <div><label class="block font-bold text-slate-700 mb-1">Tahun</label><input id="pesangonYears" type="number" value="1" min="0" max="10" class="w-full px-2.5 py-2 rounded-xl border border-slate-300"></div>
+              <div><label class="block font-bold text-slate-700 mb-1">Bulan</label><input id="pesangonMonths" type="number" value="6" min="0" max="11" class="w-full px-2.5 py-2 rounded-xl border border-slate-300"></div>
+            </div>
+            <button id="btnCalcPesangon" type="button" class="w-full py-2.5 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-extrabold cursor-pointer">Hitung Perkiraan Pesangon</button>
+            <div id="pesangonResult" class="hidden rounded-xl bg-emerald-50 border border-emerald-200 p-3 text-xs space-y-1"></div>
+          </div>
+
+          <div class="bg-white/85 rounded-2xl border border-slate-200 p-4 space-y-3">
+            <h3 class="text-sm font-extrabold text-slate-900">2. Cek Lembur &amp; Shift Malam (잔업·야간수당)</h3>
+            <div class="grid grid-cols-2 gap-2 text-xs">
+              <div><label class="block font-bold text-slate-700 mb-1">Upah/Jam (KRW)</label><input id="otHourly" type="number" value="10320" class="w-full px-2.5 py-2 rounded-xl border border-slate-300"></div>
+              <div><label class="block font-bold text-slate-700 mb-1">Jam Lembur (1.5x)</label><input id="otHours" type="number" value="40" class="w-full px-2.5 py-2 rounded-xl border border-slate-300"></div>
+              <div><label class="block font-bold text-slate-700 mb-1">Kerja Libur (1.5x)</label><input id="holidayHours" type="number" value="16" class="w-full px-2.5 py-2 rounded-xl border border-slate-300"></div>
+              <div><label class="block font-bold text-slate-700 mb-1">Jam Malam (+0.5x)</label><input id="nightHours" type="number" value="0" class="w-full px-2.5 py-2 rounded-xl border border-slate-300"></div>
+            </div>
+            <button id="btnCalcOvertime" type="button" class="w-full py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-extrabold cursor-pointer">Hitung Total Gaji Kotor</button>
+            <div id="overtimeResult" class="hidden rounded-xl bg-blue-50 border border-blue-200 p-3 text-xs space-y-1"></div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div class="bg-white/85 rounded-2xl border border-slate-200 p-4 space-y-2.5">
+            <h3 class="text-sm font-extrabold text-slate-900">3. Konverter Cepat Won ke Rupiah (KRW ke IDR)</h3>
+            <div class="grid grid-cols-2 gap-2 text-xs">
+              <div><label class="block font-bold text-slate-700 mb-1">Nominal KRW</label><input id="fxWonInput" type="number" value="2500000" step="50000" class="w-full px-2.5 py-2 rounded-xl border border-slate-300"></div>
+              <div><label class="block font-bold text-slate-700 mb-1">Kurs 1 KRW (IDR)</label><input id="fxRateInput" type="number" value="11.3" step="0.1" class="w-full px-2.5 py-2 rounded-xl border border-slate-300"></div>
+            </div>
+            <div id="fxResultBox" class="rounded-xl bg-emerald-50 border border-emerald-200 p-3 text-sm font-black text-emerald-950"></div>
+          </div>
+
+          <div class="bg-white/85 rounded-2xl border border-slate-200 p-4 space-y-2.5">
+            <h3 class="text-sm font-extrabold text-slate-900">4. Pengingat Lapor Pindah Alamat (Maks. 14 Hari)</h3>
+            <div class="flex gap-2">
+              <input id="moveDateInput" type="date" class="flex-1 px-3 py-2 text-xs rounded-xl border border-slate-300 bg-white">
+              <button id="btnCalcMove14" type="button" class="px-3.5 py-2 rounded-xl bg-slate-900 text-white text-xs font-extrabold cursor-pointer">Cek Batas</button>
+            </div>
+            <div id="move14Result" class="hidden text-xs p-2.5 rounded-xl bg-amber-50 border border-amber-200 font-semibold"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 1-Click Emergency Triage -->
+      <section class="liquid-glass squircle p-4 sm:p-5 space-y-3.5 border-rose-200">
+        <div>
+          <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-rose-100 text-rose-900">
+            <i data-lucide="alert-triangle" class="w-3.5 h-3.5"></i>
+            <span>긴급 해결 가이드 · PEMANDU DARURAT 1-KLIK</span>
+          </span>
+          <h2 class="text-base sm:text-lg font-extrabold text-slate-900 mt-1">Pilih Situasi Darurat untuk Melihat Langkah Penyelesaian</h2>
+        </div>
+        <div class="flex flex-wrap gap-1.5" id="triageButtons">
+          <button type="button" data-triage="GAJI" class="triage-btn px-3 py-2 rounded-xl text-xs font-extrabold bg-rose-700 text-white cursor-pointer">Gaji / Pesangon Belum Dibayar</button>
+          <button type="button" data-triage="TANDATANGAN" class="triage-btn px-3 py-2 rounded-xl text-xs font-bold bg-white text-slate-800 border border-slate-200 cursor-pointer">Bos Tolak Tanda Tangan Pindah</button>
+          <button type="button" data-triage="SANJAE" class="triage-btn px-3 py-2 rounded-xl text-xs font-bold bg-white text-slate-800 border border-slate-200 cursor-pointer">Kecelakaan Kerja (Sanjae)</button>
+          <button type="button" data-triage="PASPOR" class="triage-btn px-3 py-2 rounded-xl text-xs font-bold bg-white text-slate-800 border border-slate-200 cursor-pointer">Paspor / ARC Ditahan Bos</button>
+          <button type="button" data-triage="D90" class="triage-btn px-3 py-2 rounded-xl text-xs font-bold bg-white text-slate-800 border border-slate-200 cursor-pointer">Masa D-90 Hampir Habis</button>
+        </div>
+        <div id="triageResultBox" class="rounded-2xl bg-white/90 border border-slate-200 p-4 text-xs space-y-1.5"></div>
+      </section>
+
+      <!-- Polite Boss / HRD Message Generator -->
+      <section class="liquid-glass squircle p-4 sm:p-5 space-y-3">
+        <h3 class="text-base font-extrabold text-slate-900 flex items-center gap-2">
+          <i data-lucide="send" class="w-4 h-4 text-blue-700"></i>
+          <span>Generator Pesan Sopan ke Bos / HRD (Siap Salin ke KakaoTalk)</span>
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-xs">
+          <div>
+            <label for="msgTypeSelect" class="block font-bold text-slate-700 mb-1">Keperluan:</label>
+            <select id="msgTypeSelect" class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white font-semibold">
+              <option value="SAKIT">Izin Tidak Masuk / Sakit ke RS</option>
+              <option value="CUTI">Minta Izin Cuti / Pulang Sementara</option>
+              <option value="GAJI">Tanyakan Gaji / Lembur Kurang</option>
+              <option value="SURAT">Minta Surat Keterangan Kerja</option>
+              <option value="PINDAH">Bicarakan Pindah Pabrik Baik-baik</option>
+            </select>
+          </div>
+          <div><label for="msgWorkerName" class="block font-bold text-slate-700 mb-1">Nama Anda:</label><input id="msgWorkerName" type="text" placeholder="Contoh: Budi Santoso" class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white"></div>
+          <div><label for="msgTargetDate" class="block font-bold text-slate-700 mb-1">Tanggal / Keterangan:</label><input id="msgTargetDate" type="text" placeholder="Contoh: 20 November" class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white"></div>
+        </div>
+        <div class="dynamic-island rounded-2xl p-4 text-white space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-[11px] font-bold text-amber-300">Pesan Bahasa Korea:</span>
+            <button id="btnCopyGenMsg" type="button" class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-amber-400 text-slate-950 text-xs font-black cursor-pointer">
+              <i data-lucide="copy" class="w-3 h-3"></i>
+              <span>Salin Pesan</span>
+            </button>
+          </div>
+          <p id="genMsgKr" class="text-sm font-bold leading-relaxed select-all"></p>
+          <p id="genMsgId" class="text-[11px] text-slate-300 italic"></p>
+        </div>
+      </section>
+
+      <!-- KBRI Seoul & E-9 Q&A -->
+      <section class="liquid-glass squircle p-4 sm:p-5 space-y-4">
+        <div class="rounded-2xl border border-rose-200 bg-rose-50/60 p-4 flex flex-col md:flex-row md:items-center justify-between gap-3 text-xs">
+          <div class="space-y-1">
+            <div class="font-extrabold text-sm text-slate-900">Kedutaan Besar Republik Indonesia (KBRI Seoul)</div>
+            <div class="font-bold text-slate-800">서울특별시 영등포구 여의대방로 380 (380 Yeouidaebang-ro, Yeongdeungpo-gu, Seoul)</div>
+            <p class="text-slate-600">Telepon: <strong>02-222-49000</strong> · Lapor paspor baru ke HiKorea maksimal 14 hari setelah diterbitkan.</p>
+          </div>
+          <div class="flex gap-2 shrink-0">
+            <a href="https://map.kakao.com/link/search/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%98%81%EB%93%B1%ED%8F%AC%EA%B5%AC%20%EC%97%AC%EC%9D%98%EB%8C%80%EB%B0%A9%EB%A1%9C%20380" target="_blank" rel="noopener noreferrer" class="kakao-btn px-3 py-2 rounded-xl font-extrabold">KakaoMap</a>
+            <a href="https://map.naver.com/p/search/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%98%81%EB%93%B1%ED%8F%AC%EA%B5%AC%20%EC%97%AC%EC%9D%98%EB%8C%80%EB%B0%A9%EB%A1%9C%20380" target="_blank" rel="noopener noreferrer" class="naver-btn px-3 py-2 rounded-xl font-extrabold">Naver Map</a>
+          </div>
+        </div>
+
+        <div class="space-y-2.5">
+          <h3 class="text-base font-extrabold text-slate-900">Tanya Jawab (Q&amp;A) Lengkap Pekerja Manufaktur E-9</h3>
+          <div class="relative">
+            <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-3"></i>
+            <input id="qnaSearchInput" type="text" placeholder="Cari topik Q&A (nunggak gaji, D-90, sanjae, paspor, pesangon, tilang, cuti)..." class="w-full pl-10 pr-3.5 py-2.5 text-xs sm:text-sm rounded-xl border border-slate-300 bg-white">
+          </div>
+        </div>
+        <div id="qnaList" class="space-y-2.5"></div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="liquid-glass squircle p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-slate-600">
+      <div>
+        <strong class="text-slate-900">Kawan E-9 · Direktori Nodongbu, Shelter &amp; Masjid Korea</strong>
+        <p class="text-[11px] text-slate-500 mt-0.5">100% Non-Komersial · Murni Solidaritas Pekerja Migran Indonesia di Korea Selatan.</p>
+      </div>
+      <span class="text-[11px] font-bold text-slate-500">Standar KST (Asia/Seoul)</span>
+    </footer>
+  </main>
+
+  <!-- Floating Glass Dock -->
+  <div class="fixed bottom-4 inset-x-3.5 sm:inset-x-auto sm:right-5 z-40 flex items-center justify-between sm:justify-end gap-2 pointer-events-none">
+    <button id="btnBackToTop" type="button" class="pointer-events-auto hidden items-center gap-1.5 px-3.5 py-2.5 rounded-full bg-slate-900/90 hover:bg-slate-800 text-white text-xs font-extrabold shadow-xl border border-white/15 backdrop-blur cursor-pointer">
+      <i data-lucide="arrow-up" class="w-3.5 h-3.5"></i>
+      <span>Atas</span>
+    </button>
+    <button id="btnOpenAiFloating" type="button" class="pointer-events-auto inline-flex items-center gap-2 px-4 py-3 rounded-full bg-blue-600 hover:bg-blue-500 text-white text-xs font-extrabold shadow-2xl border border-blue-400/50 transition cursor-pointer">
+      <i data-lucide="bot" class="w-4 h-4"></i>
+      <span>Tanya AI E-9</span>
+    </button>
+  </div>
+
+  <!-- Taxi & Security Guard Screen Modal (Closed by Default) -->
+  <div id="taxiModal" class="fixed inset-0 z-50 hidden bg-slate-950/75 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white squircle max-w-lg w-full p-5 sm:p-6 shadow-2xl border border-slate-200 space-y-4">
+      <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+        <div class="flex items-center gap-2">
+          <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-400 text-slate-950 font-black text-xs">
+            <i data-lucide="car-taxi-front" class="w-3.5 h-3.5"></i>
+            <span>LAYAR TUNJUK TAKSI &amp; SATPAM</span>
+          </span>
+          <span id="taxiModalId" class="text-xs font-bold text-slate-500"></span>
+        </div>
+        <button id="btnCloseTaxiModal" type="button" class="p-1.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 cursor-pointer">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div class="dynamic-island rounded-2xl p-4 sm:p-5 text-white space-y-3">
+        <p class="text-xs text-amber-300 font-bold">기사님께 이 화면을 보여주세요 (Tunjukkan ke sopir taksi):</p>
+        <div>
+          <div class="text-[11px] text-slate-400">목적지 (Tujuan):</div>
+          <div id="taxiModalKrName" class="text-lg font-black text-white leading-snug"></div>
+        </div>
+        <div class="bg-white/10 rounded-xl p-3 border border-white/10 space-y-1">
+          <div class="text-[11px] text-amber-300 font-semibold">주소 (Alamat Resmi):</div>
+          <div id="taxiModalAddr" class="text-base font-extrabold text-white select-all"></div>
+          <div id="taxiModalLatin" class="text-xs text-slate-300"></div>
+          <div id="taxiModalFloor" class="text-xs text-emerald-300 font-semibold pt-1"></div>
+        </div>
+        <p class="text-xs text-slate-300">전화번호: <span id="taxiModalPhone" class="font-bold text-white"></span></p>
+      </div>
+
+      <div class="bg-blue-950 text-white rounded-2xl p-4 border border-blue-800 space-y-1">
+        <p class="text-xs text-blue-300 font-bold">건물 안내원 / 경비원께 보여주세요 (Tunjukkan ke Satpam Gedung):</p>
+        <div class="text-sm font-black text-white leading-snug">"안녕하세요. E-9 비자 외국인력팀(사업장변경 신청) 창구가 몇 층에 있나요?"</div>
+        <div class="text-[11px] text-blue-200 italic">(Arti: "Halo, loket Tim Tenaga Kerja Asing Visa E-9 ada di lantai berapa?")</div>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-end gap-2">
+        <button id="btnCopyFromModal" type="button" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-extrabold bg-slate-900 hover:bg-slate-800 text-white cursor-pointer">
+          <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+          <span>Salin Alamat</span>
+        </button>
+        <a id="btnOpenKakaoFromModal" href="https://map.kakao.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-extrabold kakao-btn">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+          <span>Buka KakaoMap</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI Assistant Drawer (Closed by Default) -->
+  <div id="aiChatDrawer" class="fixed bottom-20 right-3.5 left-3.5 sm:left-auto sm:w-96 z-50 hidden bg-white squircle shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[72vh]">
+    <div class="dynamic-island text-white px-4 py-3 flex items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <i data-lucide="bot" class="w-4 h-4 text-emerald-400"></i>
+        <div>
+          <div class="text-xs font-black">Asisten Pintar Kawan E-9</div>
+          <div class="text-[10px] text-slate-300">Tanya alamat, gaji, D-30/D-90, tilang, atau bahasa Korea</div>
+        </div>
+      </div>
+      <button id="btnCloseAiChat" type="button" class="p-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white cursor-pointer">
+        <i data-lucide="x" class="w-3.5 h-3.5"></i>
+      </button>
+    </div>
+
+    <div id="aiChatMessages" class="p-3.5 space-y-2.5 overflow-y-auto flex-1 bg-slate-50 text-xs min-h-[180px]">
+      <div class="bg-white border border-slate-200 rounded-xl p-3 text-slate-800 space-y-1">
+        <div class="font-extrabold text-blue-900">Halo Pejuang E-9!</div>
+        <p>Ketik pertanyaan Anda (misal: <em>"gaji ditunggak"</em>, <em>"nodongbu ansan"</em>, <em>"kena tilang"</em>, <em>"masjid geumwang"</em>, atau <em>"d-90 habis"</em>).</p>
+      </div>
+    </div>
+
+    <div class="px-3 py-2 bg-white border-t border-slate-100 flex flex-wrap gap-1">
+      <button type="button" data-ai-q="Gaji tidak dibayar" class="ai-chip px-2.5 py-1 rounded-full bg-rose-50 text-rose-800 border border-rose-200 text-[10px] font-bold cursor-pointer">Gaji nunggak</button>
+      <button type="button" data-ai-q="Alamat Nodongbu Ansan" class="ai-chip px-2.5 py-1 rounded-full bg-blue-50 text-blue-800 border border-blue-200 text-[10px] font-bold cursor-pointer">Nodongbu Ansan</button>
+      <button type="button" data-ai-q="Kena tilang di bawah 3 juta" class="ai-chip px-2.5 py-1 rounded-full bg-amber-50 text-amber-900 border border-amber-200 text-[10px] font-bold cursor-pointer">Tilang &lt; 3jt</button>
+      <button type="button" data-ai-q="Cara hitung pesangon" class="ai-chip px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 text-[10px] font-bold cursor-pointer">Pesangon</button>
+    </div>
+
+    <form id="aiChatForm" class="p-2.5 bg-white border-t border-slate-200 flex gap-1.5">
+      <input id="aiChatInput" type="text" placeholder="Ketik pertanyaan Anda..." class="flex-1 px-3 py-2 text-xs rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-600">
+      <button type="submit" class="px-3.5 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-extrabold cursor-pointer">Kirim</button>
+    </form>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toastBox" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 hidden bg-slate-900 text-white px-4 py-2.5 rounded-full shadow-xl border border-slate-700 text-xs font-bold flex items-center gap-2">
+    <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+    <span id="toastText">Berhasil disalin!</span>
+  </div>
+
+  <script>
+    // Complete dataset of 62 Nodongbu E-9 offices across 5 zones
+    const NODONGBU_CENTERS = [
+      { id: 1, zone: "ZONA_1", zoneLabel: "Zona 1 · Sudogwon (Seoul)", nameId: "Kantor Ketenagakerjaan Seoul Pusat", nameKr: "서울지방고용노동청 외국인력팀", roadAddr: "서울특별시 중구 삼일대로 363", latinAddr: "363, Samil-daero, Jung-gu, Seoul", floor: "장교빌딩 16층 (Gedung Janggyo, Lantai 16)", phone: "02-2004-7397", area: "Kota Seoul: Jung-gu, Jongno-gu, Dongdaemun-gu, Seocho-gu" },
+      { id: 2, zone: "ZONA_1", zoneLabel: "Zona 1 · Sudogwon (Seoul)", nameId: "Kantor Ketenagakerjaan Seoul Gangnam", nameKr: "서울강남지청 외국인력팀", roadAddr: "서울특별시 강남구 테헤란로 410", latinAddr: "410, Teheran-ro, Gangnam-gu, Seoul", floor: "금강타워 7층 (Geumgang Tower, Lantai 7)", phone: "02-3468-4771", area: "Kota Seoul: Seluruh Distrik Gangnam-gu" },
+      { id: 3, zone: "ZONA_1", zoneLabel: "Zona 1 · Sudogwon (Seoul)", nameId: "Kantor Ketenagakerjaan Seoul Dongbu", nameKr: "서울동부지청 외국인력팀", roadAddr: "서울특별시 송파구 중대로 109", latinAddr: "109, Jung-daero, Songpa-gu, Seoul", floor: "대동빌딩 13층 (Gedung Daedong, Lantai 13)", phone: "02-2142-8412", area: "Kota Seoul: Songpa-gu, Gangdong-gu, Gwangjin-gu, Seongdong-gu" },
+      { id: 4, zone: "ZONA_1", zoneLabel: "Zona 1 · Sudogwon (Seoul)", nameId: "Kantor Ketenagakerjaan Seoul Seobu", nameKr: "서울서부지청 외국인력팀", roadAddr: "서울특별시 마포구 독막로 320", latinAddr: "320, Dokmak-ro, Mapo-gu, Seoul", floor: "태영데시앙빌딩 6층 (Gedung Taeyoung Desian, Lantai 6)", phone: "02-2077-6196", area: "Kota Seoul: Seodaemun-gu, Yongsan-gu, Eunpyeong-gu, Mapo-gu" },
+      { id: 5, zone: "ZONA_1", zoneLabel: "Zona 1 · Sudogwon (Seoul)", nameId: "Kantor Ketenagakerjaan Seoul Nambu", nameKr: "서울남부지청 외국인력팀", roadAddr: "서울특별시 영등포구 선유로 120", latinAddr: "120, Seonyu-ro, Yeongdeungpo-gu, Seoul", floor: "서울남부고용센터 3층 (Lantai 3)", phone: "02-2639-2420", area: "Kota Seoul: Yeongdeungpo-gu, Yangcheon-gu, Gangseo-gu" },
+      { id: 6, zone: "ZONA_1", zoneLabel: "Zona 1 · Sudogwon (Seoul)", nameId: "Kantor Ketenagakerjaan Seoul Bukbu", nameKr: "서울북부지청 외국인력팀", roadAddr: "서울특별시 강북구 한천로 949", latinAddr: "949, Hancheon-ro, Gangbuk-gu, Seoul", floor: "서울북부지청 1층 (Lantai 1)", phone: "02-950-9746", area: "Kota Seoul: Seongbuk-gu, Jungnang-gu, Nowon-gu, Dobong-gu, Gangbuk-gu" },
+      { id: 7, zone: "ZONA_1", zoneLabel: "Zona 1 · Sudogwon (Seoul)", nameId: "Kantor Ketenagakerjaan Seoul Gwanak", nameKr: "서울관악지청 외국인력팀", roadAddr: "서울특별시 구로구 디지털로33길 11", latinAddr: "11, Digital-ro 33-gil, Guro-gu, Seoul", floor: "에이스테크노타워 8차 7층 705호 (Ace Techno Tower 8, Lt. 7)", phone: "02-3282-9147", area: "Kota Seoul: Guro-gu, Geumcheon-gu, Gwanak-gu, Dongjak-gu" },
+      { id: 8, zone: "ZONA_1", zoneLabel: "Zona 1 · Sudogwon (Incheon)", nameId: "Kantor Ketenagakerjaan Incheon Pusat", nameKr: "중부지방고용노동청 외국인력팀(인천)", roadAddr: "인천광역시 미추홀구 석정로 239", latinAddr: "239, Seokjeong-ro, Michuhol-gu, Incheon", floor: "정부인천지방합동청사 4층 (Lantai 4)", phone: "032-460-7112", area: "Kota Incheon: Jung-gu, Dong-gu, Namdong-gu, Yeonsu-gu, Michuhol-gu, Ongjin-gun" },
+      { id: 9, zone: "ZONA_1", zoneLabel: "Zona 1 · Sudogwon (Incheon)", nameId: "Kantor Ketenagakerjaan Incheon Bukbu", nameKr: "인천북부지청 외국인력팀(인천북부)", roadAddr: "인천광역시 계양구 장제로 804", latinAddr: "804, Jangje-ro, Gyeyang-gu, Incheon", floor: "영산빌딩 6층 (Gedung Yeongsan, Lt. 6)", phone: "032-540-5720", area: "Kota Incheon: Bupyeong-gu dan Gyeyang-gu" },
+      { id: 10, zone: "ZONA_1", zoneLabel: "Zona 1 · Sudogwon (Incheon)", nameId: "Kantor Ketenagakerjaan Incheon Seobu", nameKr: "인천북부지청 외국인력팀(인천서부)", roadAddr: "인천광역시 서구 이음1로 389", latinAddr: "389, Ieum 1-ro, Seo-gu, Incheon", floor: "에이플러스빌딩 5층 (Gedung A-Plus, Lt. 5)", phone: "032-540-2055", area: "Kota Incheon: Seo-gu dan Kabupaten Ganghwa-gun" },
+      { id: 11, zone: "ZONA_1", zoneLabel: "Zona 1 · Sudogwon (Gyeonggi)", nameId: "Kantor Ketenagakerjaan Bucheon", nameKr: "부천지청 외국인력팀(부천)", roadAddr: "경기도 부천시 원미구 길주로 351", latinAddr: "351, Gilju-ro, Wonmi-gu, Bucheon-si, Gyeonggi-do", floor: "부천고용센터 3층 (Lantai 3)", phone: "032-320-8980", area: "Provinsi Gyeonggi: Seluruh Kota Bucheon" },
+      { id: 12, zone: "ZONA_1", zoneLabel: "Zona 1 · Sudogwon (Gyeonggi)", nameId: "Kantor Ketenagakerjaan Gimpo", nameKr: "부천지청 외국인력팀(김포)", roadAddr: "경기도 김포시 김포한강4로 135번길 11", latinAddr: "11, Gimpohangang 4-ro 135beon-gil, Gimpo-si, Gyeonggi-do", floor: "김포고용센터 2층 203호 (Lantai 2, Ruang 203)", phone: "031-999-0913", area: "Provinsi Gyeonggi: Seluruh Kota Gimpo" },
+      { id: 13, zone: "ZONA_1", zoneLabel: "Zona 1 · Sudogwon (Gyeonggi)", nameId: "Kantor Ketenagakerjaan Uijeongbu", nameKr: "의정부지청 외국인력팀", roadAddr: "경기도 의정부시 시민로 49", latinAddr: "49, Simin-ro, Uijeongbu-si, Gyeonggi-do", floor: "신동아파라디움 1층 (Lantai 1)", phone: "031-828-0840", area: "Gyeonggi Utara & Gangwon: Uijeongbu, Guri, Namyangju, Pocheon, Yangju, Dongducheon, Yeoncheon, Cheorwon" },
+      { id: 14, zone: "ZONA_1", zoneLabel: "Zona 1 · Sudogwon (Gyeonggi)", nameId: "Kantor Ketenagakerjaan Goyang", nameKr: "고양지청 외국인력팀", roadAddr: "경기도 고양시 덕양구 화중로 104번길 16", latinAddr: "16, Hwajung-ro 104beon-gil, Deogyang-gu, Goyang-si, Gyeonggi-do", floor: "고양고용센터 8층 803호 (Lantai 8)", phone: "031-920-3951", area: "Provinsi Gyeonggi: Kota Goyang dan Kota Paju" },
+      { id: 15, zone: "ZONA_1", zoneLabel: "Zona 1 · Sudogwon (Gyeonggi)", nameId: "Kantor Ketenagakerjaan Gyeonggi Gwangju", nameKr: "성남지청 외국인력팀(경기광주)", roadAddr: "경기도 광주시 광주대로 62", latinAddr: "62, Gwangju-daero, Gwangju-si, Gyeonggi-do", floor: "경기광주고용센터 1층 (Lantai 1)", phone: "031-799-2740", area: "Provinsi Gyeonggi: Kota Gwangju, Hanam, dan Yangpyeong-gun" },
+      { id: 16, zone: "ZONA_1", zoneLabel: "Zona 1 · Sudogwon (Gyeonggi)", nameId: "Kantor Ketenagakerjaan Icheon", nameKr: "성남지청 외국인력팀(이천)", roadAddr: "경기도 이천시 이섭대천로 1309", latinAddr: "1309, Iseopdaecheon-ro, Icheon-si, Gyeonggi-do", floor: "이천고용센터 1층 (Lantai 1)", phone: "031-644-3812", area: "Provinsi Gyeonggi: Kota Icheon dan Kota Yeoju" },
+      { id: 17, zone: "ZONA_1", zoneLabel: "Zona 1 · Sudogwon (Gyeonggi)", nameId: "Kantor Ketenagakerjaan Seongnam", nameKr: "성남지청 외국인력팀(성남)", roadAddr: "경기도 성남시 분당구 백현로 93", latinAddr: "93, Baekhyeon-ro, Bundang-gu, Seongnam-si, Gyeonggi-do", floor: "후너스빌딩 10층 (Gedung Hunus, Lt. 10)", phone: "031-739-3161", area: "Provinsi Gyeonggi: Seluruh Kota Seongnam" },
+      { id: 18, zone: "ZONA_1", zoneLabel: "Zona 1 · Sudogwon (Gyeonggi)", nameId: "Kantor Ketenagakerjaan Hwaseong", nameKr: "경기지청 외국인력팀(화성)", roadAddr: "경기도 화성시 봉담읍 동화길 85", latinAddr: "85, Donghwa-gil, Bongdam-eup, Hwaseong-si, Gyeonggi-do", floor: "이원타워 8층 (Gedung Yiwon Tower, Lt. 8)", phone: "031-290-0871", area: "Provinsi Gyeonggi: Kota Hwaseong (kecuali Dongtan, Byeongjeom, Jinan-dong, Banwol-dong)" },
+      { id: 19, zone: "ZONA_1", zoneLabel: "Zona 1 · Sudogwon (Gyeonggi)", nameId: "Kantor Ketenagakerjaan Yongin", nameKr: "경기지청 외국인력팀(용인)", roadAddr: "경기도 용인시 기흥구 강남로 3", latinAddr: "3, Gangnam-ro, Giheung-gu, Yongin-si, Gyeonggi-do", floor: "강남앤플러스빌딩 4층 (Lantai 4)", phone: "031-289-2201", area: "Provinsi Gyeonggi: Seluruh Kota Yongin" },
+      { id: 20, zone: "ZONA_1", zoneLabel: "Zona 1 · Sudogwon (Gyeonggi)", nameId: "Kantor Ketenagakerjaan Suwon", nameKr: "경기지청 외국인력팀(수원)", roadAddr: "경기도 수원시 팔달구 경수대로 581", latinAddr: "581, Gyeongsu-daero, Paldal-gu, Suwon-si, Gyeonggi-do", floor: "수원고용센터 2층 (Lantai 2)", phone: "031-230-7681", area: "Provinsi Gyeonggi: Kota Suwon serta Dongtan, Byeongjeom, Jinan-dong, dan Banwol-dong" },
+      { id: 21, zone: "ZONA_1", zoneLabel: "Zona 1 · Sudogwon (Gyeonggi)", nameId: "Kantor Ketenagakerjaan Anyang", nameKr: "안양지청 외국인력팀", roadAddr: "경기도 안양시 만안구 안양로 303", latinAddr: "303, Anyang-ro, Manan-gu, Anyang-si, Gyeonggi-do", floor: "안양메쎄타워 8층 (Lantai 8)", phone: "031-463-0771", area: "Provinsi Gyeonggi: Anyang, Gunpo, Gwacheon, Uiwang, Gwangmyeong" },
+      { id: 22, zone: "ZONA_1", zoneLabel: "Zona 1 · Sudogwon (Gyeonggi)", nameId: "Kantor Ketenagakerjaan Ansan", nameKr: "중부지방고용노동청 안산지청 외국인력팀", roadAddr: "경기도 안산시 단원구 적금로1길 26", latinAddr: "26, Jeokgeum-ro 1-gil, Danwon-gu, Ansan-si, Gyeonggi-do", floor: "안산지청 1층 (Gedung Cabang Ansan Lt. 1 — Visa E-9 & H-2)", phone: "031-412-6952", area: "Provinsi Gyeonggi: Seluruh Kota Ansan", isUpdated: true },
+      { id: 23, zone: "ZONA_1", zoneLabel: "Zona 1 · Sudogwon (Gyeonggi)", nameId: "Kantor Ketenagakerjaan Siheung", nameKr: "안산지청 외국인력팀(시흥)", roadAddr: "경기도 시흥시 마유로 418번길 10", latinAddr: "10, Mayu-ro 418beon-gil, Siheung-si, Gyeonggi-do", floor: "롯데시네마 빌딩 3층 310호 (Lantai 3 Ruang 310)", phone: "031-496-1918", area: "Provinsi Gyeonggi: Seluruh Kota Siheung" },
+      { id: 24, zone: "ZONA_1", zoneLabel: "Zona 1 · Sudogwon (Gyeonggi)", nameId: "Kantor Ketenagakerjaan Pyeongtaek", nameKr: "평택지청 외국인력팀", roadAddr: "경기도 평택시 경기대로 1194", latinAddr: "1194, Gyeonggi-daero, Pyeongtaek-si, Gyeonggi-do", floor: "장당프라자 1층 (Gedung Jangdang Plaza, Lt. 1)", phone: "031-646-1259", area: "Provinsi Gyeonggi: Kota Pyeongtaek, Anseong, dan Osan" },
+      { id: 25, zone: "ZONA_4", zoneLabel: "Zona 4 · Gangwon", nameId: "Kantor Ketenagakerjaan Chuncheon", nameKr: "강원지청 외국인력팀(춘천)", roadAddr: "강원특별자치도 춘천시 퇴계농공로 9", latinAddr: "9, Toegyenonggong-ro, Chuncheon-si, Gangwon-do", floor: "넥서스프라자빌딩 5층 (Lantai 5)", phone: "033-250-1945", area: "Gangwon & Gyeonggi: Chuncheon, Hongcheon, Yanggu, Inje, Hwacheon, Gapyeong" },
+      { id: 26, zone: "ZONA_4", zoneLabel: "Zona 4 · Gangwon", nameId: "Kantor Ketenagakerjaan Gangneung", nameKr: "강릉지청 외국인력팀", roadAddr: "강원특별자치도 강릉시 강릉대로 176", latinAddr: "176, Gangneung-daero, Gangneung-si, Gangwon-do", floor: "강릉고용센터 4층 (Lantai 4)", phone: "033-610-1938", area: "Provinsi Gangwon: Gangneung, Donghae, Sokcho, Goseong, Yangyang" },
+      { id: 27, zone: "ZONA_4", zoneLabel: "Zona 4 · Gangwon", nameId: "Kantor Ketenagakerjaan Wonju", nameKr: "원주지청 외국인력팀", roadAddr: "강원특별자치도 원주시 서원대로 383", latinAddr: "383, Seowon-daero, Wonju-si, Gangwon-do", floor: "한신프라자 3층 (Gedung Hanshin Plaza, Lt. 3)", phone: "033-769-0964", area: "Provinsi Gangwon: Kota Wonju dan Hoengseong-gun" },
+      { id: 28, zone: "ZONA_4", zoneLabel: "Zona 4 · Gangwon", nameId: "Kantor Ketenagakerjaan Taebaek", nameKr: "태백지청 외국인력팀(태백)", roadAddr: "강원특별자치도 태백시 황지로 119", latinAddr: "119, Hwangji-ro, Taebaek-si, Gangwon-do", floor: "태백고용센터 3층 (Lantai 3)", phone: "033-550-8604", area: "Provinsi Gangwon: Seluruh Kota Taebaek" },
+      { id: 29, zone: "ZONA_4", zoneLabel: "Zona 4 · Gangwon", nameId: "Kantor Ketenagakerjaan Samcheok", nameKr: "태백지청 외국인력팀(삼척)", roadAddr: "강원특별자치도 삼척시 중앙로 214", latinAddr: "214, Jungang-ro, Samcheok-si, Gangwon-do", floor: "현진빌딩 5층 (Gedung Hyunjin, Lt. 5)", phone: "033-570-1920", area: "Provinsi Gangwon: Seluruh Kota Samcheok" },
+      { id: 30, zone: "ZONA_4", zoneLabel: "Zona 4 · Gangwon", nameId: "Kantor Ketenagakerjaan Yeongwol", nameKr: "영월출장소 외국인력팀", roadAddr: "강원특별자치도 영월군 영월읍 단종로 8", latinAddr: "8, Danjong-ro, Yeongwol-eup, Yeongwol-gun, Gangwon-do", floor: "영월고용센터 3층 (Lantai 3)", phone: "033-371-6263", area: "Provinsi Gangwon: Yeongwol-gun, Pyeongchang-gun, Jeongseon-gun" },
+      { id: 31, zone: "ZONA_5", zoneLabel: "Zona 5 · Gyeongnam (Busan)", nameId: "Kantor Ketenagakerjaan Busan Pusat", nameKr: "부산지방고용노동청 외국인력팀", roadAddr: "부산광역시 부산진구 중앙대로 993", latinAddr: "993, Jungang-daero, Busanjin-gu, Busan", floor: "부산고용센터 3층 (Lantai 3)", phone: "051-860-1929", area: "Kota Busan: Busanjin, Yeonje, Jung, Seo, Dong, Yeongdo, Saha, Nam-gu" },
+      { id: 32, zone: "ZONA_5", zoneLabel: "Zona 5 · Gyeongnam (Busan)", nameId: "Kantor Ketenagakerjaan Busan Dongbu", nameKr: "부산동부지청 외국인력팀", roadAddr: "부산광역시 금정구 공단서로 12", latinAddr: "12, Gongdanseo-ro, Geumjeong-gu, Busan", floor: "부산동부고용센터 3층 (Lantai 3)", phone: "051-559-6636", area: "Kota Busan: Dongnae, Geumjeong, Haeundae, Suyeong-gu, Gijang-gun" },
+      { id: 33, zone: "ZONA_5", zoneLabel: "Zona 5 · Gyeongnam (Busan)", nameId: "Kantor Ketenagakerjaan Busan Bukbu", nameKr: "부산북부지청 외국인력팀", roadAddr: "부산광역시 북구 화명대로 9", latinAddr: "9, Hwamyeong-daero, Buk-gu, Busan", floor: "부산북부고용센터 1층 (Lantai 1)", phone: "051-330-9957", area: "Kota Busan: Sasang-gu, Gangseo-gu, Buk-gu" },
+      { id: 34, zone: "ZONA_5", zoneLabel: "Zona 5 · Gyeongnam", nameId: "Kantor Ketenagakerjaan Changwon", nameKr: "창원지청 외국인력팀", roadAddr: "경상남도 창원시 성산구 마디미서로 60", latinAddr: "60, Madimiseo-ro, Seongsan-gu, Changwon-si, Gyeongsangnam-do", floor: "창원고용센터빌딩 1층 (Lantai 1)", phone: "055-239-0971", area: "Provinsi Gyeongnam: Changwon (Masan/Jinhae), Haman, Uiryeong, Changnyeong" },
+      { id: 35, zone: "ZONA_5", zoneLabel: "Zona 5 · Gyeongnam (Ulsan)", nameId: "Kantor Ketenagakerjaan Ulsan", nameKr: "울산지청 외국인력팀", roadAddr: "울산광역시 남구 화합로 138", latinAddr: "138, Hwahap-ro, Nam-gu, Ulsan", floor: "옥산빌딩 8층 (Gedung Oksan, Lt. 8)", phone: "052-228-1913", area: "Seluruh Kota Metropolitan Ulsan" },
+      { id: 36, zone: "ZONA_5", zoneLabel: "Zona 5 · Gyeongnam", nameId: "Kantor Ketenagakerjaan Gimhae", nameKr: "양산지청 외국인력팀(김해)", roadAddr: "경상남도 김해시 김해대로 2324번길 48-15", latinAddr: "48-15, Gimhae-daero 2324beon-gil, Gimhae-si, Gyeongsangnam-do", floor: "김해고용센터 1층 (Lantai 1)", phone: "055-330-6428", area: "Provinsi Gyeongnam: Kota Gimhae dan Kota Miryang" },
+      { id: 37, zone: "ZONA_5", zoneLabel: "Zona 5 · Gyeongnam", nameId: "Kantor Ketenagakerjaan Yangsan", nameKr: "양산지청 외국인력팀(양산)", roadAddr: "경상남도 양산시 남양산1길 58", latinAddr: "58, Namyangsan 1-gil, Yangsan-si, Gyeongsangnam-do", floor: "양산고용센터 1층 (Lantai 1)", phone: "055-370-0984", area: "Provinsi Gyeongnam: Seluruh Kota Yangsan" },
+      { id: 38, zone: "ZONA_5", zoneLabel: "Zona 5 · Gyeongnam", nameId: "Kantor Ketenagakerjaan Jinju", nameKr: "진주지청 외국인력팀", roadAddr: "경상남도 진주시 진양호로 563", latinAddr: "563, Jinyangho-ro, Jinju-si, Gyeongsangnam-do", floor: "안성빌딩 8층 (Gedung Anseong, Lt. 8)", phone: "055-760-6742", area: "Provinsi Gyeongnam: Jinju, Sacheon, Sancheong, Geochang, Hamyang, Hapcheon, Hadong, Namhae" },
+      { id: 39, zone: "ZONA_5", zoneLabel: "Zona 5 · Gyeongnam", nameId: "Kantor Ketenagakerjaan Tongyeong", nameKr: "통영지청 외국인력팀(통영)", roadAddr: "경상남도 통영시 죽림1로 69", latinAddr: "69, Jungnim 1-ro, Tongyeong-si, Gyeongsangnam-do", floor: "통영고용센터 4층 (Lantai 4)", phone: "055-650-1834", area: "Provinsi Gyeongnam: Kota Tongyeong dan Goseong-gun" },
+      { id: 40, zone: "ZONA_5", zoneLabel: "Zona 5 · Gyeongnam", nameId: "Kantor Ketenagakerjaan Geoje", nameKr: "통영지청 외국인력팀(거제)", roadAddr: "경상남도 거제시 서문로5길 6", latinAddr: "6, Seomun-ro 5-gil, Geoje-si, Gyeongsangnam-do", floor: "우형빌딩 3층 (Gedung Uhyeong, Lt. 3)", phone: "055-730-1911", area: "Provinsi Gyeongnam: Seluruh Kota Geoje" },
+      { id: 41, zone: "ZONA_4", zoneLabel: "Zona 4 · Daegu & Gyeongbuk", nameId: "Kantor Ketenagakerjaan Daegu Pusat", nameKr: "대구지방고용노동청 외국인력팀", roadAddr: "대구광역시 수성구 동대구로 392", latinAddr: "392, Dongdaegu-ro, Suseong-gu, Daegu", floor: "대구고용센터 1층 (Lantai 1)", phone: "053-667-6042", area: "Kota Daegu (Buk, Dong, Suseong, Jung-gu, Gunwi) & Gyeongsan, Yeongcheon, Cheongdo" },
+      { id: 42, zone: "ZONA_4", zoneLabel: "Zona 4 · Daegu & Gyeongbuk", nameId: "Kantor Ketenagakerjaan Daegu Seobu", nameKr: "대구서부지청 외국인력팀", roadAddr: "대구광역시 서구 서대구로 3", latinAddr: "3, Seodaegu-ro, Seo-gu, Daegu", floor: "웨딩아테네 건물 7층 (Lantai 7)", phone: "053-605-6546", area: "Kota Daegu (Nam, Dalseo, Seo-gu, Dalseong) & Goryeong, Seongju, Chilgok" },
+      { id: 43, zone: "ZONA_4", zoneLabel: "Zona 4 · Daegu & Gyeongbuk", nameId: "Kantor Ketenagakerjaan Pohang", nameKr: "포항지청 외국인력팀(포항)", roadAddr: "경상북도 포항시 북구 중흥로 231", latinAddr: "231, Jungheung-ro, Buk-gu, Pohang-si, Gyeongsangbuk-do", floor: "동양빌딩 5층 (Gedung Dongyang, Lt. 5)", phone: "054-288-3501", area: "Provinsi Gyeongbuk: Pohang, Ulleung-gun, Yeongdeok-gun, Uljin-gun" },
+      { id: 44, zone: "ZONA_4", zoneLabel: "Zona 4 · Daegu & Gyeongbuk", nameId: "Kantor Ketenagakerjaan Gyeongju", nameKr: "포항지청 외국인력팀(경주)", roadAddr: "경상북도 포항시 북구 중흥로 231", latinAddr: "231, Jungheung-ro, Buk-gu, Pohang-si, Gyeongsangbuk-do", floor: "동양빌딩 5층 (Terpusat di Gedung Dongyang Lt. 5, Pohang)", phone: "054-288-3501", area: "Provinsi Gyeongbuk: Seluruh Kota Gyeongju" },
+      { id: 45, zone: "ZONA_4", zoneLabel: "Zona 4 · Daegu & Gyeongbuk", nameId: "Kantor Ketenagakerjaan Gumi", nameKr: "구미지청 외국인력팀", roadAddr: "경상북도 구미시 백산로 118", latinAddr: "118, Baeksan-ro, Gumi-si, Gyeongsangbuk-do", floor: "구미고용센터 7층 (Lantai 7)", phone: "054-440-3304", area: "Provinsi Gyeongbuk: Gumi, Gimcheon, Kawasan Industri Seokjeok Chilgok" },
+      { id: 46, zone: "ZONA_4", zoneLabel: "Zona 4 · Daegu & Gyeongbuk", nameId: "Kantor Ketenagakerjaan Yeongju", nameKr: "영주지청 외국인력팀", roadAddr: "경상북도 영주시 번영로 88", latinAddr: "88, Beonyeong-ro, Yeongju-si, Gyeongsangbuk-do", floor: "영주고용센터 (Gedung Utama)", phone: "054-639-1175", area: "Provinsi Gyeongbuk: Yeongju, Mungyeong, Sangju, Bonghwa-gun" },
+      { id: 47, zone: "ZONA_4", zoneLabel: "Zona 4 · Daegu & Gyeongbuk", nameId: "Kantor Ketenagakerjaan Andong", nameKr: "안동지청 외국인력팀", roadAddr: "경상북도 안동시 경동로 400", latinAddr: "400, Gyeongdong-ro, Andong-si, Gyeongsangbuk-do", floor: "안동고용센터 (Gedung Utama)", phone: "054-851-8017", area: "Provinsi Gyeongbuk: Andong, Yecheon, Uiseong, Cheongsong, Yeongyang" },
+      { id: 48, zone: "ZONA_3", zoneLabel: "Zona 3 · Jeolla & Jeju", nameId: "Kantor Ketenagakerjaan Gwangju", nameKr: "광주지방고용노동청 외국인력팀", roadAddr: "광주광역시 서구 천변우하로 391", latinAddr: "391, Cheonbyeonuha-ro, Seo-gu, Gwangju", floor: "나라키움통합청사 1층 (Lantai 1)", phone: "062-609-8664", area: "Kota Gwangju & Naju, Jangseong, Damyang, Hwasun, Gokseong, Gurye, Hampyeong, Yeonggwang" },
+      { id: 49, zone: "ZONA_3", zoneLabel: "Zona 3 · Jeolla & Jeju", nameId: "Kantor Ketenagakerjaan Jeonju", nameKr: "전주지청 외국인력팀", roadAddr: "전북특별자치도 전주시 덕진구 태진로 114", latinAddr: "114, Taejin-ro, Deokjin-gu, Jeonju-si, Jeonbuk", floor: "전주고용센터 3층 (Lantai 3)", phone: "063-270-9204", area: "Provinsi Jeonbuk: Jeonju, Jeongeup, Namwon, Sunchang, Wanju, Jinan, Muju, Jangsu, Imsil" },
+      { id: 50, zone: "ZONA_3", zoneLabel: "Zona 3 · Jeolla & Jeju", nameId: "Kantor Ketenagakerjaan Iksan", nameKr: "익산지청 외국인력팀", roadAddr: "전북특별자치도 익산시 익산대로 153", latinAddr: "153, Iksan-daero, Iksan-si, Jeonbuk", floor: "익산역 4층 (Gedung Stasiun Iksan, Lt. 4)", phone: "063-839-0041", area: "Provinsi Jeonbuk: Kota Iksan dan Kota Gimje" },
+      { id: 51, zone: "ZONA_3", zoneLabel: "Zona 3 · Jeolla & Jeju", nameId: "Kantor Ketenagakerjaan Gunsan", nameKr: "군산지청 외국인력팀", roadAddr: "전북특별자치도 군산시 조촌로 62", latinAddr: "62, Jochon-ro, Gunsan-si, Jeonbuk", floor: "군산고용센터 (Gedung Utama)", phone: "063-450-0608", area: "Provinsi Jeonbuk: Kota Gunsan, Buan-gun, dan Gochang-gun" },
+      { id: 52, zone: "ZONA_3", zoneLabel: "Zona 3 · Jeolla & Jeju", nameId: "Kantor Ketenagakerjaan Mokpo", nameKr: "목포지청 외국인력팀", roadAddr: "전라남도 목포시 평화로 5", latinAddr: "5, Pyeonghwa-ro, Mokpo-si, Jeollanam-do", floor: "목포고용센터 (Gedung Utama)", phone: "061-280-0549", area: "Provinsi Jeonnam: Mokpo, Sinan, Jindo, Muan, Yeongam, Gangjin, Haenam, Wando, Jangheung" },
+      { id: 53, zone: "ZONA_3", zoneLabel: "Zona 3 · Jeolla & Jeju", nameId: "Kantor Ketenagakerjaan Suncheon", nameKr: "여수지청 외국인력팀(순천)", roadAddr: "전라남도 순천시 충효로 147", latinAddr: "147, Chunghyo-ro, Suncheon-si, Jeollanam-do", floor: "순천고용센터 (Gedung Utama)", phone: "061-720-9135", area: "Provinsi Jeonnam: Suncheon, Gwangyang, Boseong-gun, Goheung-gun" },
+      { id: 54, zone: "ZONA_3", zoneLabel: "Zona 3 · Jeolla & Jeju", nameId: "Kantor Ketenagakerjaan Yeosu", nameKr: "여수지청 외국인력팀(여수)", roadAddr: "전라남도 여수시 문수로 125", latinAddr: "125, Munsu-ro, Yeosu-si, Jeollanam-do", floor: "여수고용센터 (Gedung Utama)", phone: "061-650-0263", area: "Provinsi Jeonnam: Seluruh Kota Yeosu" },
+      { id: 55, zone: "ZONA_2", zoneLabel: "Zona 2 · Chungcheong", nameId: "Kantor Ketenagakerjaan Daejeon & Sejong", nameKr: "대전지방고용노동청 외국인력팀", roadAddr: "대전광역시 서구 둔산로 111", latinAddr: "111, Dunsan-ro, Seo-gu, Daejeon", floor: "대전 둔산 우체국 9층 (Kantor Pos Dunsan Lt. 9)", phone: "042-470-8321", area: "Daejeon, Sejong, Gongju, Nonsan, Gyeryong, Geumsan" },
+      { id: 56, zone: "ZONA_2", zoneLabel: "Zona 2 · Chungcheong", nameId: "Kantor Ketenagakerjaan Cheongju", nameKr: "청주지청 외국인력팀", roadAddr: "충청북도 청주시 서원구 1순환로 1037", latinAddr: "1037, 1-sunhwan-ro, Seowon-gu, Cheongju-si, Chungcheongbuk-do", floor: "청주고용센터 (Gedung Utama)", phone: "043-229-0751", area: "Provinsi Chungbuk: Cheongju, Jincheon, Boeun, Yeongdong, Goesan, Jeungpyeong, Okcheon" },
+      { id: 57, zone: "ZONA_2", zoneLabel: "Zona 2 · Chungcheong", nameId: "Kantor Ketenagakerjaan Cheonan", nameKr: "천안지청 외국인력팀", roadAddr: "충청남도 천안시 서북구 동서대로 163", latinAddr: "163, Dongseo-daero, Seobuk-gu, Cheonan-si, Chungcheongnam-do", floor: "충남타워 8층 (Gedung Chungnam Tower, Lt. 8)", phone: "041-620-7460", area: "Provinsi Chungnam: Cheonan, Asan, Dangjin, Yesan-gun" },
+      { id: 58, zone: "ZONA_2", zoneLabel: "Zona 2 · Chungcheong", nameId: "Kantor Ketenagakerjaan Chungju", nameKr: "충주지청 외국인력팀(충주)", roadAddr: "충청북도 충주시 탄금대로 39", latinAddr: "39, Tangeum-daero, Chungju-si, Chungcheongbuk-do", floor: "세일빌딩 4층 (Gedung Seil, Lt. 4)", phone: "043-850-4014", area: "Provinsi Chungbuk: Chungju, Jecheon, Danyang-gun" },
+      { id: 59, zone: "ZONA_2", zoneLabel: "Zona 2 · Chungcheong", nameId: "Kantor Ketenagakerjaan Eumseong", nameKr: "충주지청 외국인력팀(음성)", roadAddr: "충청북도 음성군 금왕읍 금석로 71", latinAddr: "71, Geumseok-ro, Geumwang-eup, Eumseong-gun, Chungcheongbuk-do", floor: "음성고용센터 (Gedung Utama)", phone: "043-880-8604", area: "Provinsi Chungbuk: Seluruh Kabupaten Eumseong-gun" },
+      { id: 60, zone: "ZONA_2", zoneLabel: "Zona 2 · Chungcheong", nameId: "Kantor Ketenagakerjaan Boryeong", nameKr: "보령지청 외국인력팀", roadAddr: "충청남도 보령시 보령남로 26", latinAddr: "26, Boryeongnam-ro, Boryeong-si, Chungcheongnam-do", floor: "보령고용센터 (Gedung Utama)", phone: "041-930-6286", area: "Provinsi Chungnam: Boryeong, Hongseong, Cheongyang, Seocheon, Buyeo" },
+      { id: 61, zone: "ZONA_2", zoneLabel: "Zona 2 · Chungcheong", nameId: "Kantor Ketenagakerjaan Seosan", nameKr: "서산출장소 외국인력팀", roadAddr: "충청남도 서산시 쌍연남1로 37", latinAddr: "37, Ssangyeonnam 1-ro, Seosan-si, Chungcheongnam-do", floor: "서산고용센터 4층 (Lantai 4)", phone: "041-661-5601", area: "Provinsi Chungnam: Kota Seosan dan Taean-gun" },
+      { id: 62, zone: "ZONA_3", zoneLabel: "Zona 3 · Jeolla & Jeju", nameId: "Kantor Ketenagakerjaan Jeju", nameKr: "제주고용센터 외국인력팀", roadAddr: "제주특별자치도 제주시 중앙로 165", latinAddr: "165, Jungang-ro, Jeju-si, Jeju-do", floor: "제주고용복지플러스센터 (Gedung Utama)", phone: "064-710-4408", area: "Seluruh Provinsi Khusus Pulau Jeju (Jeju & Seogwipo)" }
+    ];
+
+    // Complete dataset of 18 Foreign Worker Support Centers & Shelters
+    const SHELTER_CENTERS = [
+      { id: "S1", region: "Gyeonggi · Ansan", nameId: "Shelter & Pusat Bantuan Pekerja Asing Ansan", nameKr: "안산 외국인근로자 지원센터 / 상담소", roadAddr: "경기도 안산시 단원구 부부로 55", latinAddr: "55, Bubu-ro, Danwon-gu, Ansan-si, Gyeonggi-do", phone: "1577-0071", altPhone: "", note: "Pusat konsultasi E-9, penerjemah Bahasa Indonesia (09.00–18.00 KST), mediasi kerja, dan shelter.", highlight: true },
+      { id: "S2", region: "Chungnam · Cheonan", nameId: "Shelter & Pusat Bantuan Cheonan (Ibu Arzety)", nameKr: "충남외국인근로자지원센터 (천안 쉼터)", roadAddr: "충청남도 천안시 서북구 성정공원5로 21", latinAddr: "21, Seongjeonggongwon 5-ro, Seobuk-gu, Cheonan-si (Sky Building Lt. 4)", phone: "041-622-9314", altPhone: "041-622-7955", note: "Pendampingan Bahasa Indonesia bersama Ibu Arzety (041-622-9314) atau kantor pusat Chungnam (041-622-7955).", highlight: true },
+      { id: "S3", region: "Incheon", nameId: "Pusat Bantuan Pekerja Asing Incheon", nameKr: "인천외국인근로자지원센터", roadAddr: "인천광역시 남동구 호구포로 220", latinAddr: "220, Hogupo-ro, Namdong-gu, Incheon (Myeongjin Plaza Lt. 11–12)", phone: "032-231-4545", altPhone: "032-231-4546", note: "Gedung Myeongjin Plaza Lantai 11–12. Konsultasi: 032-231-4545; pelatihan: 032-231-4546." },
+      { id: "S4", region: "Gyeonggi · Gwangju", nameId: "Pusat Bantuan Gwangju Gyeonggi", nameKr: "한국이주노동재단 (경기 광주)", roadAddr: "경기도 광주시 경안로25번길 7", latinAddr: "7, Gyeong-an-ro 25beon-gil, Gwangju-si, Gyeonggi-do (Lt. 2)", phone: "031-797-2688", altPhone: "", note: "Berada di Kota Gwangju, Provinsi Gyeonggi (Lantai 2)." },
+      { id: "S5", region: "Chungbuk · Cheongju", nameId: "Pusat Bantuan Pekerja Asing Cheongju", nameKr: "청주시 외국인근로자 지원센터", roadAddr: "충청북도 청주시 흥덕구 송정동 140-41", latinAddr: "140-41, Songjeong-dong, Heungdeok-gu, Cheongju-si (Lt. 1)", phone: "043-260-1625", altPhone: "", note: "Gedung Songjeong Workers Welfare Center Lantai 1." },
+      { id: "S6", region: "Gangwon · Gangneung", nameId: "Pusat Bantuan Pekerja Asing Gangneung", nameKr: "강릉시 외국인근로자 지원센터", roadAddr: "강원특별자치도 강릉시 옥가로19번길 26", latinAddr: "26, Okga-ro 19beon-gil, Gangneung-si, Gangwon-do", phone: "033-655-8956", altPhone: "", note: "Tanyakan jadwal konsultasi Bahasa Indonesia untuk manufaktur atau perikanan." },
+      { id: "S7", region: "Gwangju (Barat Daya)", nameId: "Pusat Bantuan Warga Asing Gwangju & Jeonnam", nameKr: "전남광주외국인주민지원센터", roadAddr: "광주광역시 광산구 풍영로145번길 82", latinAddr: "82, Pungyeong-ro 145beon-gil, Gwangsan-gu, Gwangju", phone: "1644-3828", altPhone: "", note: "Distrik Gwangsan-gu, Kota Metropolitan Gwangju (wilayah Jeolla)." },
+      { id: "S8", region: "Jeonbuk · Jeonju", nameId: "Pusat Bantuan Pekerja Asing Jeonbuk (Jeonju)", nameKr: "전북외국인근로자지원센터", roadAddr: "전북특별자치도 전주시 완산구 홍산로 276", latinAddr: "276, Hongsan-ro, Wansan-gu, Jeonju-si, Jeonbuk (Lt. 6)", phone: "1551-1195", altPhone: "063-280-6180", note: "Berada di Lantai 6. Layanan publik: 1551-1195." },
+      { id: "S9", region: "Jeonnam · Yeosu", nameId: "Pusat Bantuan Terpadu Wilayah Timur (Yeosu)", nameKr: "동부 이민외국인 종합지원센터 (여수)", roadAddr: "전라남도 여수시 좌수영로 962-12", latinAddr: "962-12, Jwasuyeong-ro, Yeosu-si (Gedung Kadin Yeosu Lt. 2)", phone: "1588-1623", altPhone: "061-685-7784", note: "Melayani pekerja manufaktur dan perikanan wilayah Jeonnam Timur." },
+      { id: "S10", region: "Jeonnam · Yeongam", nameId: "Pusat Bantuan Terpadu Wilayah Barat (Yeongam)", nameKr: "전남 이민 외국인 종합지원센터 (영암)", roadAddr: "전라남도 영암군 삼호읍 대불주거3로 75", latinAddr: "75, Daebuljugeo 3-ro, Samho-eup, Yeongam-gun (Gedung B R.103)", phone: "1588-5949", altPhone: "061-460-7508", note: "Tekan menu 3 untuk layanan Bahasa Indonesia." },
+      { id: "S11", region: "Busan", nameId: "Pusat Bantuan Pekerja Asing Busan", nameKr: "부산외국인근로자지원센터", roadAddr: "부산광역시 연제구 연수로 86", latinAddr: "86, Yeonsu-ro, Yeonje-gu, Busan (Lantai B1)", phone: "051-868-7606", altPhone: "", note: "Lantai B1. Konsultasi resmi pemegang visa E-9." },
+      { id: "S12", region: "Daegu", nameId: "Pusat Bantuan Pekerja Asing Daegu", nameKr: "대구외국인근로자지원센터", roadAddr: "대구광역시 달성군 다사읍 달구벌대로 863", latinAddr: "863, Dalgubeol-daero, Dasa-eup, Dalseong-gun, Daegu (Lt. 8–9)", phone: "053-654-9700", altPhone: "", note: "Gedung Jinkwang Tower Lantai 8–9." },
+      { id: "S13", region: "Gyeongnam · Gimhae", nameId: "Pusat Bantuan Pekerja Asing Gimhae", nameKr: "김해외국인근로자지원센터", roadAddr: "경상남도 김해시 가락로 81", latinAddr: "81, Garak-ro, Gimhae-si, Gyeongsangnam-do (I-Joy Building Lt. 6)", phone: "055-724-2725", altPhone: "", note: "Gedung I-Joy Lantai 6. Hubungi dulu untuk jadwal penerjemah." },
+      { id: "S14", region: "Gyeongnam · Yangsan", nameId: "Pusat Bantuan Pekerja Asing Yangsan", nameKr: "양산외국인근로자지원센터", roadAddr: "경상남도 양산시 연호로 28", latinAddr: "28, Yeonho-ro, Yangsan-si, Gyeongsangnam-do", phone: "055-912-0255", altPhone: "", note: "Konsultasi masalah tempat kerja dan rujukan ke Nodongbu Yangsan." },
+      { id: "S15", region: "Gyeongnam · Changwon", nameId: "Pusat Bantuan Pekerja Asing Changwon", nameKr: "창원외국인근로자지원센터", roadAddr: "경상남도 창원시 마산합포구 3·15대로 203", latinAddr: "203, 3·15-daero, Masanhappo-gu, Changwon-si (Lt. 1)", phone: "1800-5048", altPhone: "055-714-1093", note: "Melayani wilayah Changwon, Masan, dan Jinhae." },
+      { id: "S16", region: "Gyeongbuk · Gumi", nameId: "Pusat Bantuan Warga Asing K-Dream Gumi", nameKr: "K드림외국인지원센터 (구미)", roadAddr: "경상북도 구미시 구미대로 350-27", latinAddr: "350-27, Gumi-daero, Gumi-si (Gumi Business Support Center)", phone: "054-464-2311", altPhone: "1551-4279", note: "Gedung Gumi Business Support Center (Ruang 1F-102 / 4F-412)." },
+      { id: "S17", region: "Gyeongnam · Jinju", nameId: "Pusat Bantuan Pekerja Asing Jinju (House of Love)", nameKr: "진주 사랑의 집", roadAddr: "경상남도 진주시 에나로77번길 6-11", latinAddr: "6-11, Ena-ro 77beon-gil, Jinju-si (Haeoreum Building Lt. 5)", phone: "055-763-0707", altPhone: "", note: "Gedung Haeoreum Lantai 5, Chungmugong-dong." },
+      { id: "S18", region: "Ulsan", nameId: "Pusat Bantuan Pekerja Asing Ulsan", nameKr: "울산외국인근로자지원센터", roadAddr: "울산광역시 동구 방어진순환도로 652", latinAddr: "652, Bangeojinsunhwan-doro, Dong-gu, Ulsan (Terrace Park D Lt. 2)", phone: "052-235-7100", altPhone: "", note: "Terrace Park Gedung D Lantai 2." }
+    ];
+
+    // Complete dataset of 23 mosques & Muslim centers across South Korea
+    const MOSQUES = [
+      { city: "Seoul · Itaewon", name: "Seoul Central Mosque (Masjid Pusat Seoul)", addr: "서울특별시 용산구 우사단로10길 39", phone: "02-793-6908" },
+      { city: "Gyeonggi · Ansan", name: "Masjid Al-Falah / Ansan Islamic Center", addr: "경기도 안산시 단원구 원곡로 25", phone: "" },
+      { city: "Gyeonggi · Hwaseong", name: "Masjid Al-Barokah Hwaseong (Baran)", addr: "경기도 화성시 향남읍 발안만세길 14", phone: "" },
+      { city: "Gyeonggi · Pyeongtaek", name: "Masjid Al-Ikhlas Pyeongtaek (Poseung)", addr: "경기도 평택시 포승읍 여술1길 45", phone: "" },
+      { city: "Gyeonggi · Siheung", name: "Masjid Al-Muhajirin Siheung (Jeongwang)", addr: "경기도 시흥시 정왕대로 233번길 19", phone: "" },
+      { city: "Gyeonggi · Gimpo", name: "Masjid Nurul Huda Gimpo (Daegot)", addr: "경기도 김포시 대곶면 대명항로 210", phone: "" },
+      { city: "Gyeonggi · Pocheon", name: "Masjid Darussalam Pocheon", addr: "경기도 포천시 소흘읍 솔모루로 58", phone: "" },
+      { city: "Gyeonggi · Gwangju", name: "Masjid Al-Munawwarah Gwangju Gyeonggi", addr: "경기도 광주시 곤지암읍 경충대로 731", phone: "" },
+      { city: "Gyeonggi · Anyang", name: "Anyang Islamic Center", addr: "경기도 안양시 만안구 안양로 314", phone: "031-444-7860" },
+      { city: "Incheon · Bupyeong", name: "Incheon Islamic Center (Bupyeong)", addr: "인천광역시 부평구 부평대로 32", phone: "" },
+      { city: "Chungbuk · Eumseong", name: "Masjid Al-Hidayah Geumwang (Eumseong)", addr: "충청북도 음성군 금왕읍 무극로 215", phone: "" },
+      { city: "Chungbuk · Eumseong", name: "Masjid Mugeuk / Daeso Eumseong", addr: "충청북도 음성군 대소면 오산로 112", phone: "" },
+      { city: "Chungbuk · Cheongju", name: "Cheongju Islamic Center (Ochang)", addr: "충청북도 청주시 청원구 오창읍 중심상업로 32", phone: "" },
+      { city: "Chungnam · Cheonan", name: "Masjid Al-Ittihad Cheonan (Seongjeong)", addr: "충청남도 천안시 서북구 성정중7길 12", phone: "" },
+      { city: "Chungnam · Asan", name: "Masjid Al-Falah Asan (Sinchang)", addr: "충청남도 아산시 신창면 온천대로 785", phone: "" },
+      { city: "Daejeon · Yuseong", name: "Daejeon Islamic Center (Gung-dong)", addr: "대전광역시 유성구 대학로 155번길 19", phone: "" },
+      { city: "Jeonbuk · Jeonju", name: "Jeonju Abu Bakr Al-Seddiq Mosque", addr: "전북특별자치도 전주시 덕진구 백제대로 567", phone: "" },
+      { city: "Gwangju · Gwangsan", name: "Gwangju Islamic Center (Wol곡/Hanam)", addr: "광주광역시 광산구 사암로 216번길 18", phone: "" },
+      { city: "Daegu · Dalseo", name: "Daegu Islamic Center (Seongseo)", addr: "대구광역시 달서구 성서공단로 217", phone: "" },
+      { city: "Gyeongbuk · Gumi", name: "Masjid Al-Amin Gumi (Indong)", addr: "경상북도 구미시 인동중앙로 3길 22", phone: "" },
+      { city: "Gyeongnam · Gimhae", name: "Masjid Al-Ikhlas Gimhae (Seosang)", addr: "경상남도 김해시 가락로 93번길 14", phone: "" },
+      { city: "Gyeongnam · Changwon", name: "Masjid Al-Mujahidin Changwon (Palyong)", addr: "경상남도 창원시 의창구 팔용로 412", phone: "" },
+      { city: "Busan · Geumjeong", name: "Busan Al-Fatah Mosque (Namsan-dong)", addr: "부산광역시 금정구 금단로 113번길 30-1", phone: "051-518-9991" }
+    ];
+
+    const MANUFACTURING_SECTORS = [
+      { code: "C25", popular: true, kr: "금속가공제품 제조업", pron: "Geumsok Gagong", idName: "Pengolahan & Fabrikasi Produk Logam", desc: "Mesin press (프레스), las (용접), bubut/CNC/Milling (선반/밀링/MCT), pelapisan logam (도금), pengecatan (도장)." },
+      { code: "C22", popular: true, kr: "고무제품 및 플라스틱제품 제조업", pron: "Gomu & Peullastik", idName: "Industri Karet & Plastik (Injeksi / 사출)", desc: "Pencetakan injeksi plastik (사출), ekstrusi (압출), kemasan plastik, serta komponen otomotif." },
+      { code: "C30 / C31", popular: true, kr: "자동차 및 트레일러 제조업", pron: "Jadongcha Bupum", idName: "Industri Suku Cadang Otomotif & Transportasi", desc: "Pabrik vendor suku cadang mobil (jok, sasis, pengereman, knalpot, bodi)." },
+      { code: "C26 / C27", popular: true, kr: "전자부품·컴퓨터·영상·통신장비 제조업", pron: "Jeonja Bupum", idName: "Komponen Elektronik, PCB & Instrumen Presisi", desc: "Perakitan komponen elektronik, papan sirkuit (PCB), sensor, dan alat presisi." },
+      { code: "C29", popular: false, kr: "기타 기계 및 장비 제조업", pron: "Gigye mit Jangbi", idName: "Mesin Industri & Cetakan Logam (금형)", desc: "Pembuatan mesin pabrik, cetakan presisi (금형/Mold), pompa, dan otomasi." },
+      { code: "C10 / C11", popular: false, kr: "식료품 및 음료 제조업", pron: "Sikryopum", idName: "Pengolahan Makanan & Minuman", desc: "Pengolahan daging, hasil laut, kimchi, roti, saus, dan minuman." }
+    ];
+
+    const KAMUS_DATA = [
+      { cat: "NODONGBU", kr: "사업장 변경 신청하러 왔어요.", pron: "Saeopjang byeongyeong sincheong-hareo wasseoyo.", id: "Saya datang untuk mengajukan pindah tempat kerja (Lapor D-30)." },
+      { cat: "NODONGBU", kr: "구직 등록하고 알선 받고 싶어요.", pron: "Gujik deungnok-hago alseon batgo sipeoyo.", id: "Saya ingin daftar pencari kerja (D-90) dan minta rekomendasi pabrik." },
+      { cat: "NODONGBU", kr: "인도네시아어 통역 상담이 가능할까요?", pron: "Indonesia-eo tongyeok sangdam-i ganeunghalkkayo?", id: "Apakah tersedia konsultasi penerjemah Bahasa Indonesia?" },
+      { cat: "NODONGBU", kr: "회사에서 아직 고용변동신고를 안 했어요.", pron: "Hoesa-eseo ajik goyong-byeondong-singo-reul an haesseoyo.", id: "Perusahaan lama belum melaporkan pelepasan kerja saya." },
+      { cat: "PABRIK", kr: "반장님, 기계에 이상이 생겼습니다. 확인해 주세요.", pron: "Banjangnim, gigye-e isang-i saenggyeotseumnida. Hwaginhae juseyo.", id: "Pak Mandor, ada kendala pada mesin. Mohon diperiksa." },
+      { cat: "PABRIK", kr: "불량품이 나왔는데 어떻게 처리할까요?", pron: "Bullyangpum-i nawatneunde eotteoke cheorihalkkayo?", id: "Ada produk cacat keluar, bagaimana penanganannya?" },
+      { cat: "PABRIK", kr: "오늘 잔업이나 특근이 있습니까?", pron: "Oneul janeop-ina teukgeun-i itseumnikka?", id: "Apakah hari ini ada lembur atau kerja hari libur?" },
+      { cat: "MEDIS", kr: "작업하다가 다쳤습니다. 산재 처리하고 싶어요.", pron: "Jageop-hadaga dachyeotseumnida. Sanjae cheori-hago sipeoyo.", id: "Saya terluka saat bekerja. Saya ingin memproses klaim Sanjae." },
+      { cat: "MEDIS", kr: "의사 선생님, 진단서 한 부 발급해 주세요.", pron: "Uisa seonsaengnim, jindanseo han bu balgeup-hae juseyo.", id: "Dokter, mohon terbitkan satu lembar surat keterangan diagnosis." },
+      { cat: "HARIAN", kr: "체류지 변경신고(주소 이전) 하러 왔습니다.", pron: "Cheryuji byeongyeong-singo hareo watseumnida.", id: "Saya datang untuk melapor perubahan alamat tempat tinggal." },
+      { cat: "HARIAN", kr: "계좌 이체 한도를 해제하고 싶습니다.", pron: "Gyejwa iche hando-reul haeje-hago sipseumnida.", id: "Saya ingin membuka limit transfer rekening bank." },
+      { cat: "HARIAN", kr: "이 음식에 돼지고기나 술이 들어가나요?", pron: "I eumsik-e dwaejigogi-na sur-i deureoganayo?", id: "Apakah makanan ini mengandung daging babi atau alkohol?" }
+    ];
+
+    const QNA_ITEMS = [
+      { q: "1. Bos menunggak gaji / pesangon atau kabur, bagaimana langkah resminya?", a: "Kumpulkan slip gaji, mutasi rekening bank, catatan absen/lembur, dan chat dengan bos. Ajukan laporan resmi (임금체불 진정) ke kantor Nodongbu wilayah pabrik atau via MOEL (1350). Jika pabrik bangkrut/tetap tidak bayar, minta surat keterangan tunggakan dari Nodongbu lalu ajukan dana talangan Daedang-geum (대지급금) ke COMWEL." },
+      { q: "2. Gaji dipotong sepihak karena alat/barang rusak, apakah diperbolehkan?", a: "Tidak boleh. Berdasarkan UU Ketenagakerjaan Korea, perusahaan dilarang memotong gaji sepihak tanpa persetujuan tertulis yang sah atau putusan hukum. Anda berhak melaporkannya ke Nodongbu." },
+      { q: "3. Kapan uang pesangon (퇴직금) cair setelah keluar pabrik?", a: "Jika masa kerja minimal 1 tahun penuh di pabrik yang sama, selisih pesangon di luar asuransi Chulguk Mangi Boheom wajib dilunasi pabrik maksimal 14 hari setelah berhenti kerja." },
+      { q: "4. Bos belum melapor pelepasan kerja (고용변동신고) atau menolak tanda tangan pindah?", a: "Jika alasan keluar sah (kontrak habis, gaji telat, pabrik tutup, atau pelanggaran berat), langsung datang ke kantor Nodongbu wilayah pabrik atau hubungi 1577-0071 / 1350 untuk diproses verifikasi mandiri." },
+      { q: "5. Batas 90 hari (D-90) hampir habis tapi belum dapat pabrik baru, bagaimana solusinya?", a: "Jangan tunggu lewat hari ke-90! Jika ada alasan darurat seperti sakit/kecelakaan kerja (dengan surat dokter) atau sengketa gaji di Nodongbu, ajukan perpanjangan masa pencarian kerja (구직기간 연장) ke Nodongbu dan Imigrasi sebelum hari ke-90 berakhir." },
+      { q: "6. Bolehkah pindah lintas provinsi/zona (misal dari Chungcheong ke Gyeonggi)?", a: "Pekerja dengan izin kerja awal mulai 19 Oktober 2023 wajib pindah di dalam zona yang sama (5 zona). Pekerja sebelum tanggal tersebut umumnya lebih fleksibel." },
+      { q: "7. Kena tilang/denda di bawah 3 juta Won — masih bisa perpanjang visa & re-entry?", a: "Masih berpeluang besar bisa diperpanjang jika pelanggaran ringan/tunggal dengan denda di bawah 3 juta Won (300만 원) dan bukan pelanggaran berulang. Bayar denda lunas, ambil bukti lunas (벌금납부확인서) dari Kejaksaan, siapkan surat penyesalan (반성문) & rekomendasi kerja, lalu ikuti Sabeom Simsa (사범심사) di Imigrasi." },
+      { q: "8. Kecelakaan kerja di pabrik (산재), tapi bos menyuruh pakai BPJS biasa?", a: "Jangan mau. Kecelakaan kerja ditanggung penuh oleh asuransi Sanjae (산재보험) termasuk biaya berobat dan tunjangan istirahat (~70% gaji). Anda bisa mendaftar langsung ke COMWEL (1588-0075) atau lewat rumah sakit." },
+      { q: "9. Bos menahan paspor atau kartu ARC saya, apakah boleh?", a: "Ilegal. Tidak ada perusahaan yang berhak menahan paspor, ARC, atau buku tabungan pekerja. Segera hubungi 1577-0071 / 1350 atau lapor ke polisi (112)." },
+      { q: "10. Pindah ke shelter atau kos baru saat menganggur, apakah wajib lapor alamat?", a: "Wajib lapor pindah alamat (체류지 변경신고) ke Jumin Center atau HiKorea maksimal 14 hari sejak pindah agar tidak terkena denda Imigrasi." }
+    ];
+
+    const KR_HOLIDAYS = [
+      { date: "2026-12-25", name: "Hari Natal (성탄절)" },
+      { date: "2027-01-01", name: "Tahun Baru Masehi (신정)" },
+      { date: "2027-02-06", name: "Libur Imlek Seollal (설날 연휴)" },
+      { date: "2027-02-07", name: "Tahun Baru Imlek Seollal (설날)" },
+      { date: "2027-02-08", name: "Libur Imlek Seollal (설날 연휴)" },
+      { date: "2027-03-01", name: "Hari Pergerakan Kemerdekaan (삼일절)" },
+      { date: "2027-05-05", name: "Hari Anak (어린이날)" }
+    ];
+
+    const STORAGE_KEY = "kawan_e9_saved_v3";
+    const JT_KEY = "kawan_e9_jobtrack_v3";
+    let savedIds = new Set();
+    let currentZone = "ALL";
+    let currentStatus = "ALL";
+    let searchQuery = "";
+    let shelterQuery = "";
+    let mosqueQuery = "";
+    let kamusCat = "ALL";
+    let kamusQuery = "";
+    let qnaQuery = "";
+    let toastTimer = null;
+
+    function safeGetStorage(key, fallback) {
+      try {
+        const raw = localStorage.getItem(key);
+        return raw ? JSON.parse(raw) : fallback;
+      } catch (e) {
+        return fallback;
+      }
+    }
+
+    function safeSetStorage(key, val) {
+      try {
+        localStorage.setItem(key, JSON.stringify(val));
+      } catch (e) {}
+    }
+
+    function showToast(msg) {
+      const box = document.getElementById("toastBox");
+      const txt = document.getElementById("toastText");
+      if (!box || !txt) return;
+      txt.textContent = msg;
+      box.classList.remove("hidden");
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => box.classList.add("hidden"), 2600);
+    }
+
+    function copyText(text, label) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => showToast(label)).catch(() => fallbackCopy(text, label));
+      } else {
+        fallbackCopy(text, label);
+      }
+    }
+
+    function fallbackCopy(text, label) {
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand("copy");
+        showToast(label);
+      } catch (e) {
+        showToast("Gagal menyalin teks");
+      }
+      document.body.removeChild(ta);
+    }
+
+    function speakKorean(text) {
+      try {
+        if ("speechSynthesis" in window) {
+          window.speechSynthesis.cancel();
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = "ko-KR";
+          u.rate = 0.95;
+          window.speechSynthesis.speak(u);
+          showToast("Memutar audio bahasa Korea...");
+          return;
+        }
+      } catch (e) {}
+      copyText(text, "Teks Korea disalin");
+    }
+
+    function refreshIcons() {
+      try {
+        if (window.lucide && typeof window.lucide.createIcons === "function") {
+          window.lucide.createIcons();
+        }
+      } catch (e) {}
+    }
+
+    function updateKstClock() {
+      try {
+        const now = new Date();
+        const kst = new Date(now.toLocaleString("en-US", { timeZone: "Asia/Seoul" }));
+        const hh = String(kst.getHours()).padStart(2, "0");
+        const mm = String(kst.getMinutes()).padStart(2, "0");
+        const day = kst.getDay();
+        const mins = kst.getHours() * 60 + kst.getMinutes();
+
+        const clockText = document.getElementById("islandClockText");
+        if (clockText) clockText.textContent = hh + ":" + mm + " KST";
+
+        const titleEl = document.getElementById("kstStatusTitle");
+        const subEl = document.getElementById("kstStatusSub");
+        const iconWrap = document.getElementById("kstIconWrap");
+
+        const isWeekend = day === 0 || day === 6;
+        const isLunch = !isWeekend && mins >= 720 && mins < 780;
+        const isOpen = !isWeekend && mins >= 540 && mins < 1080 && !isLunch;
+
+        if (titleEl && subEl && iconWrap) {
+          if (isOpen) {
+            titleEl.textContent = "Loket Nodongbu Sedang BUKA (" + hh + ":" + mm + " KST)";
+            subEl.textContent = "Pelayanan berlangsung hingga pukul 18.00 KST. Siapkan Paspor dan KTP Korea (ARC).";
+            iconWrap.className = "w-9 h-9 rounded-xl bg-emerald-100 border border-emerald-200 flex items-center justify-center shrink-0 mt-0.5 text-emerald-700";
+          } else if (isLunch) {
+            titleEl.textContent = "Jam Istirahat Makan Siang (" + hh + ":" + mm + " KST)";
+            subEl.textContent = "Petugas istirahat pukul 12.00–13.00 KST. Loket kembali melayani pukul 13.00 KST.";
+            iconWrap.className = "w-9 h-9 rounded-xl bg-amber-100 border border-amber-200 flex items-center justify-center shrink-0 mt-0.5 text-amber-700";
+          } else {
+            titleEl.textContent = "Di Luar Jam Loket Nodongbu (" + hh + ":" + mm + " KST)";
+            subEl.textContent = "Loket buka Senin–Jumat pukul 09.00–18.00 KST (istirahat 12.00–13.00 KST).";
+            iconWrap.className = "w-9 h-9 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center shrink-0 mt-0.5 text-slate-700";
+          }
+        }
+
+        const isoToday = kst.getFullYear() + "-" + String(kst.getMonth() + 1).padStart(2, "0") + "-" + String(kst.getDate()).padStart(2, "0");
+        const nextHol = KR_HOLIDAYS.find(h => h.date >= isoToday) || KR_HOLIDAYS[0];
+        const holBadge = document.getElementById("kstHolidayBadge");
+        if (holBadge && nextHol) {
+          holBadge.innerHTML = '<i data-lucide="calendar" class="w-3 h-3 text-amber-400"></i><span>Libur: ' + nextHol.date + ' (' + nextHol.name.split(" (")[0] + ')</span>';
+          refreshIcons();
+        }
+      } catch (e) {}
+    }
+
+    function updateProgress() {
+      const c = document.getElementById("progressCount");
+      const b = document.getElementById("progressBar");
+      if (c) c.textContent = String(savedIds.size);
+      if (b) b.style.width = Math.round((savedIds.size / NODONGBU_CENTERS.length) * 100) + "%";
+    }
+
+    function getFilteredCenters() {
+      return NODONGBU_CENTERS.filter(item => {
+        if (currentZone !== "ALL" && item.zone !== currentZone) return false;
+        const isSaved = savedIds.has(item.id);
+        if (currentStatus === "SAVED" && !isSaved) return false;
+        if (currentStatus === "UNSAVED" && isSaved) return false;
+        if (searchQuery.trim() !== "") {
+          const q = searchQuery.toLowerCase();
+          const hay = (item.id + " " + item.nameId + " " + item.nameKr + " " + item.roadAddr + " " + item.latinAddr + " " + item.floor + " " + item.area + " " + item.phone).toLowerCase();
+          if (!hay.includes(q)) return false;
+        }
+        return true;
+      });
+    }
+
+    function renderCenters() {
+      updateProgress();
+      const grid = document.getElementById("centersGrid");
+      const summary = document.getElementById("resultSummary");
+      const list = getFilteredCenters();
+      if (summary) summary.textContent = "Menampilkan " + list.length + " dari " + NODONGBU_CENTERS.length + " kantor Nodongbu E-9";
+      if (!grid) return;
+
+      if (list.length === 0) {
+        grid.innerHTML = '<div class="col-span-full liquid-glass squircle p-8 text-center space-y-1"><p class="text-sm font-bold text-slate-800">Tidak ditemukan kantor Nodongbu yang sesuai.</p><p class="text-xs text-slate-500">Coba kata kunci kota lain atau pilih Semua Wilayah (62).</p></div>';
+        return;
+      }
+
+      grid.innerHTML = list.map(item => {
+        const isSaved = savedIds.has(item.id);
+        const enc = encodeURIComponent(item.roadAddr);
+        const kakaoUrl = "https://map.kakao.com/link/search/" + enc;
+        const naverUrl = "https://map.naver.com/p/search/" + enc;
+        const badgeNew = item.isUpdated ? '<span class="px-2 py-0.5 rounded-full text-[10px] font-black bg-blue-700 text-white">GEDUNG LT. 1</span>' : '';
+
+        return `
+          <article class="liquid-glass squircle p-4 sm:p-5 flex flex-col justify-between gap-3.5 transition ${isSaved ? 'card-saved' : ''}">
+            <div class="space-y-2.5">
+              <div class="flex items-start justify-between gap-2">
+                <div class="flex flex-wrap items-center gap-1.5">
+                  <span class="px-2.5 py-0.5 rounded-full text-xs font-black bg-slate-900 text-white">#${item.id}</span>
+                  <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-blue-50 text-blue-900 border border-blue-200">${item.zoneLabel}</span>
+                  ${badgeNew}
+                </div>
+                <button type="button" data-action="toggle-save" data-id="${item.id}" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-extrabold border transition shrink-0 cursor-pointer ${isSaved ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-white text-slate-700 border-slate-300 hover:bg-slate-100'}">
+                  <i data-lucide="${isSaved ? 'check-circle-2' : 'bookmark'}" class="w-3.5 h-3.5"></i>
+                  <span>${isSaved ? 'Tersimpan' : 'Tandai'}</span>
+                </button>
+              </div>
+
+              <div class="border-b border-slate-200/70 pb-2">
+                <h3 class="text-base font-extrabold text-slate-900 leading-snug">${item.nameId}</h3>
+                <p class="text-xs sm:text-sm font-bold text-blue-900 mt-0.5">${item.nameKr}</p>
+              </div>
+
+              <div class="bg-white/80 rounded-2xl p-3 border border-slate-200/80 space-y-2 text-xs">
+                <div>
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">Alamat Jalan (Korea &amp; Romawi):</span>
+                  <div class="text-xs sm:text-sm font-extrabold text-slate-900 select-all">${item.roadAddr}</div>
+                  <div class="text-[11px] text-slate-600 select-all">${item.latinAddr}</div>
+                </div>
+                <div class="font-semibold text-amber-950 bg-amber-50/90 px-2.5 py-1.5 rounded-xl border border-amber-200/80">
+                  <strong>Lokasi Loket:</strong> ${item.floor}
+                </div>
+                <div class="text-slate-700 leading-relaxed">
+                  <strong>Wilayah Yurisdiksi:</strong> ${item.area}
+                </div>
+                <div class="flex flex-wrap items-center justify-between gap-2 pt-1.5 border-t border-slate-200/70">
+                  <a href="tel:${item.phone}" class="inline-flex items-center gap-1 text-blue-700 font-extrabold underline">
+                    <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+                    <span>${item.phone}</span>
+                  </a>
+                  <div class="flex items-center gap-1.5">
+                    <button type="button" data-action="show-taxi" data-id="${item.id}" class="inline-flex items-center gap-1 text-[11px] font-extrabold text-slate-800 bg-slate-100 hover:bg-slate-200 px-2.5 py-1 rounded-lg border border-slate-300 cursor-pointer">
+                      <i data-lucide="car-taxi-front" class="w-3 h-3"></i>
+                      <span>Layar Taksi</span>
+                    </button>
+                    <button type="button" data-action="share-center" data-id="${item.id}" class="inline-flex items-center gap-1 text-[11px] font-extrabold text-blue-800 bg-blue-50 hover:bg-blue-100 px-2.5 py-1 rounded-lg border border-blue-200 cursor-pointer">
+                      <i data-lucide="share-2" class="w-3 h-3"></i>
+                      <span>Bagikan</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-2">
+              <a href="${kakaoUrl}" target="_blank" rel="noopener noreferrer" data-action="open-kakao" data-id="${item.id}" class="kakao-btn px-2.5 py-2.5 rounded-xl text-xs font-black text-center flex items-center justify-center gap-1 transition">
+                <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+                <span>KakaoMap</span>
+              </a>
+              <a href="${naverUrl}" target="_blank" rel="noopener noreferrer" class="naver-btn px-2.5 py-2.5 rounded-xl text-xs font-bold text-center flex items-center justify-center gap-1 transition">
+                <i data-lucide="navigation" class="w-3.5 h-3.5"></i>
+                <span>Naver Map</span>
+              </a>
+              <button type="button" data-action="copy-addr" data-id="${item.id}" class="px-2.5 py-2.5 rounded-xl text-xs font-bold bg-slate-900 hover:bg-slate-800 text-white transition flex items-center justify-center gap-1 cursor-pointer">
+                <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                <span>Salin</span>
+              </button>
+            </div>
+          </article>
+        `;
+      }).join("");
+      refreshIcons();
+    }
+
+    function renderShelters() {
+      const grid = document.getElementById("sheltersGrid");
+      const badge = document.getElementById("shelterCountBadge");
+      const list = SHELTER_CENTERS.filter(s => {
+        if (!shelterQuery.trim()) return true;
+        const q = shelterQuery.toLowerCase();
+        return (s.region + " " + s.nameId + " " + s.nameKr + " " + s.roadAddr + " " + s.latinAddr + " " + s.phone + " " + s.note).toLowerCase().includes(q);
+      });
+      if (badge) badge.textContent = list.length + " dari " + SHELTER_CENTERS.length + " Pusat";
+      if (!grid) return;
+
+      grid.innerHTML = list.map(s => {
+        const enc = encodeURIComponent(s.roadAddr);
+        return `
+          <article class="liquid-glass squircle p-4 sm:p-5 flex flex-col justify-between gap-3 ${s.highlight ? 'ring-2 ring-emerald-500' : ''}">
+            <div class="space-y-2.5">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-emerald-800 text-white">${s.region}</span>
+                <div class="flex items-center gap-1.5">
+                  <a href="tel:${s.phone}" class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-black">
+                    <i data-lucide="phone" class="w-3 h-3"></i>
+                    <span>${s.phone}</span>
+                  </a>
+                  ${s.altPhone ? '<a href="tel:' + s.altPhone + '" class="px-2.5 py-1 rounded-full bg-slate-200 text-slate-800 text-xs font-bold">' + s.altPhone + '</a>' : ''}
+                </div>
+              </div>
+              <div class="border-b border-slate-200/70 pb-2">
+                <h3 class="text-base font-extrabold text-slate-900">${s.nameId}</h3>
+                <p class="text-xs font-bold text-emerald-900 mt-0.5">${s.nameKr}</p>
+              </div>
+              <div class="bg-white/80 rounded-2xl p-3 border border-slate-200/80 space-y-1.5 text-xs">
+                <div class="font-extrabold text-slate-900 select-all">${s.roadAddr}</div>
+                <div class="text-[11px] text-slate-600 select-all">${s.latinAddr}</div>
+                <p class="text-slate-700 pt-1 leading-relaxed">${s.note}</p>
+              </div>
+            </div>
+            <div class="grid grid-cols-3 gap-2">
+              <a href="https://map.kakao.com/link/search/${enc}" target="_blank" rel="noopener noreferrer" class="kakao-btn py-2.5 rounded-xl text-xs font-black text-center flex items-center justify-center gap-1">
+                <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+                <span>KakaoMap</span>
+              </a>
+              <a href="https://map.naver.com/p/search/${enc}" target="_blank" rel="noopener noreferrer" class="naver-btn py-2.5 rounded-xl text-xs font-bold text-center flex items-center justify-center gap-1">
+                <i data-lucide="navigation" class="w-3.5 h-3.5"></i>
+                <span>Naver Map</span>
+              </a>
+              <button type="button" data-action="copy-text" data-copy="${s.nameKr} - ${s.roadAddr}" class="py-2.5 rounded-xl text-xs font-bold bg-slate-900 text-white flex items-center justify-center gap-1 cursor-pointer">
+                <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                <span>Salin</span>
+              </button>
+            </div>
+          </article>
+        `;
+      }).join("");
+      refreshIcons();
+    }
+
+    function renderMosques() {
+      const grid = document.getElementById("mosquesGrid");
+      const summary = document.getElementById("mosqueSummary");
+      const list = MOSQUES.filter(m => {
+        if (!mosqueQuery.trim()) return true;
+        const q = mosqueQuery.toLowerCase();
+        return (m.city + " " + m.name + " " + m.addr).toLowerCase().includes(q);
+      });
+      if (summary) summary.textContent = list.length + " dari " + MOSQUES.length + " Masjid";
+      if (!grid) return;
+
+      grid.innerHTML = list.map(m => {
+        const enc = encodeURIComponent(m.addr);
+        return `
+          <div class="bg-white/90 rounded-2xl border border-slate-200 p-3.5 flex flex-col justify-between gap-2.5">
+            <div>
+              <div class="flex items-center justify-between gap-2">
+                <span class="px-2.5 py-0.5 rounded-full text-[11px] font-extrabold bg-teal-100 text-teal-900">${m.city}</span>
+                ${m.phone ? '<a href="tel:' + m.phone + '" class="text-[11px] font-extrabold text-blue-700 underline">' + m.phone + '</a>' : ''}
+              </div>
+              <div class="font-extrabold text-sm text-slate-900 mt-1.5">${m.name}</div>
+              <div class="text-xs text-slate-700 font-semibold mt-0.5 select-all">${m.addr}</div>
+            </div>
+            <div class="grid grid-cols-3 gap-1.5 pt-1">
+              <a href="https://map.kakao.com/link/search/${enc}" target="_blank" rel="noopener noreferrer" class="kakao-btn py-2 rounded-xl text-[11px] font-black text-center">KakaoMap</a>
+              <a href="https://map.naver.com/p/search/${enc}" target="_blank" rel="noopener noreferrer" class="naver-btn py-2 rounded-xl text-[11px] font-bold text-center">Naver Map</a>
+              <button type="button" data-action="copy-text" data-copy="${m.name} - ${m.addr}" class="py-2 rounded-xl text-[11px] font-bold bg-slate-900 text-white cursor-pointer">Salin</button>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function renderMfg() {
+      const grid = document.getElementById("mfgGrid");
+      if (!grid) return;
+      grid.innerHTML = MANUFACTURING_SECTORS.map(m => `
+        <div class="bg-white/90 rounded-2xl border border-slate-200 p-4 space-y-1.5 text-xs">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-0.5 rounded-full bg-slate-900 text-white font-black text-[11px]">Kode ${m.code}</span>
+            ${m.popular ? '<span class="px-2 py-0.5 rounded-full bg-amber-100 text-amber-900 font-extrabold text-[10px]">KUOTA BESAR</span>' : ''}
+          </div>
+          <div class="font-extrabold text-sm text-slate-900">${m.idName}</div>
+          <div class="font-bold text-blue-900">${m.kr} <span class="font-normal text-slate-500">(${m.pron})</span></div>
+          <p class="text-slate-600 leading-relaxed">${m.desc}</p>
+        </div>
+      `).join("");
+    }
+
+    function renderKamus() {
+      const grid = document.getElementById("kamusGrid");
+      if (!grid) return;
+      const list = KAMUS_DATA.filter(k => {
+        if (kamusCat !== "ALL" && k.cat !== kamusCat) return false;
+        if (!kamusQuery.trim()) return true;
+        const q = kamusQuery.toLowerCase();
+        return (k.kr + " " + k.pron + " " + k.id).toLowerCase().includes(q);
+      });
+      grid.innerHTML = list.map(k => `
+        <div class="bg-white/90 rounded-2xl border border-slate-200 p-3.5 flex flex-col justify-between gap-2.5 text-xs">
+          <div class="space-y-1">
+            <span class="px-2 py-0.5 rounded-full bg-purple-100 text-purple-900 font-extrabold text-[10px]">${k.cat}</span>
+            <div class="text-sm font-black text-slate-900 leading-snug select-all">${k.kr}</div>
+            <div class="text-[11px] font-semibold text-blue-800">${k.pron}</div>
+            <div class="text-slate-700">${k.id}</div>
+          </div>
+          <div class="flex items-center gap-2 pt-1 border-t border-slate-100">
+            <button type="button" data-action="speak-kr" data-kr="${k.kr}" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-900 font-bold border border-blue-200 cursor-pointer">
+              <i data-lucide="volume-2" class="w-3.5 h-3.5"></i>
+              <span>Suara</span>
+            </button>
+            <button type="button" data-action="copy-text" data-copy="${k.kr}" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-slate-900 text-white font-bold cursor-pointer">
+              <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+              <span>Salin</span>
+            </button>
+          </div>
+        </div>
+      `).join("");
+      refreshIcons();
+    }
+
+    function renderQna() {
+      const box = document.getElementById("qnaList");
+      if (!box) return;
+      const list = QNA_ITEMS.filter(item => {
+        if (!qnaQuery.trim()) return true;
+        const q = qnaQuery.toLowerCase();
+        return (item.q + " " + item.a).toLowerCase().includes(q);
+      });
+      box.innerHTML = list.map(item => `
+        <details class="group rounded-2xl border border-slate-200 bg-white/90 p-3.5 open:bg-blue-50/40 open:border-blue-200">
+          <summary class="cursor-pointer text-xs sm:text-sm font-extrabold text-slate-900 list-none flex items-center justify-between gap-2">
+            <span>${item.q}</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-slate-500 group-open:rotate-180 transition shrink-0"></i>
+          </summary>
+          <p class="text-xs text-slate-700 mt-2 leading-relaxed">${item.a}</p>
+        </details>
+      `).join("");
+      refreshIcons();
+    }
+
+    function updateQuotaOutput() {
+      const reason = document.getElementById("selectLeaveReason")?.value || "MUTUAL_OR_EXPIRED";
+      const stage = document.getElementById("selectContractStage")?.value || "INITIAL_3Y";
+      const used = Number(document.getElementById("selectUsedQuota")?.value || 0);
+      const max = stage === "INITIAL_3Y" ? 3 : 2;
+      const out = document.getElementById("quotaCheckerOutput");
+      if (!out) return;
+
+      if (reason !== "MUTUAL_OR_EXPIRED") {
+        out.innerHTML = '<div class="font-extrabold text-emerald-900">TIDAK MEMOTONG KUOTA PINDAH PABRIK</div><p class="text-slate-700">Keluar akibat kesalahan perusahaan (gaji macet, pabrik tutup, kekerasan, pelanggaran mess) atau kecelakaan kerja/sakit tidak mengurangi kuota normal Anda.</p>';
+      } else {
+        const rem = Math.max(0, max - used);
+        out.innerHTML = '<div class="font-extrabold text-purple-950">Sisa Kuota Normal Anda: ' + rem + ' dari ' + max + ' Kali</div><p class="text-slate-700">' + (rem > 0 ? 'Anda masih memiliki jatah pindah pabrik reguler dengan laporan pelepasan kerja.' : 'Kuota pindah normal Anda sudah habis. Pindah pabrik berikutnya hanya dimungkinkan bila terjadi kesalahan perusahaan/alasan sah.') + '</p>';
+      }
+    }
+
+    function updateZoningOutput() {
+      const period = document.getElementById("selectEntryPeriod")?.value || "AFTER_OCT2023";
+      const zone = document.getElementById("selectInitialZone")?.value || "ZONA_1";
+      const out = document.getElementById("zoningCheckerOutput");
+      if (!out) return;
+      if (period === "BEFORE_OCT2023") {
+        out.innerHTML = '<div class="font-extrabold text-emerald-900">BEBAS LINTAS WILAYAH (Izin Awal Sebelum 19 Okt 2023)</div><p class="text-slate-700">Anda dapat melamar lowongan pabrik di zona lain di Korea Selatan sesuai ketersediaan resmi Nodongbu.</p>';
+      } else {
+        out.innerHTML = '<div class="font-extrabold text-blue-950">WAJIB DI DALAM ' + zone.replace("_", " ") + '</div><p class="text-slate-700">Berdasarkan aturan mulai 19 Oktober 2023, pekerja baru wajib pindah di dalam zona wilayah pabrik pertama Anda.</p>';
+      }
+    }
+
+    function updateReqJobText() {
+      const field = document.getElementById("reqFieldSelect")?.value || "제조업 전체";
+      const area = document.getElementById("reqAreaInput")?.value || "현재 지역 근처";
+      const cond = document.getElementById("reqCondSelect")?.value || "기숙사가 있고 잔업이 있는 곳";
+      const kr = "안녕하세요. 구직 알선 희망 조건 말씀드립니다. 업종은 " + field + ", 지역은 " + area + ", 조건은 " + cond + "으로 추천 부탁드립니다.";
+      const id = "Halo, saya ingin menyampaikan kriteria pabrik harapan: bidang " + field + ", area " + area + ", dengan syarat " + cond + ".";
+      const krEl = document.getElementById("reqJobKrText");
+      const idEl = document.getElementById("reqJobIdText");
+      if (krEl) krEl.textContent = kr;
+      if (idEl) idEl.textContent = id;
+    }
+
+    function updateGenMsg() {
+      const type = document.getElementById("msgTypeSelect")?.value || "SAKIT";
+      const name = (document.getElementById("msgWorkerName")?.value || "저").trim();
+      const dateStr = (document.getElementById("msgTargetDate")?.value || "오늘").trim();
+      const map = {
+        SAKIT: { kr: "안녕하세요 사장님/반장님, " + name + "입니다. 몸이 많이 아파서 " + dateStr + " 병원에 다녀와야 할 것 같습니다. 양해해 주셔서 감사합니다.", id: "Halo Pak Bos/Mandor, saya " + name + ". Karena kondisi badan sakit, pada " + dateStr + " saya izin periksa ke rumah sakit. Terima kasih." },
+        CUTI: { kr: "안녕하세요 사장님, " + name + "입니다. 개인 사정으로 " + dateStr + " 휴가(외출)를 신청드리고 싶습니다. 확인 부탁드립니다.", id: "Halo Pak Bos, saya " + name + ". Saya ingin mengajukan izin cuti pada " + dateStr + ". Mohon konfirmasinya." },
+        GAJI: { kr: "안녕하세요 사장님, " + name + "입니다. " + dateStr + " 급여 명세서의 잔업/특근 수당 내역을 다시 한 번 확인 부탁드려도 될까요?", id: "Halo Pak Bos, saya " + name + ". Bolehkah saya minta tolong dicek kembali rincian lembur pada slip gaji " + dateStr + "?" },
+        SURAT: { kr: "안녕하세요, " + name + "입니다. 비자 및 은행 업무 때문에 재직증명서 한 부 발급 부탁드립니다. 감사합니다.", id: "Halo, saya " + name + ". Untuk keperluan visa dan bank, mohon bantuannya menerbitkan surat keterangan kerja (재직증명서)." },
+        PINDAH: { kr: "안녕하세요 사장님, " + name + "입니다. 개인적인 사정으로 사업장 변경에 대해 상의드리고 싶습니다. 편하신 시간에 잠깐 말씀 나눌 수 있을까요?", id: "Halo Pak Bos, saya " + name + ". Saya ingin berdiskusi baik-baik mengenai pindah tempat kerja. Kapan kiranya ada waktu luang?" }
+      };
+      const item = map[type] || map.SAKIT;
+      const krEl = document.getElementById("genMsgKr");
+      const idEl = document.getElementById("genMsgId");
+      if (krEl) krEl.textContent = item.kr;
+      if (idEl) idEl.textContent = item.id;
+    }
+
+    function updateTriage(key) {
+      const box = document.getElementById("triageResultBox");
+      if (!box) return;
+      const data = {
+        GAJI: "<strong>Langkah 1:</strong> Kumpulkan slip gaji, mutasi rekening, dan foto absen.<br><strong>Langkah 2:</strong> Lapor <em>임금체불 진정</em> ke kantor Nodongbu wilayah pabrik atau MOEL (1350).<br><strong>Langkah 3:</strong> Jika bos tetap tidak bayar, ajukan dana talangan <em>대지급금</em> ke COMWEL.",
+        TANDATANGAN: "<strong>Langkah 1:</strong> Simpan bukti pelanggaran kontrak/gaji telat/pesan chat penolakan.<br><strong>Langkah 2:</strong> Datang langsung ke kantor Nodongbu wilayah pabrik atau hubungi 1577-0071 untuk verifikasi pindah mandiri.",
+        SANJAE: "<strong>Langkah 1:</strong> Segera ke rumah sakit dan bilang <em>산재 (kecelakaan kerja)</em>.<br><strong>Langkah 2:</strong> Ajukan klaim Sanjae langsung ke COMWEL (1588-0075) tanpa menunggu izin bos.",
+        PASPOR: "<strong>Langkah 1:</strong> Menahan paspor/ARC adalah tindakan ilegal di Korea.<br><strong>Langkah 2:</strong> Hubungi 1577-0071, 1350, atau polisi (112) untuk pendampingan pengambilan dokumen.",
+        D90: "<strong>Langkah 1:</strong> Cek sisa hari di kalkulator D-90.<br><strong>Langkah 2:</strong> Jika sakit atau ada sengketa gaji, ajukan perpanjangan masa cari kerja (<em>구직기간 연장</em>) di Nodongbu sebelum hari ke-90 habis."
+      };
+      box.innerHTML = data[key] || data.GAJI;
+    }
+
+    function updateFxCalc() {
+      const won = Number(document.getElementById("fxWonInput")?.value || 0);
+      const rate = Number(document.getElementById("fxRateInput")?.value || 11.3);
+      const box = document.getElementById("fxResultBox");
+      if (box) box.textContent = won.toLocaleString("id-ID") + " KRW ≈ Rp " + Math.round(won * rate).toLocaleString("id-ID");
+    }
+
+    function renderJobTracker() {
+      const listEl = document.getElementById("jobTrackList");
+      if (!listEl) return;
+      const items = safeGetStorage(JT_KEY, []);
+      if (items.length === 0) {
+        listEl.innerHTML = '<div class="text-slate-500 italic">Belum ada catatan wawancara pabrik. Tambahkan pabrik yang sedang diproses.</div>';
+        return;
+      }
+      listEl.innerHTML = items.map((it, idx) => `
+        <div class="flex items-center justify-between gap-2 bg-white px-3 py-2 rounded-xl border border-slate-200">
+          <div><strong>${it.name}</strong> · <span class="text-blue-700 font-bold">${it.status}</span> <span class="text-[10px] text-slate-400">(${it.date})</span></div>
+          <button type="button" data-action="del-jt" data-idx="${idx}" class="text-rose-600 font-bold hover:underline cursor-pointer">Hapus</button>
+        </div>
+      `).join("");
+    }
+
+    function openTaxiModal(id) {
+      const item = NODONGBU_CENTERS.find(c => c.id === id);
+      if (!item) return;
+      document.getElementById("taxiModalId").textContent = "#" + item.id;
+      document.getElementById("taxiModalKrName").textContent = item.nameKr;
+      document.getElementById("taxiModalAddr").textContent = item.roadAddr;
+      document.getElementById("taxiModalLatin").textContent = item.latinAddr;
+      document.getElementById("taxiModalFloor").textContent = item.floor;
+      document.getElementById("taxiModalPhone").textContent = item.phone;
+      document.getElementById("btnOpenKakaoFromModal").href = "https://map.kakao.com/link/search/" + encodeURIComponent(item.roadAddr);
+      document.getElementById("taxiModal").classList.remove("hidden");
+    }
+
+    function switchMainTab(targetId) {
+      document.querySelectorAll("[id^='view_TAB_']").forEach(el => el.classList.add("hidden"));
+      const target = document.getElementById("view_" + targetId);
+      if (target) target.classList.remove("hidden");
+
+      document.querySelectorAll(".main-nav-tab").forEach(btn => {
+        const active = btn.getAttribute("data-main-tab") === targetId;
+        btn.classList.toggle("tab-pill-active", active);
+        btn.classList.toggle("tab-pill-inactive", !active);
+      });
+    }
+
+    function answerAiQuestion(qRaw) {
+      const q = qRaw.toLowerCase();
+      if (q.includes("gaji") || q.includes("nunggak") || q.includes("bayar")) {
+        return "Jika gaji atau pesangon ditunggak, kumpulkan bukti slip gaji, mutasi rekening, dan foto absen, lalu laporkan (임금체불 진정) ke kantor Nodongbu wilayah pabrik atau hubungi 1350.";
+      }
+      if (q.includes("ansan")) {
+        return "Nodongbu Ansan berada di Gedung Cabang Ansan Lantai 1: 경기도 안산시 단원구 적금로1길 26 (Telp: 031-412-6952). Untuk shelter & penerjemah Indonesia hubungi 1577-0071.";
+      }
+      if (q.includes("tilang") || q.includes("denda") || q.includes("3 juta")) {
+        return "Denda tunggal di bawah 3 juta Won umumnya masih bisa perpanjang visa setelah lunas dan mengikuti Sabeom Simsa (사범심사) di Imigrasi dengan bukti lunas Kejaksaan dan surat penyesalan.";
+      }
+      if (q.includes("pesangon")) {
+        return "Pesangon (퇴직금) berlaku setelah bekerja minimal 1 tahun penuh di pabrik yang sama, dihitung sekitar 1 bulan rata-rata gaji per tahun masa kerja. Gunakan kalkulator di tab Gaji, Visa & Q&A.";
+      }
+      if (q.includes("d-90") || q.includes("d90") || q.includes("90")) {
+        return "Masa pencarian kerja D-90 dihitung sejak tanggal pendaftaran di Nodongbu. Wajib dapat pabrik baru dan izin Imigrasi (근무처변경허가) sebelum hari ke-90 berakhir.";
+      }
+      if (q.includes("masjid") || q.includes("geumwang")) {
+        return "Buka tab Alamat Masjid untuk melihat 23 titik masjid di Korea (termasuk Masjid Al-Hidayah Geumwang Eumseong, Ansan, Hwaseong, Cheonan, Gimhae, dan Itaewon).";
+      }
+      return "Silakan cek tab terkait di menu atas atau hubungi layanan konseling gratis Bahasa Indonesia di 1577-0071 (Shelter Ansan) atau 1350 (Kemnaker Korea).";
+    }
+
+    function appendAiMessage(text, isUser) {
+      const box = document.getElementById("aiChatMessages");
+      if (!box) return;
+      const div = document.createElement("div");
+      div.className = isUser
+        ? "bg-blue-600 text-white rounded-xl p-2.5 ml-8 font-medium"
+        : "bg-white border border-slate-200 rounded-xl p-3 mr-4 text-slate-800 leading-relaxed";
+      div.textContent = text;
+      box.appendChild(div);
+      box.scrollTop = box.scrollHeight;
+    }
+
+    function initApp() {
+      savedIds = new Set(safeGetStorage(STORAGE_KEY, []));
+      updateKstClock();
+      setInterval(updateKstClock, 30000);
+
+      renderCenters();
+      renderShelters();
+      renderMosques();
+      renderMfg();
+      renderKamus();
+      renderQna();
+      renderJobTracker();
+      updateQuotaOutput();
+      updateZoningOutput();
+      updateReqJobText();
+      updateGenMsg();
+      updateTriage("GAJI");
+      updateFxCalc();
+      refreshIcons();
+
+      document.addEventListener("click", (e) => {
+        const tabBtn = e.target.closest("[data-main-tab]");
+        if (tabBtn) {
+          switchMainTab(tabBtn.getAttribute("data-main-tab"));
+          return;
+        }
+
+        const zoneBtn = e.target.closest(".zone-tab");
+        if (zoneBtn) {
+          currentZone = zoneBtn.getAttribute("data-zone") || "ALL";
+          document.querySelectorAll(".zone-tab").forEach(b => {
+            const active = b === zoneBtn;
+            b.className = active
+              ? "zone-tab px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-900 text-white cursor-pointer"
+              : "zone-tab px-3 py-1.5 rounded-xl text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 cursor-pointer";
+          });
+          renderCenters();
+          return;
+        }
+
+        const qcBtn = e.target.closest("[data-quick-city]");
+        if (qcBtn) {
+          const city = qcBtn.getAttribute("data-quick-city") || "";
+          searchQuery = city;
+          const inp = document.getElementById("searchInput");
+          if (inp) inp.value = city;
+          document.getElementById("btnClearSearch")?.classList.remove("hidden");
+          renderCenters();
+          return;
+        }
+
+        const kcatBtn = e.target.closest(".kamus-cat-btn");
+        if (kcatBtn) {
+          kamusCat = kcatBtn.getAttribute("data-kcat") || "ALL";
+          document.querySelectorAll(".kamus-cat-btn").forEach(b => {
+            const active = b === kcatBtn;
+            b.className = active
+              ? "kamus-cat-btn px-3 py-1.5 rounded-xl text-xs font-extrabold bg-slate-900 text-white cursor-pointer"
+              : "kamus-cat-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-white text-slate-700 border border-slate-200 cursor-pointer";
+          });
+          renderKamus();
+          return;
+        }
+
+        const triageBtn = e.target.closest(".triage-btn");
+        if (triageBtn) {
+          const key = triageBtn.getAttribute("data-triage");
+          document.querySelectorAll(".triage-btn").forEach(b => {
+            const active = b === triageBtn;
+            b.className = active
+              ? "triage-btn px-3 py-2 rounded-xl text-xs font-extrabold bg-rose-700 text-white cursor-pointer"
+              : "triage-btn px-3 py-2 rounded-xl text-xs font-bold bg-white text-slate-800 border border-slate-200 cursor-pointer";
+          });
+          updateTriage(key);
+          return;
+        }
+
+        const aiChip = e.target.closest(".ai-chip");
+        if (aiChip) {
+          const q = aiChip.getAttribute("data-ai-q");
+          appendAiMessage(q, true);
+          appendAiMessage(answerAiQuestion(q), false);
+          return;
+        }
+
+        const actionEl = e.target.closest("[data-action]");
+        if (actionEl) {
+          const act = actionEl.getAttribute("data-action");
+          const id = Number(actionEl.getAttribute("data-id"));
+          if (act === "toggle-save") {
+            if (savedIds.has(id)) {
+              savedIds.delete(id);
+              showToast("Tanda simpan dihapus");
+            } else {
+              savedIds.add(id);
+              showToast("Ditandai tersimpan di KakaoMap");
+            }
+            safeSetStorage(STORAGE_KEY, Array.from(savedIds));
+            renderCenters();
+          } else if (act === "open-kakao") {
+            if (!savedIds.has(id)) {
+              savedIds.add(id);
+              safeSetStorage(STORAGE_KEY, Array.from(savedIds));
+              renderCenters();
+            }
+          } else if (act === "copy-addr") {
+            const item = NODONGBU_CENTERS.find(c => c.id === id);
+            if (item) copyText(item.nameKr + " | " + item.roadAddr, "Alamat Korea berhasil disalin!");
+          } else if (act === "share-center") {
+            const item = NODONGBU_CENTERS.find(c => c.id === id);
+            if (item) {
+              const txt = item.nameId + " (" + item.nameKr + ")\nAlamat: " + item.roadAddr + "\nLoket: " + item.floor + "\nTelp: " + item.phone;
+              copyText(txt, "Info kantor Nodongbu disalin untuk dibagikan!");
+            }
+          } else if (act === "show-taxi") {
+            openTaxiModal(id);
+          } else if (act === "copy-text") {
+            copyText(actionEl.getAttribute("data-copy") || "", "Berhasil disalin!");
+          } else if (act === "speak-kr") {
+            speakKorean(actionEl.getAttribute("data-kr") || "");
+          } else if (act === "del-jt") {
+            const idx = Number(actionEl.getAttribute("data-idx"));
+            const arr = safeGetStorage(JT_KEY, []);
+            arr.splice(idx, 1);
+            safeSetStorage(JT_KEY, arr);
+            renderJobTracker();
+          }
+          return;
+        }
+
+        if (e.target.closest("#btnToggleFont")) {
+          document.documentElement.classList.toggle("large-font");
+          showToast(document.documentElement.classList.contains("large-font") ? "Ukuran huruf diperbesar" : "Ukuran huruf normal");
+        } else if (e.target.closest("#btnSharePortal")) {
+          copyText("Kawan E-9: Direktori 62 Kantor Nodongbu, 18 Shelter, 23 Masjid & Panduan Pindah Pabrik E-9: " + window.location.href, "Tautan portal disalin ke clipboard!");
+        } else if (e.target.closest("#btnOpenAiHeader") || e.target.closest("#btnOpenAiFloating")) {
+          document.getElementById("aiChatDrawer")?.classList.remove("hidden");
+        } else if (e.target.closest("#btnCloseAiChat")) {
+          document.getElementById("aiChatDrawer")?.classList.add("hidden");
+        } else if (e.target.closest("#btnCloseTaxiModal")) {
+          document.getElementById("taxiModal")?.classList.add("hidden");
+        } else if (e.target.closest("#btnCopyFromModal")) {
+          const addr = document.getElementById("taxiModalAddr")?.textContent || "";
+          copyText(addr, "Alamat Korea disalin!");
+        } else if (e.target.closest("#btnClearSearch")) {
+          searchQuery = "";
+          const inp = document.getElementById("searchInput");
+          if (inp) inp.value = "";
+          document.getElementById("btnClearSearch")?.classList.add("hidden");
+          renderCenters();
+        } else if (e.target.closest("#btnResetSaved")) {
+          savedIds.clear();
+          safeSetStorage(STORAGE_KEY, []);
+          renderCenters();
+          showToast("Progres simpan direset");
+        } else if (e.target.closest("#btnCopyFiltered")) {
+          const lines = getFilteredCenters().map(c => "#" + c.id + " " + c.nameId + " | " + c.roadAddr + " (" + c.phone + ")").join("\n");
+          copyText(lines, "Daftar kantor Nodongbu disalin!");
+        } else if (e.target.closest("#btnExportCsv")) {
+          const rows = [["ID", "Zona", "Nama_ID", "Nama_KR", "Alamat_KR", "Alamat_Latin", "Loket", "Telepon"]];
+          getFilteredCenters().forEach(c => rows.push([c.id, c.zoneLabel, c.nameId, c.nameKr, c.roadAddr, c.latinAddr, c.floor, c.phone]));
+          const csv = "\uFEFF" + rows.map(r => r.map(v => '"' + String(v).replace(/"/g, '""') + '"').join(",")).join("\n");
+          const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = "Direktori_Nodongbu_E9.csv";
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(url);
+          showToast("File CSV diunduh!");
+        } else if (e.target.closest("#btnAddJobTrack")) {
+          const nameInp = document.getElementById("jtFactoryName");
+          const statSel = document.getElementById("jtStatus");
+          const name = (nameInp?.value || "").trim();
+          if (!name) {
+            showToast("Isi nama pabrik terlebih dahulu");
+            return;
+          }
+          const arr = safeGetStorage(JT_KEY, []);
+          arr.unshift({ name, status: statSel?.value || "Menunggu", date: new Date().toISOString().slice(0, 10) });
+          safeSetStorage(JT_KEY, arr);
+          if (nameInp) nameInp.value = "";
+          renderJobTracker();
+          showToast("Catatan wawancara ditambahkan");
+        } else if (e.target.closest("#btnSpeakReqJob")) {
+          speakKorean(document.getElementById("reqJobKrText")?.textContent || "");
+        } else if (e.target.closest("#btnCopyReqJob")) {
+          copyText(document.getElementById("reqJobKrText")?.textContent || "", "Kalimat loket Nodongbu disalin!");
+        } else if (e.target.closest("#btnCopyGenMsg")) {
+          copyText(document.getElementById("genMsgKr")?.textContent || "", "Pesan sopan bahasa Korea disalin!");
+        } else if (e.target.closest("#btnCalcPesangon")) {
+          const wage = Number(document.getElementById("pesangonAvgWage")?.value || 0);
+          const yrs = Number(document.getElementById("pesangonYears")?.value || 0);
+          const mos = Number(document.getElementById("pesangonMonths")?.value || 0);
+          const totalMonths = yrs * 12 + mos;
+          const res = document.getElementById("pesangonResult");
+          if (res) {
+            res.classList.remove("hidden");
+            if (totalMonths < 12) {
+              res.innerHTML = "<strong class='text-rose-700'>Belum memenuhi syarat minimal 12 bulan (1 tahun penuh) di pabrik yang sama.</strong>";
+            } else {
+              const est = Math.round(wage * (totalMonths / 12));
+              res.innerHTML = "<strong class='text-emerald-950 text-sm'>Perkiraan Pesangon: " + est.toLocaleString("id-ID") + " KRW</strong><p class='text-slate-600'>Untuk masa kerja " + yrs + " tahun " + mos + " bulan.</p>";
+            }
+          }
+        } else if (e.target.closest("#btnCalcOvertime")) {
+          const hr = Number(document.getElementById("otHourly")?.value || 10320);
+          const ot = Number(document.getElementById("otHours")?.value || 0);
+          const hol = Number(document.getElementById("holidayHours")?.value || 0);
+          const night = Number(document.getElementById("nightHours")?.value || 0);
+          const base = Math.round(hr * 209);
+          const extra = Math.round(hr * 1.5 * (ot + hol) + hr * 0.5 * night);
+          const total = base + extra;
+          const res = document.getElementById("overtimeResult");
+          if (res) {
+            res.classList.remove("hidden");
+            res.innerHTML = "<strong class='text-blue-950 text-sm'>Total Gaji Kotor: " + total.toLocaleString("id-ID") + " KRW</strong><p class='text-slate-600'>Pokok (209 jam): " + base.toLocaleString("id-ID") + " KRW + Tunjangan Lembur/Libur/Malam: " + extra.toLocaleString("id-ID") + " KRW.</p>";
+          }
+        } else if (e.target.closest("#btnCalcMove14")) {
+          const val = document.getElementById("moveDateInput")?.value;
+          const res = document.getElementById("move14Result");
+          if (val && res) {
+            const d = new Date(val + "T00:00:00");
+            d.setDate(d.getDate() + 14);
+            res.classList.remove("hidden");
+            res.textContent = "Batas akhir lapor pindah alamat (14 hari): " + d.toISOString().slice(0, 10);
+          }
+        } else if (e.target.closest("#btnBackToTop")) {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      });
+
+      document.getElementById("searchInput")?.addEventListener("input", (e) => {
+        searchQuery = e.target.value;
+        document.getElementById("btnClearSearch")?.classList.toggle("hidden", !searchQuery.trim());
+        renderCenters();
+      });
+      document.getElementById("statusSelect")?.addEventListener("change", (e) => {
+        currentStatus = e.target.value;
+        renderCenters();
+      });
+      document.getElementById("shelterSearchInput")?.addEventListener("input", (e) => {
+        shelterQuery = e.target.value;
+        renderShelters();
+      });
+      document.getElementById("mosqueSearchInput")?.addEventListener("input", (e) => {
+        mosqueQuery = e.target.value;
+        renderMosques();
+      });
+      document.getElementById("kamusSearchInput")?.addEventListener("input", (e) => {
+        kamusQuery = e.target.value;
+        renderKamus();
+      });
+      document.getElementById("qnaSearchInput")?.addEventListener("input", (e) => {
+        qnaQuery = e.target.value;
+        renderQna();
+      });
+      document.getElementById("inputEndContractDate")?.addEventListener("change", (e) => {
+        const val = e.target.value;
+        const box = document.getElementById("resultD30Box");
+        if (!val || !box) return;
+        const d = new Date(val + "T00:00:00");
+        d.setMonth(d.getMonth() + 1);
+        box.innerHTML = "<strong class='text-blue-950 text-sm'>Batas Lapor D-30 (1 Bulan): " + d.toISOString().slice(0, 10) + "</strong><p class='text-slate-600 mt-0.5'>Wajib lapor pindah kerja ke Nodongbu sebelum tanggal tersebut.</p>";
+      });
+      document.getElementById("inputReportNodongbuDate")?.addEventListener("change", (e) => {
+        const val = e.target.value;
+        const box = document.getElementById("resultD90Box");
+        if (!val || !box) return;
+        const d = new Date(val + "T00:00:00");
+        d.setMonth(d.getMonth() + 3);
+        box.innerHTML = "<strong class='text-emerald-950 text-sm'>Batas Dapat Pabrik D-90 (3 Bulan): " + d.toISOString().slice(0, 10) + "</strong><p class='text-slate-600 mt-0.5'>Wajib tanda tangan kontrak baru & urus izin Imigrasi sebelum tanggal ini.</p>";
+      });
+      ["selectLeaveReason", "selectContractStage", "selectUsedQuota"].forEach(id => {
+        document.getElementById(id)?.addEventListener("change", updateQuotaOutput);
+      });
+      ["selectEntryPeriod", "selectInitialZone"].forEach(id => {
+        document.getElementById(id)?.addEventListener("change", updateZoningOutput);
+      });
+      ["reqFieldSelect", "reqCondSelect"].forEach(id => document.getElementById(id)?.addEventListener("change", updateReqJobText));
+      document.getElementById("reqAreaInput")?.addEventListener("input", updateReqJobText);
+      document.getElementById("msgTypeSelect")?.addEventListener("change", updateGenMsg);
+      ["msgWorkerName", "msgTargetDate"].forEach(id => document.getElementById(id)?.addEventListener("input", updateGenMsg));
+      ["fxWonInput", "fxRateInput"].forEach(id => document.getElementById(id)?.addEventListener("input", updateFxCalc));
+
+      document.getElementById("aiChatForm")?.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const inp = document.getElementById("aiChatInput");
+        const val = (inp?.value || "").trim();
+        if (!val) return;
+        appendAiMessage(val, true);
+        if (inp) inp.value = "";
+        appendAiMessage(answerAiQuestion(val), false);
+      });
+
+      window.addEventListener("scroll", () => {
+        const btn = document.getElementById("btnBackToTop");
+        if (!btn) return;
+        if (window.scrollY > 360) {
+          btn.classList.remove("hidden");
+          btn.classList.add("inline-flex");
+        } else {
+          btn.classList.add("hidden");
+          btn.classList.remove("inline-flex");
+        }
+      });
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initApp);
+    } else {
+      initApp();
+    }
+  </script>
+</body>
+</html>
