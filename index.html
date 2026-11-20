@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>Kawan E-9 🇰🇷🇮🇩: Direktori Nodongbu, Shelter &amp; Panduan di Korea Selatan</title>
+  <title>Kawan E-9: Direktori Nodongbu, Shelter &amp; Panduan di Korea Selatan</title>
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
   <style>
@@ -438,7 +438,7 @@
             <h2 class="text-base sm:text-lg font-extrabold text-slate-900 mt-1">Direktori Masjid &amp; Pusat Komunitas Muslim Korea Selatan</h2>
             <p class="text-xs text-slate-600 mt-0.5">Lengkap dengan alamat Korea, nomor kontak yang tersedia, serta tautan langsung KakaoMap &amp; Naver Map.</p>
           </div>
-          <span id="mosqueSummary" class="text-xs font-extrabold text-emerald-900 bg-emerald-50 px-3 py-1.5 rounded-xl border border-emerald-200 shrink-0">23 Masjid Terdaftar</span>
+          <span id="mosqueSummary" class="text-xs font-extrabold text-emerald-900 bg-emerald-50 px-3 py-1.5 rounded-xl border border-emerald-200 shrink-0">30 Masjid Terdaftar</span>
         </div>
 
         <div class="relative">
@@ -1087,11 +1087,11 @@
       { city: "Chungnam · Asan", name: "Masjid Al-Falah Asan (Sinchang)", addr: "충청남도 아산시 신창면 온천대로 785", phone: "" },
       { city: "Daejeon · Dong-gu", name: "Masjid An Noor Daejeon (Dong-gu)", addr: "대전광역시 동구 대전로 770", phone: "" },
       { city: "Jeonbuk · Jeonju", name: "Jeonju Abu Bakr Al-Seddiq Mosque", addr: "전북특별자치도 전주시 덕진구 백제대로 567", phone: "" },
-      { city: "Gwangju · Gwangsan", name: "Gwangju Islamic Center (Wol곡/Hanam)", addr: "광주광역시 광산구 사암로 216번길 18", phone: "" },
+      { city: "Gwangju · Gwangsan", name: "Gwangju Islamic Center (Wolgok / Hanam)", addr: "광주광역시 광산구 사암로 216번길 18", phone: "" },
       { city: "Gwangju · Pyeongdong", name: "Masjid AL-Ishlah Pyeongdong", addr: "광주광역시 광산구 평동로 851, 선양빌딩, 5층", phone: "" },
       { city: "Daegu · Dalseo", name: "Daegu Islamic Center (Seongseo)", addr: "대구광역시 달서구 성서공단로 217", phone: "" },
       { city: "Gyeongbuk · Gumi", name: "Masjid Al-Amin Gumi (Indong)", addr: "경상북도 구미시 인동중앙로 3길 22", phone: "" },
-      { city: "Gyeongbuk · Pohang", name: "Masjid Ar-rahman Pohang", addr: "경북 포항시 북구 신흥동 823-21", phone: "" },
+      { city: "Gyeongbuk · Pohang", name: "Masjid Ar-Rahman Pohang", addr: "경북 포항시 북구 신흥동 823-21", phone: "" },
       { city: "Gyeongnam · Gimhae", name: "Masjid Al-Barokah Gimhae", addr: "경상남도 김해시 분성로 317번길 7 1층", phone: "" },
       { city: "Gyeongnam · Changwon", name: "Masjid Sunan Kalijogo", addr: "경상남도 창원시 진해구 남의로98 (두동1층)", phone: "" },
       { city: "Gyeongnam · Haman", name: "Masjid Baitussalam Haman", addr: "경상남도 함안군 가야읍 말산리 601-4", phone: "010-6754-7150" },
@@ -1250,14 +1250,51 @@
       } catch (e) {}
     }
 
+    let lastHolidayRendered = "";
+
+    function getSeoulTimeParts() {
+      const now = new Date();
+      try {
+        const fmt = new Intl.DateTimeFormat("en-CA", {
+          timeZone: "Asia/Seoul",
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+          hour: "2-digit",
+          minute: "2-digit",
+          weekday: "short",
+          hour12: false
+        });
+        const parts = {};
+        fmt.formatToParts(now).forEach(p => { parts[p.type] = p.value; });
+        const hourNum = Number(parts.hour === "24" ? 0 : parts.hour);
+        const minNum = Number(parts.minute || 0);
+        const isWeekend = parts.weekday === "Sat" || parts.weekday === "Sun";
+        const isoToday = parts.year + "-" + parts.month + "-" + parts.day;
+        return {
+          hh: String(hourNum).padStart(2, "0"),
+          mm: String(minNum).padStart(2, "0"),
+          mins: hourNum * 60 + minNum,
+          isWeekend,
+          isoToday
+        };
+      } catch (e) {
+        const utc = now.getTime() + now.getTimezoneOffset() * 60000;
+        const kst = new Date(utc + 9 * 3600000);
+        const day = kst.getDay();
+        return {
+          hh: String(kst.getHours()).padStart(2, "0"),
+          mm: String(kst.getMinutes()).padStart(2, "0"),
+          mins: kst.getHours() * 60 + kst.getMinutes(),
+          isWeekend: day === 0 || day === 6,
+          isoToday: kst.getFullYear() + "-" + String(kst.getMonth() + 1).padStart(2, "0") + "-" + String(kst.getDate()).padStart(2, "0")
+        };
+      }
+    }
+
     function updateKstClock() {
       try {
-        const now = new Date();
-        const kst = new Date(now.toLocaleString("en-US", { timeZone: "Asia/Seoul" }));
-        const hh = String(kst.getHours()).padStart(2, "0");
-        const mm = String(kst.getMinutes()).padStart(2, "0");
-        const day = kst.getDay();
-        const mins = kst.getHours() * 60 + kst.getMinutes();
+        const { hh, mm, mins, isWeekend, isoToday } = getSeoulTimeParts();
 
         const clockText = document.getElementById("islandClockText");
         if (clockText) clockText.textContent = hh + ":" + mm + " KST";
@@ -1266,7 +1303,6 @@
         const subEl = document.getElementById("kstStatusSub");
         const iconWrap = document.getElementById("kstIconWrap");
 
-        const isWeekend = day === 0 || day === 6;
         const isLunch = !isWeekend && mins >= 720 && mins < 780;
         const isOpen = !isWeekend && mins >= 540 && mins < 1080 && !isLunch;
 
@@ -1286,10 +1322,10 @@
           }
         }
 
-        const isoToday = kst.getFullYear() + "-" + String(kst.getMonth() + 1).padStart(2, "0") + "-" + String(kst.getDate()).padStart(2, "0");
         const nextHol = KR_HOLIDAYS.find(h => h.date >= isoToday) || KR_HOLIDAYS[0];
         const holBadge = document.getElementById("kstHolidayBadge");
-        if (holBadge && nextHol) {
+        if (holBadge && nextHol && lastHolidayRendered !== nextHol.date) {
+          lastHolidayRendered = nextHol.date;
           holBadge.innerHTML = '<i data-lucide="calendar" class="w-3 h-3 text-amber-400"></i><span>Libur: ' + nextHol.date + ' (' + nextHol.name.split(" (")[0] + ')</span>';
           refreshIcons();
         }
@@ -1419,6 +1455,10 @@
       });
       if (badge) badge.textContent = list.length + " dari " + SHELTER_CENTERS.length + " Pusat";
       if (!grid) return;
+      if (list.length === 0) {
+        grid.innerHTML = '<div class="col-span-full liquid-glass squircle p-8 text-center space-y-1"><p class="text-sm font-bold text-slate-800">Tidak ditemukan shelter atau pusat bantuan yang sesuai.</p><p class="text-xs text-slate-500">Coba kata kunci kota lain seperti Ansan, Cheonan, Incheon, atau Gimhae.</p></div>';
+        return;
+      }
 
       grid.innerHTML = list.map(s => {
         const enc = encodeURIComponent(s.roadAddr);
@@ -1475,6 +1515,10 @@
       });
       if (summary) summary.textContent = list.length + " dari " + MOSQUES.length + " Masjid";
       if (!grid) return;
+      if (list.length === 0) {
+        grid.innerHTML = '<div class="col-span-full bg-white/90 rounded-2xl border border-slate-200 p-8 text-center space-y-1"><p class="text-sm font-bold text-slate-800">Tidak ditemukan masjid yang sesuai.</p><p class="text-xs text-slate-500">Coba cari nama kota seperti Ansan, Hwaseong, Pyeongtaek, Eumseong, atau Busan.</p></div>';
+        return;
+      }
 
       grid.innerHTML = list.map(m => {
         const enc = encodeURIComponent(m.addr);
@@ -1638,8 +1682,8 @@
     }
 
     function updateFxCalc() {
-      const won = Number(document.getElementById("fxWonInput")?.value || 0);
-      const rate = Number(document.getElementById("fxRateInput")?.value || 11.3);
+      const won = Math.max(0, Number(document.getElementById("fxWonInput")?.value || 0));
+      const rate = Math.max(0, Number(document.getElementById("fxRateInput")?.value || 11.3));
       const box = document.getElementById("fxResultBox");
       if (box) box.textContent = won.toLocaleString("id-ID") + " KRW ≈ Rp " + Math.round(won * rate).toLocaleString("id-ID");
     }
@@ -1703,7 +1747,7 @@
         return "Masa pencarian kerja D-90 dihitung sejak tanggal pendaftaran di Nodongbu. Wajib dapat pabrik baru dan izin Imigrasi (근무처변경허가) sebelum hari ke-90 berakhir.";
       }
       if (q.includes("masjid") || q.includes("geumwang")) {
-        return "Buka tab Alamat Masjid untuk melihat 23 titik masjid di Korea (termasuk Masjid Al-Hidayah Geumwang Eumseong, Ansan, Hwaseong, Cheonan, Gimhae, dan Itaewon).";
+        return "Buka tab Alamat Masjid untuk melihat 30 titik masjid di Korea (termasuk Masjid Al-Hidayah Geumwang Eumseong, Ansan, Hwaseong, Cheonan, Gimhae, dan Itaewon).";
       }
       return "Silakan cek tab terkait di menu atas atau hubungi layanan konseling gratis Bahasa Indonesia di 1577-0071 (Shelter Ansan) atau 1350 (Kemnaker Korea).";
     }
@@ -1725,20 +1769,25 @@
       updateKstClock();
       setInterval(updateKstClock, 30000);
 
-      renderCenters();
-      renderShelters();
-      renderMosques();
-      renderMfg();
-      renderKamus();
-      renderQna();
-      renderJobTracker();
-      updateQuotaOutput();
-      updateZoningOutput();
-      updateReqJobText();
-      updateGenMsg();
-      updateTriage("GAJI");
-      updateFxCalc();
-      refreshIcons();
+      const steps = [
+        renderCenters,
+        renderShelters,
+        renderMosques,
+        renderMfg,
+        renderKamus,
+        renderQna,
+        renderJobTracker,
+        updateQuotaOutput,
+        updateZoningOutput,
+        updateReqJobText,
+        updateGenMsg,
+        () => updateTriage("GAJI"),
+        updateFxCalc,
+        refreshIcons
+      ];
+      steps.forEach(fn => {
+        try { fn(); } catch (err) {}
+      });
 
       document.addEventListener("click", (e) => {
         const tabBtn = e.target.closest("[data-main-tab]");
@@ -1854,7 +1903,16 @@
           document.documentElement.classList.toggle("large-font");
           showToast(document.documentElement.classList.contains("large-font") ? "Ukuran huruf diperbesar" : "Ukuran huruf normal");
         } else if (e.target.closest("#btnSharePortal")) {
-          copyText("Kawan E-9: Direktori 62 Kantor Nodongbu, 18 Shelter, 23 Masjid & Panduan Pindah Pabrik E-9: " + window.location.href, "Tautan portal disalin ke clipboard!");
+          const shareTitle = "Kawan E-9: Direktori Nodongbu, Shelter & Panduan di Korea Selatan";
+          const shareText = "Kawan E-9: Direktori 62 Kantor Nodongbu, 18 Shelter, 30 Masjid & Panduan Pindah Pabrik E-9";
+          const shareUrl = window.location.href;
+          if (navigator.share && /^https?:/i.test(shareUrl)) {
+            navigator.share({ title: shareTitle, text: shareText, url: shareUrl }).catch(() => {
+              copyText(shareText + ": " + shareUrl, "Tautan portal disalin ke clipboard!");
+            });
+          } else {
+            copyText(shareText + ": " + shareUrl, "Tautan portal disalin ke clipboard!");
+          }
         } else if (e.target.closest("#btnOpenAiHeader") || e.target.closest("#btnOpenAiFloating")) {
           document.getElementById("aiChatDrawer")?.classList.remove("hidden");
         } else if (e.target.closest("#btnCloseAiChat")) {
@@ -1913,9 +1971,9 @@
         } else if (e.target.closest("#btnCopyGenMsg")) {
           copyText(document.getElementById("genMsgKr")?.textContent || "", "Pesan sopan bahasa Korea disalin!");
         } else if (e.target.closest("#btnCalcPesangon")) {
-          const wage = Number(document.getElementById("pesangonAvgWage")?.value || 0);
-          const yrs = Number(document.getElementById("pesangonYears")?.value || 0);
-          const mos = Number(document.getElementById("pesangonMonths")?.value || 0);
+          const wage = Math.max(0, Number(document.getElementById("pesangonAvgWage")?.value || 0));
+          const yrs = Math.max(0, Number(document.getElementById("pesangonYears")?.value || 0));
+          const mos = Math.max(0, Number(document.getElementById("pesangonMonths")?.value || 0));
           const totalMonths = yrs * 12 + mos;
           const res = document.getElementById("pesangonResult");
           if (res) {
@@ -1928,10 +1986,10 @@
             }
           }
         } else if (e.target.closest("#btnCalcOvertime")) {
-          const hr = Number(document.getElementById("otHourly")?.value || 10320);
-          const ot = Number(document.getElementById("otHours")?.value || 0);
-          const hol = Number(document.getElementById("holidayHours")?.value || 0);
-          const night = Number(document.getElementById("nightHours")?.value || 0);
+          const hr = Math.max(0, Number(document.getElementById("otHourly")?.value || 10320));
+          const ot = Math.max(0, Number(document.getElementById("otHours")?.value || 0));
+          const hol = Math.max(0, Number(document.getElementById("holidayHours")?.value || 0));
+          const night = Math.max(0, Number(document.getElementById("nightHours")?.value || 0));
           const base = Math.round(hr * 209);
           const extra = Math.round(hr * 1.5 * (ot + hol) + hr * 0.5 * night);
           const total = base + extra;
@@ -1944,10 +2002,11 @@
           const val = document.getElementById("moveDateInput")?.value;
           const res = document.getElementById("move14Result");
           if (val && res) {
-            const d = new Date(val + "T00:00:00");
-            d.setDate(d.getDate() + 14);
+            const [y, m, d] = val.split("-").map(Number);
+            const dt = new Date(Date.UTC(y, m - 1, d + 14));
+            const iso = dt.getUTCFullYear() + "-" + String(dt.getUTCMonth() + 1).padStart(2, "0") + "-" + String(dt.getUTCDate()).padStart(2, "0");
             res.classList.remove("hidden");
-            res.textContent = "Batas akhir lapor pindah alamat (14 hari): " + d.toISOString().slice(0, 10);
+            res.textContent = "Batas akhir lapor pindah alamat (14 hari): " + iso;
           }
         } else if (e.target.closest("#btnBackToTop")) {
           window.scrollTo({ top: 0, behavior: "smooth" });
@@ -1979,21 +2038,42 @@
         qnaQuery = e.target.value;
         renderQna();
       });
+      function addSafeMonthsISO(isoStr, monthsToAdd) {
+        const [y, m, d] = isoStr.split("-").map(Number);
+        const targetMonthIdx = (m - 1) + monthsToAdd;
+        const targetYear = y + Math.floor(targetMonthIdx / 12);
+        const targetMonth = ((targetMonthIdx % 12) + 12) % 12;
+        const maxDay = new Date(Date.UTC(targetYear, targetMonth + 1, 0)).getUTCDate();
+        const safeDay = Math.min(d, maxDay);
+        return String(targetYear) + "-" + String(targetMonth + 1).padStart(2, "0") + "-" + String(safeDay).padStart(2, "0");
+      }
+
       document.getElementById("inputEndContractDate")?.addEventListener("change", (e) => {
         const val = e.target.value;
         const box = document.getElementById("resultD30Box");
         if (!val || !box) return;
-        const d = new Date(val + "T00:00:00");
-        d.setMonth(d.getMonth() + 1);
-        box.innerHTML = "<strong class='text-blue-950 text-sm'>Batas Lapor D-30 (1 Bulan): " + d.toISOString().slice(0, 10) + "</strong><p class='text-slate-600 mt-0.5'>Wajib lapor pindah kerja ke Nodongbu sebelum tanggal tersebut.</p>";
+        const resIso = addSafeMonthsISO(val, 1);
+        box.innerHTML = "<strong class='text-blue-950 text-sm'>Batas Lapor D-30 (1 Bulan): " + resIso + "</strong><p class='text-slate-600 mt-0.5'>Wajib lapor pindah kerja ke Nodongbu sebelum tanggal tersebut.</p>";
       });
       document.getElementById("inputReportNodongbuDate")?.addEventListener("change", (e) => {
         const val = e.target.value;
         const box = document.getElementById("resultD90Box");
         if (!val || !box) return;
-        const d = new Date(val + "T00:00:00");
-        d.setMonth(d.getMonth() + 3);
-        box.innerHTML = "<strong class='text-emerald-950 text-sm'>Batas Dapat Pabrik D-90 (3 Bulan): " + d.toISOString().slice(0, 10) + "</strong><p class='text-slate-600 mt-0.5'>Wajib tanda tangan kontrak baru & urus izin Imigrasi sebelum tanggal ini.</p>";
+        const resIso = addSafeMonthsISO(val, 3);
+        box.innerHTML = "<strong class='text-emerald-950 text-sm'>Batas Dapat Pabrik D-90 (3 Bulan): " + resIso + "</strong><p class='text-slate-600 mt-0.5'>Wajib tanda tangan kontrak baru & urus izin Imigrasi sebelum tanggal ini.</p>";
+      });
+
+      document.getElementById("taxiModal")?.addEventListener("click", (e) => {
+        if (e.target.id === "taxiModal") {
+          document.getElementById("taxiModal")?.classList.add("hidden");
+        }
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          document.getElementById("taxiModal")?.classList.add("hidden");
+          document.getElementById("aiChatDrawer")?.classList.add("hidden");
+        }
       });
       ["selectLeaveReason", "selectContractStage", "selectUsedQuota"].forEach(id => {
         document.getElementById(id)?.addEventListener("change", updateQuotaOutput);
