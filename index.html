@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>Kawan E-9: Direktori Nodongbu, Shelter &amp; Panduan di Korea Selatan</title>
+  <title>Direktori Tempat &amp; Panduan Umum</title>
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
   <style>
@@ -37,6 +37,23 @@
     html.large-font {
       font-size: 112%;
     }
+
+    html.tinted-glass .liquid-glass {
+      background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.56) 0%,
+        rgba(241, 245, 249, 0.42) 54%,
+        rgba(226, 232, 240, 0.48) 100%
+      );
+    }
+    html.tinted-glass .liquid-subglass {
+      background: linear-gradient(
+        150deg,
+        rgba(255, 255, 255, 0.48) 0%,
+        rgba(241, 245, 249, 0.34) 100%
+      );
+    }
+
 
     /* iPhone ProMotion Tactile & Window Motion */
     .motion-120 {
@@ -293,62 +310,27 @@
     }
   </style>
 </head>
-<body class="ios-ambient-wash min-h-screen pb-28">
+<body class="ios-ambient-wash min-h-screen pb-32">
 
-  <!-- Compact iPhone-Style Emergency & Support Strip -->
+  <!-- iOS-Style Top Status Card with Large Clock in Right Corner -->
   <div class="max-w-5xl mx-auto px-3.5 sm:px-5 pt-3.5">
-    <div class="liquid-glass squircle px-3.5 py-3 space-y-2">
-      <div class="flex items-start justify-between gap-2.5">
-        <div class="flex items-start gap-1.5 min-w-0">
-          <i data-lucide="phone-call" class="w-3.5 h-3.5 text-rose-600 shrink-0 mt-0.5"></i>
-          <div class="leading-tight min-w-0">
-            <div class="text-xs font-black text-slate-900">Kontak Cepat Penting</div>
-            <div class="text-[11px] font-semibold text-slate-600 whitespace-nowrap">Ketuk untuk telepon</div>
-          </div>
+    <div class="liquid-glass squircle px-4 py-3.5 space-y-2.5">
+      <div class="flex items-center justify-between gap-3">
+        <div class="flex items-center gap-2.5 min-w-0">
+          <span id="topKstIconBadge" class="w-7 h-7 rounded-full bg-blue-500/15 text-blue-700 flex items-center justify-center shrink-0">
+            <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+          </span>
+          <span id="topKstStatusHeadline" class="text-xs sm:text-sm font-black text-slate-900 truncate">Di Luar Jam Loket</span>
         </div>
-        <button id="btnCopyHotlines" type="button" class="motion-120 inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/30 hover:bg-white text-slate-700 border-transparent border-transparent/90 text-[10px] font-bold whitespace-nowrap shrink-0 cursor-pointer">
-          <i data-lucide="copy" class="w-2.5 h-2.5 shrink-0"></i>
-          <span>Salin Nomor</span>
-        </button>
+        <div class="text-right shrink-0 leading-none">
+          <div id="topIosBigClock" class="text-2xl sm:text-3xl font-black tracking-tight text-slate-950 tabular-nums">22:12</div>
+          <div class="text-[10px] font-extrabold uppercase tracking-wider text-slate-500 mt-0.5">KST</div>
+        </div>
       </div>
 
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-1.5 text-xs">
-        <a href="tel:1577-0071" class="tactile-press motion-120 min-h-[46px] py-1 flex items-center gap-2 px-2.5 rounded-[24px] bg-amber-100/55 hover:bg-amber-100/80 backdrop-blur-md text-amber-950 border-transparent border-transparent/80 font-extrabold">
-          <span class="w-6 h-6 rounded-full bg-amber-200/80 text-amber-900 flex items-center justify-center shrink-0">
-            <i data-lucide="life-buoy" class="w-3.5 h-3.5"></i>
-          </span>
-          <span class="flex flex-col justify-center text-left leading-tight gap-0.5 min-w-0">
-            <span class="truncate">1577-0071</span>
-            <span class="font-semibold text-[10px] text-amber-800 truncate">Shelter Ansan</span>
-          </span>
-        </a>
-        <a href="tel:1350" class="tactile-press motion-120 min-h-[46px] py-1 flex items-center gap-2 px-2.5 rounded-[24px] bg-sky-100/55 hover:bg-sky-100/80 backdrop-blur-md text-sky-950 border-transparent border-transparent/80 font-extrabold">
-          <span class="w-6 h-6 rounded-full bg-blue-200/80 text-blue-900 flex items-center justify-center shrink-0">
-            <i data-lucide="briefcase" class="w-3.5 h-3.5"></i>
-          </span>
-          <span class="flex flex-col justify-center text-left leading-tight gap-0.5 min-w-0">
-            <span class="truncate">1350</span>
-            <span class="font-semibold text-[10px] text-blue-800 truncate">MOEL Buruh</span>
-          </span>
-        </a>
-        <a href="tel:1345" class="tactile-press motion-120 min-h-[46px] py-1 flex items-center gap-2 px-2.5 rounded-[24px] bg-emerald-100/55 hover:bg-emerald-100/80 backdrop-blur-md text-emerald-950 border-transparent border-transparent/80 font-extrabold">
-          <span class="w-6 h-6 rounded-full bg-emerald-200/80 text-emerald-900 flex items-center justify-center shrink-0">
-            <i data-lucide="file-check-2" class="w-3.5 h-3.5"></i>
-          </span>
-          <span class="flex flex-col justify-center text-left leading-tight gap-0.5 min-w-0">
-            <span class="truncate leading-tight">1345</span>
-            <span class="font-semibold text-[10px] text-emerald-800 leading-tight pb-[1px]">Imigrasi</span>
-          </span>
-        </a>
-        <a href="tel:02-222-49000" class="tactile-press motion-120 min-h-[46px] py-1 flex items-center gap-2 px-2.5 rounded-[24px] bg-rose-100/55 hover:bg-rose-100/80 backdrop-blur-md text-rose-950 border-transparent border-transparent/80 font-extrabold">
-          <span class="w-6 h-6 rounded-full bg-rose-200/80 text-rose-900 flex items-center justify-center shrink-0">
-            <i data-lucide="building" class="w-3.5 h-3.5"></i>
-          </span>
-          <span class="flex flex-col justify-center text-left leading-tight gap-0.5 min-w-0">
-            <span class="truncate">02-222-49000</span>
-            <span class="font-semibold text-[10px] text-rose-800 truncate">KBRI Seoul</span>
-          </span>
-        </a>
+      <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/60 text-slate-800 text-[11px] font-extrabold max-w-full">
+        <i data-lucide="calendar" class="w-3.5 h-3.5 text-amber-700 shrink-0"></i>
+        <span id="topNextHolidayText" class="truncate">Libur Terdekat: 2026-12-25 (Hari Natal)</span>
       </div>
     </div>
   </div>
@@ -361,18 +343,22 @@
           <div class="flex flex-wrap items-center gap-2">
             <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-400 text-slate-950 text-[11px] font-black">
               <i data-lucide="compass" class="w-3 h-3"></i>
-              <span>노동부 &amp; 쉼터 안내</span>
+              <span>고용·쉼터·모스크</span>
             </span>
             <span id="islandClockChip" class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/10 text-emerald-300 text-[11px] font-bold border-transparent border-transparent/10">
               <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
               <span id="islandClockText">Memuat KST...</span>
             </span>
           </div>
-          <h1 class="text-lg sm:text-2xl font-extrabold tracking-tight leading-snug text-white">Kawan E-9: Portal Mandiri &amp; Panduan di Korea Selatan</h1>
+          <h1 class="text-lg sm:text-2xl font-extrabold tracking-tight leading-snug text-white">Direktori Mandiri &amp; Panduan Umum</h1>
           <p class="text-xs text-slate-300 leading-relaxed">Direktori mandiri kontak darurat, Nodongbu, shelter &amp; masjid di Korea Selatan. Bukan situs resmi instansi mana pun · 100% gratis &amp; non-komersial.</p>
         </div>
 
         <div class="flex flex-wrap items-center gap-2 shrink-0">
+          <button id="btnToggleGlassTone" type="button" class="motion-120 inline-flex items-center gap-1 px-3 py-2 rounded-full bg-white/10 hover:bg-white/20 text-sky-300 border-transparent border-transparent/15 text-xs font-extrabold cursor-pointer" title="Mode Kontras Kaca">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+            <span>Kaca</span>
+          </button>
           <button id="btnToggleFont" type="button" class="motion-120 inline-flex items-center gap-1 px-3 py-2 rounded-full bg-white/10 hover:bg-white/20 text-amber-300 border-transparent border-transparent/15 text-xs font-extrabold cursor-pointer">
             <i data-lucide="type" class="w-3.5 h-3.5"></i>
             <span>A+</span>
@@ -381,21 +367,17 @@
             <i data-lucide="share-2" class="w-3.5 h-3.5"></i>
             <span>Bagikan</span>
           </button>
-          <button id="btnOpenAiHeader" type="button" class="motion-120 inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-black shadow-none cursor-pointer">
-            <i data-lucide="bot" class="w-3.5 h-3.5"></i>
-            <span>Tanya AI</span>
-          </button>
-        </div>
+</div>
       </div>
 
-      <!-- Ringkasan Direktori & Panduan E-9 Capsule -->
+      <!-- Ringkasan Direktori & Panduan Capsule -->
       <div class="bg-white/10 rounded-[24px] px-4 py-2.5 border-transparent border-transparent/10 flex flex-wrap items-center justify-between gap-3">
         <div class="flex items-center gap-2.5 min-w-0">
           <div class="w-8 h-8 rounded-[18px] bg-emerald-400/20 border-transparent border-transparent/30 flex items-center justify-center shrink-0">
             <i data-lucide="compass" class="w-4 h-4 text-emerald-300"></i>
           </div>
           <div class="text-xs min-w-0">
-            <div class="text-slate-300 text-[11px] font-semibold">Cakupan Direktori Mandiri E-9</div>
+            <div class="text-slate-300 text-[11px] font-semibold">Cakupan Direktori Mandiri</div>
             <div class="font-extrabold text-xs sm:text-sm text-white">62 Nodongbu · 18 Shelter · <span id="heroMosqueCount">45</span> Masjid</div>
           </div>
         </div>
@@ -406,13 +388,13 @@
     </div>
 
     <!-- Swipeable iPhone UI Feature Deck (Inspired by Vivo Activity Showcase & iPhone UI) -->
-    <section aria-label="Geser Sorotan Panduan E-9" class="mt-3 space-y-2.5">
+    <section aria-label="Geser Sorotan Direktori" class="mt-3 space-y-2.5">
       <div class="flex items-center justify-between px-1">
         <span class="inline-flex items-center gap-1.5 text-[11px] font-black text-slate-800">
           <i data-lucide="move-horizontal" class="w-3.5 h-3.5 text-blue-700"></i>
-          <span>Geser Kartu Sorotan E-9</span>
+          <span>Geser Kartu Sorotan</span>
         </span>
-        <span id="showcaseSlideCounter" class="text-[11px] font-bold text-slate-500">1 / 4</span>
+        <span id="showcaseSlideCounter" class="text-[11px] font-bold text-slate-600">1 / 4</span>
       </div>
 
       <div id="showcaseTrack" class="flex overflow-x-auto snap-x snap-mandatory gap-3 pb-1 scroll-smooth select-none" style="scrollbar-width:none;-webkit-overflow-scrolling:touch;">
@@ -421,14 +403,14 @@
           <div class="h-20 sm:h-24 bg-gradient-to-br from-blue-500/25 via-slate-900 to-emerald-600/25 px-5 py-4 flex flex-col justify-between border-transparent border-transparent/10">
             <div class="flex items-center justify-between gap-2">
               <span class="px-2.5 py-0.5 rounded-full bg-amber-400 text-slate-950 text-[10px] font-black uppercase whitespace-nowrap shrink-0">Nodongbu &amp; Shelter</span>
-              <span class="text-[11px] font-bold text-amber-300 whitespace-nowrap shrink-0">DIREKTORI KOREA</span>
+              <span class="text-[11px] font-bold text-amber-300 whitespace-nowrap shrink-0">DIREKTORI UMUM</span>
             </div>
             <div class="text-xs font-medium text-slate-300">Alamat jalan Korea resmi, kontak &amp; peta lokasi</div>
           </div>
           <div class="p-4 text-center space-y-1.5">
             <h2 class="text-xl sm:text-2xl font-black tracking-tight text-white">Alamat Nodongbu &amp; Shelter</h2>
             <p class="text-xs sm:text-sm font-semibold text-emerald-300">Kantor Ketenagakerjaan (고용복지플러스센터) &amp; Pusat Bantuan Pekerja</p>
-            <p class="text-xs text-slate-300 max-w-xl mx-auto leading-relaxed">Cari kantor Nodongbu sesuai alamat pabrik terakhir serta informasi shelter dan pusat bantuan di Korea Selatan.</p>
+            <p class="text-xs text-slate-300 max-w-xl mx-auto leading-relaxed">Cari kantor Nodongbu sesuai alamat tempat kerja terakhir serta informasi shelter dan pusat bantuan di Korea Selatan.</p>
             <div class="pt-1 flex flex-wrap items-center justify-center gap-2">
               <button type="button" data-main-tab="TAB_DIREKTORI" class="motion-120 inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-amber-400 hover:bg-amber-300 text-slate-950 text-xs font-black cursor-pointer">
                 <span>Alamat Nodongbu</span>
@@ -442,44 +424,44 @@
           </div>
         </article>
 
-        <!-- Slide 2: D-30 & D-90 -->
+        <!-- Slide 2: Zonasi & Referensi Wilayah -->
         <article class="snap-center shrink-0 w-full dynamic-island squircle overflow-hidden text-white">
           <div class="h-20 sm:h-24 bg-gradient-to-br from-amber-500/25 via-slate-900 to-blue-600/25 px-5 py-4 flex flex-col justify-between border-transparent border-transparent/10">
             <div class="flex items-center justify-between gap-2">
-              <span class="px-2.5 py-0.5 rounded-full bg-blue-400 text-slate-950 text-[10px] font-black uppercase whitespace-nowrap shrink-0">Pindah Pabrik</span>
-              <span class="text-[11px] font-bold text-amber-300 whitespace-nowrap shrink-0">PASAL 25 AYAT 3</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-blue-400 text-slate-950 text-[10px] font-black uppercase whitespace-nowrap shrink-0">Referensi Wilayah</span>
+              <span class="text-[11px] font-bold text-amber-300 whitespace-nowrap shrink-0">5 ZONA WILAYAH</span>
             </div>
-            <div class="text-xs font-medium text-slate-300 truncate">Hitung batas lapor D-30 dan cari kerja D-90</div>
+            <div class="text-xs font-medium text-slate-300 truncate">Pembagian 5 zona ketenagakerjaan &amp; checklist dokumen</div>
           </div>
           <div class="p-4 text-center space-y-1.5">
-            <h2 class="text-xl sm:text-2xl font-black tracking-tight text-white">Cek Tenggat D-30 &amp; D-90</h2>
-            <p class="text-xs sm:text-sm font-semibold text-emerald-300">1 Bulan Lapor Nodongbu · 3 Bulan Cari Pabrik &amp; Izin Imigrasi</p>
-            <p class="text-xs text-slate-300 max-w-xl mx-auto leading-relaxed">Pastikan status D-30 tercatat di EPS/Nodongbu dan selesaikan izin perubahan tempat kerja di Imigrasi sebelum hari ke-90.</p>
+            <h2 class="text-xl sm:text-2xl font-black tracking-tight text-white">Referensi 5 Zona &amp; Dokumen</h2>
+            <p class="text-xs sm:text-sm font-semibold text-emerald-300">Sudogwon · Chungcheong · Jeolla·Jeju · Gyeongbuk·Gangwon · Gyeongnam</p>
+            <p class="text-xs text-slate-300 max-w-xl mx-auto leading-relaxed">Lihat pembagian zona wilayah kantor ketenagakerjaan di Korea Selatan serta daftar kelengkapan dokumen umum.</p>
             <div class="pt-1">
-              <button type="button" data-main-tab="TAB_KALKULATOR" class="motion-120 inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-amber-400 hover:bg-amber-300 text-slate-950 text-xs font-black cursor-pointer">
-                <span>Buka Kalkulator Pindah Pabrik</span>
+              <button type="button" data-main-tab="TAB_ZONASI" class="motion-120 inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-amber-400 hover:bg-amber-300 text-slate-950 text-xs font-black cursor-pointer">
+                <span>Lihat Pembagian 5 Zona</span>
                 <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
               </button>
             </div>
           </div>
         </article>
 
-        <!-- Slide 3: Asuransi & Upah -->
+        <!-- Slide 3: Estimasi Gaji & Kurs -->
         <article class="snap-center shrink-0 w-full dynamic-island squircle overflow-hidden text-white">
           <div class="h-20 sm:h-24 bg-gradient-to-br from-emerald-500/25 via-slate-900 to-teal-600/25 px-5 py-4 flex flex-col justify-between border-transparent border-transparent/10">
             <div class="flex items-center justify-between gap-2">
-              <span class="px-2.5 py-0.5 rounded-full bg-emerald-400 text-slate-950 text-[10px] font-black uppercase whitespace-nowrap shrink-0">Asuransi &amp; Upah</span>
-              <span class="text-[11px] font-bold text-emerald-300 whitespace-nowrap shrink-0">BOHEOM · PESANGON</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-emerald-400 text-slate-950 text-[10px] font-black uppercase whitespace-nowrap shrink-0">Kalkulator &amp; Kurs</span>
+              <span class="text-[11px] font-bold text-emerald-300 whitespace-nowrap shrink-0">SIMULASI · KRW-IDR</span>
             </div>
-            <div class="text-xs font-medium text-slate-300 truncate">Asuransi kepulangan, pesangon &amp; kecelakaan kerja</div>
+            <div class="text-xs font-medium text-slate-300 truncate">Simulasi estimasi gaji, lembur &amp; konversi KRW ke IDR</div>
           </div>
           <div class="p-4 text-center space-y-1.5">
-            <h2 class="text-xl sm:text-2xl font-black tracking-tight text-white">Asuransi (Boheom) &amp; Hak Gaji</h2>
-            <p class="text-xs sm:text-sm font-semibold text-emerald-300">Daftar Kepulangan ≤ 3 Bulan · Pesangon Min. 1 Tahun · Pelunasan 14 Hari</p>
-            <p class="text-xs text-slate-300 max-w-xl mx-auto leading-relaxed">Simpan slip gaji &amp; kontrak (SLC), pahami aturan potongan asrama/makan, dan klaim Sanjae ke COMWEL jika terjadi kecelakaan kerja.</p>
+            <h2 class="text-xl sm:text-2xl font-black tracking-tight text-white">Simulasi Gaji &amp; Kurs KRW</h2>
+            <p class="text-xs sm:text-sm font-semibold text-emerald-300">Estimasi Lembur · Konversi Won ke Rupiah · Pengingat 14 Hari Pindah Alamat</p>
+            <p class="text-xs text-slate-300 max-w-xl mx-auto leading-relaxed">Alat bantu hitung estimasi kasar berdasarkan jam kerja dan referensi kurs harian.</p>
             <div class="pt-1">
               <button type="button" data-main-tab="TAB_BANTUAN" class="motion-120 inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-emerald-400 hover:bg-emerald-300 text-slate-950 text-xs font-black cursor-pointer">
-                <span>Buka Kalkulator Gaji &amp; Q&amp;A</span>
+                <span>Buka Kalkulator Gaji &amp; Kurs</span>
                 <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
               </button>
             </div>
@@ -527,30 +509,8 @@
   <!-- Main Workspace -->
   <main class="max-w-5xl mx-auto px-3.5 sm:px-5 pt-4 space-y-4">
 
-    <!-- Full-Width Mobile-Safe KST Nodongbu Schedule Status Card & Quick Map Search -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
-      <div id="kstStatusCard" class="liquid-glass squircle p-4 w-full flex flex-col gap-2.5">
-        <div class="flex items-start gap-3 w-full">
-          <div id="kstIconWrap" class="w-9 h-9 rounded-[18px] bg-slate-100 border-transparent border-transparent flex items-center justify-center shrink-0 mt-0.5">
-            <i data-lucide="clock" class="w-4 h-4 text-slate-700"></i>
-          </div>
-          <div class="flex-1 min-w-0">
-            <h2 id="kstStatusTitle" class="text-sm font-extrabold text-slate-900 leading-snug">Memeriksa Jadwal Loket Nodongbu (KST)...</h2>
-            <p id="kstStatusSub" class="text-xs text-slate-600 mt-0.5 leading-relaxed">Loket buka Senin–Jumat pukul 09.00–18.00 KST (istirahat makan siang 12.00–13.00 KST).</p>
-          </div>
-        </div>
-        <div class="pt-2 border-transparent border-transparent/70 space-y-1.5 text-xs">
-          <div class="flex flex-wrap items-center justify-between gap-2">
-            <span class="text-slate-500 font-medium">Hari Libur Terdekat:</span>
-            <span id="kstHolidayBadge" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-900 text-white font-bold text-[11px]">
-              <i data-lucide="calendar" class="w-3 h-3 text-amber-400"></i>
-              <span>Memuat...</span>
-            </span>
-          </div>
-          <div id="kstUpcomingHolidaysList" class="text-[11px] text-slate-600 font-medium leading-snug"></div>
-        </div>
-      </div>
-
+    <!-- Quick KakaoMap Search Card (No Duplicate Loket Status Card) -->
+    <div class="w-full">
       <div class="liquid-glass squircle p-4 w-full flex flex-col justify-between gap-2.5">
         <div class="flex items-center justify-between gap-2">
           <div class="flex items-center gap-1.5 text-xs font-extrabold text-slate-800">
@@ -623,10 +583,14 @@
     <section aria-label="Pencocok Wilayah Kerja" class="liquid-glass squircle p-4 space-y-3 text-xs">
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
         <div>
-          <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-indigo-100 text-indigo-950 font-black text-[10px]">
-            <i data-lucide="sparkles" class="w-3 h-3"></i>
-            <span>PENCOCOK WILAYAH OTOMATIS</span>
-          </span>
+          <div class="flex flex-wrap items-center gap-1.5">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-indigo-100 text-indigo-950 font-black text-[10px]">
+              <i data-lucide="sparkles" class="w-3 h-3"></i>
+              <span>PENCOCOK WILAYAH OTOMATIS</span>
+            </span>
+            <span id="iosLiveReadinessPill" class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-slate-900/90 text-emerald-300 font-bold text-[10px]">iOS Quick Bar</span>
+
+          </div>
           <h2 class="text-sm font-extrabold text-slate-900 mt-1">Cek Nodongbu, Shelter &amp; Masjid Berdasarkan Kota / Kawasan Pabrik</h2>
         </div>
         <div class="flex flex-wrap items-center gap-1.5">
@@ -657,7 +621,7 @@
     </section>
 
     <!-- 8 Main Navigation Tabs (Compact Horizontal Strip on Mobile, Grid on Desktop) -->
-    <nav aria-label="Menu Utama Kawan E-9" class="flex overflow-x-auto flex-nowrap lg:grid lg:grid-cols-8 gap-1.5 pb-1 lg:pb-0" style="scrollbar-width:none;">
+    <nav aria-label="Menu Utama" class="flex overflow-x-auto flex-nowrap lg:grid lg:grid-cols-8 gap-1.5 pb-1 lg:pb-0" style="scrollbar-width:none;">
       <button type="button" data-main-tab="TAB_DIREKTORI" class="main-nav-tab motion-120 tab-pill-active shrink-0 lg:shrink px-3 py-2 lg:p-2.5 squircle-sm text-[11px] lg:text-xs font-extrabold flex items-center lg:flex-col justify-center gap-1.5 lg:gap-1 text-center cursor-pointer whitespace-nowrap">
         <i data-lucide="building-2" class="w-3.5 h-3.5 lg:w-4 lg:h-4"></i>
         <span>Alamat Nodongbu</span>
@@ -675,8 +639,8 @@
       </button>
       <button type="button" data-main-tab="TAB_KALKULATOR" class="main-nav-tab motion-120 tab-pill-inactive shrink-0 lg:shrink px-3 py-2 lg:p-2.5 squircle-sm text-[11px] lg:text-xs font-bold flex items-center lg:flex-col justify-center gap-1.5 lg:gap-1 text-center cursor-pointer whitespace-nowrap">
         <i data-lucide="timer" class="w-3.5 h-3.5 lg:w-4 lg:h-4 text-blue-600"></i>
-        <span>Cek Pindah Pabrik</span>
-        <span class="hidden lg:inline text-[10px] font-medium opacity-75">D-30·D-90·쿼터</span>
+        <span>Dokumen &amp; Catatan</span>
+        <span class="hidden lg:inline text-[10px] font-medium opacity-75">서류·메모</span>
       </button>
       <button type="button" data-main-tab="TAB_ZONASI" class="main-nav-tab motion-120 tab-pill-inactive shrink-0 lg:shrink px-3 py-2 lg:p-2.5 squircle-sm text-[11px] lg:text-xs font-bold flex items-center lg:flex-col justify-center gap-1.5 lg:gap-1 text-center cursor-pointer whitespace-nowrap">
         <i data-lucide="map" class="w-3.5 h-3.5 lg:w-4 lg:h-4 text-amber-600"></i>
@@ -695,8 +659,8 @@
       </button>
       <button type="button" data-main-tab="TAB_BANTUAN" class="main-nav-tab motion-120 tab-pill-inactive shrink-0 lg:shrink px-3 py-2 lg:p-2.5 squircle-sm text-[11px] lg:text-xs font-bold flex items-center lg:flex-col justify-center gap-1.5 lg:gap-1 text-center cursor-pointer whitespace-nowrap">
         <i data-lucide="calculator" class="w-3.5 h-3.5 lg:w-4 lg:h-4 text-rose-600"></i>
-        <span>Gaji, Visa &amp; Q&amp;A</span>
-        <span class="hidden lg:inline text-[10px] font-medium opacity-75">퇴직금·체류·질문</span>
+        <span>Gaji &amp; Kurs</span>
+        <span class="hidden lg:inline text-[10px] font-medium opacity-75">급여·환율</span>
       </button>
     </nav>
 
@@ -707,19 +671,21 @@
       <section class="liquid-glass squircle p-4 sm:p-5 space-y-3.5">
         <div class="flex flex-col gap-2.5 border-transparent border-transparent/70 pb-3">
           <div>
-            <h2 class="text-base sm:text-lg font-extrabold text-slate-900 flex items-center gap-2">
-              <i data-lucide="building-2" class="w-5 h-5 text-blue-700 shrink-0"></i>
+            <h2 class="text-base sm:text-lg font-extrabold text-slate-900 flex items-center gap-2.5">
+              <span class="w-7 h-7 rounded-xl bg-blue-100/90 text-blue-700 flex items-center justify-center shrink-0">
+                <i data-lucide="building-2" class="w-4 h-4"></i>
+              </span>
               <span>Alamat Nodongbu (고용복지+센터 외국인력팀)</span>
             </h2>
-            <p class="text-xs text-slate-600 mt-0.5">Pelaporan pindah pabrik wajib dilakukan di kantor Nodongbu sesuai <strong>alamat pabrik terakhir</strong> Anda.</p>
+            <p class="text-xs text-slate-600 mt-0.5">Pelaporan pindah tempat kerja wajib dilakukan di kantor Nodongbu sesuai <strong>alamat tempat kerja terakhir</strong> Anda.</p>
           </div>
           <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-center gap-1.5">
-            <button id="btnCopyFiltered" type="button" class="motion-120 inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-[18px] text-xs font-bold bg-blue-50/90 hover:bg-blue-100 text-blue-900 border-transparent border-transparent cursor-pointer">
-              <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+            <button id="btnCopyFiltered" type="button" class="motion-120 inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-[18px] text-[11px] sm:text-xs font-bold bg-blue-50/90 hover:bg-blue-100 text-blue-900 border-transparent border-transparent whitespace-nowrap cursor-pointer">
+              <i data-lucide="copy" class="w-3.5 h-3.5 shrink-0"></i>
               <span>Salin Hasil</span>
             </button>
-            <button id="btnCopySaved" type="button" class="motion-120 inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-[18px] text-xs font-bold bg-emerald-50/90 hover:bg-emerald-100 text-emerald-950 border-transparent border-transparent cursor-pointer">
-              <i data-lucide="bookmark-check" class="w-3.5 h-3.5"></i>
+            <button id="btnCopySaved" type="button" class="motion-120 inline-flex items-center justify-center gap-1 px-2.5 py-1.5 rounded-[18px] text-[11px] sm:text-xs font-bold bg-emerald-50/90 hover:bg-emerald-100 text-emerald-950 border-transparent border-transparent whitespace-nowrap cursor-pointer">
+              <i data-lucide="bookmark-check" class="w-3.5 h-3.5 shrink-0"></i>
               <span>Salin Tersimpan</span>
             </button>
             <button id="btnExportCsv" type="button" class="motion-120 inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-[18px] text-xs font-bold bg-slate-900 hover:bg-slate-800 text-white cursor-pointer">
@@ -729,6 +695,10 @@
             <button id="btnToggleAppleShelf" type="button" class="motion-120 inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-[18px] text-xs font-extrabold bg-slate-900 text-white border-transparent border-transparent cursor-pointer">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-amber-300 shrink-0"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg>
               <span>Mode Geser</span>
+            </button>
+            <button id="btnToggleCompactCard" type="button" class="motion-120 inline-flex items-center justify-center gap-1 px-2.5 py-1.5 rounded-[18px] text-xs font-bold bg-white/35 hover:bg-white text-slate-800 border border-slate-900/15 cursor-pointer" title="Mode Fokus Alamat Saja">
+              <i data-lucide="layout-grid" class="w-3.5 h-3.5 text-blue-700 shrink-0"></i>
+              <span>Ringkas</span>
             </button>
             <button id="btnResetSaved" type="button" class="motion-120 inline-flex items-center justify-center gap-1 px-2.5 py-1.5 rounded-[18px] text-xs font-semibold text-slate-600 hover:bg-white/25 border-transparent border-transparent/80 cursor-pointer">
               <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i>
@@ -743,17 +713,18 @@
             <input id="searchInput" type="text" placeholder="Cari kota, provinsi, atau nama kantor..." class="w-full pl-10 pr-16 py-2.5 text-sm rounded-[18px] border-transparent border-transparent/90 bg-white/30 focus:outline-none focus:ring-0 focus:ring-0">
             <button id="btnClearSearch" type="button" class="hidden absolute right-2.5 top-2 text-xs font-bold px-2 py-1 rounded-lg bg-slate-200 text-slate-700 hover:bg-slate-300 cursor-pointer">Hapus</button>
           </div>
-          <div>
-            <select id="statusSelect" class="w-full px-3 py-2.5 text-sm rounded-[18px] border-transparent border-transparent/90 bg-white/30 font-semibold text-slate-800 focus:outline-none focus:ring-0 focus:ring-0">
-              <option value="ALL">Semua Status (62)</option>
-              <option value="UNSAVED">Belum Disimpan</option>
-              <option value="SAVED">Sudah Disimpan</option>
-            </select>
+          <div class="flex items-center">
+            <div id="iosStatusSeg" class="w-full grid grid-cols-3 gap-1 p-1.5 rounded-[18px] bg-slate-900/10 text-xs font-extrabold">
+              <button type="button" data-ios-status="ALL" class="ios-seg-btn py-2 rounded-[14px] bg-slate-900 text-white cursor-pointer">Semua</button>
+              <button type="button" data-ios-status="UNSAVED" class="ios-seg-btn py-2 rounded-[14px] text-slate-700 hover:bg-white/50 cursor-pointer">Belum</button>
+              <button type="button" data-ios-status="SAVED" class="ios-seg-btn py-2 rounded-[14px] text-slate-700 hover:bg-white/50 cursor-pointer">Tersimpan</button>
+            </div>
           </div>
         </div>
+        <div id="recentSearchRow" class="hidden flex items-center gap-1.5 overflow-x-auto flex-nowrap sm:flex-wrap text-[11px]"></div>
 
-        <div class="flex items-center gap-1.5 overflow-x-auto flex-nowrap sm:flex-wrap pb-1 sm:pb-0">
-          <span class="text-[11px] font-bold text-slate-500 mr-0.5 shrink-0">Kota:</span>
+        <div class="flex items-center gap-1.5 overflow-x-auto flex-nowrap sm:flex-wrap py-1.5 sm:py-1">
+          <span class="text-[11px] font-bold text-slate-700 mr-1 py-1.5 leading-normal shrink-0">Kota:</span>
           <button type="button" data-quick-city="Ansan" class="quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Ansan</button>
           <button type="button" data-quick-city="Hwaseong" class="quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Hwaseong</button>
           <button type="button" data-quick-city="Pyeongtaek" class="quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Pyeongtaek</button>
@@ -800,11 +771,13 @@
       <section class="liquid-glass squircle p-4 sm:p-5 space-y-3.5">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 border-transparent border-transparent/70 pb-3">
           <div>
-            <h2 class="text-base sm:text-lg font-extrabold text-slate-900 flex items-center gap-2">
-              <i data-lucide="home" class="w-5 h-5 text-emerald-700 shrink-0"></i>
+            <h2 class="text-base sm:text-lg font-extrabold text-slate-900 flex items-center gap-2.5">
+              <span class="w-7 h-7 rounded-xl bg-emerald-100/90 text-emerald-700 flex items-center justify-center shrink-0">
+                <i data-lucide="home" class="w-4 h-4"></i>
+              </span>
               <span>Alamat Shelter &amp; Pusat Bantuan Pekerja Asing (외국인근로자지원센터)</span>
             </h2>
-            <p class="text-xs text-slate-600 mt-0.5">Konsultasi ketenagakerjaan, penerjemah Bahasa Indonesia, mediasi pabrik, dan tempat singgah sementara saat proses pindah kerja.</p>
+            <p class="text-xs text-slate-600 mt-0.5">Konsultasi ketenagakerjaan, penerjemah Bahasa Indonesia, mediasi pabrik, dan tempat singgah sementara saat proses pindah kerja. <strong>Jam umum:</strong> Sen–Jum 09.00–18.00 KST (hubungi dulu bila ke luar kota atau akhir pekan).</p>
           </div>
           <div class="flex flex-wrap gap-1.5 shrink-0">
             <a href="tel:1577-0071" class="tactile-press motion-120 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-[18px] bg-blue-700 hover:bg-blue-800 text-white text-xs font-extrabold">
@@ -821,13 +794,14 @@
         <div class="flex flex-col sm:flex-row gap-2.5 items-stretch sm:items-center">
           <div class="relative flex-1">
             <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-3"></i>
-            <input id="shelterSearchInput" type="text" placeholder="Cari kota shelter atau kontak (Ansan, Cheonan, Ibu Arzety, Incheon, Busan, Gimhae)..." class="w-full pl-10 pr-3.5 py-2.5 text-sm rounded-[18px] border-transparent border-transparent/90 bg-white/30 focus:outline-none focus:ring-0 focus:ring-0">
+            <input id="shelterSearchInput" type="text" placeholder="Cari kota shelter atau kontak (Ansan, Cheonan, Incheon, Busan, Gimhae)..." class="w-full pl-10 pr-16 py-2.5 text-sm rounded-[18px] border-transparent border-transparent/90 bg-white/30 focus:outline-none focus:ring-0 focus:ring-0">
+            <button id="btnClearShelterSearch" type="button" class="hidden absolute right-2.5 top-2 text-xs font-bold px-2 py-1 rounded-lg bg-slate-200 text-slate-700 hover:bg-slate-300 cursor-pointer">Hapus</button>
           </div>
           <span id="shelterCountBadge" class="liquid-subglass text-xs font-extrabold text-slate-700 px-3.5 py-2.5 rounded-[18px] text-center shrink-0">18 Pusat Bantuan</span>
         </div>
 
-        <div class="flex items-center gap-1.5 overflow-x-auto flex-nowrap sm:flex-wrap pb-1 sm:pb-0 text-xs">
-          <span class="text-[11px] font-bold text-slate-500 mr-0.5 shrink-0">Wilayah:</span>
+        <div class="flex items-center gap-1.5 overflow-x-auto flex-nowrap sm:flex-wrap py-1.5 sm:py-1 text-xs">
+          <span class="text-[11px] font-bold text-slate-700 mr-1 py-1.5 leading-normal shrink-0">Wilayah:</span>
           <button type="button" data-shelter-city="" class="shelter-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-bold bg-slate-900 text-white cursor-pointer">Semua</button>
           <button type="button" data-shelter-city="Ansan" class="shelter-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Ansan</button>
           <button type="button" data-shelter-city="Cheonan" class="shelter-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Cheonan</button>
@@ -864,12 +838,13 @@
 
         <div class="relative">
           <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-3"></i>
-          <input id="mosqueSearchInput" type="text" placeholder="Cari kota atau nama masjid (Geumwang, Mugeuk, Al-Barokah, Hwaseong, Changwon, Gumi, Ansan)..." class="w-full pl-10 pr-3.5 py-2.5 text-sm rounded-[18px] border-transparent border-transparent/90 bg-white/30 focus:outline-none focus:ring-0 focus:ring-0">
+          <input id="mosqueSearchInput" type="text" placeholder="Cari kota atau nama masjid (Geumwang, Mugeuk, Al-Barokah, Hwaseong, Changwon, Gumi, Ansan)..." class="w-full pl-10 pr-16 py-2.5 text-sm rounded-[18px] border-transparent border-transparent/90 bg-white/30 focus:outline-none focus:ring-0 focus:ring-0">
+          <button id="btnClearMosqueSearch" type="button" class="hidden absolute right-2.5 top-2 text-xs font-bold px-2 py-1 rounded-lg bg-slate-200 text-slate-700 hover:bg-slate-300 cursor-pointer">Hapus</button>
         </div>
 
         <div class="space-y-2 text-xs">
           <div class="flex items-center gap-1.5 overflow-x-auto flex-nowrap sm:flex-wrap pb-1 sm:pb-0" style="scrollbar-width:none;">
-            <span class="text-[11px] font-extrabold text-slate-700 mr-0.5 shrink-0">Provinsi:</span>
+            <span class="text-[11px] font-extrabold text-slate-700 mr-1 py-1.5 leading-normal shrink-0">Provinsi:</span>
             <button type="button" data-mosque-prov="" class="mosque-prov-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-bold bg-emerald-700 text-white cursor-pointer">Semua</button>
             <button type="button" data-mosque-prov="Gyeonggi" class="mosque-prov-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Gyeonggi</button>
             <button type="button" data-mosque-prov="Gyeongnam" class="mosque-prov-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Gyeongnam</button>
@@ -910,52 +885,30 @@
     </div>
 
     <!-- =================================================================== -->
-    <!-- TAB 4: CEK PINDAH PABRIK (D-30, D-90, KUOTA, 6 LANGKAH & TRACKER)   -->
+    <!-- TAB 4: CEK PINDAH PABRIK (masa pelaporan awal, masa pengajuan berlaku, KUOTA, 6 LANGKAH & TRACKER)   -->
     <!-- =================================================================== -->
     <div id="view_TAB_KALKULATOR" class="tab-panel-enter hidden space-y-4">
-      <section class="liquid-glass squircle p-4 sm:p-5 space-y-4">
-        <div>
-          <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-bold bg-blue-100 text-blue-900">
-            <i data-lucide="timer" class="w-3.5 h-3.5"></i>
-            <span>PASAL 25 AYAT 3 UU PEKERJA ASING (법 제25조 제3항)</span>
-          </span>
-          <h2 class="text-base sm:text-lg font-extrabold text-slate-900 mt-1">Kalkulator Tenggat Waktu Pindah Pabrik (D-30 &amp; D-90)</h2>
-          <p class="text-xs text-slate-600 mt-0.5">Hitung batas maksimal <strong>1 Bulan (D-30)</strong> untuk melapor ke Nodongbu dan <strong>3 Bulan (D-90)</strong> untuk memperoleh pabrik baru &amp; izin Imigrasi.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="liquid-subglass rounded-[24px] p-4 space-y-3">
-            <div class="flex items-center justify-between gap-2">
-              <label for="inputEndContractDate" class="block text-xs font-extrabold text-slate-900">1. Tanggal Berakhir Kontrak (근로계약 종료일):</label>
-              <button type="button" data-today-target="inputEndContractDate" class="motion-120 px-2 py-0.5 rounded-full bg-blue-100 hover:bg-blue-200 text-blue-900 text-[10px] font-extrabold shrink-0 cursor-pointer">Hari Ini (KST)</button>
-            </div>
-            <input id="inputEndContractDate" type="date" class="w-full px-3 py-2.5 text-sm rounded-[18px] border-transparent border-transparent/90 bg-white/35 font-semibold">
-            <div id="resultD30Box" class="bg-white/75 rounded-[18px] p-3 border-transparent border-transparent/90 text-xs text-slate-600">Pilih tanggal berakhirnya kontrak kerja untuk menghitung tenggat D-30 &amp; sisa hari KST.</div>
-          </div>
-
-          <div class="liquid-subglass rounded-[24px] p-4 space-y-3">
-            <div class="flex items-center justify-between gap-2">
-              <label for="inputReportNodongbuDate" class="block text-xs font-extrabold text-slate-900">2. Tanggal Lapor Nodongbu (사업장변경 신청일):</label>
-              <button type="button" data-today-target="inputReportNodongbuDate" class="motion-120 px-2 py-0.5 rounded-full bg-emerald-100 hover:bg-emerald-200 text-emerald-900 text-[10px] font-extrabold shrink-0 cursor-pointer">Hari Ini (KST)</button>
-            </div>
-            <input id="inputReportNodongbuDate" type="date" class="w-full px-3 py-2.5 text-sm rounded-[18px] border-transparent border-transparent/90 bg-white/35 font-semibold">
-            <div id="resultD90Box" class="bg-white/75 rounded-[18px] p-3 border-transparent border-transparent/90 text-xs text-slate-600">Pilih tanggal pengajuan di Nodongbu untuk menghitung tenggat D-90 &amp; sisa hari KST.</div>
-          </div>
-        </div>
+      <section class="liquid-glass squircle p-4 sm:p-5 space-y-2">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-bold bg-blue-100 text-blue-900">
+          <i data-lucide="info" class="w-3.5 h-3.5"></i>
+          <span>INFORMASI REFERENSI</span>
+        </span>
+        <h2 class="text-base sm:text-lg font-extrabold text-slate-900 mt-1">Catatan Prosedur &amp; Dokumen Umum</h2>
+        <p class="text-xs text-slate-600 leading-relaxed">Perhitungan tenggat waktu khusus dihapus agar halaman tetap netral sebagai referensi alamat dan informasi umum. Untuk ketentuan tanggal resmi terkini, rujuk langsung ke kanal resmi EPS, Work24, atau HiKorea.</p>
       </section>
 
-      <!-- Kuota Pindah Pabrik -->
+      <!-- Kuota Pindah Tempat Kerja -->
       <section class="liquid-glass squircle p-4 sm:p-5 space-y-4">
         <h3 class="text-base font-extrabold text-slate-900 flex items-center gap-2">
-          <i data-lucide="list-checks" class="w-4 h-4 text-purple-700"></i>
-          <span>Cek Kuota Pindah Pabrik (3 Kali / 2 Kali) &amp; Alasan Tanpa Potong Kuota</span>
+          <i data-lucide="list-checks" class="w-5 h-5 text-purple-700 shrink-0"></i>
+          <span>Cek Kuota Pindah Kerja (3 Kali / 2 Kali) &amp; Alasan Tanpa Potong Kuota</span>
         </h3>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
           <div>
-            <label for="selectLeaveReason" class="block font-bold text-slate-800 mb-1">Alasan Keluar Pabrik:</label>
+            <label for="selectLeaveReason" class="block font-bold text-slate-800 mb-1">Alasan Keluar Tempat Kerja:</label>
             <select id="selectLeaveReason" class="w-full px-3 py-2.5 rounded-[18px] border-transparent border-transparent/90 bg-white/35 font-semibold">
               <option value="MUTUAL_OR_EXPIRED">Kesepakatan Bersama / Kontrak Habis (합의해지 / 계약만료)</option>
-              <option value="COMPANY_FAULT">Kesalahan Pabrik: Gaji Macet / Tutup / Kekerasan / Pelanggaran Mess</option>
+              <option value="COMPANY_FAULT">Kesalahan Tempat Kerja: Gaji Macet / Tutup / Kekerasan / Pelanggaran Mess</option>
               <option value="INJURY_ILLNESS">Kecelakaan Kerja / Sakit Tidak Bisa Lanjut (산재 / 상해·질병)</option>
             </select>
           </div>
@@ -983,7 +936,7 @@
       <section class="liquid-glass squircle p-4 sm:p-5 space-y-3">
         <div class="flex flex-wrap items-center justify-between gap-2">
           <h3 class="text-base font-extrabold text-slate-900 flex items-center gap-2">
-            <i data-lucide="file-check-2" class="w-4 h-4 text-blue-700"></i>
+            <i data-lucide="file-check-2" class="w-5 h-5 text-blue-700 shrink-0"></i>
             <span>Checklist Dokumen &amp; Bukti Pendukung (Tersimpan Lokal)</span>
           </h3>
           <button id="btnCopyDocChecklist" type="button" class="motion-120 inline-flex items-center gap-1 px-3 py-1 rounded-[18px] bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold cursor-pointer">
@@ -997,121 +950,38 @@
       <!-- 6-Step Official Job Transfer Checklist -->
       <section class="liquid-glass squircle p-4 sm:p-5 space-y-3">
         <h3 class="text-base font-extrabold text-slate-900 flex items-center gap-2">
-          <i data-lucide="check-square" class="w-4 h-4 text-emerald-700"></i>
-          <span>Checklist 6 Langkah Resmi Pindah Pabrik E-9</span>
+          <i data-lucide="check-square" class="w-5 h-5 text-emerald-700 shrink-0"></i>
+          <span>Checklist 6 Langkah Umum Administrasi Kerja</span>
         </h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5 text-xs">
           <div class="liquid-subglass rounded-[24px] p-3.5">
-            <div class="font-extrabold text-slate-900">1. Pastikan Laporan Keluar Kerja (고용변동신고)</div>
+            <div class="font-extrabold text-slate-900">1. Pastikan Laporan Perubahan Status Kerja (고용변동신고)</div>
             <p class="text-slate-600 mt-1">Perusahaan wajib melaporkan pemutusan hubungan kerja maksimal 15 hari sejak Anda keluar. Cek lewat EPS, Work24, atau hubungi 1350.</p>
           </div>
           <div class="liquid-subglass rounded-[24px] p-3.5">
-            <div class="font-extrabold text-slate-900">2. Datang ke Nodongbu Sebelum D-30 Habis</div>
+            <div class="font-extrabold text-slate-900">2. Datang ke Kantor Nodongbu Sesuai Jadwal Pelaporan</div>
             <p class="text-slate-600 mt-1">Bawa ARC asli, paspor asli, nomor HP aktif, serta bukti (mutasi gaji, foto mess, atau surat dokter) bila keluar tanpa tanda tangan bos.</p>
           </div>
           <div class="liquid-subglass rounded-[24px] p-3.5">
-            <div class="font-extrabold text-slate-900">3. Daftar Pencari Kerja (구직등록필증) &amp; Mulai D-90</div>
-            <p class="text-slate-600 mt-1">Pilih sektor/sub-sektor dan syarat kerja yang diinginkan. Masa cari kerja 3 bulan (D-90) berlaku sejak pengajuan tercatat.</p>
+            <div class="font-extrabold text-slate-900">3. Pendaftaran Pencari Kerja (구직등록필증) &amp; Proses Penempatan</div>
+            <p class="text-slate-600 mt-1">Pilih sektor/sub-sektor dan syarat kerja yang diinginkan sesuai ketentuan yang berlaku sejak pengajuan tercatat.</p>
           </div>
           <div class="liquid-subglass rounded-[24px] p-3.5">
             <div class="font-extrabold text-slate-900">4. Pantau SMS &amp; Panggilan Lowongan (알선)</div>
-            <p class="text-slate-600 mt-1">Pastikan nomor HP selalu aktif dan angkat panggilan/SMS resmi dari Nodongbu atau pabrik yang mengundang wawancara.</p>
+            <p class="text-slate-600 mt-1">Pastikan nomor HP selalu aktif dan angkat panggilan/SMS resmi dari Nodongbu atau tempat kerja yang mengundang wawancara.</p>
           </div>
           <div class="liquid-subglass rounded-[24px] p-3.5">
             <div class="font-extrabold text-slate-900">5. Tanda Tangan Kontrak &amp; Izin Imigrasi (근무처변경허가)</div>
-            <p class="text-slate-600 mt-1">Setelah mendapat pabrik baru dan 고용허가서, urus izin perubahan tempat kerja di Imigrasi sebelum hari ke-90 berakhir.</p>
+            <p class="text-slate-600 mt-1">Setelah mendapat tempat kerja baru dan 고용허가서, urus izin perubahan tempat kerja di Imigrasi sesuai tenggat yang ditetapkan.</p>
           </div>
           <div class="rounded-[24px] p-3.5 border-transparent border-transparent bg-rose-50/75">
-            <div class="font-extrabold text-rose-900">6. Dilarang Kerja Serabutan Sebelum Izin Terbit</div>
-            <p class="text-rose-800 mt-1">Bekerja paruh waktu atau harian tanpa izin resmi Imigrasi selama masa D-90 melanggar aturan keimigrasian.</p>
+            <div class="font-extrabold text-rose-900">6. Patuhi Ketentuan Izin Kerja Sebelum Mulai Bekerja</div>
+            <p class="text-rose-800 mt-1">Bekerja di luar ketentuan atau tanpa izin resmi Imigrasi sebelum izin terbit dapat melanggar aturan keimigrasian.</p>
           </div>
         </div>
       </section>
 
-      <!-- Pelacak Wawancara Pabrik D-90 -->
-      <section class="liquid-glass squircle p-4 sm:p-5 space-y-3">
-        <div class="flex flex-wrap items-center justify-between gap-2">
-          <h3 class="text-base font-extrabold text-slate-900 flex items-center gap-2">
-            <i data-lucide="clipboard-list" class="w-4 h-4 text-blue-700"></i>
-            <span>Pelacak Wawancara Pabrik (D-90 Job Tracker)</span>
-          </h3>
-          <div class="flex flex-wrap items-center gap-1.5 text-xs">
-            <button id="btnCopyBackupSummary" type="button" class="motion-120 inline-flex items-center gap-1 px-2.5 py-1 rounded-[18px] bg-blue-50/90 hover:bg-blue-100 text-blue-900 border-transparent border-transparent font-bold cursor-pointer">
-              <i data-lucide="copy" class="w-3.5 h-3.5"></i>
-              <span>Salin Ringkasan</span>
-            </button>
-            <button id="btnExportBackupJson" type="button" class="motion-120 inline-flex items-center gap-1 px-2.5 py-1 rounded-[18px] bg-slate-900 hover:bg-slate-800 text-white font-bold cursor-pointer">
-              <i data-lucide="download" class="w-3.5 h-3.5"></i>
-              <span>Unduh Backup</span>
-            </button>
-            <label class="motion-120 inline-flex items-center gap-1 px-2.5 py-1 rounded-[18px] bg-emerald-50/90 hover:bg-emerald-100 text-emerald-950 border-transparent border-transparent font-bold cursor-pointer">
-              <i data-lucide="upload" class="w-3.5 h-3.5"></i>
-              <span>Pulihkan</span>
-              <input id="inputRestoreBackup" type="file" accept=".json,.txt" class="hidden">
-            </label>
-          </div>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs">
-          <input id="jtFactoryName" type="text" placeholder="Nama Pabrik / Kota" class="px-3 py-2 rounded-[18px] border-transparent border-transparent/90 bg-white/35">
-          <select id="jtStatus" class="px-3 py-2 rounded-[18px] border-transparent border-transparent/90 bg-white/35 font-semibold">
-            <option value="Menunggu">Menunggu Kabar</option>
-            <option value="Wawancara">Sudah Wawancara</option>
-            <option value="Diterima">Diterima</option>
-            <option value="Ditolak">Tidak Cocok</option>
-          </select>
-          <button id="btnAddJobTrack" type="button" class="motion-120 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-[18px] bg-slate-900 hover:bg-slate-800 text-white font-extrabold cursor-pointer">
-            <i data-lucide="plus" class="w-3.5 h-3.5"></i>
-            <span>Tambah Catatan</span>
-          </button>
-        </div>
-        <div id="jobTrackList" class="space-y-1.5 text-xs"></div>
-      </section>
 
-      <!-- Otomatisasi Cloud Online & Tautan Lintas Perangkat -->
-      <section class="liquid-glass squircle p-4 sm:p-5 space-y-3 text-xs">
-        <div class="flex flex-wrap items-center justify-between gap-2 border-transparent border-transparent/70 pb-2.5">
-          <div>
-            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-sky-100 text-sky-950 font-black text-[10px]">
-              <i data-lucide="globe" class="w-3 h-3"></i>
-              <span>CLOUD &amp; OTOMATISASI</span>
-            </span>
-            <h3 class="text-base font-extrabold text-slate-900 mt-1">Sinkronisasi Cloud Online &amp; Tautan Lintas Perangkat</h3>
-          </div>
-          <span id="cloudSyncStatusBadge" class="px-2.5 py-1 rounded-full bg-slate-900 text-emerald-300 text-[10px] font-bold">Lokal Siap · Cloud Opsional</span>
-        </div>
-
-        <p class="text-slate-600 leading-relaxed">Simpan data tersimpan (Nodongbu, tanggal D-30/D-90, checklist &amp; catatan wawancara) ke <strong>Tautan Cloud/URL</strong> instan atau hubungkan <strong>JSONBin Cloud</strong> untuk sinkronisasi online antar-perangkat.</p>
-
-        <div class="flex flex-wrap gap-2">
-          <button id="btnCopyCloudLink" type="button" class="motion-120 inline-flex items-center gap-1.5 px-3.5 py-2 rounded-[18px] bg-blue-600 hover:bg-blue-500 text-white font-extrabold cursor-pointer">
-            <i data-lucide="link" class="w-3.5 h-3.5"></i>
-            <span>Salin Link Data Instan</span>
-          </button>
-          <button id="btnCloudPush" type="button" class="motion-120 inline-flex items-center gap-1.5 px-3.5 py-2 rounded-[18px] bg-emerald-700 hover:bg-emerald-800 text-white font-extrabold cursor-pointer">
-            <i data-lucide="upload" class="w-3.5 h-3.5"></i>
-            <span>Unggah ke Cloud</span>
-          </button>
-          <button id="btnCloudPull" type="button" class="motion-120 inline-flex items-center gap-1.5 px-3.5 py-2 rounded-[18px] bg-slate-900 hover:bg-slate-800 text-white font-extrabold cursor-pointer">
-            <i data-lucide="download" class="w-3.5 h-3.5"></i>
-            <span>Tarik dari Cloud</span>
-          </button>
-          <label class="inline-flex items-center gap-1.5 px-3 py-2 rounded-[18px] bg-white/30 border-transparent border-transparent/90 font-bold text-slate-800 cursor-pointer">
-            <input id="chkAutoCloudSync" type="checkbox" class="rounded">
-            <span>Auto-Sync Cloud</span>
-          </label>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
-          <div>
-            <label for="cloudBinIdInput" class="block font-bold text-slate-700 mb-1">JSONBin Bin ID (Opsional):</label>
-            <input id="cloudBinIdInput" type="text" placeholder="Contoh: 674f... (kosongkan untuk buat bin baru)" class="w-full px-3 py-2 rounded-[18px] border-transparent border-transparent/90 bg-white/35">
-          </div>
-          <div>
-            <label for="cloudApiKeyInput" class="block font-bold text-slate-700 mb-1">JSONBin X-Master-Key (Opsional):</label>
-            <input id="cloudApiKeyInput" type="password" placeholder="Tempel Master/Access Key jika pakai JSONBin" class="w-full px-3 py-2 rounded-[18px] border-transparent border-transparent/90 bg-white/35">
-          </div>
-        </div>
-      </section>
     </div>
 
     <!-- =================================================================== -->
@@ -1124,7 +994,7 @@
             <i data-lucide="map" class="w-3.5 h-3.5"></i>
             <span>KEBIJAKAN ZONASI 19 OKTOBER 2023 (권역 내 사업장 변경)</span>
           </span>
-          <h2 class="text-base sm:text-lg font-extrabold text-slate-900 mt-1">Pemeriksaan Status Zonasi Pindah Pabrik E-9</h2>
+          <h2 class="text-base sm:text-lg font-extrabold text-slate-900 mt-1">Pemeriksaan Pembagian 5 Zona Wilayah Kerja</h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5">
@@ -1136,7 +1006,7 @@
             </select>
           </div>
           <div>
-            <label for="selectInitialZone" class="block text-xs font-bold text-slate-800 mb-1">2. Zona Pabrik Pertama (최초 사업장):</label>
+            <label for="selectInitialZone" class="block text-xs font-bold text-slate-800 mb-1">2. Zona Tempat Kerja Pertama (최초 사업장):</label>
             <select id="selectInitialZone" class="w-full px-3 py-2.5 text-xs sm:text-sm rounded-[18px] border-transparent border-transparent/90 bg-white/35 font-semibold">
               <option value="ZONA_1">Zona 1 — 수도권 (Seoul, Gyeonggi, Incheon)</option>
               <option value="ZONA_2">Zona 2 — 충청권 (Daejeon, Sejong, Chungnam, Chungbuk)</option>
@@ -1146,7 +1016,7 @@
             </select>
           </div>
           <div>
-            <label for="selectTargetZone" class="block text-xs font-bold text-slate-800 mb-1">3. Zona Pabrik Tujuan (희망 이동 권역):</label>
+            <label for="selectTargetZone" class="block text-xs font-bold text-slate-800 mb-1">3. Zona Tempat Kerja Tujuan (희망 이동 권역):</label>
             <select id="selectTargetZone" class="w-full px-3 py-2.5 text-xs sm:text-sm rounded-[18px] border-transparent border-transparent/90 bg-white/35 font-semibold">
               <option value="ZONA_1">Zona 1 — 수도권</option>
               <option value="ZONA_2">Zona 2 — 충청권</option>
@@ -1239,14 +1109,14 @@
             <i data-lucide="message-square-text" class="w-3.5 h-3.5"></i>
             <span>알선 희망조건 요청기 · GENERATOR LOKET</span>
           </span>
-          <h2 class="text-base sm:text-lg font-extrabold text-slate-900 mt-1">Kalimat Tunjuk di Loket Nodongbu Saat Meminta Rekomendasi Pabrik</h2>
+          <h2 class="text-base sm:text-lg font-extrabold text-slate-900 mt-1">Kalimat Tunjuk di Loket Saat Meminta Rekomendasi Tempat Kerja</h2>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
           <div>
-            <label for="reqFieldSelect" class="block font-bold text-slate-700 mb-1">Bidang Pabrik:</label>
+            <label for="reqFieldSelect" class="block font-bold text-slate-700 mb-1">Bidang Kerja:</label>
             <select id="reqFieldSelect" class="w-full px-3 py-2.5 rounded-[18px] border-transparent border-transparent/90 bg-white/35 font-semibold">
-              <option value="제조업 전체 (아무 분야나 괜찮습니다)">Bebas / Manufaktur Apa Saja</option>
+              <option value="제조업 전체 (아무 분야나 괜찮습니다)">Bebas / Sektor Apa Saja</option>
               <option value="금속가공제품 제조업 (프레스·용접·CNC)">C25 · Logam (Press, Las, CNC)</option>
               <option value="고무제품 및 플라스틱제품 제조업 (사출·압출)">C22 · Karet &amp; Plastik (Injeksi/Extrusi)</option>
               <option value="자동차 및 트레일러 제조업 (자동차 부품)">C30/C31 · Onderdil Mobil</option>
@@ -1310,11 +1180,13 @@
       <section class="liquid-glass squircle p-4 sm:p-5 space-y-4">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-transparent border-transparent/70 pb-3">
           <div>
-            <h2 class="text-base sm:text-lg font-extrabold text-slate-900 flex items-center gap-2">
-              <i data-lucide="languages" class="w-5 h-5 text-purple-700"></i>
+            <h2 class="text-base sm:text-lg font-extrabold text-slate-900 flex items-center gap-2.5">
+              <span class="w-7 h-7 rounded-xl bg-purple-100/90 text-purple-700 flex items-center justify-center shrink-0">
+                <i data-lucide="languages" class="w-4 h-4"></i>
+              </span>
               <span>Kamus Bahasa Korea Terpadu (Nodongbu, Pabrik, RS &amp; Harian)</span>
             </h2>
-            <p class="text-xs text-slate-600 mt-0.5">Ketuk <strong>Salin</strong> untuk mengirim lewat KakaoTalk atau <strong>Suara</strong> untuk mendengarkan pelafalan.</p>
+            <p class="text-xs text-slate-600 mt-0.5">Ketuk <strong>Salin</strong> untuk mengirim lewat KakaoTalk atau <strong>Suara</strong> untuk mendengarkan pelafalan. Pastikan audio HP aktif saat memakai fitur <strong>Suara</strong>.</p>
           </div>
           <a href="tel:1339" class="tactile-press motion-120 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-[18px] bg-teal-700 hover:bg-teal-800 text-white text-xs font-extrabold self-start">
             <i data-lucide="phone" class="w-3.5 h-3.5"></i>
@@ -1336,7 +1208,7 @@
             <button type="button" data-kcat="HARIAN" class="kamus-cat-btn motion-120 px-3 py-1.5 rounded-[18px] text-xs font-bold bg-white/25 text-slate-700 border-transparent border-transparent/90 cursor-pointer">Sehari-hari &amp; Bank</button>
           </div>
           <div class="flex items-center gap-1.5 overflow-x-auto flex-nowrap sm:flex-wrap pb-1 sm:pb-0 text-[11px]">
-            <span class="font-bold text-slate-500 shrink-0">Cepat Cari:</span>
+            <span class="font-bold text-slate-700 mr-1 py-1.5 leading-normal shrink-0">Cepat Cari:</span>
             <button type="button" data-kamus-quick="잔업" class="motion-120 shrink-0 px-2.5 py-0.5 rounded-full bg-white/25 text-slate-700 border-transparent border-transparent/90 font-semibold cursor-pointer">Lembur (잔업)</button>
             <button type="button" data-kamus-quick="산재" class="motion-120 shrink-0 px-2.5 py-0.5 rounded-full bg-white/25 text-slate-700 border-transparent border-transparent/90 font-semibold cursor-pointer">Sanjae (산재)</button>
             <button type="button" data-kamus-quick="통역" class="motion-120 shrink-0 px-2.5 py-0.5 rounded-full bg-white/25 text-slate-700 border-transparent border-transparent/90 font-semibold cursor-pointer">Penerjemah (통역)</button>
@@ -1359,7 +1231,8 @@
             <i data-lucide="calculator" class="w-3.5 h-3.5"></i>
             <span>퇴직금 &amp; 급여 계산기 · PATOKAN UMR 2026: 10,320 KRW/JAM</span>
           </span>
-          <h2 class="text-base sm:text-lg font-extrabold text-slate-900 mt-1">Kalkulator Pesangon (퇴직금), Lembur &amp; Kurs KRW ke IDR</h2>
+          <h2 class="text-base sm:text-lg font-extrabold text-slate-900 mt-1">Simulasi Kasar Pesangon (퇴직금), Lembur &amp; Kurs KRW ke IDR</h2>
+          <p class="text-[11px] text-slate-600 mt-0.5">Hasil hitungan bersifat simulasi kasar untuk referensi pribadi dan dapat berbeda dari rincian slip gaji, kontrak kerja, atau kurs bank/remitansi.</p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -1397,7 +1270,7 @@
               </button>
             </div>
             <div class="flex flex-wrap items-center gap-1 text-[10px]">
-              <span class="font-bold text-slate-500">Cepat:</span>
+              <span class="font-bold text-slate-600">Cepat:</span>
               <button type="button" data-fx-preset="500000" class="motion-120 px-2 py-0.5 rounded-full bg-white/30 border-transparent border-transparent/90 font-bold text-slate-700 cursor-pointer">500rb</button>
               <button type="button" data-fx-preset="1000000" class="motion-120 px-2 py-0.5 rounded-full bg-white/30 border-transparent border-transparent/90 font-bold text-slate-700 cursor-pointer">1 Jt</button>
               <button type="button" data-fx-preset="2000000" class="motion-120 px-2 py-0.5 rounded-full bg-white/30 border-transparent border-transparent/90 font-bold text-slate-700 cursor-pointer">2 Jt</button>
@@ -1409,7 +1282,7 @@
               <div><label class="block font-bold text-slate-700 mb-1">Kurs 1 KRW (IDR)</label><input id="fxRateInput" type="number" value="11.3" step="0.01" class="w-full px-2.5 py-2 rounded-[18px] border-transparent border-transparent/90 bg-white/35 font-semibold"></div>
             </div>
             <div id="fxResultBox" class="rounded-[18px] bg-emerald-50/90 border-transparent border-transparent p-3 text-sm font-black text-emerald-950"></div>
-            <div id="fxStatusMeta" class="text-[11px] font-semibold text-slate-500">Memuat kurs pasar dunia KRW &rarr; IDR...</div>
+            <div id="fxStatusMeta" class="text-[11px] font-semibold text-slate-600">Memuat kurs pasar dunia KRW &rarr; IDR...</div>
           </div>
 
           <div class="liquid-subglass rounded-[24px] p-4 space-y-2.5">
@@ -1423,126 +1296,64 @@
         </div>
       </section>
 
-      <!-- 1-Click Emergency Triage -->
-      <section class="liquid-glass squircle p-4 sm:p-5 space-y-3.5 border-transparent">
-        <div>
-          <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-rose-100 text-rose-900">
-            <i data-lucide="alert-triangle" class="w-3.5 h-3.5"></i>
-            <span>긴급 해결 가이드 · PEMANDU DARURAT 1-KLIK</span>
-          </span>
-          <h2 class="text-base sm:text-lg font-extrabold text-slate-900 mt-1">Pilih Situasi Darurat untuk Melihat Langkah Penyelesaian</h2>
-        </div>
-        <div class="flex flex-wrap gap-1.5" id="triageButtons">
-          <button type="button" data-triage="GAJI" class="triage-btn motion-120 px-3 py-2 rounded-[18px] text-xs font-extrabold bg-rose-700 text-white cursor-pointer">Gaji / Pesangon Belum Dibayar</button>
-          <button type="button" data-triage="TANDATANGAN" class="triage-btn motion-120 px-3 py-2 rounded-[18px] text-xs font-bold bg-white/25 text-slate-800 border-transparent border-transparent/90 cursor-pointer">Bos Tolak Tanda Tangan Pindah</button>
-          <button type="button" data-triage="SANJAE" class="triage-btn motion-120 px-3 py-2 rounded-[18px] text-xs font-bold bg-white/25 text-slate-800 border-transparent border-transparent/90 cursor-pointer">Kecelakaan Kerja (Sanjae)</button>
-          <button type="button" data-triage="PASPOR" class="triage-btn motion-120 px-3 py-2 rounded-[18px] text-xs font-bold bg-white/25 text-slate-800 border-transparent border-transparent/90 cursor-pointer">Paspor / ARC Ditahan Bos</button>
-          <button type="button" data-triage="D90" class="triage-btn motion-120 px-3 py-2 rounded-[18px] text-xs font-bold bg-white/25 text-slate-800 border-transparent border-transparent/90 cursor-pointer">Masa D-90 Hampir Habis</button>
-        </div>
-        <div id="triageResultBox" class="liquid-subglass rounded-[24px] p-4 text-xs space-y-1.5"></div>
-      </section>
-
-      <!-- Polite Boss / HRD Message Generator -->
-      <section class="liquid-glass squircle p-4 sm:p-5 space-y-3">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-          <h3 class="text-base font-extrabold text-slate-900 flex items-center gap-2">
-            <i data-lucide="send" class="w-4 h-4 text-blue-700"></i>
-            <span>Generator Pesan Sopan ke Bos / HRD (Siap Salin ke KakaoTalk)</span>
-          </h3>
-          <div class="flex flex-wrap gap-1 text-[11px]">
-            <button type="button" data-msg-preset="SAKIT|오늘" class="motion-120 px-2.5 py-1 rounded-full bg-blue-50 hover:bg-blue-100 text-blue-900 border-transparent border-transparent font-bold cursor-pointer">Izin Sakit Hari Ini</button>
-            <button type="button" data-msg-preset="GAJI|이번 달" class="motion-120 px-2.5 py-1 rounded-full bg-emerald-50 hover:bg-emerald-100 text-emerald-950 border-transparent border-transparent font-bold cursor-pointer">Cek Lembur Bulan Ini</button>
-            <button type="button" data-msg-preset="SURAT|이번 주" class="motion-120 px-2.5 py-1 rounded-full bg-amber-50 hover:bg-amber-100 text-amber-950 border-transparent border-transparent font-bold cursor-pointer">Minta Surat Kerja</button>
-          </div>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-xs">
-          <div>
-            <label for="msgTypeSelect" class="block font-bold text-slate-700 mb-1">Keperluan:</label>
-            <select id="msgTypeSelect" class="w-full px-3 py-2 rounded-[18px] border-transparent border-transparent/90 bg-white/35 font-semibold">
-              <option value="SAKIT">Izin Tidak Masuk / Sakit ke RS</option>
-              <option value="CUTI">Minta Izin Cuti / Pulang Sementara</option>
-              <option value="GAJI">Tanyakan Gaji / Lembur Kurang</option>
-              <option value="SURAT">Minta Surat Keterangan Kerja</option>
-              <option value="PINDAH">Bicarakan Pindah Pabrik Baik-baik</option>
-            </select>
-          </div>
-          <div><label for="msgWorkerName" class="block font-bold text-slate-700 mb-1">Nama Anda:</label><input id="msgWorkerName" type="text" placeholder="Contoh: Budi Santoso" class="w-full px-3 py-2 rounded-[18px] border-transparent border-transparent/90 bg-white/35"></div>
-          <div><label for="msgTargetDate" class="block font-bold text-slate-700 mb-1">Tanggal / Keterangan:</label><input id="msgTargetDate" type="text" placeholder="Contoh: 20 November" class="w-full px-3 py-2 rounded-[18px] border-transparent border-transparent/90 bg-white/35"></div>
-        </div>
-        <div class="dynamic-island rounded-[24px] p-4 text-white space-y-2">
-          <div class="flex items-center justify-between">
-            <span class="text-[11px] font-bold text-amber-300">Pesan Bahasa Korea:</span>
-            <button id="btnCopyGenMsg" type="button" class="motion-120 inline-flex items-center gap-1 px-3 py-1 rounded-full bg-amber-400 text-slate-950 text-xs font-black cursor-pointer">
-              <i data-lucide="copy" class="w-3 h-3"></i>
-              <span>Salin Pesan</span>
-            </button>
-          </div>
-          <p id="genMsgKr" class="text-sm font-bold leading-relaxed select-all"></p>
-          <p id="genMsgId" class="text-[11px] text-slate-300 italic"></p>
-        </div>
-      </section>
-
-      <!-- KBRI Seoul & E-9 Q&A -->
+      <!-- KBRI Seoul -->
       <section class="liquid-glass squircle p-4 sm:p-5 space-y-4">
         <div class="rounded-[24px] border-transparent border-transparent/90 bg-rose-50/70 p-4 flex flex-col md:flex-row md:items-center justify-between gap-3 text-xs">
           <div class="space-y-1">
             <div class="font-extrabold text-sm text-slate-900">Kedutaan Besar Republik Indonesia (KBRI Seoul)</div>
             <div class="font-bold text-slate-800">서울특별시 영등포구 여의대방로 380 (380 Yeouidaebang-ro, Yeongdeungpo-gu, Seoul)</div>
-            <p class="text-slate-600">Telepon: <strong>02-222-49000</strong> · Lapor paspor baru ke HiKorea maksimal 14 hari setelah diterbitkan.</p>
+            <p class="text-slate-600">Telepon: <strong>02-222-49000</strong> · Informasi resmi layanan kekonsuleran tersedia di situs resmi KBRI / HiKorea.</p>
           </div>
           <div class="flex gap-2 shrink-0">
             <a href="https://map.kakao.com/link/search/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%98%81%EB%93%B1%ED%8F%AC%EA%B5%AC%20%EC%97%AC%EC%9D%98%EB%8C%80%EB%B0%A9%EB%A1%9C%20380" target="_blank" rel="noopener noreferrer" class="kakao-btn tactile-press motion-120 px-3 py-2 rounded-[18px] font-extrabold">KakaoMap</a>
-            <a href="https://map.naver.com/p/search/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%98%81%EB%93%B1%ED%8F%AC%EA%B5%AC%20%EC%97%AC%EC%9D%98%EB%8C%80%EB%B0%A9%EB%A1%9C%20380" target="_blank" rel="noopener noreferrer" class="naver-btn tactile-press motion-120 px-3 py-2 rounded-[18px] font-extrabold">Naver Map</a>
+            <a href="https://map.naver.com/p/search/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%98%81%EB%93%B1%ED%8F%AC%EA%B5%AC%20%EC%97%AC%EC%9D%98%EB%8C%80%EB%B0%A9%EB%A1%9%20380" target="_blank" rel="noopener noreferrer" class="naver-btn tactile-press motion-120 px-3 py-2 rounded-[18px] font-extrabold">Naver Map</a>
           </div>
         </div>
-
-        <div class="space-y-2.5">
-          <h3 class="text-base font-extrabold text-slate-900">Tanya Jawab (Q&amp;A) Lengkap Pekerja Manufaktur E-9</h3>
-          <div class="relative">
-            <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-3"></i>
-            <input id="qnaSearchInput" type="text" placeholder="Cari topik Q&A (nunggak gaji, D-90, sanjae, paspor, pesangon, tilang, cuti)..." class="w-full pl-10 pr-3.5 py-2.5 text-xs sm:text-sm rounded-[18px] border-transparent border-transparent/90 bg-white/35">
-          </div>
-        </div>
-        <div id="qnaList" class="space-y-2.5"></div>
       </section>
     </div>
 
     <!-- Footer -->
-    <footer class="liquid-glass squircle p-4 space-y-3 text-xs text-slate-600">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-        <div class="space-y-0.5">
-          <strong class="text-slate-900 text-sm">Kawan E-9 · Direktori Nodongbu, Shelter &amp; Masjid Korea</strong>
-          <p class="text-[11px] text-slate-500 leading-relaxed">Inisiatif mandiri non-pemerintah · 100% gratis, non-komersial &amp; tanpa pungutan biaya. Cek ulang jadwal resmi sebelum berangkat.</p>
-        </div>
-        <div class="flex flex-wrap items-center gap-2 shrink-0">
-          <button type="button" data-main-tab="TAB_SHELTER" class="motion-120 inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-emerald-50/90 hover:bg-emerald-100 text-emerald-950 border-transparent border-transparent text-[11px] font-extrabold cursor-pointer">
-            <i data-lucide="home" class="w-3 h-3 text-emerald-700"></i>
-            <span>Shelter (18)</span>
-          </button>
-          <button type="button" data-main-tab="TAB_BANTUAN" class="motion-120 inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white text-[11px] font-extrabold cursor-pointer">
-            <i data-lucide="help-circle" class="w-3 h-3 text-amber-400"></i>
-            <span>Gaji &amp; Q&amp;A</span>
-          </button>
+    <footer class="space-y-3 pb-4 text-xs text-slate-600">
+      <div class="liquid-glass squircle p-4 space-y-3">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div class="space-y-1">
+            <div class="font-extrabold text-slate-900 text-sm">Direktori Mandiri · Catatan Referensi Umum</div>
+            <p class="text-[11px] text-slate-600 leading-relaxed">Catatan referensi mandiri non-resmi · 100% gratis &amp; non-komersial. Pastikan jadwal dan alamat terbaru sebelum berkunjung.</p>
+          </div>
+          <div class="flex flex-wrap items-center gap-1.5 shrink-0">
+            <button type="button" data-main-tab="TAB_SHELTER" class="motion-120 inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-white/75 hover:bg-white text-emerald-950 border border-slate-900/15 text-[11px] font-extrabold cursor-pointer">
+              <i data-lucide="home" class="w-3 h-3 text-emerald-700"></i>
+              <span>Shelter (18)</span>
+            </button>
+            <button type="button" data-main-tab="TAB_MASJID" class="motion-120 inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-white/75 hover:bg-white text-teal-950 border border-slate-900/15 text-[11px] font-extrabold cursor-pointer">
+              <i data-lucide="moon-star" class="w-3 h-3 text-teal-700"></i>
+              <span>Masjid (45)</span>
+            </button>
+            <button type="button" data-main-tab="TAB_KAMUS" class="motion-120 inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white text-[11px] font-extrabold cursor-pointer">
+              <i data-lucide="languages" class="w-3 h-3 text-amber-300"></i>
+              <span>Kamus</span>
+            </button>
+          </div>
         </div>
       </div>
 
       <!-- Penghitung Kunjungan Harian, Bulanan & Tahunan -->
-      <div class="pt-2.5 border-transparent border-transparent/75 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+      <div class="liquid-glass squircle p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
         <div class="flex items-center gap-1.5 text-[11px] font-extrabold text-slate-800">
           <i data-lucide="bar-chart-3" class="w-3.5 h-3.5 text-blue-700"></i>
           <span>Statistik Kunjungan (Perangkat Ini):</span>
         </div>
         <div class="grid grid-cols-3 gap-2 text-[11px] sm:w-auto w-full">
-          <div class="liquid-subglass rounded-[18px] px-3 py-1.5 text-center">
-            <div class="text-[10px] font-semibold text-slate-500">Harian</div>
+          <div class="bg-white/65 border border-slate-900/10 rounded-[18px] px-3 py-1.5 text-center">
+            <div class="text-[10px] font-semibold text-slate-600">Harian</div>
             <div id="visitDailyCount" class="font-black text-slate-900 text-xs">1</div>
           </div>
-          <div class="liquid-subglass rounded-[18px] px-3 py-1.5 text-center">
-            <div class="text-[10px] font-semibold text-slate-500">Bulanan</div>
+          <div class="bg-white/65 border border-slate-900/10 rounded-[18px] px-3 py-1.5 text-center">
+            <div class="text-[10px] font-semibold text-slate-600">Bulanan</div>
             <div id="visitMonthlyCount" class="font-black text-slate-900 text-xs">1</div>
           </div>
-          <div class="liquid-subglass rounded-[18px] px-3 py-1.5 text-center">
-            <div class="text-[10px] font-semibold text-slate-500">Tahunan</div>
+          <div class="bg-white/65 border border-slate-900/10 rounded-[18px] px-3 py-1.5 text-center">
+            <div class="text-[10px] font-semibold text-slate-600">Tahunan</div>
             <div id="visitYearlyCount" class="font-black text-slate-900 text-xs">1</div>
           </div>
         </div>
@@ -1551,12 +1362,55 @@
   </main>
 
   <!-- Floating Glass Dock -->
-  <div class="fixed bottom-24 right-3.5 sm:right-5 z-40 flex flex-col items-end gap-1.5 pointer-events-none">
-    <button id="btnBackToTop" type="button" class="pointer-events-auto motion-120 hidden items-center gap-1 px-2.5 py-1.5 rounded-full bg-slate-900/90 hover:bg-slate-800 text-white text-[11px] font-bold shadow-none border-transparent border-transparent/15 backdrop-blur cursor-pointer">
-      <i data-lucide="arrow-up" class="w-3 h-3"></i>
+  <div class="fixed bottom-32 right-3.5 sm:right-5 z-30 flex flex-col items-end gap-1.5 pointer-events-none">
+    <button id="btnBackToTop" type="button" class="pointer-events-auto motion-120 hidden items-center gap-1 px-3 py-1.5 rounded-full bg-slate-900/90 hover:bg-slate-800 text-white text-xs font-bold shadow-none border-transparent border-transparent/15 backdrop-blur cursor-pointer">
+      <i data-lucide="arrow-up" class="w-3.5 h-3.5 shrink-0"></i>
       <span>Atas</span>
     </button>
+  </div>
 
+  <!-- Common Shelter Consultation Modal (Ansan & Cheonan Priority) -->
+  <div id="consultSheetModal" class="fixed inset-0 z-50 hidden backdrop-fade-120 bg-slate-950/70 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="liquid-glass sheet-open-120 squircle max-w-md w-full p-5 space-y-3.5">
+      <div class="flex items-center justify-between border-transparent pb-2">
+        <div class="flex items-center gap-1.5">
+          <span class="px-2.5 py-0.5 rounded-full bg-emerald-600 text-white text-[11px] font-black">KONSULTASI SHELTER UMUM</span>
+        </div>
+        <button id="btnCloseConsultSheet" type="button" class="motion-120 p-1.5 rounded-full bg-white/30 hover:bg-white text-slate-700 cursor-pointer">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div class="space-y-2 text-xs">
+        <div class="liquid-subglass rounded-[22px] p-3.5 space-y-2">
+          <div class="flex items-center justify-between gap-2">
+            <div>
+              <div class="font-extrabold text-sm text-slate-900">Shelter &amp; Pusat Bantuan Ansan</div>
+              <div class="text-[11px] text-slate-600">경기도 안산시 단원구 부부로 55 · Layanan Bahasa Indonesia</div>
+            </div>
+            <a href="tel:1577-0071" class="tactile-press motion-120 px-3 py-2 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-black whitespace-nowrap shrink-0">1577-0071</a>
+          </div>
+        </div>
+
+        <div class="liquid-subglass rounded-[22px] p-3.5 space-y-2">
+          <div class="flex items-center justify-between gap-2">
+            <div>
+              <div class="font-extrabold text-sm text-slate-900">Shelter &amp; Pusat Bantuan Cheonan</div>
+              <div class="text-[11px] text-slate-600">충청남도 천안시 서북구 성정공원5로 21 · Pendampingan Indonesia</div>
+            </div>
+            <div class="flex flex-col gap-1 shrink-0">
+              <a href="tel:041-622-9314" class="tactile-press motion-120 px-3 py-1.5 rounded-full bg-blue-700 hover:bg-blue-800 text-white font-black text-center whitespace-nowrap">041-622-9314</a>
+              <a href="tel:041-622-7955" class="tactile-press motion-120 px-3 py-1 rounded-full bg-white/45 hover:bg-white text-slate-800 font-bold text-center text-[11px] whitespace-nowrap">041-622-7955</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between gap-2 pt-1">
+        <button id="btnGoAllSheltersFromConsult" type="button" class="motion-120 flex-1 py-2.5 px-3 rounded-[18px] bg-slate-900 hover:bg-slate-800 text-white text-xs font-extrabold cursor-pointer">Lihat Semua Shelter (18)</button>
+        <button id="btnCopyCommonShelters" type="button" class="motion-120 py-2.5 px-3.5 rounded-[18px] bg-white/45 hover:bg-white text-slate-800 text-xs font-bold cursor-pointer">Salin Nomor</button>
+      </div>
+    </div>
   </div>
 
   <!-- Taxi & Security Guard Screen Modal (Closed by Default) -->
@@ -1566,9 +1420,9 @@
         <div class="flex items-center gap-2">
           <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-400 text-slate-950 font-black text-xs">
             <i data-lucide="car" class="w-3.5 h-3.5"></i>
-            <span>LAYAR TUNJUK TAKSI &amp; SATPAM</span>
+            <span>KARTU INFORMASI TUJUAN</span>
           </span>
-          <span id="taxiModalId" class="text-xs font-bold text-slate-500"></span>
+          <span id="taxiModalId" class="text-xs font-bold text-slate-600"></span>
         </div>
         <button id="btnCloseTaxiModal" type="button" class="motion-120 p-1.5 rounded-full bg-white/25 hover:bg-white text-slate-700 cursor-pointer">
           <i data-lucide="x" class="w-4 h-4"></i>
@@ -1592,8 +1446,8 @@
 
       <div class="bg-blue-950/95 text-white rounded-[24px] p-4 border-transparent border-transparent/70 space-y-1">
         <p class="text-xs text-blue-300 font-bold">건물 안내원 / 경비원께 보여주세요 (Tunjukkan ke Satpam Gedung):</p>
-        <div class="text-sm font-black text-white leading-snug">"안녕하세요. E-9 비자 외국인력팀(사업장변경 신청) 창구가 몇 층에 있나요?"</div>
-        <div class="text-[11px] text-blue-200 italic">(Arti: "Halo, loket Tim Tenaga Kerja Asing Visa E-9 ada di lantai berapa?")</div>
+        <div class="text-sm font-black text-white leading-snug">"안녕하세요. 외국인력팀(사업장변경 신청) 창구가 몇 층에 있나요?"</div>
+        <div class="text-[11px] text-blue-200 italic">(Arti: "Halo, loket Tim Tenaga Kerja Asing ada di lantai berapa?")</div>
       </div>
 
       <div class="flex flex-wrap items-center justify-end gap-2">
@@ -1612,47 +1466,12 @@
       </div>
     </div>
   </div>
-
-  <!-- AI Assistant Drawer (Closed by Default) -->
-  <div id="aiChatDrawer" class="fixed bottom-20 right-3.5 left-3.5 sm:left-auto sm:w-96 z-50 hidden sheet-open-120 liquid-glass squircle shadow-none overflow-hidden flex flex-col max-h-[72vh]">
-    <div class="dynamic-island text-white px-4 py-3 flex items-center justify-between gap-2">
-      <div class="flex items-center gap-2">
-        <i data-lucide="bot" class="w-4 h-4 text-emerald-400"></i>
-        <div>
-          <div class="text-xs font-black">Asisten Pintar Kawan E-9</div>
-          <div class="text-[10px] text-slate-300">Tanya alamat, gaji, D-30/D-90, tilang, atau bahasa Korea</div>
-        </div>
-      </div>
-      <button id="btnCloseAiChat" type="button" class="motion-120 p-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white cursor-pointer">
-        <i data-lucide="x" class="w-3.5 h-3.5"></i>
-      </button>
-    </div>
-
-    <div id="aiChatMessages" class="p-3.5 space-y-2.5 overflow-y-auto flex-1 bg-white/50 text-xs min-h-[180px]">
-      <div class="liquid-subglass rounded-[18px] p-3 text-slate-800 space-y-1">
-        <div class="font-extrabold text-blue-900">Halo Pejuang E-9!</div>
-        <p>Ketik pertanyaan Anda (misal: <em>"gaji ditunggak"</em>, <em>"nodongbu ansan"</em>, <em>"kena tilang"</em>, <em>"masjid geumwang"</em>, atau <em>"d-90 habis"</em>).</p>
-      </div>
-    </div>
-
-    <div class="px-3 py-2 bg-white/70 border-transparent border-transparent/80 flex flex-wrap gap-1">
-      <button id="btnAiSummarizeStatus" type="button" class="motion-120 px-2.5 py-1 rounded-full bg-indigo-600 text-white text-[10px] font-extrabold cursor-pointer">Ringkas Status Saya</button>
-      <button type="button" data-ai-q="Gaji tidak dibayar" class="ai-chip motion-120 px-2.5 py-1 rounded-full bg-rose-50 text-rose-800 border-transparent border-transparent text-[10px] font-bold cursor-pointer">Gaji nunggak</button>
-      <button type="button" data-ai-q="Alamat Nodongbu Ansan" class="ai-chip motion-120 px-2.5 py-1 rounded-full bg-blue-50 text-blue-800 border-transparent border-transparent text-[10px] font-bold cursor-pointer">Nodongbu Ansan</button>
-      <button type="button" data-ai-q="Kena tilang di bawah 3 juta" class="ai-chip motion-120 px-2.5 py-1 rounded-full bg-amber-50 text-amber-900 border-transparent border-transparent text-[10px] font-bold cursor-pointer">Tilang &lt; 3jt</button>
-      <button type="button" data-ai-q="Cara hitung pesangon" class="ai-chip motion-120 px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-800 border-transparent border-transparent text-[10px] font-bold cursor-pointer">Pesangon</button>
-    </div>
-
-    <form id="aiChatForm" class="p-2.5 bg-white/25 border-transparent border-transparent/90 flex gap-1.5">
-      <input id="aiChatInput" type="text" placeholder="Ketik pertanyaan Anda..." class="flex-1 px-3 py-2 text-xs rounded-[18px] border-transparent border-transparent/90 bg-white/95 focus:outline-none focus:ring-0 focus:ring-0">
-      <button type="submit" class="motion-120 px-3.5 py-2 rounded-[18px] bg-blue-600 hover:bg-blue-500 text-white text-xs font-extrabold cursor-pointer">Kirim</button>
-    </form>
-  </div>
-
-  <!-- Toast Notification -->
-  <div id="toastBox" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 hidden sheet-open-120 bg-slate-900/95 backdrop-blur-md text-white px-4 py-2.5 rounded-full shadow-none border-transparent border-transparent/15 text-xs font-bold flex items-center gap-2">
-    <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-    <span id="toastText">Berhasil disalin!</span>
+  <!-- iOS-Style Notification Banner Toast -->
+  <div id="toastBox" role="status" aria-live="polite" class="fixed top-4 left-1/2 -translate-x-1/2 z-50 hidden sheet-open-120 max-w-[92vw] sm:max-w-md w-auto bg-slate-950/88 backdrop-blur-2xl text-white pl-3 pr-4 py-2.5 rounded-[22px] border border-white/15 text-xs font-bold flex items-center gap-2.5">
+    <span class="w-6 h-6 rounded-full bg-emerald-400/20 text-emerald-300 flex items-center justify-center shrink-0">
+      <i data-lucide="bell" class="w-3.5 h-3.5"></i>
+    </span>
+    <span id="toastText" class="leading-snug">Berhasil disalin!</span>
   </div>
 
   <script>
@@ -1678,7 +1497,7 @@
       { id: 19, zone: "ZONA_1", zoneLabel: "Zona 1 · Sudogwon (Gyeonggi)", nameId: "Kantor Ketenagakerjaan Yongin", nameKr: "경기지청 외국인력팀(용인)", roadAddr: "경기도 용인시 기흥구 강남로 3", latinAddr: "3, Gangnam-ro, Giheung-gu, Yongin-si, Gyeonggi-do", floor: "강남앤플러스빌딩 4층 (Lantai 4)", phone: "031-289-2201", area: "Provinsi Gyeonggi: Seluruh Kota Yongin" },
       { id: 20, zone: "ZONA_1", zoneLabel: "Zona 1 · Sudogwon (Gyeonggi)", nameId: "Kantor Ketenagakerjaan Suwon", nameKr: "경기지청 외국인력팀(수원)", roadAddr: "경기도 수원시 팔달구 경수대로 581", latinAddr: "581, Gyeongsu-daero, Paldal-gu, Suwon-si, Gyeonggi-do", floor: "수원고용센터 2층 (Lantai 2)", phone: "031-230-7681", area: "Provinsi Gyeonggi: Kota Suwon serta Dongtan, Byeongjeom, Jinan-dong, dan Banwol-dong" },
       { id: 21, zone: "ZONA_1", zoneLabel: "Zona 1 · Sudogwon (Gyeonggi)", nameId: "Kantor Ketenagakerjaan Anyang", nameKr: "안양지청 외국인력팀", roadAddr: "경기도 안양시 만안구 안양로 303", latinAddr: "303, Anyang-ro, Manan-gu, Anyang-si, Gyeonggi-do", floor: "안양메쎄타워 8층 (Lantai 8)", phone: "031-463-0771", area: "Provinsi Gyeonggi: Anyang, Gunpo, Gwacheon, Uiwang, Gwangmyeong" },
-      { id: 22, zone: "ZONA_1", zoneLabel: "Zona 1 · Sudogwon (Gyeonggi)", nameId: "Kantor Ketenagakerjaan Ansan", nameKr: "중부지방고용노동청 안산지청 외국인력팀", roadAddr: "경기도 안산시 단원구 적금로1길 26", latinAddr: "26, Jeokgeum-ro 1-gil, Danwon-gu, Ansan-si, Gyeonggi-do", floor: "안산지청 1층 (Gedung Cabang Ansan Lt. 1 — Visa E-9 & H-2)", phone: "031-412-6952", area: "Provinsi Gyeonggi: Seluruh Kota Ansan", isUpdated: true },
+      { id: 22, zone: "ZONA_1", zoneLabel: "Zona 1 · Sudogwon (Gyeonggi)", nameId: "Kantor Ketenagakerjaan Ansan", nameKr: "중부지방고용노동청 안산지청 외국인력팀", roadAddr: "경기도 안산시 단원구 적금로1길 26", latinAddr: "26, Jeokgeum-ro 1-gil, Danwon-gu, Ansan-si, Gyeonggi-do", floor: "안산지청 1층 (Gedung Cabang Ansan Lt. 1 — Layanan Ketenagakerjaan)", phone: "031-412-6952", area: "Provinsi Gyeonggi: Seluruh Kota Ansan", isUpdated: true },
       { id: 23, zone: "ZONA_1", zoneLabel: "Zona 1 · Sudogwon (Gyeonggi)", nameId: "Kantor Ketenagakerjaan Siheung", nameKr: "안산지청 외국인력팀(시흥)", roadAddr: "경기도 시흥시 마유로 418번길 10", latinAddr: "10, Mayu-ro 418beon-gil, Siheung-si, Gyeonggi-do", floor: "롯데시네마 빌딩 3층 310호 (Lantai 3 Ruang 310)", phone: "031-496-1918", area: "Provinsi Gyeonggi: Seluruh Kota Siheung" },
       { id: 24, zone: "ZONA_1", zoneLabel: "Zona 1 · Sudogwon (Gyeonggi)", nameId: "Kantor Ketenagakerjaan Pyeongtaek", nameKr: "평택지청 외국인력팀", roadAddr: "경기도 평택시 경기대로 1194", latinAddr: "1194, Gyeonggi-daero, Pyeongtaek-si, Gyeonggi-do", floor: "장당프라자 1층 (Gedung Jangdang Plaza, Lt. 1)", phone: "031-646-1259", area: "Provinsi Gyeonggi: Kota Pyeongtaek, Anseong, dan Osan" },
       { id: 25, zone: "ZONA_4", zoneLabel: "Zona 4 · Gangwon", nameId: "Kantor Ketenagakerjaan Chuncheon", nameKr: "강원지청 외국인력팀(춘천)", roadAddr: "강원특별자치도 춘천시 퇴계농공로 9", latinAddr: "9, Toegyenonggong-ro, Chuncheon-si, Gangwon-do", floor: "넥서스프라자빌딩 5층 (Lantai 5)", phone: "033-250-1945", area: "Gangwon & Gyeonggi: Chuncheon, Hongcheon, Yanggu, Inje, Hwacheon, Gapyeong" },
@@ -1722,8 +1541,8 @@
     ];
 
     const SHELTER_CENTERS = [
-      { id: "S1", region: "Gyeonggi · Ansan", nameId: "Shelter & Pusat Bantuan Pekerja Asing Ansan", nameKr: "안산 외국인근로자 지원센터 / 상담소", roadAddr: "경기도 안산시 단원구 부부로 55", latinAddr: "55, Bubu-ro, Danwon-gu, Ansan-si, Gyeonggi-do", phone: "1577-0071", altPhone: "", note: "Pusat konsultasi E-9, penerjemah Bahasa Indonesia (09.00–18.00 KST), mediasi kerja, dan shelter.", highlight: true },
-      { id: "S2", region: "Chungnam · Cheonan", nameId: "Shelter & Pusat Bantuan Cheonan (Ibu Arzety)", nameKr: "충남외국인근로자지원센터 (천안 쉼터)", roadAddr: "충청남도 천안시 서북구 성정공원5로 21", latinAddr: "21, Seongjeonggongwon 5-ro, Seobuk-gu, Cheonan-si (Sky Building Lt. 4)", phone: "041-622-9314", altPhone: "041-622-7955", note: "Pendampingan Bahasa Indonesia bersama Ibu Arzety (041-622-9314) atau kantor pusat Chungnam (041-622-7955).", highlight: true },
+      { id: "S1", region: "Gyeonggi · Ansan", nameId: "Shelter & Pusat Bantuan Pekerja Asing Ansan", nameKr: "안산 외국인근로자 지원센터 / 상담소", roadAddr: "경기도 안산시 단원구 부부로 55", latinAddr: "55, Bubu-ro, Danwon-gu, Ansan-si, Gyeonggi-do", phone: "1577-0071", altPhone: "", note: "Pusat konsultasi pekerja, penerjemah Bahasa Indonesia (09.00–18.00 KST, istirahat 12.00–13.00), mediasi kerja, dan shelter. Cek ketersediaan kamar sebelum datang.", highlight: true },
+      { id: "S2", region: "Chungnam · Cheonan", nameId: "Shelter & Pusat Bantuan Cheonan", nameKr: "충남외국인근로자지원센터 (천안 쉼터)", roadAddr: "충청남도 천안시 서북구 성정공원5로 21", latinAddr: "21, Seongjeonggongwon 5-ro, Seobuk-gu, Cheonan-si (Sky Building Lt. 4)", phone: "041-622-9314", altPhone: "041-622-7955", note: "Pendampingan Bahasa Indonesia di wilayah Cheonan (041-622-9314) atau kantor pusat Chungnam (041-622-7955, Sky Building Lt. 4).", highlight: true },
       { id: "S3", region: "Incheon", nameId: "Pusat Bantuan Pekerja Asing Incheon", nameKr: "인천외국인근로자지원센터", roadAddr: "인천광역시 남동구 호구포로 220", latinAddr: "220, Hogupo-ro, Namdong-gu, Incheon (Myeongjin Plaza Lt. 11–12)", phone: "032-231-4545", altPhone: "032-231-4546", note: "Gedung Myeongjin Plaza Lantai 11–12. Konsultasi: 032-231-4545; pelatihan: 032-231-4546." },
       { id: "S4", region: "Gyeonggi · Gwangju", nameId: "Pusat Bantuan Gwangju Gyeonggi", nameKr: "한국이주노동재단 (경기 광주)", roadAddr: "경기도 광주시 경안로25번길 7", latinAddr: "7, Gyeong-an-ro 25beon-gil, Gwangju-si, Gyeonggi-do (Lt. 2)", phone: "031-797-2688", altPhone: "", note: "Berada di Kota Gwangju, Provinsi Gyeonggi (Lantai 2)." },
       { id: "S5", region: "Chungbuk · Cheongju", nameId: "Pusat Bantuan Pekerja Asing Cheongju", nameKr: "청주시 외국인근로자 지원센터", roadAddr: "충청북도 청주시 흥덕구 송정동 140-41", latinAddr: "140-41, Songjeong-dong, Heungdeok-gu, Cheongju-si (Lt. 1)", phone: "043-260-1625", altPhone: "", note: "Gedung Songjeong Workers Welfare Center Lantai 1." },
@@ -1732,7 +1551,7 @@
       { id: "S8", region: "Jeonbuk · Jeonju", nameId: "Pusat Bantuan Pekerja Asing Jeonbuk (Jeonju)", nameKr: "전북외국인근로자지원센터", roadAddr: "전북특별자치도 전주시 완산구 홍산로 276", latinAddr: "276, Hongsan-ro, Wansan-gu, Jeonju-si, Jeonbuk (Lt. 6)", phone: "1551-1195", altPhone: "063-280-6180", note: "Berada di Lantai 6. Layanan publik: 1551-1195." },
       { id: "S9", region: "Jeonnam · Yeosu", nameId: "Pusat Bantuan Terpadu Wilayah Timur (Yeosu)", nameKr: "동부 이민외국인 종합지원센터 (여수)", roadAddr: "전라남도 여수시 좌수영로 962-12", latinAddr: "962-12, Jwasuyeong-ro, Yeosu-si (Gedung Kadin Yeosu Lt. 2)", phone: "1588-1623", altPhone: "061-685-7784", note: "Melayani pekerja manufaktur dan perikanan wilayah Jeonnam Timur." },
       { id: "S10", region: "Jeonnam · Yeongam", nameId: "Pusat Bantuan Terpadu Wilayah Barat (Yeongam)", nameKr: "전남 이민 외국인 종합지원센터 (영암)", roadAddr: "전라남도 영암군 삼호읍 대불주거3로 75", latinAddr: "75, Daebuljugeo 3-ro, Samho-eup, Yeongam-gun (Gedung B R.103)", phone: "1588-5949", altPhone: "061-460-7508", note: "Tekan menu 3 untuk layanan Bahasa Indonesia." },
-      { id: "S11", region: "Busan", nameId: "Pusat Bantuan Pekerja Asing Busan", nameKr: "부산외국인근로자지원센터", roadAddr: "부산광역시 연제구 연수로 86", latinAddr: "86, Yeonsu-ro, Yeonje-gu, Busan (Lantai B1)", phone: "051-868-7606", altPhone: "", note: "Lantai B1. Konsultasi resmi pemegang visa E-9." },
+      { id: "S11", region: "Busan", nameId: "Pusat Bantuan Pekerja Asing Busan", nameKr: "부산외국인근로자지원센터", roadAddr: "부산광역시 연제구 연수로 86", latinAddr: "86, Yeonsu-ro, Yeonje-gu, Busan (Lantai B1)", phone: "051-868-7606", altPhone: "", note: "Lantai B1. Konsultasi resmi pekerja asing." },
       { id: "S12", region: "Daegu", nameId: "Pusat Bantuan Pekerja Asing Daegu", nameKr: "대구외국인근로자지원센터", roadAddr: "대구광역시 달성군 다사읍 달구벌대로 863", latinAddr: "863, Dalgubeol-daero, Dasa-eup, Dalseong-gun, Daegu (Lt. 8–9)", phone: "053-654-9700", altPhone: "", note: "Gedung Jinkwang Tower Lantai 8–9." },
       { id: "S13", region: "Gyeongnam · Gimhae", nameId: "Pusat Bantuan Pekerja Asing Gimhae", nameKr: "김해외국인근로자지원센터", roadAddr: "경상남도 김해시 가락로 81", latinAddr: "81, Garak-ro, Gimhae-si, Gyeongsangnam-do (I-Joy Building Lt. 6)", phone: "055-724-2725", altPhone: "", note: "Gedung I-Joy Lantai 6. Hubungi dulu untuk jadwal penerjemah." },
       { id: "S14", region: "Gyeongnam · Yangsan", nameId: "Pusat Bantuan Pekerja Asing Yangsan", nameKr: "양산외국인근로자지원센터", roadAddr: "경상남도 양산시 연호로 28", latinAddr: "28, Yeonho-ro, Yangsan-si, Gyeongsangnam-do", phone: "055-912-0255", altPhone: "", note: "Konsultasi masalah tempat kerja dan rujukan ke Nodongbu Yangsan." },
@@ -1768,7 +1587,7 @@
       { city: "Gyeongbuk · Pohang", name: "Masjid Ar-Rahman Pohang", addr: "경북 포항시 북구 신흥동 823-21", phone: "" },
       { city: "Gyeongnam · Gimhae", name: "Masjid Al-Barokah Gimhae", addr: "경상남도 김해시 분성로 317번길 7 1층", phone: "" },
       { city: "Gyeongnam · Changwon", name: "Masjid Sunan Kalijogo", addr: "경상남도 창원시 진해구 남의로98 (두동1층)", phone: "" },
-      { city: "Gyeongnam · Haman", name: "Masjid Baitussalam Haman", addr: "경상남도 함안군 가야읍 말산리 601-4", phone: "010-6754-7150" },
+      { city: "Gyeongnam · Haman", name: "Masjid Baitussalam Haman", addr: "경상남도 함안군 가야읍 말산리 601-4", phone: "" },
       { city: "Busan · Jangnim", name: "Masjid Hidayatullah Jangnim Busan", addr: "부산광역시 사하구 장림번영로 6 3층", phone: "" },
       { city: "Busan · Nampo", name: "Masjid Bahrul Hidayah Nampo", addr: "부산시 중구 중구로 6번길 6-1, 2층", phone: "" },
       { city: "Busan · Geumjeong", name: "Busan Al-Fatah Mosque (Namsan-dong)", addr: "부산광역시 금정구 금단로 113번길 30-1", phone: "051-518-9991" },
@@ -1779,7 +1598,7 @@
       { city: "Chungnam · Boryeong", name: "Boryeong Islamic Center", addr: "충청남도 보령시 상설시장길 29", phone: "" },
       { city: "Busan · Gangseo", name: "Masjid Al Kautsar Noksan", addr: "부산광역시 강서구 송정길 180", phone: "" },
       { city: "Gyeongnam · Changwon", name: "Masjid Sayyidina Bilal", addr: "경상남도 창원시 성산구 중앙동 31-15", phone: "" },
-      { city: "Gyeongnam · Jinju", name: "Masjid Mubarok Jinju", addr: "경상남도 진주시 일반성면 동부로 1946, CU 2층", phone: "010-8477-2003" },
+      { city: "Gyeongnam · Jinju", name: "Masjid Mubarok Jinju", addr: "경상남도 진주시 일반성면 동부로 1946, CU 2층", phone: "" },
       { city: "Gyeongnam · Yangsan", name: "Masjid Uwais Al-Qorni", addr: "경상남도 양산시 서창로 98 (면동)", phone: "" },
       { city: "Gyeongnam · Sacheon", name: "Masjid An-Nur Samcheonpo", addr: "경상남도 사천시 동금동 새시장길 10 (3층)", phone: "" },
       { city: "Busan · Gijang", name: "Masjid Babussalam Jeonggwan", addr: "부산광역시 기장군 정관읍 정관로 829", phone: "" },
@@ -1787,7 +1606,7 @@
       { city: "Chungnam · Cheonan", name: "Masjid At-Taqwa Cheonan", addr: "충청남도 천안시 동남구 은행길 18", phone: "" },
       { city: "Gyeonggi · Hwaseong", name: "Masjid Darussalam Baran", addr: "경기도 화성시 향남읍 평리 89-15 4층 404호", phone: "" },
       { city: "Gyeonggi · Gimpo", name: "Masjid Abdurrahman Bin Auf", addr: "경기도 김포시 통진읍 조강로 30 3층", phone: "" },
-      { city: "Gyeonggi · Uijeongbu", name: "Masjid Al Ikhlas Uijeongbu", addr: "경기도 의정부시 서민로132번길 19, 2층", phone: "010-5852-2816" }
+      { city: "Gyeonggi · Uijeongbu", name: "Masjid Al Ikhlas Uijeongbu", addr: "경기도 의정부시 서민로132번길 19, 2층", phone: "" }
     ];
 
     const MANUFACTURING_SECTORS = [
@@ -1808,8 +1627,8 @@
     ];
 
     const KAMUS_DATA = [
-      { cat: "NODONGBU", kr: "사업장 변경 신청하러 왔어요.", pron: "Saeopjang byeongyeong sincheong-hareo wasseoyo.", id: "Saya datang untuk mengajukan pindah tempat kerja (Lapor D-30)." },
-      { cat: "NODONGBU", kr: "구직 등록하고 알선 받고 싶어요.", pron: "Gujik deungnok-hago alseon batgo sipeoyo.", id: "Saya ingin daftar pencari kerja (D-90) dan minta rekomendasi pabrik." },
+      { cat: "NODONGBU", kr: "사업장 변경 신청하러 왔어요.", pron: "Saeopjang byeongyeong sincheong-hareo wasseoyo.", id: "Saya datang untuk mengajukan pindah tempat kerja (Lapor kepindahan)." },
+      { cat: "NODONGBU", kr: "구직 등록하고 알선 받고 싶어요.", pron: "Gujik deungnok-hago alseon batgo sipeoyo.", id: "Saya ingin daftar pencari kerja (pencari kerja) dan minta rekomendasi tempat kerja." },
       { cat: "NODONGBU", kr: "인도네시아어 통역 상담이 가능할까요?", pron: "Indonesia-eo tongyeok sangdam-i ganeunghalkkayo?", id: "Apakah tersedia konsultasi penerjemah Bahasa Indonesia?" },
       { cat: "NODONGBU", kr: "회사에서 아직 고용변동신고를 안 했어요.", pron: "Hoesa-eseo ajik goyong-byeondong-singo-reul an haesseoyo.", id: "Perusahaan lama belum melaporkan pelepasan kerja saya." },
       { cat: "PABRIK", kr: "반장님, 기계에 이상이 생겼습니다. 확인해 주세요.", pron: "Banjangnim, gigye-e isang-i saenggyeotseumnida. Hwaginhae juseyo.", id: "Pak Mandor, ada kendala pada mesin. Mohon diperiksa." },
@@ -1823,37 +1642,6 @@
       { cat: "HARIAN", kr: "기숙사 난방이나 온수가 잘 안 나옵니다.", pron: "Gisuksa nanbang-ina onsu-ga jal an naomnida.", id: "Pemanas ruangan atau air panas di asrama/mess kurang berfungsi." },
       { cat: "PABRIK", kr: "급여 명세서에서 공제 내역을 자세히 알고 싶습니다.", pron: "Geubyeo myeongsesseo-eseo gongje naeyeok-eul jasehi algo sipseumnida.", id: "Saya ingin tahu rincian potongan pada slip gaji secara jelas." },
       { cat: "HARIAN", kr: "해외 송금할 때 필요한 서류가 무엇인가요?", pron: "Haeoe songgeum-hal ttae piryo-han seoryu-ga mueosingayo?", id: "Dokumen apa saja yang diperlukan saat mengirim uang ke luar negeri?" }
-    ];
-
-    const QNA_ITEMS = [
-      { q: "1. Bos menunggak gaji / pesangon atau kabur, bagaimana langkah resminya?", a: "Kumpulkan slip gaji, mutasi rekening bank, catatan absen/lembur, dan chat dengan bos. Ajukan laporan resmi (임금체불 진정) ke kantor Nodongbu wilayah pabrik atau via MOEL (1350). Jika pabrik bangkrut/tetap tidak bayar, minta surat keterangan tunggakan dari Nodongbu lalu ajukan dana talangan Daedang-geum (대지급금) ke COMWEL." },
-      { q: "2. Gaji dipotong sepihak karena alat/barang rusak, apakah diperbolehkan?", a: "Tidak boleh. Berdasarkan UU Ketenagakerjaan Korea, perusahaan dilarang memotong gaji sepihak tanpa persetujuan tertulis yang sah atau putusan hukum. Anda berhak melaporkannya ke Nodongbu." },
-      { q: "3. Kapan uang pesangon (퇴직금) cair setelah keluar pabrik?", a: "Jika masa kerja minimal 1 tahun penuh di pabrik yang sama, selisih pesangon di luar asuransi Chulguk Mangi Boheom wajib dilunasi pabrik maksimal 14 hari setelah berhenti kerja." },
-      { q: "4. Bos belum melapor pelepasan kerja (고용변동신고) atau menolak tanda tangan pindah?", a: "Jika alasan keluar sah (kontrak habis, gaji telat, pabrik tutup, atau pelanggaran berat), langsung datang ke kantor Nodongbu wilayah pabrik atau hubungi 1577-0071 / 1350 untuk diproses verifikasi mandiri." },
-      { q: "5. Batas 90 hari (D-90) hampir habis tapi belum dapat pabrik baru, bagaimana solusinya?", a: "Jangan tunggu lewat hari ke-90! Jika ada alasan darurat seperti sakit/kecelakaan kerja (dengan surat dokter) atau sengketa gaji di Nodongbu, ajukan perpanjangan masa pencarian kerja (구직기간 연장) ke Nodongbu dan Imigrasi sebelum hari ke-90 berakhir." },
-      { q: "6. Bolehkah pindah lintas provinsi/zona (misal dari Chungcheong ke Gyeonggi)?", a: "Pekerja dengan izin kerja awal mulai 19 Oktober 2023 wajib pindah di dalam zona yang sama (5 zona). Pekerja sebelum tanggal tersebut umumnya lebih fleksibel." },
-      { q: "7. Kena tilang/denda di bawah 3 juta Won — masih bisa perpanjang visa & re-entry?", a: "Masih berpeluang besar bisa diperpanjang jika pelanggaran ringan/tunggal dengan denda di bawah 3 juta Won (300만 원) dan bukan pelanggaran berulang. Bayar denda lunas, ambil bukti lunas (벌금납부확인서) dari Kejaksaan, siapkan surat penyesalan (반성문) & rekomendasi kerja, lalu ikuti Sabeom Simsa (사범심사) di Imigrasi." },
-      { q: "8. Kecelakaan kerja di pabrik (산재), tapi bos menyuruh pakai BPJS biasa?", a: "Jangan mau. Kecelakaan kerja ditanggung penuh oleh asuransi Sanjae (산재보험) termasuk biaya berobat dan tunjangan istirahat (~70% gaji). Anda bisa mendaftar langsung ke COMWEL (1588-0075) atau lewat rumah sakit." },
-      { q: "9. Bos menahan paspor atau kartu ARC saya, apakah boleh?", a: "Ilegal. Tidak ada perusahaan yang berhak menahan paspor, ARC, atau buku tabungan pekerja. Segera hubungi 1577-0071 / 1350 atau lapor ke polisi (112)." },
-      { q: "10. Pindah ke shelter atau kos baru saat menganggur, apakah wajib lapor alamat?", a: "Wajib lapor pindah alamat (체류지 변경신고) ke Jumin Center atau HiKorea maksimal 14 hari sejak pindah agar tidak terkena denda Imigrasi." },
-      { q: "11. Disuruh angkat beban berat, naik forklift/mesin press tanpa APD/pelatihan, atau kerja di ruang dingin ekstrem — apa hak saya?", a: "Pekerja berhak menolak instruksi yang membahayakan keselamatan kerja tanpa prosedur aman dan APD layak. Jika cedera atau terpapar risiko kerja, catat kronologinya, periksa ke dokter/rumah sakit, dan laporkan pelanggaran K3 ke Nodongbu atau KOSHA/1350 bila perusahaan mengabaikan keselamatan." },
-      { q: "12. Jam kerja di slip gaji tidak sesuai absen/lembur (misal lembur 1.5x atau kerja hari libur dihitung rata biasa)?", a: "Simpan bukti jam masuk-pulang (foto mesin absen, jadwal shift, atau catatan pribadi harian) dan bandingkan dengan slip gaji (급여명세서). Tanyakan dulu ke HRD/bos secara tertulis atau lewat pesan, lalu laporkan selisih upah lembur/libur ke Nodongbu jika tidak dikoreksi." },
-      { q: "13. Potongan asuransi, mess, atau makan di slip gaji terlalu besar atau tidak jelas rinciannya?", a: "Perusahaan wajib memberikan slip gaji beserta rincian komponen upah dan potongan. Potongan biaya mess/makan harus sesuai kesepakatan kontrak/aturan resmi; jika ada potongan sewenang-wenang atau tidak wajar, minta rincian tertulis dan konsultasikan ke 1577-0071 atau Nodongbu." },
-      { q: "14. Masa kontrak 3 tahun hampir habis — bagaimana alur perpanjangan (1 tahun 10 bulan) atau re-entry?", a: "Cek kesiapan perpanjangan kontrak di pabrik (재고용/근로계약 갱신) jauh sebelum masa tinggal habis dan pastikan status visa & ARC diperpanjang tepat waktu di HiKorea/Imigrasi agar tidak melewati batas izin tinggal (체류기간)." },
-      { q: "15. Pabrik pindah lokasi ke kota/kabupaten lain (misal pindah gudang/pabrik) — bagaimana pengaruhnya ke alamat & Nodongbu?", a: "Perubahan lokasi tempat kerja/alamat pabrik yang terdaftar memengaruhi administrasi ketenagakerjaan dan wilayah yurisdiksi kantor Nodongbu. Pastikan alamat tempat kerja & tempat tinggal di data resmi sesuai dan laporkan perubahan alamat tinggal maksimal 14 hari." },
-      { q: "16. Sering dipindah-pindah lini/bagian atau shift mendadak sehingga tidak sempat istirahat/makan?", a: "Waktu istirahat (휴게시간) wajib diberikan sesuai aturan jam kerja. Jika jam istirahat dipotong terus-menerus atau jadwal shift berubah mendadak hingga mengganggu kesehatan/hak istirahat, simpan bukti jadwal dan sampaikan ke HRD atau pusat bantuan pekerja (1577-0071 / 1350)." },
-      { q: "17. Mau pulang kampung sementara atau cuti — apa saja yang perlu dicek sebelum berangkat?", a: "Pastikan izin cuti/libur disetujui perusahaan, cek masa berlaku ARC dan izin masuk kembali bila diperlukan, siapkan dokumen penting, dan pastikan tanggal kembali tidak melewati batas izin tinggal di Korea." },
-      { q: "18. Bos meminta tanda tangan surat pengunduran diri / kesepakatan keluar — apa yang harus diperhatikan?", a: "Baca atau minta terjemahkan isinya sebelum menandatangani. Jangan menandatangani pernyataan yang tidak sesuai fakta (misalnya mengaku keluar murni atas kemauan sendiri padahal gaji nunggak atau pabrik bermasalah) karena dapat memengaruhi hak klaim maupun status pindah kerja." },
-      { q: "19. Sudah tanda tangan sajikso (사직서) atau keluar pabrik, tapi status di EPS belum berubah jadi D-30 — bagaimana?", a: "Perusahaan memiliki kewajiban melapor perubahan ketenagakerjaan, dan di lapangan perubahan status di sistem EPS/Nodongbu biasanya muncul setelah laporan diproses (seringkali 1–2 hari kerja atau menyusul). Pantau akun EPS & SMS Nodongbu, atau hubungi 1350/Nodongbu jika belum tercatat." },
-      { q: "20. Bagaimana cara mendapatkan atau mengecek salinan Standard Labor Contract (SLC / 표준근로계약서)?", a: "Minta salinan/fotokopi kontrak kerja standar (표준근로계약서) ke pihak perusahaan atau tanyakan/minta cetakan salinannya saat mengurus administrasi di kantor Nodongbu agar rincian gaji, jam kerja, dan asrama jelas." },
-      { q: "21. Bagaimana syarat re-entry (재입국특례) vs perpanjangan kontrak 1 tahun 10 bulan setelah pindah pabrik?", a: "Secara umum, untuk dapat memenuhi syarat re-entry khusus di pabrik terakhir diperlukan masa kerja minimal 1 tahun (12 bulan) di tempat kerja tersebut dan memenuhi ketentuan kelayakan/sektor. Sementara untuk perpanjangan/pengajuan lanjutan ada batas minimal masa kerja di tempat kerja terakhir (umumnya minimal 1 bulan)." },
-      { q: "22. Bagaimana alur resmi setelah membayar surat denda/tilang dari Kejaksaan (검찰청 / 벌금)?", a: "Setelah membayar denda sesuai surat tagihan, ambil bukti lunas pembayaran (납부증명서) dan salinan putusan (약식명령등본) di Kejaksaan setempat, lalu lapor/jalani pemeriksaan keimigrasian (사범심사 / Sabeom-gwa) di Kantor Imigrasi dengan paspor, ARC, dan surat penyesalan (반성문) agar catatan sistem aman saat perpanjangan." },
-      { q: "23. Saat masa nganggur/menunggu penempatan, bagaimana tunggakan iuran Asuransi Kesehatan (건강보험 / NHIS)?", a: "Selama tidak bekerja di perusahaan aktif, tunggakan atau tagihan iuran asuransi kesehatan (건강보험) tetap perlu dicek dan diurus melalui layanan NHIS (web/aplikasi The건강보험) atau konsultasi lewat shelter/instansi terkait agar tidak menumpuk menjadi masalah administrasi." },
-      { q: "24. Apa perbedaan pabrik finish product dengan pabrik sajang borong / sub-kontrak (외주/하청)?", a: "Pabrik sub-kontrak/borongan sering bergantung pada orderan/target dari perusahaan utama sehingga jam kerja/lembur bisa naik-turun drastis. Saat wawancara (면접), tanyakan kejelasan jam kerja, lembur, asrama, dan aturan cuti/re-entry sebelum menandatangani kontrak." },
-      { q: "25. Apakah sering meminta file lalu membatalkan (cancel) bisa kena penalti masa tunggu?", a: "Di beberapa kantor Nodongbu, pembatalan berulang setelah pengambilan lowongan/file dapat memicu pembatasan/penalti sementara (misalnya jeda beberapa hari tidak bisa mengambil file baru). Pertimbangkan kecocokan syarat kerja sebelum mengambil file." },
-      { q: "26. Bagaimana cara mengecek saldo pesangon (퇴직금 / 출국만기보험) dan dana pensiun nasional (국민연금)?", a: "Dana pensiun nasional (국민연금) dapat dicek melalui layanan/akun NPS, sedangkan jaminan pesangon/asuransi keberangkatan (출국만기보험) dapat dicek melalui saluran/penyedia asuransi terkait atau bank/slip terkait serta rincian hak pesangon saat keluar kerja." },
-      { q: "27. Bagaimana aturan pembayaran Gwiguk-biyong Boheom (귀국비용보험 / asuransi kepulangan)?", a: "Asuransi biaya kepulangan didaftarkan dan dibayarkan sendiri oleh pekerja dalam batas waktu 3 bulan sejak tanggal efektif kontrak kerja/masuk, baik sekaligus maupun cicilan sesuai ketentuan. Keterlambatan mendaftar dapat dikenakan denda administratif (과태료)." },
-      { q: "28. Apa saja kesalahan paling sering pekerja E-9 yang memicu masalah hukum atau finansial?", a: "Kesalahan yang sering terjadi: bekerja sampingan (알바/double job) tanpa izin resmi, keluar tanpa prosedur/laporan resmi, menunda pembayaran asuransi kepulangan hingga lewat 3 bulan, tidak menyimpan kontrak & slip gaji, atau menandatangani dokumen tanpa memahami isinya." }
     ];
 
     const KR_HOLIDAYS = [
@@ -1893,9 +1681,8 @@
       "Bukti lapor alamat baru (체류지 변경신고) maks. 14 hari saat pindah tempat tinggal"
     ];
 
-    const STORAGE_KEY = "kawan_e9_saved_v3";
-    const JT_KEY = "kawan_e9_jobtrack_v3";
-    const DOC_KEY = "kawan_e9_docs_v1";
+    const STORAGE_KEY = "direktori_umum_saved_v3";
+    const DOC_KEY = "direktori_umum_docs_v1";
     let savedIds = new Set();
     let checkedDocs = new Set();
     let currentZone = "ALL";
@@ -1906,8 +1693,32 @@
     let mosqueProv = "";
     let kamusCat = "ALL";
     let kamusQuery = "";
-    let qnaQuery = "";
     let isAppleShelf = true;
+    let isCompactCard = false;
+    const SEARCH_HIST_KEY = "direktori_umum_search_hist_v1";
+
+    function pushSearchHistory(q) {
+      const clean = (q || "").trim();
+      if (clean.length < 2) return;
+      const list = safeGetStorage(SEARCH_HIST_KEY, []).filter(x => x.toLowerCase() !== clean.toLowerCase());
+      list.unshift(clean);
+      safeSetStorage(SEARCH_HIST_KEY, list.slice(0, 5));
+      renderRecentSearchChips();
+    }
+
+    function renderRecentSearchChips() {
+      const row = document.getElementById("recentSearchRow");
+      if (!row) return;
+      const list = safeGetStorage(SEARCH_HIST_KEY, []);
+      if (!list.length) {
+        row.classList.add("hidden");
+        row.innerHTML = "";
+        return;
+      }
+      row.classList.remove("hidden");
+      row.innerHTML = '<span class="font-bold text-slate-600 shrink-0">Terakhir:</span>' +
+        list.map(term => '<button type="button" data-hist-q="' + term.replace(/"/g, "&quot;") + '" class="motion-120 shrink-0 px-2.5 py-0.5 rounded-full bg-white/55 hover:bg-white border border-slate-900/15 text-slate-800 font-semibold cursor-pointer">' + term + '</button>').join("");
+    }
     let toastTimer = null;
 
     function safeGetStorage(key, fallback) {
@@ -2113,15 +1924,6 @@
       }
     }
 
-    function diffDaysFromSeoulToday(targetIso) {
-      const { isoToday } = getSeoulTimeParts();
-      const [y1, m1, d1] = isoToday.split("-").map(Number);
-      const [y2, m2, d2] = targetIso.split("-").map(Number);
-      const t1 = Date.UTC(y1, m1 - 1, d1);
-      const t2 = Date.UTC(y2, m2 - 1, d2);
-      return Math.round((t2 - t1) / 86400000);
-    }
-
     function updateKstClock() {
       try {
         const { hh, mm, mins, isWeekend, isoToday } = getSeoulTimeParts();
@@ -2165,25 +1967,54 @@
         if (upListEl && upcomingList.length > 0) {
           upListEl.innerHTML = "<strong>Agenda Libur Berikutnya:</strong> " + upcomingList.map(h => h.date + " (" + h.name.split(" (")[0] + ")").join(" · ");
         }
+
+        const topHeadline = document.getElementById("topKstStatusHeadline");
+        const topIconBadge = document.getElementById("topKstIconBadge");
+        const topBigClock = document.getElementById("topIosBigClock");
+        const topHolidayEl = document.getElementById("topNextHolidayText");
+        if (topBigClock) {
+          topBigClock.textContent = hh + ":" + mm;
+        }
+        if (topHeadline && topIconBadge) {
+          if (isOpen) {
+            topHeadline.textContent = "Loket Nodongbu BUKA";
+            topIconBadge.className = "w-7 h-7 rounded-full bg-emerald-500/20 text-emerald-700 flex items-center justify-center shrink-0";
+          } else if (isLunch) {
+            topHeadline.textContent = "Istirahat Siang (12–13)";
+            topIconBadge.className = "w-7 h-7 rounded-full bg-amber-400/25 text-amber-800 flex items-center justify-center shrink-0";
+          } else {
+            topHeadline.textContent = "Di Luar Jam Loket";
+            topIconBadge.className = "w-7 h-7 rounded-full bg-slate-900/10 text-slate-700 flex items-center justify-center shrink-0";
+          }
+        }
+        if (topHolidayEl && nextHol) {
+          topHolidayEl.textContent = "Libur Terdekat: " + nextHol.date + " (" + nextHol.name.split(" (")[0] + ")";
+        }
       } catch (e) {}
+    }
+
+        function syncIosStatusSeg() {
+      document.querySelectorAll(".ios-seg-btn").forEach(btn => {
+        const val = btn.getAttribute("data-ios-status") || "ALL";
+        const active = val === currentStatus;
+        btn.className = active
+          ? "ios-seg-btn py-2 rounded-[14px] bg-slate-900 text-white cursor-pointer"
+          : "ios-seg-btn py-2 rounded-[14px] text-slate-700 hover:bg-white/50 cursor-pointer";
+      });
     }
 
     function updateProgress() {
       const c = document.getElementById("progressCount");
       const hm = document.getElementById("heroMosqueCount");
       const savedBtnSpan = document.querySelector("#btnCopySaved span");
-      const sel = document.getElementById("statusSelect");
-      const total = NODONGBU_CENTERS.length;
       const savedCount = savedIds.size;
-      const unsavedCount = Math.max(0, total - savedCount);
       if (c) c.textContent = String(savedCount);
       if (hm) hm.textContent = String(MOSQUES.length);
+      const scBadge = document.getElementById("showcaseMosqueBadge");
+      const scSub = document.getElementById("showcaseMosqueSub");
+      if (scBadge) scBadge.textContent = MOSQUES.length + " MASJID";
+      if (scSub) scSub.textContent = MOSQUES.length + " Lokasi Masjid · Alamat Korea · KakaoMap & Naver Map";
       if (savedBtnSpan) savedBtnSpan.textContent = "Salin Tersimpan (" + savedCount + ")";
-      if (sel && sel.options.length >= 3) {
-        sel.options[0].textContent = "Semua Status (" + total + ")";
-        sel.options[1].textContent = "Belum Disimpan (" + unsavedCount + ")";
-        sel.options[2].textContent = "Sudah Disimpan (" + savedCount + ")";
-      }
     }
 
     function getFilteredCenters() {
@@ -2222,10 +2053,13 @@
 
     function renderCenters() {
       updateProgress();
+      syncIosStatusSeg();
+      const pill = document.getElementById('iosLiveReadinessPill');
+      if (pill && !pill.textContent.startsWith('D-')) pill.textContent = 'Tersimpan: ' + savedIds.size + '/62';
       const grid = document.getElementById("centersGrid");
       const summary = document.getElementById("resultSummary");
       const list = getFilteredCenters();
-      if (summary) summary.textContent = "Menampilkan " + list.length + " dari " + NODONGBU_CENTERS.length + " kantor Nodongbu E-9";
+      if (summary) summary.textContent = "Menampilkan " + list.length + " dari " + NODONGBU_CENTERS.length + " kantor Nodongbu";
       if (!grid) return;
 
       if (list.length === 0) {
@@ -2233,7 +2067,7 @@
         grid.classList.add("grid", "grid-cols-1", "gap-4");
         const shelfBarEmpty = document.getElementById("appleShelfBar");
         if (shelfBarEmpty) shelfBarEmpty.classList.add("hidden");
-        grid.innerHTML = '<div class="col-span-full liquid-glass squircle p-8 text-center space-y-1"><p class="text-sm font-bold text-slate-800">Tidak ditemukan kantor Nodongbu yang sesuai.</p><p class="text-xs text-slate-500">Coba kata kunci kota lain atau pilih Semua Wilayah (62).</p></div>';
+        grid.innerHTML = '<div class="col-span-full liquid-glass squircle p-8 text-center space-y-1"><p class="text-sm font-bold text-slate-800">Tidak ditemukan kantor Nodongbu yang sesuai.</p><p class="text-xs text-slate-600">Coba kata kunci kota lain atau pilih Semua Wilayah (62).</p></div>';
         return;
       }
 
@@ -2279,12 +2113,12 @@
                   <div class="text-xs sm:text-sm font-extrabold text-slate-900 select-all">${item.roadAddr}</div>
                   <div class="text-[11px] text-slate-600 select-all">${item.latinAddr}</div>
                 </div>
-                <div class="font-semibold text-amber-950 bg-amber-100/35 px-2.5 py-1.5 rounded-[18px] border-transparent border-transparent/80">
+                ${isCompactCard ? '' : `<div class="font-semibold text-amber-950 bg-amber-100/35 px-2.5 py-1.5 rounded-[18px] border-transparent border-transparent/80">
                   <strong>Lokasi Loket:</strong> ${item.floor} <span class="text-[11px] font-bold text-amber-800 block sm:inline sm:ml-1">(Sen–Jum 09:00–18:00 · Istirahat 12:00–13:00 KST)</span>
                 </div>
                 <div class="text-slate-700 leading-relaxed">
                   <strong>Wilayah Yurisdiksi:</strong> ${item.area}
-                </div>
+                </div>`}
                 <div class="flex flex-wrap items-center justify-between gap-2 pt-1.5 border-transparent border-transparent/70">
                   <a href="tel:${item.phone}" class="tactile-press motion-120 inline-flex items-center gap-1 text-blue-700 font-extrabold underline">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 shrink-0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -2293,7 +2127,7 @@
                   <div class="flex items-center gap-1.5">
                     <button type="button" data-action="show-taxi" data-id="${item.id}" class="motion-120 inline-flex items-center gap-1 text-[11px] font-extrabold text-slate-800 bg-white/30 hover:bg-white px-2.5 py-1 rounded-lg border-transparent border-transparent/90 cursor-pointer">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 shrink-0"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
-                      <span>Layar Taksi</span>
+                      <span>Kartu Tujuan</span>
                     </button>
                     <button type="button" data-action="share-center" data-id="${item.id}" class="motion-120 inline-flex items-center gap-1 text-[11px] font-extrabold text-blue-800 bg-blue-50/90 hover:bg-blue-100 px-2.5 py-1 rounded-lg border-transparent border-transparent cursor-pointer">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 shrink-0"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
@@ -2336,7 +2170,7 @@
       if (badge) badge.textContent = list.length + " dari " + SHELTER_CENTERS.length + " Pusat";
       if (!grid) return;
       if (list.length === 0) {
-        grid.innerHTML = '<div class="col-span-full liquid-glass squircle p-8 text-center space-y-1"><p class="text-sm font-bold text-slate-800">Tidak ditemukan shelter atau pusat bantuan yang sesuai.</p><p class="text-xs text-slate-500">Coba kata kunci kota lain seperti Ansan, Cheonan, Incheon, atau Gimhae.</p></div>';
+        grid.innerHTML = '<div class="col-span-full liquid-glass squircle p-8 text-center space-y-1"><p class="text-sm font-bold text-slate-800">Tidak ditemukan shelter atau pusat bantuan yang sesuai.</p><p class="text-xs text-slate-600">Coba kata kunci kota lain seperti Ansan, Cheonan, Incheon, atau Gimhae.</p></div>';
         return;
       }
 
@@ -2487,7 +2321,7 @@
       if (summary) summary.textContent = list.length + " dari " + totalMosques + " Masjid";
       if (!grid) return;
       if (list.length === 0) {
-        grid.innerHTML = '<div class="col-span-full liquid-subglass rounded-[24px] p-8 text-center space-y-1"><p class="text-sm font-bold text-slate-800">Tidak ditemukan masjid yang sesuai.</p><p class="text-xs text-slate-500">Coba cari nama kota seperti Ansan, Hwaseong, Pyeongtaek, Eumseong, atau Busan.</p></div>';
+        grid.innerHTML = '<div class="col-span-full liquid-subglass rounded-[24px] p-8 text-center space-y-1"><p class="text-sm font-bold text-slate-800">Tidak ditemukan masjid yang sesuai.</p><p class="text-xs text-slate-600">Coba cari nama kota seperti Ansan, Hwaseong, Pyeongtaek, Eumseong, atau Busan.</p></div>';
         return;
       }
 
@@ -2498,7 +2332,7 @@
             <div>
               <div class="flex items-center justify-between gap-2">
                 <span class="px-2.5 py-0.5 rounded-full text-[11px] font-extrabold bg-teal-100 text-teal-900">${m.city}</span>
-                ${m.phone ? '<a href="tel:' + m.phone + '" class="text-[11px] font-extrabold text-blue-700 underline">' + m.phone + '</a>' : '<span class="text-[10px] font-semibold text-slate-500">Tanpa no. telp · pakai peta</span>'}
+                ${m.phone ? '<a href="tel:' + m.phone + '" class="text-[11px] font-extrabold text-blue-700 underline">' + m.phone + '</a>' : ''}
               </div>
               <div class="font-extrabold text-sm text-slate-900 mt-1.5">${m.name}</div>
               <div class="text-xs text-slate-700 font-semibold mt-0.5 select-all">${m.addr}</div>
@@ -2533,7 +2367,7 @@
             ${m.popular ? '<span class="px-2 py-0.5 rounded-full bg-amber-100 text-amber-900 font-extrabold text-[10px]">KUOTA BESAR</span>' : ''}
           </div>
           <div class="font-extrabold text-sm text-slate-900">${m.idName}</div>
-          <div class="font-bold text-blue-900">${m.kr} <span class="font-normal text-slate-500">(${m.pron})</span></div>
+          <div class="font-bold text-blue-900">${m.kr} <span class="font-normal text-slate-600">(${m.pron})</span></div>
           <p class="text-slate-600 leading-relaxed">${m.desc}</p>
         </div>
       `).join("");
@@ -2571,26 +2405,6 @@
       refreshIcons();
     }
 
-    function renderQna() {
-      const box = document.getElementById("qnaList");
-      if (!box) return;
-      const list = QNA_ITEMS.filter(item => {
-        if (!qnaQuery.trim()) return true;
-        const q = qnaQuery.toLowerCase();
-        return (item.q + " " + item.a).toLowerCase().includes(q);
-      });
-      box.innerHTML = list.map(item => `
-        <details class="group liquid-subglass motion-120 rounded-[24px] p-3.5 open:bg-blue-50/50">
-          <summary class="cursor-pointer text-xs sm:text-sm font-extrabold text-slate-900 list-none flex items-center justify-between gap-2">
-            <span>${item.q}</span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-slate-500 group-open:rotate-180 transition-transform duration-200 shrink-0"><path d="m6 9 6 6 6-6"/></svg>
-          </summary>
-          <p class="text-xs text-slate-700 mt-2 leading-relaxed">${item.a}</p>
-        </details>
-      `).join("");
-      refreshIcons();
-    }
-
     function renderDocChecklist() {
       const box = document.getElementById("docChecklistBox");
       if (!box) return;
@@ -2618,7 +2432,7 @@
         out.innerHTML = '<div class="font-extrabold text-emerald-900">TIDAK MEMOTONG KUOTA PINDAH PABRIK</div><p class="text-slate-700">Keluar akibat kesalahan perusahaan (gaji macet, pabrik tutup, kekerasan, pelanggaran mess) atau kecelakaan kerja/sakit tidak mengurangi kuota normal Anda.</p>';
       } else {
         const rem = Math.max(0, max - used);
-        out.innerHTML = '<div class="font-extrabold text-purple-950">Sisa Kuota Normal Anda: ' + rem + ' dari ' + max + ' Kali</div><p class="text-slate-700">' + (rem > 0 ? 'Anda masih memiliki jatah pindah pabrik reguler dengan laporan pelepasan kerja.' : 'Kuota pindah normal Anda sudah habis. Pindah pabrik berikutnya hanya dimungkinkan bila terjadi kesalahan perusahaan/alasan sah.') + '</p>';
+        out.innerHTML = '<div class="font-extrabold text-purple-950">Sisa Kuota Normal Anda: ' + rem + ' dari ' + max + ' Kali</div><p class="text-slate-700">' + (rem > 0 ? 'Anda masih memiliki jatah pindah kerja reguler dengan laporan pelepasan kerja.' : 'Kuota pindah kerja normal Anda sudah habis. Pindah pabrik berikutnya hanya dimungkinkan bila terjadi kesalahan perusahaan/alasan sah.') + '</p>';
       }
     }
 
@@ -2639,8 +2453,8 @@
             <span class="font-extrabold text-emerald-950 text-sm">DIIZINKAN (Izin Awal Sebelum 19 Okt 2023)</span>
             <button type="button" data-jump-zone="${target}" class="motion-120 px-3 py-1 rounded-full bg-slate-900 text-white text-[11px] font-bold cursor-pointer">Lihat Nodongbu ${targetLabel}</button>
           </div>
-          <p class="text-slate-700 leading-relaxed">Untuk izin kerja awal sebelum 19 Oktober 2023, perpindahan pabrik ke <strong>${targetLabel}</strong> umumnya tidak dibatasi zonasi ketat selama kuota &amp; syarat kerja sesuai.</p>
-          <p class="text-[11px] text-slate-600"><strong>Catatan:</strong> Perpanjangan kontrak di pabrik yang sama tetap mengikuti ketentuan perusahaan &amp; masa tinggal aktif.</p>
+          <p class="text-slate-700 leading-relaxed">Untuk izin kerja awal sebelum 19 Oktober 2023, perpindahan tempat kerja ke <strong>${targetLabel}</strong> umumnya tidak dibatasi zonasi ketat selama kuota &amp; syarat kerja sesuai.</p>
+          <p class="text-[11px] text-slate-600"><strong>Catatan:</strong> Perpanjangan kontrak di tempat kerja yang sama tetap mengikuti ketentuan perusahaan &amp; masa tinggal aktif.</p>
         `;
       } else if (sameZone) {
         out.innerHTML = `
@@ -2648,8 +2462,8 @@
             <span class="font-extrabold text-emerald-950 text-sm">SESUAI ATURAN ZONASI (${zoneLabel} &rarr; ${targetLabel})</span>
             <button type="button" data-jump-zone="${target}" class="motion-120 px-3 py-1 rounded-full bg-slate-900 text-white text-[11px] font-bold cursor-pointer">Lihat Nodongbu ${targetLabel}</button>
           </div>
-          <p class="text-slate-700 leading-relaxed">Pindah pabrik di dalam <strong>${zoneLabel}</strong> sesuai dengan aturan zonasi mulai 19 Oktober 2023.</p>
-          <p class="text-[11px] text-slate-600"><strong>Catatan:</strong> Pastikan alamat pabrik baru dan pelaporan D-30 / D-90 tercatat rapi di Nodongbu &amp; Imigrasi.</p>
+          <p class="text-slate-700 leading-relaxed">Pindah tempat kerja di dalam <strong>${zoneLabel}</strong> sesuai dengan aturan zonasi mulai 19 Oktober 2023.</p>
+          <p class="text-[11px] text-slate-600"><strong>Catatan:</strong> Pastikan alamat pabrik baru dan pelaporan jadwal pelaporan tercatat rapi di Nodongbu &amp; Imigrasi.</p>
         `;
       } else {
         out.innerHTML = `
@@ -2657,8 +2471,8 @@
             <span class="font-extrabold text-amber-950 text-sm">BEDA ZONA (${zoneLabel} &rarr; ${targetLabel}) — PERLU CEK KETENTUAN</span>
             <button type="button" data-jump-zone="${zone}" class="motion-120 px-3 py-1 rounded-full bg-slate-900 text-white text-[11px] font-bold cursor-pointer">Lihat Nodongbu ${zoneLabel}</button>
           </div>
-          <p class="text-slate-700 leading-relaxed">Untuk izin kerja awal mulai 19 Oktober 2023, pindah pabrik secara umum dibatasi di dalam <strong>${zoneLabel}</strong>. Pindah ke <strong>${targetLabel}</strong> biasanya hanya terbuka pada kondisi/kebijakan tertentu yang ditetapkan otoritas.</p>
-          <p class="text-[11px] text-slate-600"><strong>Saran:</strong> Tanyakan langsung ke petugas loket Nodongbu atau hubungi <strong>1350</strong> sebelum mengambil lowongan di luar zona.</p>
+          <p class="text-slate-700 leading-relaxed">Untuk izin kerja awal mulai 19 Oktober 2023, pindah tempat kerja secara umum dibatasi di dalam <strong>${zoneLabel}</strong>. Pindah ke <strong>${targetLabel}</strong> biasanya hanya terbuka pada kondisi/kebijakan tertentu yang ditetapkan otoritas.</p>
+          <p class="text-[11px] text-slate-600"><strong>Saran:</strong> Tanyakan langsung ke petugas loket Nodongbu atau hubungi <strong>1350</strong> sebelum mengambil penempatan di luar zona.</p>
         `;
       }
     }
@@ -2675,39 +2489,7 @@
       if (idEl) idEl.textContent = id;
     }
 
-    function updateGenMsg() {
-      const type = document.getElementById("msgTypeSelect")?.value || "SAKIT";
-      const name = (document.getElementById("msgWorkerName")?.value || "저").trim();
-      const dateStr = (document.getElementById("msgTargetDate")?.value || "오늘").trim();
-      const map = {
-        SAKIT: { kr: "안녕하세요 사장님/반장님, " + name + "입니다. 몸이 많이 아파서 " + dateStr + " 병원에 다녀와야 할 것 같습니다. 양해해 주셔서 감사합니다.", id: "Halo Pak Bos/Mandor, saya " + name + ". Karena kondisi badan sakit, pada " + dateStr + " saya izin periksa ke rumah sakit. Terima kasih." },
-        CUTI: { kr: "안녕하세요 사장님, " + name + "입니다. 개인 사정으로 " + dateStr + " 휴가(외출)를 신청드리고 싶습니다. 확인 부탁드립니다.", id: "Halo Pak Bos, saya " + name + ". Saya ingin mengajukan izin cuti pada " + dateStr + ". Mohon konfirmasinya." },
-        GAJI: { kr: "안녕하세요 사장님, " + name + "입니다. " + dateStr + " 급여 명세서의 잔업/특근 수당 내역을 다시 한 번 확인 부탁드려도 될까요?", id: "Halo Pak Bos, saya " + name + ". Bolehkah saya minta tolong dicek kembali rincian lembur pada slip gaji " + dateStr + "?" },
-        SURAT: { kr: "안녕하세요, " + name + "입니다. 비자 및 은행 업무 때문에 재직증명서 한 부 발급 부탁드립니다. 감사합니다.", id: "Halo, saya " + name + ". Untuk keperluan visa dan bank, mohon bantuannya menerbitkan surat keterangan kerja (재직증명서)." },
-        PINDAH: { kr: "안녕하세요 사장님, " + name + "입니다. 개인적인 사정으로 사업장 변경에 대해 상의드리고 싶습니다. 편하신 시간에 잠깐 말씀 나눌 수 있을까요?", id: "Halo Pak Bos, saya " + name + ". Saya ingin berdiskusi baik-baik mengenai pindah tempat kerja. Kapan kiranya ada waktu luang?" }
-      };
-      const item = map[type] || map.SAKIT;
-      const krEl = document.getElementById("genMsgKr");
-      const idEl = document.getElementById("genMsgId");
-      if (krEl) krEl.textContent = item.kr;
-      if (idEl) idEl.textContent = item.id;
-    }
-
-    function updateTriage(key) {
-      const box = document.getElementById("triageResultBox");
-      if (!box) return;
-      const data = {
-        GAJI: "<strong>Langkah 1:</strong> Kumpulkan slip gaji, mutasi rekening, dan foto absen.<br><strong>Langkah 2:</strong> Lapor <em>임금체불 진정</em> ke kantor Nodongbu wilayah pabrik atau MOEL (1350).<br><strong>Langkah 3:</strong> Jika bos tetap tidak bayar, ajukan dana talangan <em>대지급금</em> ke COMWEL.",
-        TANDATANGAN: "<strong>Langkah 1:</strong> Simpan bukti pelanggaran kontrak/gaji telat/pesan chat penolakan.<br><strong>Langkah 2:</strong> Datang langsung ke kantor Nodongbu wilayah pabrik atau hubungi 1577-0071 untuk verifikasi pindah mandiri.",
-        SANJAE: "<strong>Langkah 1:</strong> Segera ke rumah sakit dan bilang <em>산재 (kecelakaan kerja)</em>.<br><strong>Langkah 2:</strong> Ajukan klaim Sanjae langsung ke COMWEL (1588-0075) tanpa menunggu izin bos.",
-        PASPOR: "<strong>Langkah 1:</strong> Menahan paspor/ARC adalah tindakan ilegal di Korea.<br><strong>Langkah 2:</strong> Hubungi 1577-0071, 1350, atau polisi (112) untuk pendampingan pengambilan dokumen.",
-        D90: "<strong>Langkah 1:</strong> Cek sisa hari di kalkulator D-90.<br><strong>Langkah 2:</strong> Jika sakit atau ada sengketa gaji, ajukan perpanjangan masa cari kerja (<em>구직기간 연장</em>) di Nodongbu sebelum hari ke-90 habis."
-      };
-      box.innerHTML = data[key] || data.GAJI;
-    }
-
-    const FX_KEY = "kawan_e9_fx_v1";
-    const DATES_KEY = "kawan_e9_dates_v1";
+    const FX_KEY = "direktori_umum_fx_v1";
 
     function updateFxCalc() {
       const won = Math.max(0, Number(document.getElementById("fxWonInput")?.value || 0));
@@ -2762,45 +2544,6 @@
       }
     }
 
-    function recalcSavedTransferDates() {
-      const savedDates = safeGetStorage(DATES_KEY, {});
-      const endInp = document.getElementById("inputEndContractDate");
-      const repInp = document.getElementById("inputReportNodongbuDate");
-      const box30 = document.getElementById("resultD30Box");
-      const box90 = document.getElementById("resultD90Box");
-
-      if (endInp && savedDates.endContract) {
-        endInp.value = savedDates.endContract;
-        if (box30) {
-          const resIso = addSafeMonthsISO(savedDates.endContract, 1);
-          box30.innerHTML = "<strong class='text-blue-950 text-sm'>Batas Lapor D-30 (1 Bulan): " + resIso + "</strong>" + formatCountdownBadge(resIso) + "<p class='text-slate-600 mt-1'>Wajib lapor pindah kerja ke Nodongbu sebelum tanggal tersebut.</p>";
-        }
-      }
-      if (repInp && savedDates.reportNodongbu) {
-        repInp.value = savedDates.reportNodongbu;
-        if (box90) {
-          const resIso = addSafeMonthsISO(savedDates.reportNodongbu, 3);
-          box90.innerHTML = "<strong class='text-emerald-950 text-sm'>Batas Dapat Pabrik D-90 (3 Bulan): " + resIso + "</strong>" + formatCountdownBadge(resIso) + "<p class='text-slate-600 mt-1'>Wajib tanda tangan kontrak baru & urus izin Imigrasi sebelum tanggal ini.</p>";
-        }
-      }
-    }
-
-    function renderJobTracker() {
-      const listEl = document.getElementById("jobTrackList");
-      if (!listEl) return;
-      const items = safeGetStorage(JT_KEY, []);
-      if (items.length === 0) {
-        listEl.innerHTML = '<div class="text-slate-500 italic">Belum ada catatan wawancara pabrik. Tambahkan pabrik yang sedang diproses.</div>';
-        return;
-      }
-      listEl.innerHTML = items.map((it, idx) => `
-        <div class="liquid-subglass flex items-center justify-between gap-2 px-3 py-2 rounded-[18px]">
-          <div><strong>${it.name}</strong> · <span class="text-blue-700 font-bold">${it.status}</span> <span class="text-[10px] text-slate-400">(${it.date})</span></div>
-          <button type="button" data-action="del-jt" data-idx="${idx}" class="text-rose-600 font-bold hover:underline cursor-pointer">Hapus</button>
-        </div>
-      `).join("");
-    }
-
     function openTaxiModal(id) {
       const item = NODONGBU_CENTERS.find(c => c.id === id);
       if (!item) return;
@@ -2819,15 +2562,6 @@
         void card.offsetWidth;
         card.classList.add("sheet-open-120");
       }
-    }
-
-    function openAiDrawer() {
-      const drawer = document.getElementById("aiChatDrawer");
-      if (!drawer) return;
-      drawer.classList.remove("hidden");
-      drawer.classList.remove("sheet-open-120");
-      void drawer.offsetWidth;
-      drawer.classList.add("sheet-open-120");
     }
 
     function switchMainTab(targetId) {
@@ -2854,83 +2588,11 @@
       });
       refreshIcons();
     }
-
-    const AI_INTENTS = [
-      { keys: ["gaji", "nunggak", "bayar", "upah", "potong", "lembur", "잔업", "임금"], reply: "Jika gaji, lembur, atau pesangon bermasalah, simpan slip gaji, mutasi rekening & foto absen, lalu ajukan laporan (임금체불 진정) ke Nodongbu wilayah pabrik atau MOEL (1350)." },
-      { keys: ["ansan", "shelter ansan", "1577"], reply: "Nodongbu Ansan berada di 경기도 안산시 단원구 적금로1길 26 (Telp: 031-412-6952). Untuk shelter & penerjemah Indonesia hubungi 1577-0071." },
-      { keys: ["tilang", "denda", "3 juta", "kejaksaan", "벌금", "사범심사"], reply: "Denda tunggal di bawah 3 juta Won umumnya masih bisa perpanjang visa setelah lunas dan mengikuti Sabeom Simsa (사범심사) di Imigrasi dengan bukti lunas Kejaksaan & surat penyesalan." },
-      { keys: ["pesangon", "퇴직금", "keluar kerja"], reply: "Pesangon (퇴직금) berlaku setelah kerja minimal 1 tahun penuh di pabrik yang sama, dihitung sekitar 1 bulan rata-rata gaji per tahun masa kerja. Gunakan kalkulator di tab Gaji, Visa & Q&A." },
-      { keys: ["d-90", "d90", "90", "d-30", "d30", "30", "pindah pabrik"], reply: "Lapor pindah kerja ke Nodongbu maksimal D-30 (1 bulan) dan selesaikan izin pabrik baru di Imigrasi sebelum D-90 (3 bulan) berakhir." },
-      { keys: ["zona", "zonasi", "lintas wilayah", "권역"], reply: "Izin kerja awal mulai 19 Okt 2023 wajib pindah di dalam zona yang sama (5 zona). Cek simulasi lengkap di tab Aturan Zonasi." },
-      { keys: ["masjid", "geumwang", "mugeuk", "sholat", "jumat", "모스크"], reply: "Buka tab Alamat Masjid untuk melihat 45 masjid di Korea lengkap dengan filter per provinsi dan kota, salin alamat, serta KakaoMap/Naver Map." },
-      { keys: ["gwiguk", "kepulangan", "3 bulan", "denda asuransi"], reply: "Gwiguk-biyong Boheom (asuransi kepulangan) wajib didaftarkan/dibayar sendiri dalam 3 bulan sejak mulai kontrak/masuk agar terhindar dari denda administratif (과태료)." },
-      { keys: ["slc", "kontrak", "표준근로계약서", "nhis", "건강보험", "kesehatan"], reply: "Simpan salinan Standard Labor Contract (표준근로계약서) & slip gaji. Tunggakan iuran kesehatan (건강보험) saat jeda kerja dapat dicek di layanan NHIS atau dikonsultasikan ke shelter." },
-      { keys: ["borong", "alba", "sampingan", "paspor", "arc", "sanjae", "kecelakaan"], reply: "Dilarang kerja sampingan (알바) tanpa izin, paspor/ARC milik pekerja, dan kecelakaan kerja wajib diklaim sebagai Sanjae (산재) ke COMWEL (1588-0075)." }
-    ];
-
-    function answerAiQuestion(qRaw) {
-      const q = (qRaw || "").toLowerCase().trim();
-      if (!q) return "Ketik kata kunci pertanyaan Anda (misal: gaji nunggak, d-90, zona, masjid, tilang, atau sanjae).";
-
-      let bestReply = null;
-      let bestScore = 0;
-      AI_INTENTS.forEach(intent => {
-        let score = 0;
-        intent.keys.forEach(k => {
-          if (q.includes(k)) score += k.length >= 4 ? 2 : 1;
-        });
-        if (score > bestScore) {
-          bestScore = score;
-          bestReply = intent.reply;
-        }
-      });
-
-      if (bestReply && bestScore > 0) return bestReply;
-
-      const matchedMosque = MOSQUES.find(m => (m.name + " " + m.city + " " + m.addr).toLowerCase().includes(q));
-      if (matchedMosque) {
-        return "Masjid ditemukan: " + matchedMosque.name + " (" + matchedMosque.city + ") — Alamat: " + matchedMosque.addr + ".";
-      }
-
-      const matchedCenter = NODONGBU_CENTERS.find(c => (c.nameId + " " + c.nameKr + " " + c.area + " " + c.roadAddr).toLowerCase().includes(q));
-      if (matchedCenter) {
-        return "Kantor Nodongbu ditemukan: " + matchedCenter.nameId + " (" + matchedCenter.nameKr + ") — " + matchedCenter.roadAddr + " · Telp: " + matchedCenter.phone + ".";
-      }
-
-      return "Coba gunakan kata kunci seperti 'gaji', 'd-90', 'zona', 'masjid', 'tilang', atau hubungi layanan bantuan gratis Bahasa Indonesia di 1577-0071 (Shelter Ansan) atau 1350.";
-    }
-
-    function appendAiMessage(text, isUser) {
-      const box = document.getElementById("aiChatMessages");
-      if (!box) return;
-      const div = document.createElement("div");
-      div.className = isUser
-        ? "sheet-open-120 bg-blue-600 text-white rounded-[18px] p-2.5 ml-8 font-medium shadow-none"
-        : "sheet-open-120 liquid-subglass rounded-[18px] p-3 mr-4 text-slate-800 leading-relaxed";
-      div.textContent = text;
-      box.appendChild(div);
-      box.scrollTop = box.scrollHeight;
-    }
-
-    function addSafeMonthsISO(isoStr, monthsToAdd) {
-      const [y, m, d] = isoStr.split("-").map(Number);
-      const targetMonthIdx = (m - 1) + monthsToAdd;
-      const targetYear = y + Math.floor(targetMonthIdx / 12);
-      const targetMonth = ((targetMonthIdx % 12) + 12) % 12;
-      const maxDay = new Date(Date.UTC(targetYear, targetMonth + 1, 0)).getUTCDate();
-      const safeDay = Math.min(d, maxDay);
-      return String(targetYear) + "-" + String(targetMonth + 1).padStart(2, "0") + "-" + String(safeDay).padStart(2, "0");
-    }
-
-    function formatCountdownBadge(targetIso) {
-      const days = diffDaysFromSeoulToday(targetIso);
-      if (days > 7) return "<span class='inline-block mt-1 px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-900 font-extrabold'>Sisa " + days + " hari lagi (KST)</span>";
-      if (days >= 0) return "<span class='inline-block mt-1 px-2 py-0.5 rounded-md bg-amber-100 text-amber-950 font-extrabold'>Mendesak: sisa " + days + " hari lagi (KST)</span>";
-      return "<span class='inline-block mt-1 px-2 py-0.5 rounded-md bg-rose-100 text-rose-900 font-extrabold'>Lewat " + Math.abs(days) + " hari dari tanggal hitung</span>";
-    }
-
-
     function renderRegionMatcher() {
+      const pill = document.getElementById("iosLiveReadinessPill");
+      if (pill) {
+        pill.textContent = "Tersimpan: " + savedIds.size + "/62";
+      }
       const sel = document.getElementById("regionMatcherSelect");
       const out = document.getElementById("regionMatcherOutput");
       if (!sel || !out) return;
@@ -2945,25 +2607,32 @@
           <div class="text-[10px] font-black uppercase text-blue-800">Nodongbu Wilayah</div>
           <div class="font-extrabold text-slate-900">${nd.nameId}</div>
           <div class="text-[11px] text-slate-700 select-all">${nd.roadAddr}</div>
-          <div class="flex items-center justify-between pt-1">
+          <div class="flex items-center justify-between gap-1.5 pt-1">
             <a href="tel:${nd.phone}" class="font-extrabold text-blue-700 underline">${nd.phone}</a>
-            <a href="https://map.kakao.com/link/search/${encodeURIComponent(nd.roadAddr)}" target="_blank" rel="noopener noreferrer" class="kakao-btn px-2.5 py-1 rounded-lg text-[10px] font-black">KakaoMap</a>
+            <div class="flex items-center gap-1">
+              <button type="button" data-action="copy-text" data-copy="${nd.nameKr} - ${nd.roadAddr} (${nd.phone})" class="px-2 py-1 rounded-lg bg-slate-900 text-white text-[10px] font-bold cursor-pointer">Salin</button>
+              <a href="https://map.kakao.com/link/search/${encodeURIComponent(nd.roadAddr)}" target="_blank" rel="noopener noreferrer" class="kakao-btn px-2.5 py-1 rounded-lg text-[10px] font-black">KakaoMap</a>
+            </div>
           </div>
         </div>
         <div class="liquid-subglass rounded-[24px] p-3 space-y-1.5">
           <div class="text-[10px] font-black uppercase text-emerald-800">Shelter Terdekat</div>
           <div class="font-extrabold text-slate-900">${sh.nameId}</div>
           <div class="text-[11px] text-slate-700 select-all">${sh.roadAddr}</div>
-          <div class="flex items-center justify-between pt-1">
+          <div class="flex items-center justify-between gap-1.5 pt-1">
             <a href="tel:${sh.phone}" class="font-extrabold text-emerald-700 underline">${sh.phone}</a>
-            <a href="https://map.kakao.com/link/search/${encodeURIComponent(sh.roadAddr)}" target="_blank" rel="noopener noreferrer" class="kakao-btn px-2.5 py-1 rounded-lg text-[10px] font-black">KakaoMap</a>
+            <div class="flex items-center gap-1">
+              <button type="button" data-action="copy-text" data-copy="${sh.nameKr} - ${sh.roadAddr} (${sh.phone})" class="px-2 py-1 rounded-lg bg-slate-900 text-white text-[10px] font-bold cursor-pointer">Salin</button>
+              <a href="https://map.kakao.com/link/search/${encodeURIComponent(sh.roadAddr)}" target="_blank" rel="noopener noreferrer" class="kakao-btn px-2.5 py-1 rounded-lg text-[10px] font-black">KakaoMap</a>
+            </div>
           </div>
         </div>
         <div class="liquid-subglass rounded-[24px] p-3 space-y-1.5">
           <div class="text-[10px] font-black uppercase text-teal-800">Masjid Terdekat</div>
           <div class="font-extrabold text-slate-900">${mq.name}</div>
           <div class="text-[11px] text-slate-700 select-all">${mq.addr}</div>
-          <div class="flex items-center justify-end pt-1">
+          <div class="flex items-center justify-end gap-1 pt-1">
+            <button type="button" data-action="copy-text" data-copy="${mq.name} - ${mq.addr}" class="px-2 py-1 rounded-lg bg-slate-900 text-white text-[10px] font-bold cursor-pointer">Salin</button>
             <a href="https://map.kakao.com/link/search/${encodeURIComponent(mq.addr)}" target="_blank" rel="noopener noreferrer" class="kakao-btn px-2.5 py-1 rounded-lg text-[10px] font-black">KakaoMap</a>
           </div>
         </div>
@@ -3009,170 +2678,8 @@
       );
     }
 
-    const CLOUD_CFG_KEY = "kawan_e9_cloud_cfg_v1";
-
-    function buildSnapshotPayload() {
-      return {
-        app: "Kawan E-9",
-        version: 1,
-        updatedAt: new Date().toISOString(),
-        savedNodongbuIds: Array.from(savedIds),
-        checkedDocs: Array.from(checkedDocs),
-        transferDates: safeGetStorage(DATES_KEY, {}),
-        jobTracker: safeGetStorage(JT_KEY, [])
-      };
-    }
-
-    function applySnapshotPayload(parsed) {
-      if (!parsed || typeof parsed !== "object") return false;
-      if (Array.isArray(parsed.savedNodongbuIds)) {
-        savedIds = new Set(parsed.savedNodongbuIds.map(Number).filter(n => !Number.isNaN(n)));
-        safeSetStorage(STORAGE_KEY, Array.from(savedIds));
-      }
-      if (Array.isArray(parsed.checkedDocs)) {
-        checkedDocs = new Set(parsed.checkedDocs.map(Number).filter(n => !Number.isNaN(n)));
-        safeSetStorage(DOC_KEY, Array.from(checkedDocs));
-      }
-      if (parsed.transferDates && typeof parsed.transferDates === "object") {
-        safeSetStorage(DATES_KEY, parsed.transferDates);
-      }
-      if (Array.isArray(parsed.jobTracker)) {
-        safeSetStorage(JT_KEY, parsed.jobTracker);
-      }
-      renderCenters();
-      renderDocChecklist();
-      renderJobTracker();
-      recalcSavedTransferDates();
-      return true;
-    }
-
-    function restoreSnapshotFromUrlHash() {
-      try {
-        const h = window.location.hash || "";
-        const m = h.match(/state=([^&]+)/);
-        if (!m || !m[1]) return;
-        const jsonStr = decodeURIComponent(escape(atob(decodeURIComponent(m[1]))));
-        const parsed = JSON.parse(jsonStr);
-        if (applySnapshotPayload(parsed)) {
-          showToast("Data snapshot dari tautan dimuat!");
-        }
-      } catch (e) {}
-    }
-
-    function buildShareableCloudLink() {
-      const compact = {
-        s: Array.from(savedIds),
-        d: Array.from(checkedDocs),
-        t: safeGetStorage(DATES_KEY, {}),
-        j: safeGetStorage(JT_KEY, [])
-      };
-      const b64 = btoa(unescape(encodeURIComponent(JSON.stringify(compact))));
-      const base = (window.location.href || "https://kawan-e9.github.io/kawan-e9/").split("#")[0];
-      return base + "#state=" + encodeURIComponent(b64);
-    }
-
-    async function syncCloudJsonBin(mode) {
-      const statusEl = document.getElementById("cloudSyncStatusBadge");
-      const binInp = document.getElementById("cloudBinIdInput");
-      const keyInp = document.getElementById("cloudApiKeyInput");
-      const cfg = safeGetStorage(CLOUD_CFG_KEY, { binId: "", apiKey: "" });
-      const binId = (binInp?.value || cfg.binId || "").trim();
-      const apiKey = (keyInp?.value || cfg.apiKey || "").trim();
-
-      if (!apiKey) {
-        showToast("Isi JSONBin Key terlebih dahulu atau pakai Link Data Instan");
-        return;
-      }
-      safeSetStorage(CLOUD_CFG_KEY, { binId, apiKey });
-
-      try {
-        if (statusEl) statusEl.textContent = mode === "push" ? "Mengunggah ke Cloud..." : "Menarik dari Cloud...";
-        if (mode === "push") {
-          const url = binId ? ("https://api.jsonbin.io/v3/b/" + encodeURIComponent(binId)) : "https://api.jsonbin.io/v3/b";
-          const method = binId ? "PUT" : "POST";
-          const headers = {
-            "Content-Type": "application/json",
-            "X-Master-Key": apiKey
-          };
-          if (!binId) headers["X-Bin-Name"] = "Kawan_E9_Sync";
-          const res = await fetch(url, {
-            method,
-            headers,
-            body: JSON.stringify(buildSnapshotPayload())
-          });
-          if (!res.ok) throw new Error("HTTP " + res.status);
-          const data = await res.json();
-          const newId = data?.metadata?.id || data?.record?.metadata?.id || binId;
-          if (newId) {
-            safeSetStorage(CLOUD_CFG_KEY, { binId: newId, apiKey });
-            if (binInp) binInp.value = newId;
-          }
-          if (statusEl) statusEl.textContent = "Cloud Tersinkron · Bin: " + (newId || "OK");
-          showToast("Data berhasil diunggah ke Cloud!");
-        } else {
-          if (!binId) {
-            showToast("Masukkan Bin ID untuk menarik data dari Cloud");
-            if (statusEl) statusEl.textContent = "Butuh Bin ID";
-            return;
-          }
-          const res = await fetch("https://api.jsonbin.io/v3/b/" + encodeURIComponent(binId) + "/latest", {
-            headers: { "X-Master-Key": apiKey }
-          });
-          if (!res.ok) throw new Error("HTTP " + res.status);
-          const data = await res.json();
-          const record = data?.record || data;
-          if (applySnapshotPayload(record)) {
-            if (statusEl) statusEl.textContent = "Cloud Ditarik · Sukses";
-            showToast("Data berhasil ditarik dari Cloud!");
-          }
-        }
-      } catch (err) {
-        if (statusEl) statusEl.textContent = "Gagal Cloud · Cek Koneksi / Key";
-        showToast("Sinkronisasi Cloud gagal (cek koneksi atau Key)");
-      }
-    }
-
-    function buildSmartStatusSummary() {
-      const dates = safeGetStorage(DATES_KEY, {});
-      const jt = safeGetStorage(JT_KEY, []);
-      const parts = [
-        "Nodongbu ditandai: " + savedIds.size + "/62",
-        "Dokumen siap: " + checkedDocs.size + "/" + DOC_CHECKLIST.length,
-        "Catatan D-90: " + jt.length
-      ];
-      if (dates.endContract) {
-        const d30 = addSafeMonthsISO(dates.endContract, 1);
-        parts.push("Batas D-30: " + d30 + " (" + diffDaysFromSeoulToday(d30) + " hr)");
-      }
-      if (dates.reportNodongbu) {
-        const d90 = addSafeMonthsISO(dates.reportNodongbu, 3);
-        parts.push("Batas D-90: " + d90 + " (" + diffDaysFromSeoulToday(d90) + " hr)");
-      }
-      const nextStep = checkedDocs.size < DOC_CHECKLIST.length
-        ? "Saran berikutnya: lengkapi checklist dokumen & pastikan laporan keluar kerja tercatat."
-        : "Saran berikutnya: pantau panggilan/SMS Nodongbu dan urus izin Imigrasi sebelum batas waktu.";
-      return "Ringkasan Otomatis: " + parts.join(" · ") + ". " + nextStep;
-    }
-
-    function triggerAutoCloudIfEnabled() {
-      const chk = document.getElementById("chkAutoCloudSync");
-      const cfg = safeGetStorage(CLOUD_CFG_KEY, { binId: "", apiKey: "", autoSync: false });
-      const enabled = chk ? chk.checked : Boolean(cfg.autoSync);
-      if (!enabled) return;
-      if (cfg.apiKey) {
-        syncCloudJsonBin("push");
-      }
-    }
-
     function initApp() {
       savedIds = new Set(safeGetStorage(STORAGE_KEY, []));
-      const savedCloudCfg = safeGetStorage(CLOUD_CFG_KEY, { binId: "", apiKey: "" });
-      const binInpInit = document.getElementById("cloudBinIdInput");
-      const keyInpInit = document.getElementById("cloudApiKeyInput");
-      if (binInpInit && savedCloudCfg.binId) binInpInit.value = savedCloudCfg.binId;
-      if (keyInpInit && savedCloudCfg.apiKey) keyInpInit.value = savedCloudCfg.apiKey;
-      const autoChkInit = document.getElementById("chkAutoCloudSync");
-      if (autoChkInit) autoChkInit.checked = Boolean(savedCloudCfg.autoSync);
       checkedDocs = new Set(safeGetStorage(DOC_KEY, []));
       updateKstClock();
       setInterval(updateKstClock, 30000);
@@ -3180,21 +2687,17 @@
       const steps = [
         renderRegionMatcher,
         renderCenters,
+        renderRecentSearchChips,
         renderShelters,
         renderMosques,
         renderMfg,
         renderKamus,
-        renderQna,
         renderDocChecklist,
-        renderJobTracker,
         updateQuotaOutput,
         updateZoningOutput,
         updateReqJobText,
-        updateGenMsg,
-        () => updateTriage("GAJI"),
         updateFxCalc,
         () => fetchLiveKrwRate(false),
-        recalcSavedTransferDates,
         syncAllCityFilterPills,
         updateVisitCounters,
         syncShowcaseCounter,
@@ -3204,15 +2707,23 @@
       steps.forEach(fn => {
         try { fn(); } catch (err) {}
       });
-      restoreSnapshotFromUrlHash();
 
       document.addEventListener("click", (e) => {
+        const iosSegBtn = e.target.closest("[data-ios-status]");
+        if (iosSegBtn) {
+          currentStatus = iosSegBtn.getAttribute("data-ios-status") || "ALL";
+          syncIosStatusSeg();
+          renderCenters();
+          return;
+        }
+
         const shCityBtn = e.target.closest("[data-shelter-city]");
         if (shCityBtn) {
           const val = shCityBtn.getAttribute("data-shelter-city") || "";
           shelterQuery = val;
           const inp = document.getElementById("shelterSearchInput");
           if (inp) inp.value = val;
+          document.getElementById("btnClearShelterSearch")?.classList.toggle("hidden", !val.trim());
           syncAllCityFilterPills();
           renderShelters();
           return;
@@ -3241,6 +2752,7 @@
           mosqueQuery = val;
           const inp = document.getElementById("mosqueSearchInput");
           if (inp) inp.value = val;
+          document.getElementById("btnClearMosqueSearch")?.classList.toggle("hidden", !val.trim());
           renderMosques();
           return;
         }
@@ -3264,6 +2776,7 @@
 
         if (e.target.closest("#btnCloseMoreMenu")) {
           document.getElementById("moreMenuPopover")?.classList.add("hidden");
+          document.getElementById("consultSheetModal")?.classList.add("hidden");
           document.getElementById("btnToggleMoreMenu")?.classList.remove("is-open");
           return;
         }
@@ -3334,31 +2847,6 @@
           return;
         }
 
-        const triageBtn = e.target.closest(".triage-btn");
-        if (triageBtn) {
-          const key = triageBtn.getAttribute("data-triage");
-          document.querySelectorAll(".triage-btn").forEach(b => {
-            const active = b === triageBtn;
-            b.className = active
-              ? "triage-btn motion-120 px-3 py-2 rounded-[18px] text-xs font-extrabold bg-rose-700 text-white cursor-pointer"
-              : "triage-btn motion-120 px-3 py-2 rounded-[18px] text-xs font-bold bg-white/25 text-slate-800 border-transparent border-transparent/90 cursor-pointer";
-          });
-          updateTriage(key);
-          return;
-        }
-
-        const msgPreset = e.target.closest("[data-msg-preset]");
-        if (msgPreset) {
-          const [pType, pDate] = (msgPreset.getAttribute("data-msg-preset") || "SAKIT|오늘").split("|");
-          const typeSel = document.getElementById("msgTypeSelect");
-          const dateInp = document.getElementById("msgTargetDate");
-          if (typeSel && pType) typeSel.value = pType;
-          if (dateInp && pDate) dateInp.value = pDate;
-          updateGenMsg();
-          showToast("Template pesan diterapkan");
-          return;
-        }
-
         const kamusQuick = e.target.closest("[data-kamus-quick]");
         if (kamusQuick) {
           const kw = kamusQuick.getAttribute("data-kamus-quick") || "";
@@ -3372,14 +2860,6 @@
           const kInp = document.getElementById("kamusSearchInput");
           if (kInp) kInp.value = kw;
           renderKamus();
-          return;
-        }
-
-        const aiChip = e.target.closest(".ai-chip");
-        if (aiChip) {
-          const q = aiChip.getAttribute("data-ai-q");
-          appendAiMessage(q, true);
-          appendAiMessage(answerAiQuestion(q), false);
           return;
         }
 
@@ -3397,7 +2877,6 @@
             }
             safeSetStorage(STORAGE_KEY, Array.from(savedIds));
             renderCenters();
-            triggerAutoCloudIfEnabled();
           } else if (act === "open-kakao") {
             if (!savedIds.has(id)) {
               savedIds.add(id);
@@ -3411,7 +2890,7 @@
             const item = NODONGBU_CENTERS.find(c => c.id === id);
             if (item) {
               const txt = item.nameId + " (" + item.nameKr + ")\nAlamat: " + item.roadAddr + "\nLoket: " + item.floor + "\nTelp: " + item.phone;
-              copyText(txt, "Info kantor Nodongbu disalin untuk dibagikan!");
+              copyText(txt, "Info kantor disalin untuk dibagikan!");
             }
           } else if (act === "show-taxi") {
             openTaxiModal(id);
@@ -3419,12 +2898,6 @@
             copyText(actionEl.getAttribute("data-copy") || "", "Berhasil disalin!");
           } else if (act === "speak-kr") {
             speakKorean(actionEl.getAttribute("data-kr") || "");
-          } else if (act === "del-jt") {
-            const idx = Number(actionEl.getAttribute("data-idx"));
-            const arr = safeGetStorage(JT_KEY, []);
-            arr.splice(idx, 1);
-            safeSetStorage(JT_KEY, arr);
-            renderJobTracker();
           } else if (act === "toggle-doc") {
             const docIdx = Number(actionEl.getAttribute("data-doc-idx"));
             if (checkedDocs.has(docIdx)) checkedDocs.delete(docIdx);
@@ -3435,7 +2908,25 @@
           return;
         }
 
-        if (e.target.closest("#btnToggleAppleShelf")) {
+        if (e.target.closest("#btnToggleCompactCard")) {
+          isCompactCard = !isCompactCard;
+          const cBtn = document.getElementById("btnToggleCompactCard");
+          if (cBtn) {
+            cBtn.className = isCompactCard
+              ? "motion-120 inline-flex items-center justify-center gap-1 px-2.5 py-1.5 rounded-[18px] text-xs font-extrabold bg-blue-600 text-white border border-blue-700 cursor-pointer"
+              : "motion-120 inline-flex items-center justify-center gap-1 px-2.5 py-1.5 rounded-[18px] text-xs font-bold bg-white/35 hover:bg-white text-slate-800 border border-slate-900/15 cursor-pointer";
+          }
+          renderCenters();
+          showToast(isCompactCard ? "Mode fokus alamat aktif" : "Mode detail lengkap aktif");
+        } else if (e.target.closest("[data-hist-q]")) {
+          const hq = e.target.closest("[data-hist-q]").getAttribute("data-hist-q") || "";
+          searchQuery = hq;
+          const sInp = document.getElementById("searchInput");
+          if (sInp) sInp.value = hq;
+          document.getElementById("btnClearSearch")?.classList.toggle("hidden", !hq.trim());
+          syncAllCityFilterPills();
+          renderCenters();
+        } else if (e.target.closest("#btnToggleAppleShelf")) {
           isAppleShelf = !isAppleShelf;
           const btn = document.getElementById("btnToggleAppleShelf");
           if (btn) {
@@ -3454,19 +2945,29 @@
         } else if (e.target.closest("#btnShelfNext")) {
           scrollAppleShelfBy(1);
           setTimeout(() => updateAppleShelfCounter(), 220);
+        } else if (e.target.closest("#btnToggleGlassTone")) {
+          const isTinted = document.documentElement.classList.toggle("tinted-glass");
+          showToast(isTinted ? "Mode kaca kontras aktif" : "Mode kaca bening aktif");
         } else if (e.target.closest("#btnToggleFont")) {
-          document.documentElement.classList.toggle("large-font");
-          showToast(document.documentElement.classList.contains("large-font") ? "Ukuran huruf diperbesar" : "Ukuran huruf normal");
-        } else if (e.target.closest("#btnCopyHotlines")) {
-          copyText("Shelter Ansan: 1577-0071 | MOEL: 1350 | Imigrasi: 1345 | KBRI Seoul: 02-222-49000", "Daftar nomor darurat disalin!");
+          const isLarge = document.documentElement.classList.toggle("large-font");
+          const fontBtn = document.getElementById("btnToggleFont");
+          if (fontBtn) {
+            fontBtn.classList.toggle("bg-amber-400/25", isLarge);
+            fontBtn.classList.toggle("bg-white/10", !isLarge);
+          }
+          showToast(isLarge ? "Ukuran huruf diperbesar" : "Ukuran huruf normal");
+        } else if (e.target.closest("#btnCopyScheduleSummary")) {
+          const { hh, mm, isoToday } = getSeoulTimeParts();
+          const nextHol = KR_HOLIDAYS.find(h => h.date >= isoToday) || KR_HOLIDAYS[0];
+          copyText("Jam Loket Nodongbu: Sen–Jum 09.00–18.00 KST (Istirahat 12.00–13.00 KST) | Waktu KST: " + hh + ":" + mm + " | Libur Terdekat: " + nextHol.date + " (" + nextHol.name + ")", "Ringkasan jadwal & hari libur disalin!");
         } else if (e.target.closest("#btnCopySiteUrl")) {
-          copyText("https://kawan-e9.github.io/kawan-e9/", "Tautan https://kawan-e9.github.io/kawan-e9/ disalin!");
+          const curUrl = /^https?:/i.test(window.location.href) ? window.location.href : ""; copyText(curUrl, "Tautan halaman disalin!");
         } else if (e.target.closest("#btnCopyDocChecklist")) {
           const lines = DOC_CHECKLIST.map((item, idx) => (checkedDocs.has(idx) ? "[x] " : "[ ] ") + item).join("\n");
           copyText(lines, "Checklist dokumen disalin!");
         } else if (e.target.closest("#btnSharePortal")) {
-          const shareTitle = "Kawan E-9: Direktori Nodongbu, Shelter & Panduan di Korea Selatan";
-          const shareText = "Kawan E-9: Direktori 62 Kantor Nodongbu, 18 Shelter, 30 Masjid & Panduan Pindah Pabrik E-9";
+          const shareTitle = "Direktori Tempat & Panduan Umum";
+          const shareText = "Direktori 62 Kantor Nodongbu, 18 Shelter & 45 Masjid";
           const shareUrl = window.location.href;
           if (navigator.share && /^https?:/i.test(shareUrl)) {
             navigator.share({ title: shareTitle, text: shareText, url: shareUrl }).catch(() => {
@@ -3475,23 +2976,8 @@
           } else {
             copyText(shareText + ": " + shareUrl, "Tautan portal disalin ke clipboard!");
           }
-        } else if (e.target.closest("#btnOpenAiHeader") || e.target.closest("#btnOpenAiFloating")) {
-          openAiDrawer();
-        } else if (e.target.closest("#btnCloseAiChat")) {
-          document.getElementById("aiChatDrawer")?.classList.add("hidden");
         } else if (e.target.closest("#btnCloseTaxiModal")) {
           document.getElementById("taxiModal")?.classList.add("hidden");
-        } else if (e.target.closest("#btnQuickSavedOnly")) {
-          currentStatus = currentStatus === "SAVED" ? "ALL" : "SAVED";
-          const sel = document.getElementById("statusSelect");
-          if (sel) sel.value = currentStatus;
-          const btn = document.getElementById("btnQuickSavedOnly");
-          if (btn) {
-            btn.className = currentStatus === "SAVED"
-              ? "motion-120 px-3 py-2.5 rounded-[18px] text-xs font-extrabold bg-emerald-600 text-white border-transparent border-transparent whitespace-nowrap cursor-pointer"
-              : "motion-120 px-3 py-2.5 rounded-[18px] text-xs font-extrabold bg-emerald-50/90 hover:bg-emerald-100 text-emerald-950 border-transparent border-transparent whitespace-nowrap cursor-pointer";
-          }
-          renderCenters();
         } else if (e.target.closest("#btnCopyFullFromModal")) {
           const krName = document.getElementById("taxiModalKrName")?.textContent || "";
           const addr = document.getElementById("taxiModalAddr")?.textContent || "";
@@ -3509,13 +2995,33 @@
           document.getElementById("btnClearSearch")?.classList.add("hidden");
           renderCenters();
         } else if (e.target.closest("#btnResetSaved")) {
+          const resetBtn = e.target.closest("#btnResetSaved");
+          if (savedIds.size === 0) {
+            showToast("Belum ada tanda tersimpan untuk direset");
+            return;
+          }
+          if (resetBtn.getAttribute("data-confirm-reset") !== "1") {
+            resetBtn.setAttribute("data-confirm-reset", "1");
+            const span = resetBtn.querySelector("span");
+            if (span) span.textContent = "Yakin Reset?";
+            showToast("Ketuk Reset sekali lagi untuk menghapus " + savedIds.size + " tanda");
+            setTimeout(() => {
+              resetBtn.removeAttribute("data-confirm-reset");
+              const sp = resetBtn.querySelector("span");
+              if (sp) sp.textContent = "Reset";
+            }, 3500);
+            return;
+          }
+          resetBtn.removeAttribute("data-confirm-reset");
+          const sp = resetBtn.querySelector("span");
+          if (sp) sp.textContent = "Reset";
           savedIds.clear();
           safeSetStorage(STORAGE_KEY, []);
           renderCenters();
           showToast("Progres simpan direset");
         } else if (e.target.closest("#btnCopyFiltered")) {
           const lines = getFilteredCenters().map(c => "#" + c.id + " " + c.nameId + " | " + c.roadAddr + " (" + c.phone + ")").join("\n");
-          copyText(lines, "Daftar hasil filter Nodongbu disalin!");
+          copyText(lines, "Daftar hasil filter disalin!");
         } else if (e.target.closest("#btnCopySaved")) {
           const savedList = NODONGBU_CENTERS.filter(c => savedIds.has(c.id));
           if (savedList.length === 0) {
@@ -3532,66 +3038,16 @@
           const url = URL.createObjectURL(blob);
           const a = document.createElement("a");
           a.href = url;
-          a.download = "Direktori_Nodongbu_E9.csv";
+          a.download = "Direktori_Nodongbu.csv";
           document.body.appendChild(a);
           a.click();
           document.body.removeChild(a);
           URL.revokeObjectURL(url);
           showToast("File CSV diunduh!");
-        } else if (e.target.closest("#btnCopyBackupSummary")) {
-          const jtItems = safeGetStorage(JT_KEY, []);
-          const dates = safeGetStorage(DATES_KEY, {});
-          const savedArr = Array.from(savedIds).sort((a, b) => a - b);
-          const summaryLines = [
-            "=== BACKUP DATA KAWAN E-9 ===",
-            "Kantor Nodongbu Tersimpan (" + savedArr.length + "/62): " + (savedArr.length ? savedArr.map(id => "#" + id).join(", ") : "-"),
-            "Tanggal Kontrak Habis: " + (dates.endContract || "-"),
-            "Tanggal Lapor Nodongbu: " + (dates.reportNodongbu || "-"),
-            "Dokumen Checklist Selesai: " + checkedDocs.size + "/" + DOC_CHECKLIST.length,
-            "Catatan Wawancara D-90 (" + jtItems.length + "): " + (jtItems.length ? jtItems.map(j => j.name + " [" + j.status + "]").join("; ") : "-")
-          ].join("\n");
-          copyText(summaryLines, "Ringkasan backup disalin!");
-        } else if (e.target.closest("#btnExportBackupJson")) {
-          const payload = {
-            app: "Kawan E-9",
-            version: 1,
-            exportedAt: new Date().toISOString(),
-            savedNodongbuIds: Array.from(savedIds),
-            checkedDocs: Array.from(checkedDocs),
-            transferDates: safeGetStorage(DATES_KEY, {}),
-            jobTracker: safeGetStorage(JT_KEY, [])
-          };
-          const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json;charset=utf-8;" });
-          const url = URL.createObjectURL(blob);
-          const a = document.createElement("a");
-          a.href = url;
-          a.download = "Kawan_E9_Backup_" + getSeoulTimeParts().isoToday + ".json";
-          document.body.appendChild(a);
-          a.click();
-          document.body.removeChild(a);
-          URL.revokeObjectURL(url);
-          showToast("File backup JSON diunduh!");
-        } else if (e.target.closest("#btnAddJobTrack")) {
-          const nameInp = document.getElementById("jtFactoryName");
-          const statSel = document.getElementById("jtStatus");
-          const name = (nameInp?.value || "").trim();
-          if (!name) {
-            showToast("Isi nama pabrik terlebih dahulu");
-            return;
-          }
-          const arr = safeGetStorage(JT_KEY, []);
-          arr.unshift({ name, status: statSel?.value || "Menunggu", date: new Date().toISOString().slice(0, 10) });
-          safeSetStorage(JT_KEY, arr);
-          if (nameInp) nameInp.value = "";
-          renderJobTracker();
-          triggerAutoCloudIfEnabled();
-          showToast("Catatan wawancara ditambahkan");
         } else if (e.target.closest("#btnSpeakReqJob")) {
           speakKorean(document.getElementById("reqJobKrText")?.textContent || "");
         } else if (e.target.closest("#btnCopyReqJob")) {
-          copyText(document.getElementById("reqJobKrText")?.textContent || "", "Kalimat loket Nodongbu disalin!");
-        } else if (e.target.closest("#btnCopyGenMsg")) {
-          copyText(document.getElementById("genMsgKr")?.textContent || "", "Pesan sopan bahasa Korea disalin!");
+          copyText(document.getElementById("reqJobKrText")?.textContent || "", "Kalimat permintaan disalin!");
         } else if (e.target.closest("#btnCalcPesangon")) {
           const wage = Math.max(0, Number(document.getElementById("pesangonAvgWage")?.value || 0));
           const yrs = Math.max(0, Number(document.getElementById("pesangonYears")?.value || 0));
@@ -3601,7 +3057,7 @@
           if (res) {
             res.classList.remove("hidden");
             if (totalMonths < 12) {
-              res.innerHTML = "<strong class='text-rose-700'>Belum memenuhi syarat minimal 12 bulan (1 tahun penuh) di pabrik yang sama.</strong>";
+              res.innerHTML = "<strong class='text-rose-700'>Belum memenuhi syarat minimal 12 bulan (1 tahun penuh) di tempat kerja yang sama.</strong>";
             } else {
               const est = Math.round(wage * (totalMonths / 12));
               res.innerHTML = "<strong class='text-emerald-950 text-sm'>Perkiraan Pesangon: " + est.toLocaleString("id-ID") + " KRW</strong><p class='text-slate-600'>Untuk masa kerja " + yrs + " tahun " + mos + " bulan.</p>";
@@ -3628,7 +3084,7 @@
             const dt = new Date(Date.UTC(y, m - 1, d + 14));
             const iso = dt.getUTCFullYear() + "-" + String(dt.getUTCMonth() + 1).padStart(2, "0") + "-" + String(dt.getUTCDate()).padStart(2, "0");
             res.classList.remove("hidden");
-            res.innerHTML = "Batas akhir lapor pindah alamat (14 hari): <strong>" + iso + "</strong> " + formatCountdownBadge(iso);
+            res.innerHTML = "Perkiraan batas 14 hari kalender sejak tanggal pindah: <strong>" + iso + "</strong> (cek aturan resmi di 주민센터 / HiKorea).";
           }
         } else if (e.target.closest("#btnRefreshFx")) {
           fetchLiveKrwRate(true);
@@ -3645,9 +3101,6 @@
             inp.dispatchEvent(new Event("change"));
             showToast("Diisi tanggal hari ini (KST)");
           }
-        } else if (e.target.closest("#btnAiSummarizeStatus")) {
-          appendAiMessage("Ringkas status saya saat ini", true);
-          appendAiMessage(buildSmartStatusSummary(), false);
         } else if (e.target.closest("#btnCopyRegionBundle")) {
           const city = document.getElementById("regionMatcherSelect")?.value || "Eumseong";
           const nd = NODONGBU_CENTERS.find(c => (c.nameId + " " + c.area + " " + c.roadAddr).toLowerCase().includes(city.toLowerCase())) || NODONGBU_CENTERS[0];
@@ -3660,12 +3113,6 @@
             "Masjid: " + mq.name + " | " + mq.addr
           ].join("\n");
           copyText(bundle, "Paket wilayah " + city + " disalin!");
-        } else if (e.target.closest("#btnCopyCloudLink")) {
-          copyText(buildShareableCloudLink(), "Tautan data instan lintas perangkat disalin!");
-        } else if (e.target.closest("#btnCloudPush")) {
-          syncCloudJsonBin("push");
-        } else if (e.target.closest("#btnCloudPull")) {
-          syncCloudJsonBin("pull");
         } else if (e.target.closest("#btnResetMosqueFilter")) {
           mosqueProv = "";
           mosqueQuery = "";
@@ -3679,6 +3126,39 @@
           });
           renderMosques();
           showToast("Filter masjid direset");
+        } else if (e.target.closest("#btnOpenConsultFromTile")) {
+          const cm = document.getElementById("consultSheetModal");
+          if (cm) {
+            cm.classList.remove("hidden");
+            const inner = cm.querySelector(".sheet-open-120");
+            if (inner) {
+              inner.classList.remove("sheet-open-120");
+              void inner.offsetWidth;
+              inner.classList.add("sheet-open-120");
+            }
+            refreshIcons();
+          }
+        } else if (e.target.closest("#btnCloseConsultSheet")) {
+          document.getElementById("consultSheetModal")?.classList.add("hidden");
+        } else if (e.target.closest("#btnGoAllSheltersFromConsult")) {
+          document.getElementById("consultSheetModal")?.classList.add("hidden");
+          switchMainTab("TAB_SHELTER");
+        } else if (e.target.closest("#btnCopyCommonShelters")) {
+          copyText("Shelter Ansan: 1577-0071 | Shelter Cheonan: 041-622-9314 / 041-622-7955", "Nomor shelter umum (Ansan & Cheonan) disalin!");
+        } else if (e.target.closest("#btnClearShelterSearch")) {
+          shelterQuery = "";
+          const inp = document.getElementById("shelterSearchInput");
+          if (inp) inp.value = "";
+          document.getElementById("btnClearShelterSearch")?.classList.add("hidden");
+          syncAllCityFilterPills();
+          renderShelters();
+        } else if (e.target.closest("#btnClearMosqueSearch")) {
+          mosqueQuery = "";
+          const inp = document.getElementById("mosqueSearchInput");
+          if (inp) inp.value = "";
+          document.getElementById("btnClearMosqueSearch")?.classList.add("hidden");
+          syncAllCityFilterPills();
+          renderMosques();
         } else if (e.target.closest("#btnBackToTop")) {
           window.scrollTo({ top: 0, behavior: "smooth" });
         }
@@ -3690,17 +3170,18 @@
         document.getElementById("btnClearSearch")?.classList.toggle("hidden", !searchQuery.trim());
         renderCenters();
       });
-      document.getElementById("statusSelect")?.addEventListener("change", (e) => {
-        currentStatus = e.target.value;
-        renderCenters();
+      document.getElementById("searchInput")?.addEventListener("change", (e) => {
+        pushSearchHistory(e.target.value);
       });
       document.getElementById("shelterSearchInput")?.addEventListener("input", (e) => {
         shelterQuery = e.target.value;
+        document.getElementById("btnClearShelterSearch")?.classList.toggle("hidden", !shelterQuery.trim());
         syncAllCityFilterPills();
         renderShelters();
       });
       document.getElementById("mosqueSearchInput")?.addEventListener("input", (e) => {
         mosqueQuery = e.target.value;
+        document.getElementById("btnClearMosqueSearch")?.classList.toggle("hidden", !mosqueQuery.trim());
         syncAllCityFilterPills();
         renderMosques();
       });
@@ -3709,48 +3190,21 @@
         renderKamus();
       });
       document.getElementById("regionMatcherSelect")?.addEventListener("change", renderRegionMatcher);
-      document.getElementById("chkAutoCloudSync")?.addEventListener("change", (e) => {
-        const cfg = safeGetStorage(CLOUD_CFG_KEY, { binId: "", apiKey: "", autoSync: false });
-        cfg.autoSync = Boolean(e.target.checked);
-        safeSetStorage(CLOUD_CFG_KEY, cfg);
-        showToast(cfg.autoSync ? "Auto-Sync Cloud aktif" : "Auto-Sync Cloud dimatikan");
-      });
-      document.getElementById("qnaSearchInput")?.addEventListener("input", (e) => {
-        qnaQuery = e.target.value;
-        renderQna();
-      });
-
-      document.getElementById("inputEndContractDate")?.addEventListener("change", (e) => {
-        const val = e.target.value;
-        const prev = safeGetStorage(DATES_KEY, {});
-        prev.endContract = val || "";
-        safeSetStorage(DATES_KEY, prev);
-        const box = document.getElementById("resultD30Box");
-        if (!val || !box) return;
-        const resIso = addSafeMonthsISO(val, 1);
-        box.innerHTML = "<strong class='text-blue-950 text-sm'>Batas Lapor D-30 (1 Bulan): " + resIso + "</strong>" + formatCountdownBadge(resIso) + "<p class='text-slate-600 mt-1'>Wajib lapor pindah kerja ke Nodongbu sebelum tanggal tersebut.</p>";
-      });
-      document.getElementById("inputReportNodongbuDate")?.addEventListener("change", (e) => {
-        const val = e.target.value;
-        const prev = safeGetStorage(DATES_KEY, {});
-        prev.reportNodongbu = val || "";
-        safeSetStorage(DATES_KEY, prev);
-        const box = document.getElementById("resultD90Box");
-        if (!val || !box) return;
-        const resIso = addSafeMonthsISO(val, 3);
-        box.innerHTML = "<strong class='text-emerald-950 text-sm'>Batas Dapat Pabrik D-90 (3 Bulan): " + resIso + "</strong>" + formatCountdownBadge(resIso) + "<p class='text-slate-600 mt-1'>Wajib tanda tangan kontrak baru & urus izin Imigrasi sebelum tanggal ini.</p>";
-      });
 
       document.getElementById("taxiModal")?.addEventListener("click", (e) => {
         if (e.target.id === "taxiModal") {
           document.getElementById("taxiModal")?.classList.add("hidden");
         }
       });
+      document.getElementById("consultSheetModal")?.addEventListener("click", (e) => {
+        if (e.target.id === "consultSheetModal") {
+          document.getElementById("consultSheetModal")?.classList.add("hidden");
+        }
+      });
 
       document.addEventListener("keydown", (e) => {
         if (e.key === "Escape") {
           document.getElementById("taxiModal")?.classList.add("hidden");
-          document.getElementById("aiChatDrawer")?.classList.add("hidden");
           document.getElementById("moreMenuPopover")?.classList.add("hidden");
           document.getElementById("btnToggleMoreMenu")?.classList.remove("is-open");
         }
@@ -3763,19 +3217,7 @@
       });
       ["reqFieldSelect", "reqCondSelect"].forEach(id => document.getElementById(id)?.addEventListener("change", updateReqJobText));
       document.getElementById("reqAreaInput")?.addEventListener("input", updateReqJobText);
-      document.getElementById("msgTypeSelect")?.addEventListener("change", updateGenMsg);
-      ["msgWorkerName", "msgTargetDate"].forEach(id => document.getElementById(id)?.addEventListener("input", updateGenMsg));
       ["fxWonInput", "fxRateInput"].forEach(id => document.getElementById(id)?.addEventListener("input", updateFxCalc));
-
-      document.getElementById("aiChatForm")?.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const inp = document.getElementById("aiChatInput");
-        const val = (inp?.value || "").trim();
-        if (!val) return;
-        appendAiMessage(val, true);
-        if (inp) inp.value = "";
-        appendAiMessage(answerAiQuestion(val), false);
-      });
 
 
       const centersGridEl = document.getElementById("centersGrid");
@@ -3798,43 +3240,6 @@
         }
       });
     }
-
-      document.getElementById("inputRestoreBackup")?.addEventListener("change", (e) => {
-        const file = e.target.files && e.target.files[0];
-        if (!file) return;
-        const reader = new FileReader();
-        reader.onload = () => {
-          try {
-            const parsed = JSON.parse(String(reader.result || "{}"));
-            if (!parsed || typeof parsed !== "object") throw new Error("Invalid format");
-            if (Array.isArray(parsed.savedNodongbuIds)) {
-              savedIds = new Set(parsed.savedNodongbuIds.map(Number).filter(n => !Number.isNaN(n)));
-              safeSetStorage(STORAGE_KEY, Array.from(savedIds));
-            }
-            if (Array.isArray(parsed.checkedDocs)) {
-              checkedDocs = new Set(parsed.checkedDocs.map(Number).filter(n => !Number.isNaN(n)));
-              safeSetStorage(DOC_KEY, Array.from(checkedDocs));
-            }
-            if (parsed.transferDates && typeof parsed.transferDates === "object") {
-              safeSetStorage(DATES_KEY, parsed.transferDates);
-            }
-            if (Array.isArray(parsed.jobTracker)) {
-              safeSetStorage(JT_KEY, parsed.jobTracker);
-            }
-            renderCenters();
-            renderDocChecklist();
-            renderJobTracker();
-            recalcSavedTransferDates();
-            showToast("Backup berhasil dipulihkan!");
-          } catch (err) {
-            showToast("File backup tidak valid atau rusak");
-          }
-          e.target.value = "";
-        };
-        reader.readAsText(file);
-      });
-
-
     const SHOWCASE_TOTAL = 4;
     let showcaseIdx = 0;
     let showcasePlaying = true;
@@ -3913,8 +3318,8 @@
     });
 
 
-    const VISIT_KEY = "kawan_e9_visit_stats_v1";
-    const VISIT_SESSION_KEY = "kawan_e9_visit_counted_session_v1";
+    const VISIT_KEY = "direktori_umum_visit_stats_v1";
+    const VISIT_SESSION_KEY = "direktori_umum_visit_counted_session_v1";
 
     function updateVisitCounters() {
       const { isoToday } = getSeoulTimeParts();
@@ -3971,29 +3376,29 @@
     window.addEventListener("load", refreshIcons);
   </script>
   <!-- KakaoMap-Style Floating Pill Bottom Bar + `•••` Overflow Menu (Non-Duplicated) -->
-  <div id="moreMenuPopover" class="fixed bottom-24 left-3.5 right-3.5 sm:left-1/2 sm:right-auto sm:-translate-x-1/2 sm:w-[420px] max-w-full z-50 hidden bg-white/95 backdrop-blur-xl border-transparent border-transparent/90 squircle p-3.5 shadow-none space-y-2.5">
-    <div class="flex items-center justify-between border-transparent border-transparent/70 pb-2">
-      <span class="text-xs font-black text-slate-900">Menu Tambahan</span>
-      <button id="btnCloseMoreMenu" type="button" class="motion-120 p-1 rounded-full bg-white/25 text-slate-700 cursor-pointer">
+  <div id="moreMenuPopover" class="fixed bottom-24 left-3.5 right-3.5 sm:left-1/2 sm:right-auto sm:-translate-x-1/2 sm:w-[420px] max-w-full z-50 hidden bg-white/95 backdrop-blur-xl border border-slate-900/15 squircle p-3.5 shadow-none space-y-2.5">
+    <div class="flex items-center justify-between border-b border-slate-200/80 pb-2">
+      <span class="text-xs font-black text-slate-900">Menu Alat &amp; Fitur</span>
+      <button id="btnCloseMoreMenu" type="button" class="motion-120 p-1 rounded-full bg-slate-100 hover:bg-slate-200 border border-slate-300/70 text-slate-700 cursor-pointer">
         <i data-lucide="x" class="w-3.5 h-3.5"></i>
       </button>
     </div>
     <div class="grid grid-cols-2 gap-2 text-xs">
-      <button type="button" data-main-tab="TAB_KALKULATOR" class="motion-120 flex items-center gap-2 p-2.5 rounded-[24px] liquid-subglass font-extrabold text-slate-900 text-left cursor-pointer">
+      <button type="button" data-main-tab="TAB_KALKULATOR" class="motion-120 flex items-center gap-2 p-2.5 rounded-[20px] bg-white/80 hover:bg-white border border-slate-900/15 font-extrabold text-slate-900 text-left cursor-pointer">
         <i data-lucide="timer" class="w-4 h-4 text-blue-600 shrink-0"></i>
-        <span>Cek Pindah Pabrik</span>
+        <span>Dokumen &amp; Catatan</span>
       </button>
-      <button type="button" data-main-tab="TAB_ZONASI" class="motion-120 flex items-center gap-2 p-2.5 rounded-[24px] liquid-subglass font-extrabold text-slate-900 text-left cursor-pointer">
+      <button type="button" data-main-tab="TAB_ZONASI" class="motion-120 flex items-center gap-2 p-2.5 rounded-[20px] bg-white/80 hover:bg-white border border-slate-900/15 font-extrabold text-slate-900 text-left cursor-pointer">
         <i data-lucide="map" class="w-4 h-4 text-amber-600 shrink-0"></i>
         <span>Aturan Zonasi</span>
       </button>
-      <button type="button" data-main-tab="TAB_MANUFAKTUR" class="motion-120 flex items-center gap-2 p-2.5 rounded-[24px] liquid-subglass font-extrabold text-slate-900 text-left cursor-pointer">
+      <button type="button" data-main-tab="TAB_MANUFAKTUR" class="motion-120 flex items-center gap-2 p-2.5 rounded-[20px] bg-white/80 hover:bg-white border border-slate-900/15 font-extrabold text-slate-900 text-left cursor-pointer">
         <i data-lucide="factory" class="w-4 h-4 text-indigo-600 shrink-0"></i>
         <span>Pilih Pabrik</span>
       </button>
-      <button type="button" data-main-tab="TAB_BANTUAN" class="motion-120 flex items-center gap-2 p-2.5 rounded-[24px] liquid-subglass font-extrabold text-slate-900 text-left cursor-pointer">
+      <button type="button" data-main-tab="TAB_BANTUAN" class="motion-120 flex items-center gap-2 p-2.5 rounded-[20px] bg-white/80 hover:bg-white border border-slate-900/15 font-extrabold text-slate-900 text-left cursor-pointer">
         <i data-lucide="calculator" class="w-4 h-4 text-rose-600 shrink-0"></i>
-        <span>Gaji, Visa &amp; Q&amp;A</span>
+        <span>Gaji &amp; Kurs</span>
       </button>
     </div>
   </div>
