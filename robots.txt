@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: ./sitemap.xml
+Sitemap: https://kawan-e9.github.io/sitemap.xml
