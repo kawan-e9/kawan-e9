@@ -9,11 +9,30 @@
   <meta name="apple-mobile-web-app-title" content="kawan-e9">
   <meta name="application-name" content="kawan-e9">
   <meta name="theme-color" content="#eaf0f6">
+  <meta name="description" content="Kawan E9 : Solusi di Setiap Situasi — Direktori lengkap 62 kantor Nodongbu (고용센터), 18 shelter &amp; pusat bantuan pekerja asing, 45 masjid di Korea Selatan, kalkulator pesangon &amp; lembur, kurs KRW–IDR, serta kamus bahasa Korea.">
+  <meta name="keywords" content="Kawan E9, Nodongbu Korea, alamat Nodongbu, shelter pekerja asing Korea, masjid di Korea Selatan, kalkulator pesangon Korea, kurs Won Rupiah, PMI Korea, EPS Korea">
+  <meta name="author" content="Kawan E9">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:site_name" content="Kawan E9">
+  <meta property="og:title" content="Kawan E9 : Solusi di Setiap Situasi">
+  <meta property="og:description" content="Direktori mandiri 62 kantor Nodongbu, 18 shelter pekerja asing, 45 masjid di Korea Selatan, kalkulator pesangon &amp; lembur, kurs KRW–IDR, dan kamus Korea praktis.">
+  <meta property="og:image" content="./og-preview.svg">
+  <meta property="og:image:type" content="image/svg+xml">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kawan E9 : Solusi di Setiap Situasi">
+  <meta name="twitter:description" content="Direktori mandiri 62 kantor Nodongbu, 18 shelter, 45 masjid di Korea Selatan, kalkulator gaji &amp; pesangon, serta kamus Korea.">
+  <meta name="twitter:image" content="./og-preview.svg">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/svg+xml">
+  <link rel="icon" href="./favicon.ico" sizes="any">
   <link rel="manifest" href="./manifest.json">
   <link id="pwaAppIcon" rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%230f172a'/%3E%3Cstop offset='100%25' stop-color='%231e3a8a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='192' height='192' rx='44' fill='url(%23g)'/%3E%3Ccircle cx='96' cy='96' r='54' fill='none' stroke='%23fbbf24' stroke-width='10'/%3E%3Cpolygon points='124,68 106,106 68,124 86,86' fill='%2334d399'/%3E%3C/svg%3E">
   <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%230f172a'/%3E%3Cstop offset='100%25' stop-color='%231e3a8a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='192' height='192' rx='44' fill='url(%23g)'/%3E%3Ccircle cx='96' cy='96' r='54' fill='none' stroke='%23fbbf24' stroke-width='10'/%3E%3Cpolygon points='124,68 106,106 68,124 86,86' fill='%2334d399'/%3E%3C/svg%3E">
   <title>Kawan E9 : Solusi di Setiap Situasi</title>
-  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="stylesheet" href="./tailwind.min.css">
   <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
   <style>
     :root {
@@ -2826,11 +2845,13 @@
               { src: iconSvg, sizes: "512x512", type: "image/svg+xml", purpose: "any maskable" }
             ]
           };
-          const blob = new Blob([JSON.stringify(manifestObj)], { type: "application/manifest+json" });
-          const link = document.createElement("link");
-          link.rel = "manifest";
-          link.href = URL.createObjectURL(blob);
-          document.head.appendChild(link);
+          if (!document.querySelector('link[rel="manifest"][href="./manifest.json"]')) {
+            const blob = new Blob([JSON.stringify(manifestObj)], { type: "application/manifest+json" });
+            const link = document.createElement("link");
+            link.rel = "manifest";
+            link.href = URL.createObjectURL(blob);
+            document.head.appendChild(link);
+          }
         } catch (e) {}
       }
 

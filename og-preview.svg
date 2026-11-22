@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090e1c"/>
+      <stop offset="55%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <linearGradient id="badge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1040" cy="120" r="240" fill="#38bdf8" fill-opacity="0.10"/>
+  <circle cx="180" cy="540" r="220" fill="#34d399" fill-opacity="0.10"/>
+  <!-- Logo Icon -->
+  <rect x="84" y="88" width="96" height="96" rx="24" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <circle cx="132" cy="136" r="28" fill="none" stroke="#fbbf24" stroke-width="5"/>
+  <polygon points="147,121 137,141 117,151 127,131" fill="#34d399"/>
+  <!-- Pill -->
+  <rect x="204" y="102" width="250" height="36" rx="18" fill="url(#badge)"/>
+  <text x="329" y="126" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="16" font-weight="900" fill="#090e1c" text-anchor="middle">고용 · 쉼터 · 모스크</text>
+  <text x="204" y="172" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="18" font-weight="700" fill="#34d399">DIREKTORI MANDIRI KOREA SELATAN</text>
+  <!-- Title -->
+  <text x="84" y="275" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="60" font-weight="900" fill="#ffffff">Kawan E9 : Solusi di Setiap Situasi</text>
+  <text x="84" y="335" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="26" font-weight="500" fill="#cbd5e1">Referensi Kontak Darurat, Nodongbu, Shelter, Masjid &amp; Kalkulator Gaji</text>
+  <!-- Stats Pills -->
+  <rect x="84" y="405" width="320" height="110" rx="24" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.14"/>
+  <text x="114" y="452" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="34" font-weight="900" fill="#fbbf24">62 Kantor</text>
+  <text x="114" y="488" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="19" font-weight="600" fill="#e2e8f0">Nodongbu (고용센터)</text>
+
+  <rect x="430" y="405" width="320" height="110" rx="24" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.14"/>
+  <text x="460" y="452" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="34" font-weight="900" fill="#34d399">18 Shelter</text>
+  <text x="460" y="488" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="19" font-weight="600" fill="#e2e8f0">Pusat Bantuan Pekerja</text>
+
+  <rect x="776" y="405" width="340" height="110" rx="24" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.14"/>
+  <text x="806" y="452" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="34" font-weight="900" fill="#38bdf8">45 Masjid</text>
+  <text x="806" y="488" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="19" font-weight="600" fill="#e2e8f0">Seluruh Korea Selatan</text>
+</svg>
