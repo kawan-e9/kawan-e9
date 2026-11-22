@@ -9,8 +9,10 @@
   <meta name="apple-mobile-web-app-title" content="kawan-e9">
   <meta name="application-name" content="kawan-e9">
   <meta name="theme-color" content="#eaf0f6">
-  <link id="pwaAppIcon" rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%230f172a'/%3E%3Cstop offset='100%25' stop-color='%231e3a8a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='192' height='192' rx='44' fill='url(%23g)'/%3E%3Ccircle cx='96' cy='96' r='54' fill='none' stroke='%23fbbf24' stroke-width='10'/%3E%3Cpolygon points='124,68 106,106 68,124 86,86' fill='%2334d399'/%3E%3C/svg%3E">
-  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%230f172a'/%3E%3Cstop offset='100%25' stop-color='%231e3a8a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='192' height='192' rx='44' fill='url(%23g)'/%3E%3Ccircle cx='96' cy='96' r='54' fill='none' stroke='%23fbbf24' stroke-width='10'/%3E%3Cpolygon points='124,68 106,106 68,124 86,86' fill='%2334d399'/%3E%3C/svg%3E">
+  <link rel="manifest" href="./manifest.json">
+  <link id="pwaAppIcon" rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
   <title>Kawan E9 : Solusi di Setiap Situasi</title>
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
@@ -379,6 +381,14 @@
         var(--bg-mesh);
       background-attachment: fixed;
     }
+  
+    @media (display-mode: standalone), (display-mode: fullscreen) {
+      body {
+        padding-top: env(safe-area-inset-top, 0px);
+        padding-bottom: calc(96px + env(safe-area-inset-bottom, 12px));
+      }
+    }
+
   </style>
 </head>
 <body class="ios-ambient-wash min-h-dvh pb-36">
@@ -2808,29 +2818,11 @@
       const isStandalone = window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;
       const isHttp = /^https?:/i.test(window.location.href);
 
-      if (isHttp) {
-        try {
-          const iconSvg = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%230f172a'/%3E%3Cstop offset='100%25' stop-color='%231e3a8a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='192' height='192' rx='44' fill='url(%23g)'/%3E%3Ccircle cx='96' cy='96' r='54' fill='none' stroke='%23fbbf24' stroke-width='10'/%3E%3Cpolygon points='124,68 106,106 68,124 86,86' fill='%2334d399'/%3E%3C/svg%3E";
-          const manifestObj = {
-            name: "kawan-e9",
-            short_name: "kawan-e9",
-            start_url: window.location.pathname || "./",
-            scope: "./",
-            display: "standalone",
-            orientation: "portrait",
-            background_color: "#eaf0f6",
-            theme_color: "#eaf0f6",
-            icons: [
-              { src: iconSvg, sizes: "192x192", type: "image/svg+xml", purpose: "any maskable" },
-              { src: iconSvg, sizes: "512x512", type: "image/svg+xml", purpose: "any maskable" }
-            ]
-          };
-          const blob = new Blob([JSON.stringify(manifestObj)], { type: "application/manifest+json" });
-          const link = document.createElement("link");
-          link.rel = "manifest";
-          link.href = URL.createObjectURL(blob);
-          document.head.appendChild(link);
-        } catch (e) {}
+
+
+
+      if ("serviceWorker" in navigator && (window.location.protocol === "https:" || window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1")) {
+        navigator.serviceWorker.register("./sw.js", { scope: "./" }).catch(function () {});
       }
 
       const banner = document.getElementById("appInstallBanner");
