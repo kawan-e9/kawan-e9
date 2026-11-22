@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -11,7 +11,7 @@
   <meta name="theme-color" content="#eaf0f6">
   <link id="pwaAppIcon" rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%230f172a'/%3E%3Cstop offset='100%25' stop-color='%231e3a8a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='192' height='192' rx='44' fill='url(%23g)'/%3E%3Ccircle cx='96' cy='96' r='54' fill='none' stroke='%23fbbf24' stroke-width='10'/%3E%3Cpolygon points='124,68 106,106 68,124 86,86' fill='%2334d399'/%3E%3C/svg%3E">
   <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%230f172a'/%3E%3Cstop offset='100%25' stop-color='%231e3a8a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='192' height='192' rx='44' fill='url(%23g)'/%3E%3Ccircle cx='96' cy='96' r='54' fill='none' stroke='%23fbbf24' stroke-width='10'/%3E%3Cpolygon points='124,68 106,106 68,124 86,86' fill='%2334d399'/%3E%3C/svg%3E">
-  <title>Direktori Korea</title>
+  <title>Kawan E9 : Solusi di Setiap Situasi</title>
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
   <style>
@@ -28,8 +28,11 @@
 
     * {
       -webkit-tap-highlight-color: transparent;
-      outline: none !important;
       box-shadow: none !important;
+    }
+    :focus-visible {
+      outline: 2px solid rgba(37, 99, 235, 0.65);
+      outline-offset: 2px;
     }
 
     body {
@@ -40,7 +43,7 @@
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
       overscroll-behavior-y: none;
-      padding-top: env(safe-area-inset-top, 0px);
+      padding-top: 0px;
       touch-action: manipulation;
     }
 
@@ -138,7 +141,7 @@
         );
       backdrop-filter: blur(28px) saturate(210%);
       -webkit-backdrop-filter: blur(28px) saturate(210%);
-      border-transparent: 1px solid transparent !important;
+      border-color: transparent;
       box-shadow: none !important;
     }
 
@@ -163,7 +166,7 @@
       );
       backdrop-filter: blur(20px) saturate(190%);
       -webkit-backdrop-filter: blur(20px) saturate(190%);
-      border-transparent: 1px solid transparent !important;
+      border-color: transparent;
       box-shadow: none !important;
     }
 
@@ -174,7 +177,7 @@
         linear-gradient(150deg, rgba(7, 11, 20, 0.92) 0%, rgba(17, 26, 46, 0.88) 58%, rgba(9, 14, 28, 0.92) 100%);
       backdrop-filter: blur(28px) saturate(190%);
       -webkit-backdrop-filter: blur(28px) saturate(190%);
-      border-transparent: 1px solid transparent !important;
+      border-color: transparent;
       box-shadow: none !important;
     }
 
@@ -189,7 +192,7 @@
     .kakao-btn {
       background: rgba(254, 229, 0, 0.92);
       color: #191919;
-      border-transparent: 1px solid transparent !important;
+      border-color: transparent;
     }
 
     .kakao-btn:hover {
@@ -199,7 +202,7 @@
     .naver-btn {
       background: rgba(3, 199, 90, 0.92);
       color: #ffffff;
-      border-transparent: 1px solid transparent !important;
+      border-color: transparent;
     }
 
     .naver-btn:hover {
@@ -207,7 +210,7 @@
     }
 
     .card-saved {
-      border-transparent: 1px solid transparent !important;
+      border-color: transparent;
       background: linear-gradient(160deg, rgba(209, 250, 229, 0.42) 0%, rgba(255, 255, 255, 0.24) 100%) !important;
       box-shadow: none !important;
     }
@@ -215,7 +218,7 @@
     .tab-pill-active {
       background: rgba(15, 23, 42, 0.90);
       color: #ffffff;
-      border-transparent: 1px solid transparent !important;
+      border-color: transparent;
     }
 
     .tab-pill-inactive {
@@ -223,7 +226,7 @@
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       color: #334155;
-      border-transparent: 1px solid transparent !important;
+      border-color: transparent;
     }
 
     .tab-pill-inactive:hover {
@@ -274,7 +277,7 @@
       );
       backdrop-filter: blur(28px) saturate(210%);
       -webkit-backdrop-filter: blur(28px) saturate(210%);
-      border-transparent: 1px solid transparent !important;
+      border-color: transparent;
       border-radius: 9999px;
       box-shadow: none !important;
       padding: 5px 6px;
@@ -305,11 +308,69 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      border-transparent: 1px solid transparent !important;
+      border-color: transparent;
     }
     .more-dots-btn.is-open {
       background: rgba(15, 23, 42, 0.92);
       color: #ffffff;
+    }
+
+
+    html.tex-matte .liquid-glass {
+      background: linear-gradient(150deg, rgba(248, 250, 252, 0.88) 0%, rgba(241, 245, 249, 0.84) 100%);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    html.tex-matte .liquid-subglass {
+      background: rgba(241, 245, 249, 0.78);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    html.tex-grid .liquid-glass {
+      background-color: rgba(255, 255, 255, 0.62);
+      background-image:
+        linear-gradient(to right, rgba(15, 23, 42, 0.055) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(15, 23, 42, 0.055) 1px, transparent 1px);
+      background-size: 18px 18px;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+    html.tex-grid .liquid-subglass {
+      background-color: rgba(255, 255, 255, 0.48);
+      background-image:
+        linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+      background-size: 14px 14px;
+    }
+
+    html.tex-linen .liquid-glass {
+      background-color: rgba(250, 248, 245, 0.72);
+      background-image:
+        repeating-linear-gradient(45deg, rgba(15, 23, 42, 0.025) 0px, rgba(15, 23, 42, 0.025) 1px, transparent 1px, transparent 4px),
+        repeating-linear-gradient(-45deg, rgba(15, 23, 42, 0.025) 0px, rgba(15, 23, 42, 0.025) 1px, transparent 1px, transparent 4px);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    html.tex-linen .liquid-subglass {
+      background-color: rgba(248, 246, 242, 0.58);
+      background-image:
+        repeating-linear-gradient(45deg, rgba(15, 23, 42, 0.02) 0px, rgba(15, 23, 42, 0.02) 1px, transparent 1px, transparent 4px);
+    }
+    html.tex-matte .dynamic-island {
+      background: linear-gradient(150deg, rgba(15, 23, 42, 0.94) 0%, rgba(30, 41, 59, 0.92) 100%);
+    }
+    html.tex-grid .dynamic-island {
+      background-color: rgba(15, 23, 42, 0.92);
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+      background-size: 18px 18px;
+    }
+    html.tex-linen .dynamic-island {
+      background-color: rgba(15, 23, 42, 0.92);
+      background-image:
+        repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.025) 0px, rgba(255, 255, 255, 0.025) 1px, transparent 1px, transparent 4px);
     }
 
     .ios-ambient-wash {
@@ -320,7 +381,7 @@
     }
   </style>
 </head>
-<body class="ios-ambient-wash min-h-screen pb-32">
+<body class="ios-ambient-wash min-h-dvh pb-36">
 
   <!-- Interactive iOS-Style Top Status & Clock Card -->
   <div class="max-w-5xl mx-auto px-3.5 sm:px-5 pt-3.5">
@@ -345,10 +406,10 @@
         </div>
       </div>
 
-      <div class="flex items-center justify-between gap-2">
-        <button id="btnCycleTopHoliday" type="button" title="Ketuk untuk lihat agenda libur berikutnya" class="motion-120 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/65 hover:bg-white text-slate-800 text-[11px] font-extrabold max-w-full min-w-0 cursor-pointer">
+      <div class="flex flex-wrap items-center justify-between gap-2">
+        <button id="btnCycleTopHoliday" type="button" title="Ketuk untuk lihat agenda libur berikutnya" class="motion-120 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-[18px] bg-white/65 hover:bg-white text-slate-800 text-[11px] font-extrabold text-left leading-snug flex-1 min-w-[200px] cursor-pointer">
           <i data-lucide="calendar" class="w-3.5 h-3.5 text-amber-700 shrink-0"></i>
-          <span id="topNextHolidayText" class="truncate">Libur Terdekat: 2026-12-25 (Hari Natal)</span>
+          <span id="topNextHolidayText" class="break-words">Libur Terdekat: 2026-12-25 (Hari Natal)</span>
         </button>
         <button id="btnQuickCopyTopInfo" type="button" class="motion-120 inline-flex items-center gap-1 px-2.5 py-1.5 rounded-full bg-slate-900/90 hover:bg-slate-900 text-white text-[10px] font-extrabold shrink-0 cursor-pointer">
           <i data-lucide="copy" class="w-3 h-3 text-amber-300 shrink-0"></i>
@@ -392,21 +453,21 @@
               <i data-lucide="compass" class="w-3 h-3"></i>
               <span>고용·쉼터·모스크</span>
             </span>
-            <span id="islandClockChip" class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/10 text-emerald-300 text-[11px] font-bold border-transparent border-transparent/10">
+            <span id="islandClockChip" class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/10 text-emerald-300 text-[11px] font-bold">
               <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
               <span id="islandClockText">Memuat KST...</span>
             </span>
           </div>
-          <h1 class="text-lg sm:text-2xl font-extrabold tracking-tight leading-snug text-white">Direktori Mandiri &amp; Panduan Umum</h1>
-          <p class="text-xs text-slate-300 leading-relaxed">Direktori mandiri kontak darurat, Nodongbu, shelter &amp; masjid di Korea Selatan. Bukan situs resmi instansi mana pun · 100% gratis &amp; non-komersial.</p>
+          <h1 class="text-lg sm:text-2xl font-extrabold tracking-tight leading-snug text-white">Kawan E9 : Solusi di Setiap Situasi</h1>
+          <p class="text-xs text-slate-300 leading-relaxed">Referensi kontak darurat, Nodongbu, shelter &amp; masjid di Korea Selatan. Bukan situs resmi instansi mana pun · 100% gratis &amp; non-komersial.</p>
         </div>
 
         <div class="flex flex-wrap items-center gap-2 shrink-0">
-          <button id="btnToggleGlassTone" type="button" class="motion-120 inline-flex items-center gap-1 px-3 py-2 rounded-full bg-white/10 hover:bg-white/20 text-sky-300 border-transparent border-transparent/15 text-xs font-extrabold cursor-pointer" title="Mode Kontras Kaca">
+          <button id="btnCycleSurfaceTexture" type="button" class="motion-120 inline-flex items-center gap-1 px-3 py-2 rounded-full bg-white/10 hover:bg-white/20 text-sky-300 text-xs font-extrabold cursor-pointer" title="Ganti Tekstur Permukaan">
             <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
-            <span>Kaca</span>
+            <span id="surfaceTextureLabel">Kaca</span>
           </button>
-          <button id="btnToggleFont" type="button" class="motion-120 inline-flex items-center gap-1 px-3 py-2 rounded-full bg-white/10 hover:bg-white/20 text-amber-300 border-transparent border-transparent/15 text-xs font-extrabold cursor-pointer">
+          <button id="btnToggleFont" type="button" class="motion-120 inline-flex items-center gap-1 px-3 py-2 rounded-full bg-white/10 hover:bg-white/20 text-amber-300 text-xs font-extrabold cursor-pointer" title="Perbesar Ukuran Huruf">
             <i data-lucide="type" class="w-3.5 h-3.5"></i>
             <span>A+</span>
           </button>
@@ -418,9 +479,9 @@
       </div>
 
       <!-- Ringkasan Direktori & Panduan Capsule -->
-      <div class="bg-white/10 rounded-[24px] px-4 py-2.5 border-transparent border-transparent/10 flex flex-wrap items-center justify-between gap-3">
+      <div class="bg-white/10 rounded-[24px] px-4 py-2.5 flex flex-wrap items-center justify-between gap-3">
         <div class="flex items-center gap-2.5 min-w-0">
-          <div class="w-8 h-8 rounded-[18px] bg-emerald-400/20 border-transparent border-transparent/30 flex items-center justify-center shrink-0">
+          <div class="w-8 h-8 rounded-[18px] bg-emerald-400/20 flex items-center justify-center shrink-0">
             <i data-lucide="compass" class="w-4 h-4 text-emerald-300"></i>
           </div>
           <div class="text-xs min-w-0">
@@ -428,7 +489,7 @@
             <div class="font-extrabold text-xs sm:text-sm text-white">62 Nodongbu · 18 Shelter · <span id="heroMosqueCount">45</span> Masjid</div>
           </div>
         </div>
-        <div class="text-[11px] font-bold text-amber-300 bg-slate-900/70 px-3 py-1 rounded-full border-transparent border-transparent/10 shrink-0">
+        <div class="text-[11px] font-bold text-amber-300 bg-slate-900/70 px-3 py-1 rounded-full shrink-0">
           Ditandai: <span id="progressCount">0</span>/62
         </div>
       </div>
@@ -447,7 +508,7 @@
       <div id="showcaseTrack" class="flex overflow-x-auto snap-x snap-mandatory gap-3 pb-1 scroll-smooth select-none" style="scrollbar-width:none;-webkit-overflow-scrolling:touch;">
         <!-- Slide 1: Nodongbu & Shelter -->
         <article class="snap-center shrink-0 w-full dynamic-island squircle overflow-hidden text-white">
-          <div class="h-20 sm:h-24 bg-gradient-to-br from-blue-500/25 via-slate-900 to-emerald-600/25 px-5 py-4 flex flex-col justify-between border-transparent border-transparent/10">
+          <div class="h-20 sm:h-24 bg-gradient-to-br from-blue-500/25 via-slate-900 to-emerald-600/25 px-5 py-4 flex flex-col justify-between">
             <div class="flex items-center justify-between gap-2">
               <span class="px-2.5 py-0.5 rounded-full bg-amber-400 text-slate-950 text-[10px] font-black uppercase whitespace-nowrap shrink-0">Nodongbu &amp; Shelter</span>
               <span class="text-[11px] font-bold text-amber-300 whitespace-nowrap shrink-0">DIREKTORI UMUM</span>
@@ -473,7 +534,7 @@
 
         <!-- Slide 2: Zonasi & Referensi Wilayah -->
         <article class="snap-center shrink-0 w-full dynamic-island squircle overflow-hidden text-white">
-          <div class="h-20 sm:h-24 bg-gradient-to-br from-amber-500/25 via-slate-900 to-blue-600/25 px-5 py-4 flex flex-col justify-between border-transparent border-transparent/10">
+          <div class="h-20 sm:h-24 bg-gradient-to-br from-amber-500/25 via-slate-900 to-blue-600/25 px-5 py-4 flex flex-col justify-between">
             <div class="flex items-center justify-between gap-2">
               <span class="px-2.5 py-0.5 rounded-full bg-blue-400 text-slate-950 text-[10px] font-black uppercase whitespace-nowrap shrink-0">Referensi Wilayah</span>
               <span class="text-[11px] font-bold text-amber-300 whitespace-nowrap shrink-0">5 ZONA WILAYAH</span>
@@ -495,7 +556,7 @@
 
         <!-- Slide 3: Estimasi Gaji & Kurs -->
         <article class="snap-center shrink-0 w-full dynamic-island squircle overflow-hidden text-white">
-          <div class="h-20 sm:h-24 bg-gradient-to-br from-emerald-500/25 via-slate-900 to-teal-600/25 px-5 py-4 flex flex-col justify-between border-transparent border-transparent/10">
+          <div class="h-20 sm:h-24 bg-gradient-to-br from-emerald-500/25 via-slate-900 to-teal-600/25 px-5 py-4 flex flex-col justify-between">
             <div class="flex items-center justify-between gap-2">
               <span class="px-2.5 py-0.5 rounded-full bg-emerald-400 text-slate-950 text-[10px] font-black uppercase whitespace-nowrap shrink-0">Kalkulator &amp; Kurs</span>
               <span class="text-[11px] font-bold text-emerald-300 whitespace-nowrap shrink-0">SIMULASI · KRW-IDR</span>
@@ -517,7 +578,7 @@
 
         <!-- Slide 4: Alamat Masjid Only -->
         <article class="snap-center shrink-0 w-full dynamic-island squircle overflow-hidden text-white">
-          <div class="h-20 sm:h-24 bg-gradient-to-br from-teal-500/25 via-slate-900 to-emerald-600/25 px-5 py-4 flex flex-col justify-between border-transparent border-transparent/10">
+          <div class="h-20 sm:h-24 bg-gradient-to-br from-teal-500/25 via-slate-900 to-emerald-600/25 px-5 py-4 flex flex-col justify-between">
             <div class="flex items-center justify-between gap-2">
               <span class="px-2.5 py-0.5 rounded-full bg-teal-300 text-slate-950 text-[10px] font-black uppercase whitespace-nowrap shrink-0">Alamat Masjid</span>
               <span id="showcaseMosqueBadge" class="text-[11px] font-bold text-teal-300 whitespace-nowrap shrink-0">45 MASJID</span>
@@ -564,33 +625,33 @@
             <i data-lucide="map-pin" class="w-3.5 h-3.5 text-rose-600"></i>
             <span>Cari Terdekat di KakaoMap:</span>
           </div>
-          <button id="btnCopySiteUrl" type="button" class="motion-120 inline-flex items-center gap-1 text-[11px] font-bold text-blue-800 bg-blue-50/90 hover:bg-blue-100 px-2 py-0.5 rounded-lg border-transparent border-transparent cursor-pointer">
+          <button id="btnCopySiteUrl" type="button" class="motion-120 inline-flex items-center gap-1 text-[11px] font-bold text-blue-800 bg-blue-50/90 hover:bg-blue-100 px-2 py-0.5 rounded-lg cursor-pointer">
             <i data-lucide="link" class="w-3 h-3"></i>
             <span>Salin Link Web</span>
           </button>
         </div>
         <div class="grid grid-cols-3 gap-1.5 text-xs">
-          <a href="https://map.kakao.com/link/search/%EC%95%BD%EA%B5%AD" target="_blank" rel="noopener noreferrer" class="tactile-press motion-120 flex items-center justify-center gap-1.5 py-2 px-2 rounded-[18px] bg-emerald-50/90 hover:bg-emerald-100 text-emerald-950 border-transparent border-transparent font-bold">
+          <a href="https://map.kakao.com/link/search/%EC%95%BD%EA%B5%AD" target="_blank" rel="noopener noreferrer" class="tactile-press motion-120 flex items-center justify-center gap-1.5 py-2 px-2 rounded-[18px] bg-emerald-50/90 hover:bg-emerald-100 text-emerald-950 font-bold">
             <i data-lucide="pill" class="w-3.5 h-3.5 text-emerald-600 shrink-0"></i>
             <span>Apotek</span>
           </a>
-          <a href="https://map.kakao.com/link/search/%EB%B3%91%EC%9B%90" target="_blank" rel="noopener noreferrer" class="tactile-press motion-120 flex items-center justify-center gap-1.5 py-2 px-2 rounded-[18px] bg-rose-50/90 hover:bg-rose-100 text-rose-950 border-transparent border-transparent font-bold">
+          <a href="https://map.kakao.com/link/search/%EB%B3%91%EC%9B%90" target="_blank" rel="noopener noreferrer" class="tactile-press motion-120 flex items-center justify-center gap-1.5 py-2 px-2 rounded-[18px] bg-rose-50/90 hover:bg-rose-100 text-rose-950 font-bold">
             <i data-lucide="hospital" class="w-3.5 h-3.5 text-rose-600 shrink-0"></i>
             <span>RS/Klinik</span>
           </a>
-          <a href="https://map.kakao.com/link/search/%EC%A3%BC%EB%AF%BC%EC%84%BC%ED%84%B0" target="_blank" rel="noopener noreferrer" class="tactile-press motion-120 flex items-center justify-center gap-1.5 py-2 px-2 rounded-[18px] bg-blue-50/90 hover:bg-blue-100 text-blue-950 border-transparent border-transparent font-bold">
+          <a href="https://map.kakao.com/link/search/%EC%A3%BC%EB%AF%BC%EC%84%BC%ED%84%B0" target="_blank" rel="noopener noreferrer" class="tactile-press motion-120 flex items-center justify-center gap-1.5 py-2 px-2 rounded-[18px] bg-blue-50/90 hover:bg-blue-100 text-blue-950 font-bold">
             <i data-lucide="landmark" class="w-3.5 h-3.5 text-blue-600 shrink-0"></i>
             <span>주민 센터</span>
           </a>
-          <a href="https://map.kakao.com/link/search/%EC%9D%80%ED%96%89%20ATM" target="_blank" rel="noopener noreferrer" class="tactile-press motion-120 flex items-center justify-center gap-1.5 py-2 px-2 rounded-[18px] bg-slate-100/90 hover:bg-slate-200 text-slate-900 border-transparent border-transparent font-bold">
+          <a href="https://map.kakao.com/link/search/%EC%9D%80%ED%96%89%20ATM" target="_blank" rel="noopener noreferrer" class="tactile-press motion-120 flex items-center justify-center gap-1.5 py-2 px-2 rounded-[18px] bg-slate-100/90 hover:bg-slate-200 text-slate-900 font-bold">
             <i data-lucide="credit-card" class="w-3.5 h-3.5 text-slate-700 shrink-0"></i>
             <span>ATM/Bank</span>
           </a>
-          <a href="https://map.kakao.com/link/search/%EC%9A%B0%EC%B2%B4%EA%B5%AD" target="_blank" rel="noopener noreferrer" class="tactile-press motion-120 flex items-center justify-center gap-1.5 py-2 px-2 rounded-[18px] bg-amber-100/35 hover:bg-amber-100 text-amber-950 border-transparent border-transparent font-bold">
+          <a href="https://map.kakao.com/link/search/%EC%9A%B0%EC%B2%B4%EA%B5%AD" target="_blank" rel="noopener noreferrer" class="tactile-press motion-120 flex items-center justify-center gap-1.5 py-2 px-2 rounded-[18px] bg-amber-100/35 hover:bg-amber-100 text-amber-950 font-bold">
             <i data-lucide="package" class="w-3.5 h-3.5 text-amber-600 shrink-0"></i>
             <span>Kantor Pos</span>
           </a>
-          <a href="https://map.kakao.com/link/search/%ED%95%A0%EB%9E%84%EB%A7%88%ED%8A%B8" target="_blank" rel="noopener noreferrer" class="tactile-press motion-120 flex items-center justify-center gap-1.5 py-2 px-2 rounded-[18px] bg-teal-50/90 hover:bg-teal-100 text-teal-950 border-transparent border-transparent font-bold">
+          <a href="https://map.kakao.com/link/search/%ED%95%A0%EB%9E%84%EB%A7%88%ED%8A%B8" target="_blank" rel="noopener noreferrer" class="tactile-press motion-120 flex items-center justify-center gap-1.5 py-2 px-2 rounded-[18px] bg-teal-50/90 hover:bg-teal-100 text-teal-950 font-bold">
             <i data-lucide="shopping-bag" class="w-3.5 h-3.5 text-teal-600 shrink-0"></i>
             <span>Halal Mart</span>
           </a>
@@ -606,19 +667,19 @@
           <span>Portal Resmi EPS, Imigrasi &amp; Administrasi:</span>
         </span>
         <div class="flex flex-wrap items-center gap-1.5">
-          <a href="https://www.eps.go.kr/" target="_blank" rel="noopener noreferrer" class="tactile-press motion-120 inline-flex items-center gap-1 px-2.5 py-1.5 rounded-[18px] bg-white/30 hover:bg-blue-50 text-slate-800 font-bold border-transparent border-transparent/90">
+          <a href="https://www.eps.go.kr/" target="_blank" rel="noopener noreferrer" class="tactile-press motion-120 inline-flex items-center gap-1 px-2.5 py-1.5 rounded-[18px] bg-white/30 hover:bg-blue-50 text-slate-800 font-bold">
             <i data-lucide="globe" class="w-3 h-3 text-blue-600"></i>
             <span>EPS (eps.go.kr)</span>
           </a>
-          <a href="https://m.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systClId=SC00000339&systCnntId=CI00002290&systId=SI00000446" target="_blank" rel="noopener noreferrer" class="tactile-press motion-120 inline-flex items-center gap-1 px-2.5 py-1.5 rounded-[18px] bg-white/30 hover:bg-blue-50 text-slate-800 font-bold border-transparent border-transparent/90">
+          <a href="https://m.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systClId=SC00000339&systCnntId=CI00002290&systId=SI00000446" target="_blank" rel="noopener noreferrer" class="tactile-press motion-120 inline-flex items-center gap-1 px-2.5 py-1.5 rounded-[18px] bg-white/30 hover:bg-blue-50 text-slate-800 font-bold">
             <i data-lucide="briefcase" class="w-3 h-3 text-indigo-600"></i>
             <span>Work24 (고용24)</span>
           </a>
-          <a href="https://www.hikorea.go.kr/" target="_blank" rel="noopener noreferrer" class="tactile-press motion-120 inline-flex items-center gap-1 px-2.5 py-1.5 rounded-[18px] bg-white/30 hover:bg-blue-50 text-slate-800 font-bold border-transparent border-transparent/90">
+          <a href="https://www.hikorea.go.kr/" target="_blank" rel="noopener noreferrer" class="tactile-press motion-120 inline-flex items-center gap-1 px-2.5 py-1.5 rounded-[18px] bg-white/30 hover:bg-blue-50 text-slate-800 font-bold">
             <i data-lucide="badge-check" class="w-3 h-3 text-emerald-600"></i>
             <span>HiKorea</span>
           </a>
-          <a href="https://labor.moel.go.kr/minwonSysInfo/wagesolway.do" target="_blank" rel="noopener noreferrer" class="tactile-press motion-120 inline-flex items-center gap-1 px-2.5 py-1.5 rounded-[18px] bg-white/30 hover:bg-rose-50 text-slate-800 font-bold border-transparent border-transparent/90">
+          <a href="https://labor.moel.go.kr/minwonSysInfo/wagesolway.do" target="_blank" rel="noopener noreferrer" class="tactile-press motion-120 inline-flex items-center gap-1 px-2.5 py-1.5 rounded-[18px] bg-white/30 hover:bg-rose-50 text-slate-800 font-bold">
             <i data-lucide="scale" class="w-3 h-3 text-rose-600"></i>
             <span>Pengaduan Gaji (MOEL)</span>
           </a>
@@ -641,7 +702,7 @@
           <h2 class="text-sm font-extrabold text-slate-900 mt-1">Cek Nodongbu, Shelter &amp; Masjid Berdasarkan Kota / Kawasan Pabrik</h2>
         </div>
         <div class="flex flex-wrap items-center gap-1.5">
-          <select id="regionMatcherSelect" class="px-3 py-2 rounded-[18px] border-transparent border-transparent/90 bg-white/35 font-bold text-slate-800 text-xs">
+          <select id="regionMatcherSelect" class="px-3 py-2 rounded-[18px] bg-white/35 font-bold text-slate-800 text-xs">
             <option value="Eumseong">Eumseong · 음성 (Chungbuk)</option>
             <option value="Ansan">Ansan · 안산 (Gyeonggi)</option>
             <option value="Hwaseong">Hwaseong · 화성 (Gyeonggi)</option>
@@ -716,7 +777,7 @@
     <!-- =================================================================== -->
     <div id="view_TAB_DIREKTORI" class="tab-panel-enter space-y-4">
       <section class="liquid-glass squircle p-4 sm:p-5 space-y-3.5">
-        <div class="flex flex-col gap-2.5 border-transparent border-transparent/70 pb-3">
+        <div class="flex flex-col gap-2.5 pb-3">
           <div>
             <h2 class="text-base sm:text-lg font-extrabold text-slate-900 flex items-center gap-2.5">
               <span class="w-7 h-7 rounded-xl bg-blue-100/90 text-blue-700 flex items-center justify-center shrink-0">
@@ -727,11 +788,11 @@
             <p class="text-xs text-slate-600 mt-0.5">Pelaporan pindah tempat kerja wajib dilakukan di kantor Nodongbu sesuai <strong>alamat tempat kerja terakhir</strong> Anda.</p>
           </div>
           <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-center gap-1.5">
-            <button id="btnCopyFiltered" type="button" class="motion-120 inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-[18px] text-[11px] sm:text-xs font-bold bg-blue-50/90 hover:bg-blue-100 text-blue-900 border-transparent border-transparent whitespace-nowrap cursor-pointer">
+            <button id="btnCopyFiltered" type="button" class="motion-120 inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-[18px] text-[11px] sm:text-xs font-bold bg-blue-50/90 hover:bg-blue-100 text-blue-900 whitespace-nowrap cursor-pointer">
               <i data-lucide="copy" class="w-3.5 h-3.5 shrink-0"></i>
               <span>Salin Hasil</span>
             </button>
-            <button id="btnCopySaved" type="button" class="motion-120 inline-flex items-center justify-center gap-1 px-2.5 py-1.5 rounded-[18px] text-[11px] sm:text-xs font-bold bg-emerald-50/90 hover:bg-emerald-100 text-emerald-950 border-transparent border-transparent whitespace-nowrap cursor-pointer">
+            <button id="btnCopySaved" type="button" class="motion-120 inline-flex items-center justify-center gap-1 px-2.5 py-1.5 rounded-[18px] text-[11px] sm:text-xs font-bold bg-emerald-50/90 hover:bg-emerald-100 text-emerald-950 whitespace-nowrap cursor-pointer">
               <i data-lucide="bookmark-check" class="w-3.5 h-3.5 shrink-0"></i>
               <span>Salin Tersimpan</span>
             </button>
@@ -739,7 +800,7 @@
               <i data-lucide="download" class="w-3.5 h-3.5"></i>
               <span>Unduh CSV</span>
             </button>
-            <button id="btnToggleAppleShelf" type="button" class="motion-120 inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-[18px] text-xs font-extrabold bg-slate-900 text-white border-transparent border-transparent cursor-pointer">
+            <button id="btnToggleAppleShelf" type="button" class="motion-120 inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-[18px] text-xs font-extrabold bg-slate-900 text-white cursor-pointer">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-amber-300 shrink-0"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg>
               <span>Mode Geser</span>
             </button>
@@ -747,7 +808,7 @@
               <i data-lucide="layout-grid" class="w-3.5 h-3.5 text-blue-700 shrink-0"></i>
               <span>Ringkas</span>
             </button>
-            <button id="btnResetSaved" type="button" class="motion-120 inline-flex items-center justify-center gap-1 px-2.5 py-1.5 rounded-[18px] text-xs font-semibold text-slate-600 hover:bg-white/25 border-transparent border-transparent/80 cursor-pointer">
+            <button id="btnResetSaved" type="button" class="motion-120 inline-flex items-center justify-center gap-1 px-2.5 py-1.5 rounded-[18px] text-xs font-semibold text-slate-600 hover:bg-white/25 cursor-pointer">
               <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i>
               <span>Reset</span>
             </button>
@@ -757,7 +818,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
           <div class="sm:col-span-2 relative">
             <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-3"></i>
-            <input id="searchInput" type="text" placeholder="Cari kota, provinsi, atau nama kantor..." class="w-full pl-10 pr-16 py-2.5 text-sm rounded-[18px] border-transparent border-transparent/90 bg-white/30 focus:outline-none focus:ring-0 focus:ring-0">
+            <input id="searchInput" type="text" placeholder="Cari kota, provinsi, atau nama kantor..." class="w-full pl-10 pr-16 py-2.5 text-sm rounded-[18px] bg-white/30 focus:outline-none focus:ring-0 focus:ring-0">
             <button id="btnClearSearch" type="button" class="hidden absolute right-2.5 top-2 text-xs font-bold px-2 py-1 rounded-lg bg-slate-200 text-slate-700 hover:bg-slate-300 cursor-pointer">Hapus</button>
           </div>
           <div class="flex items-center">
@@ -772,28 +833,28 @@
 
         <div class="flex items-center gap-1.5 overflow-x-auto flex-nowrap sm:flex-wrap py-1.5 sm:py-1">
           <span class="text-[11px] font-bold text-slate-700 mr-1 py-1.5 leading-normal shrink-0">Kota:</span>
-          <button type="button" data-quick-city="Ansan" class="quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Ansan</button>
-          <button type="button" data-quick-city="Hwaseong" class="quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Hwaseong</button>
-          <button type="button" data-quick-city="Pyeongtaek" class="quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Pyeongtaek</button>
-          <button type="button" data-quick-city="Siheung" class="quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Siheung</button>
-          <button type="button" data-quick-city="Gimpo" class="quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Gimpo</button>
-          <button type="button" data-quick-city="Incheon" class="quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Incheon</button>
-          <button type="button" data-quick-city="Cheonan" class="quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Cheonan</button>
-          <button type="button" data-quick-city="Eumseong" class="quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Eumseong</button>
-          <button type="button" data-quick-city="Gimhae" class="quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Gimhae</button>
-          <button type="button" data-quick-city="Changwon" class="quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Changwon</button>
-          <button type="button" data-quick-city="Gumi" class="quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Gumi</button>
-          <button type="button" data-quick-city="Daegu" class="quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Daegu</button>
-          <button type="button" data-quick-city="Gwangju" class="quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Gwangju</button>
+          <button type="button" data-quick-city="Ansan" class="quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Ansan</button>
+          <button type="button" data-quick-city="Hwaseong" class="quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Hwaseong</button>
+          <button type="button" data-quick-city="Pyeongtaek" class="quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Pyeongtaek</button>
+          <button type="button" data-quick-city="Siheung" class="quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Siheung</button>
+          <button type="button" data-quick-city="Gimpo" class="quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Gimpo</button>
+          <button type="button" data-quick-city="Incheon" class="quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Incheon</button>
+          <button type="button" data-quick-city="Cheonan" class="quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Cheonan</button>
+          <button type="button" data-quick-city="Eumseong" class="quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Eumseong</button>
+          <button type="button" data-quick-city="Gimhae" class="quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Gimhae</button>
+          <button type="button" data-quick-city="Changwon" class="quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Changwon</button>
+          <button type="button" data-quick-city="Gumi" class="quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Gumi</button>
+          <button type="button" data-quick-city="Daegu" class="quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Daegu</button>
+          <button type="button" data-quick-city="Gwangju" class="quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Gwangju</button>
         </div>
 
-        <div id="zoneTabs" class="flex flex-wrap gap-1.5 pt-2 border-transparent border-transparent/70">
+        <div id="zoneTabs" class="flex flex-wrap gap-1.5 pt-2">
           <button type="button" data-zone="ALL" class="zone-tab motion-120 px-2 py-1.5 rounded-[18px] text-[11px] sm:text-xs font-bold bg-slate-900 text-white cursor-pointer">Semua Alamat Nodongbu (62)</button>
-          <button type="button" data-zone="ZONA_1" class="zone-tab motion-120 px-2 py-1.5 rounded-[18px] text-[11px] sm:text-xs font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Zona 1 · Sudogwon (24)</button>
-          <button type="button" data-zone="ZONA_2" class="zone-tab motion-120 px-2 py-1.5 rounded-[18px] text-[11px] sm:text-xs font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Zona 2 · Chungcheong (7)</button>
-          <button type="button" data-zone="ZONA_3" class="zone-tab motion-120 px-2 py-1.5 rounded-[18px] text-[11px] sm:text-xs font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Zona 3 · Jeolla·Jeju (8)</button>
-          <button type="button" data-zone="ZONA_4" class="zone-tab motion-120 px-2 py-1.5 rounded-[18px] text-[11px] sm:text-xs font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Zona 4 · Gyeongbuk·Gangwon (13)</button>
-          <button type="button" data-zone="ZONA_5" class="zone-tab motion-120 px-2 py-1.5 rounded-[18px] text-[11px] sm:text-xs font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Zona 5 · Gyeongnam·Busan·Ulsan (10)</button>
+          <button type="button" data-zone="ZONA_1" class="zone-tab motion-120 px-2 py-1.5 rounded-[18px] text-[11px] sm:text-xs font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Zona 1 · Sudogwon (24)</button>
+          <button type="button" data-zone="ZONA_2" class="zone-tab motion-120 px-2 py-1.5 rounded-[18px] text-[11px] sm:text-xs font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Zona 2 · Chungcheong (7)</button>
+          <button type="button" data-zone="ZONA_3" class="zone-tab motion-120 px-2 py-1.5 rounded-[18px] text-[11px] sm:text-xs font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Zona 3 · Jeolla·Jeju (8)</button>
+          <button type="button" data-zone="ZONA_4" class="zone-tab motion-120 px-2 py-1.5 rounded-[18px] text-[11px] sm:text-xs font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Zona 4 · Gyeongbuk·Gangwon (13)</button>
+          <button type="button" data-zone="ZONA_5" class="zone-tab motion-120 px-2 py-1.5 rounded-[18px] text-[11px] sm:text-xs font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Zona 5 · Gyeongnam·Busan·Ulsan (10)</button>
         </div>
       </section>
 
@@ -816,7 +877,7 @@
     <!-- =================================================================== -->
     <div id="view_TAB_SHELTER" class="tab-panel-enter hidden space-y-4">
       <section class="liquid-glass squircle p-4 sm:p-5 space-y-3.5">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 border-transparent border-transparent/70 pb-3">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 pb-3">
           <div>
             <h2 class="text-base sm:text-lg font-extrabold text-slate-900 flex items-center gap-2.5">
               <span class="w-7 h-7 rounded-xl bg-emerald-100/90 text-emerald-700 flex items-center justify-center shrink-0">
@@ -841,7 +902,7 @@
         <div class="flex flex-col sm:flex-row gap-2.5 items-stretch sm:items-center">
           <div class="relative flex-1">
             <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-3"></i>
-            <input id="shelterSearchInput" type="text" placeholder="Cari kota shelter atau kontak (Ansan, Cheonan, Incheon, Busan, Gimhae)..." class="w-full pl-10 pr-16 py-2.5 text-sm rounded-[18px] border-transparent border-transparent/90 bg-white/30 focus:outline-none focus:ring-0 focus:ring-0">
+            <input id="shelterSearchInput" type="text" placeholder="Cari kota shelter atau kontak (Ansan, Cheonan, Incheon, Busan, Gimhae)..." class="w-full pl-10 pr-16 py-2.5 text-sm rounded-[18px] bg-white/30 focus:outline-none focus:ring-0 focus:ring-0">
             <button id="btnClearShelterSearch" type="button" class="hidden absolute right-2.5 top-2 text-xs font-bold px-2 py-1 rounded-lg bg-slate-200 text-slate-700 hover:bg-slate-300 cursor-pointer">Hapus</button>
           </div>
           <span id="shelterCountBadge" class="liquid-subglass text-xs font-extrabold text-slate-700 px-3.5 py-2.5 rounded-[18px] text-center shrink-0">18 Pusat Bantuan</span>
@@ -850,16 +911,16 @@
         <div class="flex items-center gap-1.5 overflow-x-auto flex-nowrap sm:flex-wrap py-1.5 sm:py-1 text-xs">
           <span class="text-[11px] font-bold text-slate-700 mr-1 py-1.5 leading-normal shrink-0">Wilayah:</span>
           <button type="button" data-shelter-city="" class="shelter-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-bold bg-slate-900 text-white cursor-pointer">Semua</button>
-          <button type="button" data-shelter-city="Ansan" class="shelter-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Ansan</button>
-          <button type="button" data-shelter-city="Cheonan" class="shelter-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Cheonan</button>
-          <button type="button" data-shelter-city="Incheon" class="shelter-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Incheon</button>
-          <button type="button" data-shelter-city="Cheongju" class="shelter-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Cheongju</button>
-          <button type="button" data-shelter-city="Gumi" class="shelter-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Gumi</button>
-          <button type="button" data-shelter-city="Gimhae" class="shelter-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Gimhae</button>
-          <button type="button" data-shelter-city="Changwon" class="shelter-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Changwon</button>
-          <button type="button" data-shelter-city="Busan" class="shelter-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Busan</button>
-          <button type="button" data-shelter-city="Daegu" class="shelter-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Daegu</button>
-          <button type="button" data-shelter-city="Ulsan" class="shelter-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Ulsan</button>
+          <button type="button" data-shelter-city="Ansan" class="shelter-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Ansan</button>
+          <button type="button" data-shelter-city="Cheonan" class="shelter-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Cheonan</button>
+          <button type="button" data-shelter-city="Incheon" class="shelter-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Incheon</button>
+          <button type="button" data-shelter-city="Cheongju" class="shelter-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Cheongju</button>
+          <button type="button" data-shelter-city="Gumi" class="shelter-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Gumi</button>
+          <button type="button" data-shelter-city="Gimhae" class="shelter-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Gimhae</button>
+          <button type="button" data-shelter-city="Changwon" class="shelter-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Changwon</button>
+          <button type="button" data-shelter-city="Busan" class="shelter-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Busan</button>
+          <button type="button" data-shelter-city="Daegu" class="shelter-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Daegu</button>
+          <button type="button" data-shelter-city="Ulsan" class="shelter-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Ulsan</button>
         </div>
       </section>
 
@@ -871,7 +932,7 @@
     <!-- =================================================================== -->
     <div id="view_TAB_MASJID" class="tab-panel-enter hidden space-y-4">
       <section class="liquid-glass squircle p-4 sm:p-5 space-y-4">
-        <div class="border-transparent border-transparent/70 pb-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        <div class="pb-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
           <div>
             <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-emerald-100 text-emerald-900">
               <i data-lucide="moon-star" class="w-3.5 h-3.5"></i>
@@ -880,12 +941,12 @@
             <h2 class="text-base sm:text-lg font-extrabold text-slate-900 mt-1">Direktori Masjid &amp; Pusat Komunitas Muslim Korea Selatan</h2>
             <p class="text-xs text-slate-600 mt-0.5">Lengkap dengan alamat Korea, nomor kontak yang tersedia, serta tautan langsung KakaoMap &amp; Naver Map.</p>
           </div>
-          <span id="mosqueSummary" class="text-xs font-extrabold text-emerald-900 bg-emerald-50/90 px-3 py-1.5 rounded-[18px] border-transparent border-transparent shrink-0">45 Masjid Terdaftar</span>
+          <span id="mosqueSummary" class="text-xs font-extrabold text-emerald-900 bg-emerald-50/90 px-3 py-1.5 rounded-[18px] shrink-0">45 Masjid Terdaftar</span>
         </div>
 
         <div class="relative">
           <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-3"></i>
-          <input id="mosqueSearchInput" type="text" placeholder="Cari kota atau nama masjid (Geumwang, Mugeuk, Al-Barokah, Hwaseong, Changwon, Gumi, Ansan)..." class="w-full pl-10 pr-16 py-2.5 text-sm rounded-[18px] border-transparent border-transparent/90 bg-white/30 focus:outline-none focus:ring-0 focus:ring-0">
+          <input id="mosqueSearchInput" type="text" placeholder="Cari kota atau nama masjid (Geumwang, Mugeuk, Al-Barokah, Hwaseong, Changwon, Gumi, Ansan)..." class="w-full pl-10 pr-16 py-2.5 text-sm rounded-[18px] bg-white/30 focus:outline-none focus:ring-0 focus:ring-0">
           <button id="btnClearMosqueSearch" type="button" class="hidden absolute right-2.5 top-2 text-xs font-bold px-2 py-1 rounded-lg bg-slate-200 text-slate-700 hover:bg-slate-300 cursor-pointer">Hapus</button>
         </div>
 
@@ -893,37 +954,37 @@
           <div class="flex items-center gap-1.5 overflow-x-auto flex-nowrap sm:flex-wrap pb-1 sm:pb-0" style="scrollbar-width:none;">
             <span class="text-[11px] font-extrabold text-slate-700 mr-1 py-1.5 leading-normal shrink-0">Provinsi:</span>
             <button type="button" data-mosque-prov="" class="mosque-prov-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-bold bg-emerald-700 text-white cursor-pointer">Semua</button>
-            <button type="button" data-mosque-prov="Gyeonggi" class="mosque-prov-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Gyeonggi</button>
-            <button type="button" data-mosque-prov="Gyeongnam" class="mosque-prov-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Gyeongnam</button>
-            <button type="button" data-mosque-prov="Gyeongbuk" class="mosque-prov-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Gyeongbuk</button>
-            <button type="button" data-mosque-prov="Chungnam" class="mosque-prov-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Chungnam</button>
-            <button type="button" data-mosque-prov="Chungbuk" class="mosque-prov-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Chungbuk</button>
-            <button type="button" data-mosque-prov="Busan" class="mosque-prov-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Busan</button>
-            <button type="button" data-mosque-prov="Incheon" class="mosque-prov-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Incheon</button>
-            <button type="button" data-mosque-prov="Gwangju" class="mosque-prov-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Gwangju</button>
-            <button type="button" data-mosque-prov="Seoul" class="mosque-prov-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Seoul</button>
-            <button type="button" data-mosque-prov="Daejeon" class="mosque-prov-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Daejeon</button>
-            <button type="button" data-mosque-prov="Jeonbuk" class="mosque-prov-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Jeonbuk</button>
-            <button type="button" data-mosque-prov="Daegu" class="mosque-prov-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Daegu</button>
+            <button type="button" data-mosque-prov="Gyeonggi" class="mosque-prov-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Gyeonggi</button>
+            <button type="button" data-mosque-prov="Gyeongnam" class="mosque-prov-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Gyeongnam</button>
+            <button type="button" data-mosque-prov="Gyeongbuk" class="mosque-prov-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Gyeongbuk</button>
+            <button type="button" data-mosque-prov="Chungnam" class="mosque-prov-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Chungnam</button>
+            <button type="button" data-mosque-prov="Chungbuk" class="mosque-prov-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Chungbuk</button>
+            <button type="button" data-mosque-prov="Busan" class="mosque-prov-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Busan</button>
+            <button type="button" data-mosque-prov="Incheon" class="mosque-prov-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Incheon</button>
+            <button type="button" data-mosque-prov="Gwangju" class="mosque-prov-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Gwangju</button>
+            <button type="button" data-mosque-prov="Seoul" class="mosque-prov-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Seoul</button>
+            <button type="button" data-mosque-prov="Daejeon" class="mosque-prov-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Daejeon</button>
+            <button type="button" data-mosque-prov="Jeonbuk" class="mosque-prov-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Jeonbuk</button>
+            <button type="button" data-mosque-prov="Daegu" class="mosque-prov-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Daegu</button>
           </div>
 
           <div id="mosqueCityChipsRow" class="flex items-center gap-1.5 overflow-x-auto flex-nowrap sm:flex-wrap pb-1 sm:pb-0" style="scrollbar-width:none;">
             <span class="text-[11px] font-extrabold text-slate-700 mr-0.5 shrink-0">Kota:</span>
             <button type="button" data-mosque-city="" class="mosque-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-bold bg-slate-900 text-white cursor-pointer">Semua</button>
-            <button type="button" data-mosque-city="Ansan" class="mosque-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Ansan</button>
-            <button type="button" data-mosque-city="Hwaseong" class="mosque-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Hwaseong</button>
-            <button type="button" data-mosque-city="Pyeongtaek" class="mosque-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Pyeongtaek</button>
-            <button type="button" data-mosque-city="Eumseong" class="mosque-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Eumseong</button>
-            <button type="button" data-mosque-city="Cheonan" class="mosque-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Cheonan</button>
-            <button type="button" data-mosque-city="Gumi" class="mosque-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Gumi</button>
-            <button type="button" data-mosque-city="Gimhae" class="mosque-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Gimhae</button>
-            <button type="button" data-mosque-city="Changwon" class="mosque-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Changwon</button>
-            <button type="button" data-mosque-city="Busan" class="mosque-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Busan</button>
-            <button type="button" data-mosque-city="Itaewon" class="mosque-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer">Seoul</button>
+            <button type="button" data-mosque-city="Ansan" class="mosque-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Ansan</button>
+            <button type="button" data-mosque-city="Hwaseong" class="mosque-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Hwaseong</button>
+            <button type="button" data-mosque-city="Pyeongtaek" class="mosque-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Pyeongtaek</button>
+            <button type="button" data-mosque-city="Eumseong" class="mosque-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Eumseong</button>
+            <button type="button" data-mosque-city="Cheonan" class="mosque-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Cheonan</button>
+            <button type="button" data-mosque-city="Gumi" class="mosque-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Gumi</button>
+            <button type="button" data-mosque-city="Gimhae" class="mosque-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Gimhae</button>
+            <button type="button" data-mosque-city="Changwon" class="mosque-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Changwon</button>
+            <button type="button" data-mosque-city="Busan" class="mosque-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Busan</button>
+            <button type="button" data-mosque-city="Itaewon" class="mosque-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer">Seoul</button>
           </div>
         </div>
 
-        <div id="mosqueActiveFilterBar" class="hidden flex items-center justify-between gap-2 px-3 py-2 rounded-[18px] bg-amber-100/35 border-transparent border-transparent/80 text-xs">
+        <div id="mosqueActiveFilterBar" class="hidden flex items-center justify-between gap-2 px-3 py-2 rounded-[18px] bg-amber-100/35 text-xs">
           <span id="mosqueActiveFilterText" class="font-bold text-amber-950 truncate">Filter aktif</span>
           <button id="btnResetMosqueFilter" type="button" class="motion-120 shrink-0 px-2.5 py-1 rounded-lg bg-slate-900 text-white text-[11px] font-extrabold cursor-pointer">Reset Filter</button>
         </div>
@@ -953,7 +1014,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
           <div>
             <label for="selectLeaveReason" class="block font-bold text-slate-800 mb-1">Alasan Keluar Tempat Kerja:</label>
-            <select id="selectLeaveReason" class="w-full px-3 py-2.5 rounded-[18px] border-transparent border-transparent/90 bg-white/35 font-semibold">
+            <select id="selectLeaveReason" class="w-full px-3 py-2.5 rounded-[18px] bg-white/35 font-semibold">
               <option value="MUTUAL_OR_EXPIRED">Kesepakatan Bersama / Kontrak Habis (합의해지 / 계약만료)</option>
               <option value="COMPANY_FAULT">Kesalahan Tempat Kerja: Gaji Macet / Tutup / Kekerasan / Pelanggaran Mess</option>
               <option value="INJURY_ILLNESS">Kecelakaan Kerja / Sakit Tidak Bisa Lanjut (산재 / 상해·질병)</option>
@@ -961,14 +1022,14 @@
           </div>
           <div>
             <label for="selectContractStage" class="block font-bold text-slate-800 mb-1">Masa Kontrak Saat Ini:</label>
-            <select id="selectContractStage" class="w-full px-3 py-2.5 rounded-[18px] border-transparent border-transparent/90 bg-white/35 font-semibold">
+            <select id="selectContractStage" class="w-full px-3 py-2.5 rounded-[18px] bg-white/35 font-semibold">
               <option value="INITIAL_3Y">Kontrak 3 Tahun Pertama (Batas Normal: 3 Kali)</option>
               <option value="EXTENDED_1Y10M">Perpanjangan 1 Tahun 10 Bulan (Batas Normal: 2 Kali)</option>
             </select>
           </div>
           <div>
             <label for="selectUsedQuota" class="block font-bold text-slate-800 mb-1">Kuota Normal Terpakai:</label>
-            <select id="selectUsedQuota" class="w-full px-3 py-2.5 rounded-[18px] border-transparent border-transparent/90 bg-white/35 font-semibold">
+            <select id="selectUsedQuota" class="w-full px-3 py-2.5 rounded-[18px] bg-white/35 font-semibold">
               <option value="0">Belum Pernah (0 Kali)</option>
               <option value="1">Sudah 1 Kali</option>
               <option value="2">Sudah 2 Kali</option>
@@ -976,7 +1037,7 @@
             </select>
           </div>
         </div>
-        <div id="quotaCheckerOutput" class="rounded-[18px] p-4 border-transparent border-transparent/90 bg-purple-50/85 space-y-1 text-xs"></div>
+        <div id="quotaCheckerOutput" class="rounded-[18px] p-4 bg-purple-50/85 space-y-1 text-xs"></div>
       </section>
 
       <!-- Checklist Persiapan Dokumen & Bukti Interaktif -->
@@ -1021,7 +1082,7 @@
             <div class="font-extrabold text-slate-900">5. Tanda Tangan Kontrak &amp; Izin Imigrasi (근무처변경허가)</div>
             <p class="text-slate-600 mt-1">Setelah mendapat tempat kerja baru dan 고용허가서, urus izin perubahan tempat kerja di Imigrasi sesuai tenggat yang ditetapkan.</p>
           </div>
-          <div class="rounded-[24px] p-3.5 border-transparent border-transparent bg-rose-50/75">
+          <div class="rounded-[24px] p-3.5 bg-rose-50/75">
             <div class="font-extrabold text-rose-900">6. Patuhi Ketentuan Izin Kerja Sebelum Mulai Bekerja</div>
             <p class="text-rose-800 mt-1">Bekerja di luar ketentuan atau tanpa izin resmi Imigrasi sebelum izin terbit dapat melanggar aturan keimigrasian.</p>
           </div>
@@ -1047,14 +1108,14 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5">
           <div>
             <label for="selectEntryPeriod" class="block text-xs font-bold text-slate-800 mb-1">1. Periode Izin Kerja Awal (고용허가서):</label>
-            <select id="selectEntryPeriod" class="w-full px-3 py-2.5 text-xs sm:text-sm rounded-[18px] border-transparent border-transparent/90 bg-white/35 font-semibold">
+            <select id="selectEntryPeriod" class="w-full px-3 py-2.5 text-xs sm:text-sm rounded-[18px] bg-white/35 font-semibold">
               <option value="AFTER_OCT2023">Mulai 19 Okt 2023 ke atas (Kuota Tahap 4 / Re-entry baru)</option>
               <option value="BEFORE_OCT2023">Sebelum 19 Okt 2023 (Angkatan lama)</option>
             </select>
           </div>
           <div>
             <label for="selectInitialZone" class="block text-xs font-bold text-slate-800 mb-1">2. Zona Tempat Kerja Pertama (최초 사업장):</label>
-            <select id="selectInitialZone" class="w-full px-3 py-2.5 text-xs sm:text-sm rounded-[18px] border-transparent border-transparent/90 bg-white/35 font-semibold">
+            <select id="selectInitialZone" class="w-full px-3 py-2.5 text-xs sm:text-sm rounded-[18px] bg-white/35 font-semibold">
               <option value="ZONA_1">Zona 1 — 수도권 (Seoul, Gyeonggi, Incheon)</option>
               <option value="ZONA_2">Zona 2 — 충청권 (Daejeon, Sejong, Chungnam, Chungbuk)</option>
               <option value="ZONA_3">Zona 3 — 전라·제주권 (Gwangju, Jeonnam, Jeonbuk, Jeju)</option>
@@ -1064,7 +1125,7 @@
           </div>
           <div>
             <label for="selectTargetZone" class="block text-xs font-bold text-slate-800 mb-1">3. Zona Tempat Kerja Tujuan (희망 이동 권역):</label>
-            <select id="selectTargetZone" class="w-full px-3 py-2.5 text-xs sm:text-sm rounded-[18px] border-transparent border-transparent/90 bg-white/35 font-semibold">
+            <select id="selectTargetZone" class="w-full px-3 py-2.5 text-xs sm:text-sm rounded-[18px] bg-white/35 font-semibold">
               <option value="ZONA_1">Zona 1 — 수도권</option>
               <option value="ZONA_2">Zona 2 — 충청권</option>
               <option value="ZONA_3">Zona 3 — 전라·제주권</option>
@@ -1074,7 +1135,7 @@
           </div>
         </div>
 
-        <div id="zoningCheckerOutput" class="rounded-[24px] p-4 border-transparent border-transparent/90 bg-blue-50/85 space-y-2 text-xs"></div>
+        <div id="zoningCheckerOutput" class="rounded-[24px] p-4 bg-blue-50/85 space-y-2 text-xs"></div>
 
         <!-- Mobile-Friendly Liquid Glass Zone Cards (< sm) -->
         <div class="grid grid-cols-1 gap-2.5 sm:hidden pt-1">
@@ -1126,7 +1187,7 @@
 
         <!-- Tablet & Desktop Table (>= sm) -->
         <div class="hidden sm:block overflow-x-auto pt-1">
-          <table class="w-full text-left border-transparent text-xs bg-white/30 rounded-[18px] overflow-hidden">
+          <table class="w-full text-left text-xs bg-white/30 rounded-[18px] overflow-hidden">
             <thead>
               <tr class="bg-slate-900 text-white">
                 <th class="p-3">Nama Zona (권역)</th>
@@ -1162,18 +1223,24 @@
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
           <div>
             <label for="reqFieldSelect" class="block font-bold text-slate-700 mb-1">Bidang Kerja:</label>
-            <select id="reqFieldSelect" class="w-full px-3 py-2.5 rounded-[18px] border-transparent border-transparent/90 bg-white/35 font-semibold">
+            <select id="reqFieldSelect" class="w-full px-3 py-2.5 rounded-[18px] bg-white/35 font-semibold">
               <option value="제조업 전체 (아무 분야나 괜찮습니다)">Bebas / Sektor Apa Saja</option>
               <option value="금속가공제품 제조업 (프레스·용접·CNC)">C25 · Logam (Press, Las, CNC)</option>
               <option value="고무제품 및 플라스틱제품 제조업 (사출·압출)">C22 · Karet &amp; Plastik (Injeksi/Extrusi)</option>
-              <option value="자동차 및 트레일러 제조업 (자동차 부품)">C30/C31 · Onderdil Mobil</option>
-              <option value="전자부품·컴퓨터·영상·통신장비 제조업">C26/C27 · Elektronik &amp; PCB</option>
+              <option value="자동차 및 트레일러 제조업 (자동차 부품)">C30 · Onderdil Mobil</option>
+              <option value="기타 운송장비 제조업">C31 · Peralatan Transportasi Lain</option>
+              <option value="전자부품 제조업">C26 · Komponen Elektronik &amp; PCB</option>
+              <option value="컴퓨터·영상·음향 및 통신장비 제조업">C27 · Perangkat IT &amp; Komunikasi</option>
               <option value="기타 기계 및 장비 제조업 (금형·기계)">C29 · Mesin Industri &amp; Cetakan (Mold)</option>
-              <option value="식료품 및 음료 제조업 (식품 공장)">C10/C11 · Makanan &amp; Minuman</option>
-              <option value="섬유제품·의복 제조업">C13/C14 · Tekstil &amp; Pakaian</option>
+              <option value="식료품 제조업">C10 · Pengolahan Makanan</option>
+              <option value="음료 제조업">C11 · Pengolahan Minuman</option>
+              <option value="섬유제품 제조업 (직물·염색·가공)">C13 · Tekstil &amp; Kain</option>
+              <option value="의복·의복액세서리 및 모피제품 제조업">C14 · Pakaian &amp; Konveksi</option>
               <option value="가죽·가방 및 신발 제조업">C15 · Kulit, Tas &amp; Sepatu</option>
-              <option value="목재·나무제품 및 펄프·종이 제조업">C16/C17 · Kayu, Pallet &amp; Karton</option>
-              <option value="화학물질·화학제품 제조업">C20/C21 · Kimia, Cat &amp; Kosmetik</option>
+              <option value="목재 및 나무제품 제조업">C16 · Kayu &amp; Pallet</option>
+              <option value="펄프·종이 및 종이제품 제조업">C17 · Karton &amp; Kemasan Kertas</option>
+              <option value="화학물질 및 화학제품 제조업">C20 · Kimia &amp; Cat</option>
+              <option value="의료용 물질 및 의약품 제조업">C21 · Farmasi &amp; Kosmetik</option>
               <option value="비금속 광물제품 제조업">C23 · Keramik, Kaca &amp; Beton</option>
               <option value="1차 금속 제조업 (주물·제련)">C24 · Logam Primer / Pengecoran</option>
               <option value="전기장비 제조업 (모터·배터리·전선)">C28 · Peralatan Listrik &amp; Baterai</option>
@@ -1182,11 +1249,11 @@
           </div>
           <div>
             <label for="reqAreaInput" class="block font-bold text-slate-700 mb-1">Daerah Harapan:</label>
-            <input id="reqAreaInput" type="text" value="현재 지역 근처 또는 같은 권역" class="w-full px-3 py-2.5 rounded-[18px] border-transparent border-transparent/90 bg-white/35 font-semibold">
+            <input id="reqAreaInput" type="text" value="현재 지역 근처 또는 같은 권역" class="w-full px-3 py-2.5 rounded-[18px] bg-white/35 font-semibold">
           </div>
           <div>
             <label for="reqCondSelect" class="block font-bold text-slate-700 mb-1">Syarat Kerja:</label>
-            <select id="reqCondSelect" class="w-full px-3 py-2.5 rounded-[18px] border-transparent border-transparent/90 bg-white/35 font-semibold">
+            <select id="reqCondSelect" class="w-full px-3 py-2.5 rounded-[18px] bg-white/35 font-semibold">
               <option value="기숙사가 있고 잔업이 있는 곳">Ada Mess &amp; Ada Lembur</option>
               <option value="기숙사가 제공되는 곳">Wajib Ada Mess / Asrama</option>
               <option value="주간 근무 위주인 곳 (야간 교대 제외)">Shift Siang Saja (Non-Malam)</option>
@@ -1225,7 +1292,7 @@
     <!-- =================================================================== -->
     <div id="view_TAB_KAMUS" class="tab-panel-enter hidden space-y-4">
       <section class="liquid-glass squircle p-4 sm:p-5 space-y-4">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-transparent border-transparent/70 pb-3">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3">
           <div>
             <h2 class="text-base sm:text-lg font-extrabold text-slate-900 flex items-center gap-2.5">
               <span class="w-7 h-7 rounded-xl bg-purple-100/90 text-purple-700 flex items-center justify-center shrink-0">
@@ -1243,24 +1310,24 @@
 
         <div class="relative">
           <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-3"></i>
-          <input id="kamusSearchInput" type="text" placeholder="Cari kata atau kalimat (mesin, lembur, gaji, sakit, diagnosis, bank, alamat)..." class="w-full pl-10 pr-3.5 py-2.5 text-sm rounded-[18px] border-transparent border-transparent/90 bg-white/30 focus:outline-none focus:ring-0 focus:ring-0">
+          <input id="kamusSearchInput" type="text" placeholder="Cari kata atau kalimat (mesin, lembur, gaji, sakit, diagnosis, bank, alamat)..." class="w-full pl-10 pr-3.5 py-2.5 text-sm rounded-[18px] bg-white/30 focus:outline-none focus:ring-0 focus:ring-0">
         </div>
 
         <div class="space-y-2">
           <div id="kamusCatBar" class="flex flex-wrap gap-1.5">
             <button type="button" data-kcat="ALL" class="kamus-cat-btn motion-120 px-3 py-1.5 rounded-[18px] text-xs font-extrabold bg-slate-900 text-white cursor-pointer">Semua Tema</button>
-            <button type="button" data-kcat="NODONGBU" class="kamus-cat-btn motion-120 px-3 py-1.5 rounded-[18px] text-xs font-bold bg-white/25 text-slate-700 border-transparent border-transparent/90 cursor-pointer">Nodongbu &amp; Pindah</button>
-            <button type="button" data-kcat="PABRIK" class="kamus-cat-btn motion-120 px-3 py-1.5 rounded-[18px] text-xs font-bold bg-white/25 text-slate-700 border-transparent border-transparent/90 cursor-pointer">Pabrik &amp; Mesin</button>
-            <button type="button" data-kcat="MEDIS" class="kamus-cat-btn motion-120 px-3 py-1.5 rounded-[18px] text-xs font-bold bg-white/25 text-slate-700 border-transparent border-transparent/90 cursor-pointer">RS &amp; Sanjae</button>
-            <button type="button" data-kcat="HARIAN" class="kamus-cat-btn motion-120 px-3 py-1.5 rounded-[18px] text-xs font-bold bg-white/25 text-slate-700 border-transparent border-transparent/90 cursor-pointer">Sehari-hari &amp; Bank</button>
+            <button type="button" data-kcat="NODONGBU" class="kamus-cat-btn motion-120 px-3 py-1.5 rounded-[18px] text-xs font-bold bg-white/25 text-slate-700 cursor-pointer">Nodongbu &amp; Pindah</button>
+            <button type="button" data-kcat="PABRIK" class="kamus-cat-btn motion-120 px-3 py-1.5 rounded-[18px] text-xs font-bold bg-white/25 text-slate-700 cursor-pointer">Pabrik &amp; Mesin</button>
+            <button type="button" data-kcat="MEDIS" class="kamus-cat-btn motion-120 px-3 py-1.5 rounded-[18px] text-xs font-bold bg-white/25 text-slate-700 cursor-pointer">RS &amp; Sanjae</button>
+            <button type="button" data-kcat="HARIAN" class="kamus-cat-btn motion-120 px-3 py-1.5 rounded-[18px] text-xs font-bold bg-white/25 text-slate-700 cursor-pointer">Sehari-hari &amp; Bank</button>
           </div>
           <div class="flex items-center gap-1.5 overflow-x-auto flex-nowrap sm:flex-wrap pb-1 sm:pb-0 text-[11px]">
             <span class="font-bold text-slate-700 mr-1 py-1.5 leading-normal shrink-0">Cepat Cari:</span>
-            <button type="button" data-kamus-quick="잔업" class="motion-120 shrink-0 px-2.5 py-0.5 rounded-full bg-white/25 text-slate-700 border-transparent border-transparent/90 font-semibold cursor-pointer">Lembur (잔업)</button>
-            <button type="button" data-kamus-quick="산재" class="motion-120 shrink-0 px-2.5 py-0.5 rounded-full bg-white/25 text-slate-700 border-transparent border-transparent/90 font-semibold cursor-pointer">Sanjae (산재)</button>
-            <button type="button" data-kamus-quick="통역" class="motion-120 shrink-0 px-2.5 py-0.5 rounded-full bg-white/25 text-slate-700 border-transparent border-transparent/90 font-semibold cursor-pointer">Penerjemah (통역)</button>
-            <button type="button" data-kamus-quick="체류지" class="motion-120 shrink-0 px-2.5 py-0.5 rounded-full bg-white/25 text-slate-700 border-transparent border-transparent/90 font-semibold cursor-pointer">Alamat (체류지)</button>
-            <button type="button" data-kamus-quick="돼지고기" class="motion-120 shrink-0 px-2.5 py-0.5 rounded-full bg-white/25 text-slate-700 border-transparent border-transparent/90 font-semibold cursor-pointer">Halal / Babi</button>
+            <button type="button" data-kamus-quick="잔업" class="motion-120 shrink-0 px-2.5 py-0.5 rounded-full bg-white/25 text-slate-700 font-semibold cursor-pointer">Lembur (잔업)</button>
+            <button type="button" data-kamus-quick="산재" class="motion-120 shrink-0 px-2.5 py-0.5 rounded-full bg-white/25 text-slate-700 font-semibold cursor-pointer">Sanjae (산재)</button>
+            <button type="button" data-kamus-quick="통역" class="motion-120 shrink-0 px-2.5 py-0.5 rounded-full bg-white/25 text-slate-700 font-semibold cursor-pointer">Penerjemah (통역)</button>
+            <button type="button" data-kamus-quick="체류지" class="motion-120 shrink-0 px-2.5 py-0.5 rounded-full bg-white/25 text-slate-700 font-semibold cursor-pointer">Alamat (체류지)</button>
+            <button type="button" data-kamus-quick="돼지고기" class="motion-120 shrink-0 px-2.5 py-0.5 rounded-full bg-white/25 text-slate-700 font-semibold cursor-pointer">Halal / Babi</button>
           </div>
         </div>
 
@@ -1286,24 +1353,24 @@
           <div class="liquid-subglass rounded-[24px] p-4 space-y-3">
             <h3 class="text-sm font-extrabold text-slate-900">1. Estimasi Pesangon (퇴직금 — Min. 1 Tahun Kerja)</h3>
             <div class="grid grid-cols-3 gap-2 text-xs">
-              <div><label class="block font-bold text-slate-700 mb-1">Gaji/Bln</label><input id="pesangonAvgWage" type="number" value="2500000" step="50000" class="w-full px-2.5 py-2 rounded-[18px] border-transparent border-transparent/90 bg-white/35"></div>
-              <div><label class="block font-bold text-slate-700 mb-1">Tahun</label><input id="pesangonYears" type="number" value="1" min="0" max="10" class="w-full px-2.5 py-2 rounded-[18px] border-transparent border-transparent/90 bg-white/35"></div>
-              <div><label class="block font-bold text-slate-700 mb-1">Bulan</label><input id="pesangonMonths" type="number" value="6" min="0" max="11" class="w-full px-2.5 py-2 rounded-[18px] border-transparent border-transparent/90 bg-white/35"></div>
+              <div><label class="block font-bold text-slate-700 mb-1">Gaji/Bln</label><input id="pesangonAvgWage" type="number" value="2500000" step="50000" class="w-full px-2.5 py-2 rounded-[18px] bg-white/35"></div>
+              <div><label class="block font-bold text-slate-700 mb-1">Tahun</label><input id="pesangonYears" type="number" value="1" min="0" max="10" class="w-full px-2.5 py-2 rounded-[18px] bg-white/35"></div>
+              <div><label class="block font-bold text-slate-700 mb-1">Bulan</label><input id="pesangonMonths" type="number" value="6" min="0" max="11" class="w-full px-2.5 py-2 rounded-[18px] bg-white/35"></div>
             </div>
             <button id="btnCalcPesangon" type="button" class="motion-120 w-full py-2.5 rounded-[18px] bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-extrabold cursor-pointer">Hitung Perkiraan Pesangon</button>
-            <div id="pesangonResult" class="hidden rounded-[18px] bg-emerald-50/90 border-transparent border-transparent p-3 text-xs space-y-1"></div>
+            <div id="pesangonResult" class="hidden rounded-[18px] bg-emerald-50/90 p-3 text-xs space-y-1"></div>
           </div>
 
           <div class="liquid-subglass rounded-[24px] p-4 space-y-3">
             <h3 class="text-sm font-extrabold text-slate-900">2. Cek Lembur &amp; Shift Malam (잔업·야간수당)</h3>
             <div class="grid grid-cols-2 gap-2 text-xs">
-              <div><label class="block font-bold text-slate-700 mb-1">Upah/Jam (KRW)</label><input id="otHourly" type="number" value="10320" class="w-full px-2.5 py-2 rounded-[18px] border-transparent border-transparent/90 bg-white/35"></div>
-              <div><label class="block font-bold text-slate-700 mb-1">Jam Lembur (1.5x)</label><input id="otHours" type="number" value="40" class="w-full px-2.5 py-2 rounded-[18px] border-transparent border-transparent/90 bg-white/35"></div>
-              <div><label class="block font-bold text-slate-700 mb-1">Kerja Libur (1.5x)</label><input id="holidayHours" type="number" value="16" class="w-full px-2.5 py-2 rounded-[18px] border-transparent border-transparent/90 bg-white/35"></div>
-              <div><label class="block font-bold text-slate-700 mb-1">Jam Malam (+0.5x)</label><input id="nightHours" type="number" value="0" class="w-full px-2.5 py-2 rounded-[18px] border-transparent border-transparent/90 bg-white/35"></div>
+              <div><label class="block font-bold text-slate-700 mb-1">Upah/Jam (KRW)</label><input id="otHourly" type="number" value="10320" class="w-full px-2.5 py-2 rounded-[18px] bg-white/35"></div>
+              <div><label class="block font-bold text-slate-700 mb-1">Jam Lembur (1.5x)</label><input id="otHours" type="number" value="40" class="w-full px-2.5 py-2 rounded-[18px] bg-white/35"></div>
+              <div><label class="block font-bold text-slate-700 mb-1">Kerja Libur (1.5x)</label><input id="holidayHours" type="number" value="16" class="w-full px-2.5 py-2 rounded-[18px] bg-white/35"></div>
+              <div><label class="block font-bold text-slate-700 mb-1">Jam Malam (+0.5x)</label><input id="nightHours" type="number" value="0" class="w-full px-2.5 py-2 rounded-[18px] bg-white/35"></div>
             </div>
             <button id="btnCalcOvertime" type="button" class="motion-120 w-full py-2.5 rounded-[18px] bg-slate-900 hover:bg-slate-800 text-white text-xs font-extrabold cursor-pointer">Hitung Total Gaji Kotor</button>
-            <div id="overtimeResult" class="hidden rounded-[18px] bg-blue-50/90 border-transparent border-transparent p-3 text-xs space-y-1"></div>
+            <div id="overtimeResult" class="hidden rounded-[18px] bg-blue-50/90 p-3 text-xs space-y-1"></div>
           </div>
         </div>
 
@@ -1318,34 +1385,37 @@
             </div>
             <div class="flex flex-wrap items-center gap-1 text-[10px]">
               <span class="font-bold text-slate-600">Cepat:</span>
-              <button type="button" data-fx-preset="500000" class="motion-120 px-2 py-0.5 rounded-full bg-white/30 border-transparent border-transparent/90 font-bold text-slate-700 cursor-pointer">500rb</button>
-              <button type="button" data-fx-preset="1000000" class="motion-120 px-2 py-0.5 rounded-full bg-white/30 border-transparent border-transparent/90 font-bold text-slate-700 cursor-pointer">1 Jt</button>
-              <button type="button" data-fx-preset="2000000" class="motion-120 px-2 py-0.5 rounded-full bg-white/30 border-transparent border-transparent/90 font-bold text-slate-700 cursor-pointer">2 Jt</button>
-              <button type="button" data-fx-preset="2500000" class="motion-120 px-2 py-0.5 rounded-full bg-white/30 border-transparent border-transparent/90 font-bold text-slate-700 cursor-pointer">2.5 Jt</button>
-              <button type="button" data-fx-preset="3000000" class="motion-120 px-2 py-0.5 rounded-full bg-white/30 border-transparent border-transparent/90 font-bold text-slate-700 cursor-pointer">3 Jt</button>
+              <button type="button" data-fx-preset="500000" class="motion-120 px-2 py-0.5 rounded-full bg-white/30 font-bold text-slate-700 cursor-pointer">500rb</button>
+              <button type="button" data-fx-preset="1000000" class="motion-120 px-2 py-0.5 rounded-full bg-white/30 font-bold text-slate-700 cursor-pointer">1 Jt</button>
+              <button type="button" data-fx-preset="2000000" class="motion-120 px-2 py-0.5 rounded-full bg-white/30 font-bold text-slate-700 cursor-pointer">2 Jt</button>
+              <button type="button" data-fx-preset="2500000" class="motion-120 px-2 py-0.5 rounded-full bg-white/30 font-bold text-slate-700 cursor-pointer">2.5 Jt</button>
+              <button type="button" data-fx-preset="3000000" class="motion-120 px-2 py-0.5 rounded-full bg-white/30 font-bold text-slate-700 cursor-pointer">3 Jt</button>
             </div>
             <div class="grid grid-cols-2 gap-2 text-xs">
-              <div><label class="block font-bold text-slate-700 mb-1">Nominal KRW</label><input id="fxWonInput" type="number" value="2500000" step="50000" class="w-full px-2.5 py-2 rounded-[18px] border-transparent border-transparent/90 bg-white/35 font-semibold"></div>
-              <div><label class="block font-bold text-slate-700 mb-1">Kurs 1 KRW (IDR)</label><input id="fxRateInput" type="number" value="11.3" step="0.01" class="w-full px-2.5 py-2 rounded-[18px] border-transparent border-transparent/90 bg-white/35 font-semibold"></div>
+              <div><label class="block font-bold text-slate-700 mb-1">Nominal KRW</label><input id="fxWonInput" type="number" value="2500000" step="50000" class="w-full px-2.5 py-2 rounded-[18px] bg-white/35 font-semibold"></div>
+              <div><label class="block font-bold text-slate-700 mb-1">Kurs 1 KRW (IDR)</label><input id="fxRateInput" type="number" value="11.3" step="0.01" class="w-full px-2.5 py-2 rounded-[18px] bg-white/35 font-semibold"></div>
             </div>
-            <div id="fxResultBox" class="rounded-[18px] bg-emerald-50/90 border-transparent border-transparent p-3 text-sm font-black text-emerald-950"></div>
+            <div id="fxResultBox" class="rounded-[18px] bg-emerald-50/90 p-3 text-sm font-black text-emerald-950"></div>
             <div id="fxStatusMeta" class="text-[11px] font-semibold text-slate-600">Memuat kurs pasar dunia KRW &rarr; IDR...</div>
           </div>
 
           <div class="liquid-subglass rounded-[24px] p-4 space-y-2.5">
-            <h3 class="text-sm font-extrabold text-slate-900">4. Pengingat Lapor Pindah Alamat (Maks. 14 Hari)</h3>
+            <div class="flex items-center justify-between gap-2">
+              <h3 class="text-sm font-extrabold text-slate-900">4. Pengingat Lapor Pindah Alamat (Maks. 14 Hari)</h3>
+              <button type="button" data-today-target="moveDateInput" class="motion-120 px-2.5 py-1 rounded-full bg-white/60 hover:bg-white text-slate-800 text-[10px] font-extrabold cursor-pointer">Hari Ini</button>
+            </div>
             <div class="flex gap-2">
-              <input id="moveDateInput" type="date" class="flex-1 px-3 py-2 text-xs rounded-[18px] border-transparent border-transparent/90 bg-white/35">
+              <input id="moveDateInput" type="date" class="flex-1 px-3 py-2 text-xs rounded-[18px] bg-white/35">
               <button id="btnCalcMove14" type="button" class="motion-120 px-3.5 py-2 rounded-[18px] bg-slate-900 text-white text-xs font-extrabold cursor-pointer">Cek Batas</button>
             </div>
-            <div id="move14Result" class="hidden text-xs p-2.5 rounded-[18px] bg-amber-100/35 border-transparent border-transparent font-semibold"></div>
+            <div id="move14Result" class="hidden text-xs p-2.5 rounded-[18px] bg-amber-100/35 font-semibold"></div>
           </div>
         </div>
       </section>
 
       <!-- KBRI Seoul -->
       <section class="liquid-glass squircle p-4 sm:p-5 space-y-4">
-        <div class="rounded-[24px] border-transparent border-transparent/90 bg-rose-50/70 p-4 flex flex-col md:flex-row md:items-center justify-between gap-3 text-xs">
+        <div class="rounded-[24px] bg-rose-50/70 p-4 flex flex-col md:flex-row md:items-center justify-between gap-3 text-xs">
           <div class="space-y-1">
             <div class="font-extrabold text-sm text-slate-900">Kedutaan Besar Republik Indonesia (KBRI Seoul)</div>
             <div class="font-bold text-slate-800">서울특별시 영등포구 여의대방로 380 (380 Yeouidaebang-ro, Yeongdeungpo-gu, Seoul)</div>
@@ -1386,9 +1456,12 @@
 
       <!-- Penghitung Kunjungan Harian, Bulanan & Tahunan -->
       <div class="liquid-glass squircle p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
-        <div class="flex items-center gap-1.5 text-[11px] font-extrabold text-slate-800">
-          <i data-lucide="bar-chart-3" class="w-3.5 h-3.5 text-blue-700"></i>
-          <span>Statistik Kunjungan (Perangkat Ini):</span>
+        <div class="flex items-center justify-between sm:justify-start gap-2 text-[11px] font-extrabold text-slate-800">
+          <div class="flex items-center gap-1.5">
+            <i data-lucide="bar-chart-3" class="w-3.5 h-3.5 text-blue-700"></i>
+            <span>Statistik Kunjungan (Perangkat Ini):</span>
+          </div>
+          <button id="btnResetVisitStats" type="button" class="motion-120 px-2 py-0.5 rounded-full bg-white/55 hover:bg-white border border-slate-900/15 text-[10px] font-bold text-slate-700 cursor-pointer">Reset</button>
         </div>
         <div class="grid grid-cols-3 gap-2 text-[11px] sm:w-auto w-full">
           <div class="bg-white/65 border border-slate-900/10 rounded-[18px] px-3 py-1.5 text-center">
@@ -1409,8 +1482,8 @@
   </main>
 
   <!-- Floating Glass Dock -->
-  <div class="fixed bottom-32 right-3.5 sm:right-5 z-30 flex flex-col items-end gap-1.5 pointer-events-none">
-    <button id="btnBackToTop" type="button" class="pointer-events-auto motion-120 hidden items-center gap-1 px-3 py-1.5 rounded-full bg-slate-900/90 hover:bg-slate-800 text-white text-xs font-bold shadow-none border-transparent border-transparent/15 backdrop-blur cursor-pointer">
+  <div class="fixed bottom-24 right-3.5 sm:right-5 z-30 flex flex-col items-end gap-1.5 pointer-events-none">
+    <button id="btnBackToTop" type="button" class="pointer-events-auto motion-120 hidden items-center gap-1 px-3 py-1.5 rounded-full bg-slate-900/90 hover:bg-slate-800 text-white text-xs font-bold shadow-none backdrop-blur cursor-pointer">
       <i data-lucide="arrow-up" class="w-3.5 h-3.5 shrink-0"></i>
       <span>Atas</span>
     </button>
@@ -1419,7 +1492,7 @@
   <!-- Common Shelter Consultation Modal (Ansan & Cheonan Priority) -->
   <div id="consultSheetModal" class="fixed inset-0 z-50 hidden backdrop-fade-120 bg-slate-950/70 backdrop-blur-md flex items-center justify-center p-4">
     <div class="liquid-glass sheet-open-120 squircle max-w-md w-full p-5 space-y-3.5">
-      <div class="flex items-center justify-between border-transparent pb-2">
+      <div class="flex items-center justify-between pb-2">
         <div class="flex items-center gap-1.5">
           <span class="px-2.5 py-0.5 rounded-full bg-emerald-600 text-white text-[11px] font-black">KONSULTASI SHELTER UMUM</span>
         </div>
@@ -1463,7 +1536,7 @@
   <!-- Taxi & Security Guard Screen Modal (Closed by Default) -->
   <div id="taxiModal" class="fixed inset-0 z-50 hidden backdrop-fade-120 bg-slate-950/70 backdrop-blur-md flex items-center justify-center p-4">
     <div class="liquid-glass sheet-open-120 squircle max-w-lg w-full p-5 sm:p-6 shadow-none space-y-4">
-      <div class="flex items-center justify-between border-transparent border-transparent/80 pb-3">
+      <div class="flex items-center justify-between pb-3">
         <div class="flex items-center gap-2">
           <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-400 text-slate-950 font-black text-xs">
             <i data-lucide="car" class="w-3.5 h-3.5"></i>
@@ -1482,7 +1555,7 @@
           <div class="text-[11px] text-slate-400">목적지 (Tujuan):</div>
           <div id="taxiModalKrName" class="text-lg font-black text-white leading-snug"></div>
         </div>
-        <div class="bg-white/10 rounded-[18px] p-3 border-transparent border-transparent/10 space-y-1">
+        <div class="bg-white/10 rounded-[18px] p-3 space-y-1">
           <div class="text-[11px] text-amber-300 font-semibold">주소 (Alamat Resmi):</div>
           <div id="taxiModalAddr" class="text-base font-extrabold text-white select-all"></div>
           <div id="taxiModalLatin" class="text-xs text-slate-300"></div>
@@ -1491,14 +1564,14 @@
         <p class="text-xs text-slate-300">전화번호: <span id="taxiModalPhone" class="font-bold text-white"></span></p>
       </div>
 
-      <div class="bg-blue-950/95 text-white rounded-[24px] p-4 border-transparent border-transparent/70 space-y-1">
+      <div class="bg-blue-950/95 text-white rounded-[24px] p-4 space-y-1">
         <p class="text-xs text-blue-300 font-bold">건물 안내원 / 경비원께 보여주세요 (Tunjukkan ke Satpam Gedung):</p>
         <div class="text-sm font-black text-white leading-snug">"안녕하세요. 외국인력팀(사업장변경 신청) 창구가 몇 층에 있나요?"</div>
         <div class="text-[11px] text-blue-200 italic">(Arti: "Halo, loket Tim Tenaga Kerja Asing ada di lantai berapa?")</div>
       </div>
 
       <div class="flex flex-wrap items-center justify-end gap-2">
-        <button id="btnCopyFullFromModal" type="button" class="motion-120 inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-[18px] text-xs font-extrabold bg-blue-50 hover:bg-blue-100 text-blue-950 border-transparent border-transparent cursor-pointer">
+        <button id="btnCopyFullFromModal" type="button" class="motion-120 inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-[18px] text-xs font-extrabold bg-blue-50 hover:bg-blue-100 text-blue-950 cursor-pointer">
           <i data-lucide="clipboard-copy" class="w-3.5 h-3.5"></i>
           <span>Salin Nama + Alamat</span>
         </button>
@@ -1675,7 +1748,7 @@
 
     const KAMUS_DATA = [
       { cat: "NODONGBU", kr: "사업장 변경 신청하러 왔어요.", pron: "Saeopjang byeongyeong sincheong-hareo wasseoyo.", id: "Saya datang untuk mengajukan pindah tempat kerja (Lapor kepindahan)." },
-      { cat: "NODONGBU", kr: "구직 등록하고 알선 받고 싶어요.", pron: "Gujik deungnok-hago alseon batgo sipeoyo.", id: "Saya ingin daftar pencari kerja (pencari kerja) dan minta rekomendasi tempat kerja." },
+      { cat: "NODONGBU", kr: "구직 등록하고 알선 받고 싶어요.", pron: "Gujik deungnok-hago alseon batgo sipeoyo.", id: "Saya ingin daftar pencari kerja dan minta rekomendasi tempat kerja." },
       { cat: "NODONGBU", kr: "인도네시아어 통역 상담이 가능할까요?", pron: "Indonesia-eo tongyeok sangdam-i ganeunghalkkayo?", id: "Apakah tersedia konsultasi penerjemah Bahasa Indonesia?" },
       { cat: "NODONGBU", kr: "회사에서 아직 고용변동신고를 안 했어요.", pron: "Hoesa-eseo ajik goyong-byeondong-singo-reul an haesseoyo.", id: "Perusahaan lama belum melaporkan pelepasan kerja saya." },
       { cat: "PABRIK", kr: "반장님, 기계에 이상이 생겼습니다. 확인해 주세요.", pron: "Banjangnim, gigye-e isang-i saenggyeotseumnida. Hwaginhae juseyo.", id: "Pak Mandor, ada kendala pada mesin. Mohon diperiksa." },
@@ -1790,7 +1863,8 @@
       txt.textContent = msg;
       box.classList.remove("hidden");
       if (toastTimer) clearTimeout(toastTimer);
-      toastTimer = setTimeout(() => box.classList.add("hidden"), 2600);
+      const dur = Math.min(4800, Math.max(2400, 1800 + String(msg || "").length * 32));
+      toastTimer = setTimeout(() => box.classList.add("hidden"), dur);
     }
 
     function copyText(text, label) {
@@ -1833,6 +1907,11 @@
     }
 
     const FALLBACK_ICON_PATHS = {
+      "bell": '<path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/>',
+      "chevron-down": '<path d="m6 9 6 6 6-6"/>',
+      "info": '<circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/>',
+      "maximize-2": '<polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/>',
+      "smartphone": '<rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/>',
       "alert-triangle": '<path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/>',
       "arrow-left-right": '<path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/>',
       "arrow-right": '<path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>',
@@ -1979,41 +2058,10 @@
         if (clockText) clockText.textContent = hh + ":" + mm + " KST";
 
 
-        const titleEl = document.getElementById("kstStatusTitle");
-        const subEl = document.getElementById("kstStatusSub");
-        const iconWrap = document.getElementById("kstIconWrap");
-
         const isLunch = !isWeekend && mins >= 720 && mins < 780;
         const isOpen = !isWeekend && mins >= 540 && mins < 1080 && !isLunch;
-
-        if (titleEl && subEl && iconWrap) {
-          if (isOpen) {
-            titleEl.textContent = "Loket Nodongbu Sedang BUKA (" + hh + ":" + mm + " KST)";
-            subEl.textContent = "Pelayanan berlangsung hingga pukul 18.00 KST. Siapkan Paspor dan ID Card (신분증).";
-            iconWrap.className = "w-9 h-9 rounded-[18px] bg-emerald-100 border-transparent border-transparent flex items-center justify-center shrink-0 mt-0.5 text-emerald-700";
-          } else if (isLunch) {
-            titleEl.textContent = "Jam Istirahat Makan Siang (" + hh + ":" + mm + " KST)";
-            subEl.textContent = "Petugas istirahat pukul 12.00–13.00 KST. Loket kembali melayani pukul 13.00 KST.";
-            iconWrap.className = "w-9 h-9 rounded-[18px] bg-amber-100 border-transparent border-transparent flex items-center justify-center shrink-0 mt-0.5 text-amber-700";
-          } else {
-            titleEl.textContent = "Di Luar Jam Loket Nodongbu (" + hh + ":" + mm + " KST)";
-            subEl.textContent = "Loket buka Senin–Jumat pukul 09.00–18.00 KST (istirahat 12.00–13.00 KST).";
-            iconWrap.className = "w-9 h-9 rounded-[18px] bg-slate-100 border-transparent border-transparent flex items-center justify-center shrink-0 mt-0.5 text-slate-700";
-          }
-        }
-
         const upcomingList = KR_HOLIDAYS.filter(h => h.date >= isoToday).slice(0, 3);
         const nextHol = upcomingList[0] || KR_HOLIDAYS[0];
-        const holBadge = document.getElementById("kstHolidayBadge");
-        const upListEl = document.getElementById("kstUpcomingHolidaysList");
-        if (holBadge && nextHol && lastHolidayRendered !== nextHol.date) {
-          lastHolidayRendered = nextHol.date;
-          holBadge.innerHTML = '<i data-lucide="calendar" class="w-3 h-3 text-amber-400"></i><span>Libur: ' + nextHol.date + ' (' + nextHol.name.split(" (")[0] + ')</span>';
-          refreshIcons();
-        }
-        if (upListEl && upcomingList.length > 0) {
-          upListEl.innerHTML = "<strong>Agenda Libur Berikutnya:</strong> " + upcomingList.map(h => h.date + " (" + h.name.split(" (")[0] + ")").join(" · ");
-        }
 
         const topHeadline = document.getElementById("topKstStatusHeadline");
         const topIconBadge = document.getElementById("topKstIconBadge");
@@ -2035,7 +2083,11 @@
           }
         }
         if (topHolidayEl && nextHol) {
-          topHolidayEl.textContent = "Libur Terdekat: " + nextHol.date + " (" + nextHol.name.split(" (")[0] + ")";
+          const holLabel = "Libur Terdekat: " + nextHol.date + " (" + nextHol.name.split(" (")[0] + ")";
+          if (holLabel !== lastHolidayRendered) {
+            lastHolidayRendered = holLabel;
+            topHolidayEl.textContent = holLabel;
+          }
         }
       } catch (e) {}
     }
@@ -2085,7 +2137,8 @@
       const total = typeof totalCount === "number" ? totalCount : getFilteredCenters().length;
       if (!counterEl || !grid || total === 0) return;
       const firstCard = grid.querySelector("article");
-      const step = firstCard ? (firstCard.offsetWidth + 14) : 340;
+      const cardW = firstCard ? firstCard.offsetWidth : 0;
+      const step = cardW > 40 ? (cardW + 14) : Math.min(420, Math.max(260, Math.round((window.innerWidth || 360) * 0.88)) + 14);
       const idx = Math.min(total, Math.max(1, Math.round(grid.scrollLeft / Math.max(1, step)) + 1));
       counterEl.textContent = "Geser kiri/kanan · Kartu " + idx + " / " + total;
     }
@@ -2094,7 +2147,8 @@
       const grid = document.getElementById("centersGrid");
       if (!grid) return;
       const firstCard = grid.querySelector("article");
-      const step = firstCard ? (firstCard.offsetWidth + 14) : 340;
+      const cardW = firstCard ? firstCard.offsetWidth : 0;
+      const step = cardW > 40 ? (cardW + 14) : Math.min(420, Math.max(260, Math.round((window.innerWidth || 360) * 0.88)) + 14);
       grid.scrollBy({ left: dir * step, behavior: "smooth" });
     }
 
@@ -2131,7 +2185,7 @@
         const isSaved = savedIds.has(item.id);
         const enc = encodeURIComponent(item.roadAddr);
         const kakaoUrl = "https://map.kakao.com/link/search/" + enc;
-        const naverUrl = "https://map.naver.com/p/search/" + enc;
+        const naverUrl = "https://m.map.naver.com/search2/search.naver?query=" + enc;
         const badgeNew = item.isUpdated ? '<span class="px-2 py-0.5 rounded-full text-[10px] font-black bg-blue-700 text-white">GEDUNG LT. 1</span>' : '';
 
         return `
@@ -2140,17 +2194,17 @@
               <div class="flex items-start justify-between gap-2">
                 <div class="flex flex-wrap items-center gap-1.5">
                   <span class="px-2.5 py-0.5 rounded-full text-xs font-black bg-slate-900 text-white">#${item.id}</span>
-                  <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-blue-50/90 text-blue-900 border-transparent border-transparent">${item.zoneLabel}</span>
-                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-800 border-transparent border-transparent">Cek Nov 2026</span>
+                  <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-blue-50/90 text-blue-900">${item.zoneLabel}</span>
+                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-800">Cek Nov 2026</span>
                   ${badgeNew}
                 </div>
-                <button type="button" data-action="toggle-save" data-id="${item.id}" class="motion-120 inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-extrabold border-transparent shrink-0 cursor-pointer ${isSaved ? 'bg-emerald-600 text-white border-transparent' : 'bg-white/30 text-slate-700 border-transparent/90 hover:bg-white'}">
+                <button type="button" data-action="toggle-save" data-id="${item.id}" class="motion-120 inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-extrabold shrink-0 cursor-pointer ${isSaved ? 'bg-emerald-600 text-white' : 'bg-white/30 text-slate-700 hover:bg-white'}">
                   ${isSaved ? '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 shrink-0"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>' : '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 shrink-0"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>'}
                   <span>${isSaved ? 'Tersimpan' : 'Tandai'}</span>
                 </button>
               </div>
 
-              <div class="border-transparent border-transparent/70 pb-2">
+              <div class="pb-2">
                 <h3 class="text-base font-extrabold text-slate-900 leading-snug">${item.nameId}</h3>
                 <p class="text-xs sm:text-sm font-bold text-blue-900 mt-0.5">${item.nameKr}</p>
               </div>
@@ -2160,23 +2214,23 @@
                   <div class="text-xs sm:text-sm font-extrabold text-slate-900 select-all">${item.roadAddr}</div>
                   <div class="text-[11px] text-slate-600 select-all">${item.latinAddr}</div>
                 </div>
-                ${isCompactCard ? '' : `<div class="font-semibold text-amber-950 bg-amber-100/35 px-2.5 py-1.5 rounded-[18px] border-transparent border-transparent/80">
+                ${isCompactCard ? '' : `<div class="font-semibold text-amber-950 bg-amber-100/35 px-2.5 py-1.5 rounded-[18px]">
                   <strong>Lokasi Loket:</strong> ${item.floor} <span class="text-[11px] font-bold text-amber-800 block sm:inline sm:ml-1">(Sen–Jum 09:00–18:00 · Istirahat 12:00–13:00 KST)</span>
                 </div>
                 <div class="text-slate-700 leading-relaxed">
                   <strong>Wilayah Yurisdiksi:</strong> ${item.area}
                 </div>`}
-                <div class="flex flex-wrap items-center justify-between gap-2 pt-1.5 border-transparent border-transparent/70">
+                <div class="flex flex-wrap items-center justify-between gap-2 pt-1.5">
                   <a href="tel:${item.phone}" class="tactile-press motion-120 inline-flex items-center gap-1 text-blue-700 font-extrabold underline">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 shrink-0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                     <span>${item.phone}</span>
                   </a>
                   <div class="flex items-center gap-1.5">
-                    <button type="button" data-action="show-taxi" data-id="${item.id}" class="motion-120 inline-flex items-center gap-1 text-[11px] font-extrabold text-slate-800 bg-white/30 hover:bg-white px-2.5 py-1 rounded-lg border-transparent border-transparent/90 cursor-pointer">
+                    <button type="button" data-action="show-taxi" data-id="${item.id}" class="motion-120 inline-flex items-center gap-1 text-[11px] font-extrabold text-slate-800 bg-white/30 hover:bg-white px-2.5 py-1 rounded-lg cursor-pointer">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 shrink-0"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
                       <span>Kartu Tujuan</span>
                     </button>
-                    <button type="button" data-action="share-center" data-id="${item.id}" class="motion-120 inline-flex items-center gap-1 text-[11px] font-extrabold text-blue-800 bg-blue-50/90 hover:bg-blue-100 px-2.5 py-1 rounded-lg border-transparent border-transparent cursor-pointer">
+                    <button type="button" data-action="share-center" data-id="${item.id}" class="motion-120 inline-flex items-center gap-1 text-[11px] font-extrabold text-blue-800 bg-blue-50/90 hover:bg-blue-100 px-2.5 py-1 rounded-lg cursor-pointer">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 shrink-0"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
                       <span>Bagikan</span>
                     </button>
@@ -2202,6 +2256,9 @@
           </article>
         `;
       }).join("");
+      if (isAppleShelf) {
+        grid.scrollLeft = 0;
+      }
       refreshIcons();
     }
 
@@ -2224,7 +2281,7 @@
       grid.innerHTML = list.map(s => {
         const enc = encodeURIComponent(s.roadAddr);
         return `
-          <article class="liquid-glass motion-120 squircle p-4 sm:p-5 flex flex-col justify-between gap-3 ${s.highlight ? 'ring-0 ring-0/80' : ''}">
+          <article class="liquid-glass motion-120 squircle p-4 sm:p-5 flex flex-col justify-between gap-3 ${s.highlight ? 'border border-emerald-500/45 bg-emerald-50/20' : ''}">
             <div class="space-y-2.5">
               <div class="flex flex-wrap items-center justify-between gap-2">
                 <span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-emerald-800 text-white">${s.region}</span>
@@ -2233,10 +2290,10 @@
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 shrink-0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                     <span>${s.phone}</span>
                   </a>
-                  ${s.altPhone ? '<a href="tel:' + s.altPhone + '" class="tactile-press motion-120 px-2.5 py-1 rounded-full bg-white/25 text-slate-800 text-xs font-bold border-transparent border-transparent/90">' + s.altPhone + '</a>' : ''}
+                  ${s.altPhone ? '<a href="tel:' + s.altPhone + '" class="tactile-press motion-120 px-2.5 py-1 rounded-full bg-white/25 text-slate-800 text-xs font-bold">' + s.altPhone + '</a>' : ''}
                 </div>
               </div>
-              <div class="border-transparent border-transparent/70 pb-2">
+              <div class="pb-2">
                 <h3 class="text-base font-extrabold text-slate-900">${s.nameId}</h3>
                 <p class="text-xs font-bold text-emerald-900 mt-0.5">${s.nameKr}</p>
               </div>
@@ -2251,7 +2308,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 shrink-0"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
                 <span>KakaoMap</span>
               </a>
-              <a href="https://map.naver.com/p/search/${enc}" target="_blank" rel="noopener noreferrer" class="naver-btn tactile-press motion-120 py-2.5 rounded-[18px] text-xs font-bold text-center flex items-center justify-center gap-1">
+              <a href="https://m.map.naver.com/search2/search.naver?query=${enc}" target="_blank" rel="noopener noreferrer" class="naver-btn tactile-press motion-120 py-2.5 rounded-[18px] text-xs font-bold text-center flex items-center justify-center gap-1">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 shrink-0"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
                 <span>Naver Map</span>
               </a>
@@ -2291,10 +2348,10 @@
       const currentQ = (mosqueQuery || "").trim().toLowerCase();
       const allActive = currentQ === "";
       let html = '<span class="text-[11px] font-extrabold text-slate-700 mr-0.5 shrink-0">Kota:</span>';
-      html += '<button type="button" data-mosque-city="" class="mosque-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full ' + (allActive ? 'font-bold bg-slate-900 text-white' : 'font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white') + ' cursor-pointer">Semua</button>';
+      html += '<button type="button" data-mosque-city="" class="mosque-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full ' + (allActive ? 'font-bold bg-slate-900 text-white' : 'font-semibold bg-white/25 text-slate-700 hover:bg-white') + ' cursor-pointer">Semua</button>';
       cityNames.forEach(cName => {
         const isSel = currentQ !== "" && cName.toLowerCase().includes(currentQ);
-        html += '<button type="button" data-mosque-city="' + cName + '" class="mosque-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full ' + (isSel ? 'font-bold bg-slate-900 text-white' : 'font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white') + ' cursor-pointer">' + cName + '</button>';
+        html += '<button type="button" data-mosque-city="' + cName + '" class="mosque-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full ' + (isSel ? 'font-bold bg-slate-900 text-white' : 'font-semibold bg-white/25 text-slate-700 hover:bg-white') + ' cursor-pointer">' + cName + '</button>';
       });
       row.innerHTML = html;
     }
@@ -2335,7 +2392,6 @@
       if (scSub) scSub.textContent = totalMosques + " Lokasi Masjid · Alamat Korea · KakaoMap & Naver Map";
 
       const grid = document.getElementById("mosquesGrid");
-      renderMosqueCityChips();
       const summary = document.getElementById("mosqueSummary");
       const list = MOSQUES.filter(m => {
         if (mosqueProv) {
@@ -2366,6 +2422,7 @@
       }
 
       if (summary) summary.textContent = list.length + " dari " + totalMosques + " Masjid";
+      renderMosqueCityChips();
       if (!grid) return;
       if (list.length === 0) {
         grid.innerHTML = '<div class="col-span-full liquid-subglass rounded-[24px] p-8 text-center space-y-1"><p class="text-sm font-bold text-slate-800">Tidak ditemukan masjid yang sesuai.</p><p class="text-xs text-slate-600">Coba cari nama kota seperti Ansan, Hwaseong, Pyeongtaek, Eumseong, atau Busan.</p></div>';
@@ -2379,7 +2436,7 @@
             <div>
               <div class="flex items-center justify-between gap-2">
                 <span class="px-2.5 py-0.5 rounded-full text-[11px] font-extrabold bg-teal-100 text-teal-900">${m.city}</span>
-                ${m.phone ? '<a href="tel:' + m.phone + '" class="text-[11px] font-extrabold text-blue-700 underline">' + m.phone + '</a>' : ''}
+                ${m.phone ? '<a href="tel:' + m.phone + '" class="text-[11px] font-extrabold text-blue-700 underline">' + m.phone + '</a>' : '<span class="text-[10px] font-semibold text-slate-500">Komunitas / Cek Peta</span>'}
               </div>
               <div class="font-extrabold text-sm text-slate-900 mt-1.5">${m.name}</div>
               <div class="text-xs text-slate-700 font-semibold mt-0.5 select-all">${m.addr}</div>
@@ -2389,7 +2446,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 shrink-0"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
                 <span>KakaoMap</span>
               </a>
-              <a href="https://map.naver.com/p/search/${enc}" target="_blank" rel="noopener noreferrer" class="naver-btn tactile-press motion-120 py-2 px-1.5 rounded-[18px] text-[11px] font-bold text-center inline-flex items-center justify-center gap-1 whitespace-nowrap">
+              <a href="https://m.map.naver.com/search2/search.naver?query=${enc}" target="_blank" rel="noopener noreferrer" class="naver-btn tactile-press motion-120 py-2 px-1.5 rounded-[18px] text-[11px] font-bold text-center inline-flex items-center justify-center gap-1 whitespace-nowrap">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 shrink-0"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
                 <span>Naver Map</span>
               </a>
@@ -2437,8 +2494,8 @@
             <div class="text-[11px] font-semibold text-blue-800">${k.pron}</div>
             <div class="text-slate-700">${k.id}</div>
           </div>
-          <div class="flex items-center gap-2 pt-1 border-transparent border-transparent/60">
-            <button type="button" data-action="speak-kr" data-kr="${k.kr}" class="motion-120 inline-flex items-center gap-1 px-3 py-1.5 rounded-[18px] bg-blue-50/90 hover:bg-blue-100 text-blue-900 font-bold border-transparent border-transparent cursor-pointer">
+          <div class="flex items-center gap-2 pt-1">
+            <button type="button" data-action="speak-kr" data-kr="${k.kr}" class="motion-120 inline-flex items-center gap-1 px-3 py-1.5 rounded-[18px] bg-blue-50/90 hover:bg-blue-100 text-blue-900 font-bold cursor-pointer">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 shrink-0"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></svg>
               <span>Suara</span>
             </button>
@@ -2458,7 +2515,7 @@
       box.innerHTML = DOC_CHECKLIST.map((label, idx) => {
         const done = checkedDocs.has(idx);
         return `
-          <button type="button" data-action="toggle-doc" data-doc-idx="${idx}" class="motion-120 text-left rounded-[24px] p-3 border-transparent flex items-start gap-2.5 cursor-pointer ${done ? 'bg-emerald-50/90 border-transparent text-emerald-950' : 'liquid-subglass text-slate-800'}">
+          <button type="button" data-action="toggle-doc" data-doc-idx="${idx}" class="motion-120 text-left rounded-[24px] p-3 flex items-start gap-2.5 cursor-pointer ${done ? 'bg-emerald-50/90 text-emerald-950' : 'liquid-subglass text-slate-800'}">
             <i data-lucide="${done ? 'check-square' : 'square'}" class="w-4 h-4 shrink-0 mt-0.5 ${done ? 'text-emerald-600' : 'text-slate-400'}"></i>
             <span class="${done ? 'line-through opacity-80 font-semibold' : 'font-semibold'} leading-snug">${label}</span>
           </button>
@@ -2556,16 +2613,22 @@
       }
       try {
         let rate = null;
+        const ctrl1 = typeof AbortController !== "undefined" ? new AbortController() : null;
+        const t1 = ctrl1 ? setTimeout(() => ctrl1.abort(), 6000) : null;
         try {
-          const r1 = await fetch("https://open.er-api.com/v6/latest/KRW", { cache: "no-store" });
+          const r1 = await fetch("https://open.er-api.com/v6/latest/KRW", { cache: "no-store", signal: ctrl1?.signal });
           if (r1.ok) {
             const j1 = await r1.json();
             if (j1 && j1.rates && typeof j1.rates.IDR === "number") rate = j1.rates.IDR;
           }
         } catch (e1) {}
 
+        if (t1) clearTimeout(t1);
         if (!rate) {
-          const r2 = await fetch("https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/krw.json", { cache: "no-store" });
+          const ctrl2 = typeof AbortController !== "undefined" ? new AbortController() : null;
+          const t2 = ctrl2 ? setTimeout(() => ctrl2.abort(), 6000) : null;
+          const r2 = await fetch("https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/krw.json", { cache: "no-store", signal: ctrl2?.signal });
+          if (t2) clearTimeout(t2);
           if (r2.ok) {
             const j2 = await r2.json();
             if (j2 && j2.krw && typeof j2.krw.idr === "number") rate = j2.krw.idr;
@@ -2594,14 +2657,21 @@
     function openTaxiModal(id) {
       const item = NODONGBU_CENTERS.find(c => c.id === id);
       if (!item) return;
-      document.getElementById("taxiModalId").textContent = "#" + item.id;
-      document.getElementById("taxiModalKrName").textContent = item.nameKr;
-      document.getElementById("taxiModalAddr").textContent = item.roadAddr;
-      document.getElementById("taxiModalLatin").textContent = item.latinAddr;
-      document.getElementById("taxiModalFloor").textContent = item.floor;
-      document.getElementById("taxiModalPhone").textContent = item.phone;
-      document.getElementById("btnOpenKakaoFromModal").href = "https://map.kakao.com/link/search/" + encodeURIComponent(item.roadAddr);
+      const setTxt = (elId, val) => {
+        const el = document.getElementById(elId);
+        if (el) el.textContent = val;
+      };
+      setTxt("taxiModalId", "#" + item.id);
+      setTxt("taxiModalKrName", item.nameKr);
+      setTxt("taxiModalAddr", item.roadAddr);
+      setTxt("taxiModalLatin", item.latinAddr);
+      setTxt("taxiModalFloor", item.floor);
+      setTxt("taxiModalPhone", item.phone);
+      const kakaoBtn = document.getElementById("btnOpenKakaoFromModal");
+      if (kakaoBtn) kakaoBtn.href = "https://map.kakao.com/link/search/" + encodeURIComponent(item.roadAddr);
       const modal = document.getElementById("taxiModal");
+      if (!modal) return;
+      document.body.style.overflow = "hidden";
       modal.classList.remove("hidden");
       const card = modal.querySelector(".sheet-open-120");
       if (card) {
@@ -2612,6 +2682,9 @@
     }
 
     function switchMainTab(targetId) {
+      document.body.style.overflow = "";
+      document.getElementById("consultSheetModal")?.classList.add("hidden");
+      document.getElementById("taxiModal")?.classList.add("hidden");
       document.querySelectorAll("[id^='view_TAB_']").forEach(el => el.classList.add("hidden"));
       const target = document.getElementById("view_" + targetId);
       if (target) {
@@ -2633,6 +2706,9 @@
       document.querySelectorAll(".ig-nav-btn").forEach(btn => {
         btn.classList.toggle("ig-active", btn.getAttribute("data-main-tab") === targetId);
       });
+      if (targetId === "TAB_DIREKTORI" && isAppleShelf) {
+        requestAnimationFrame(() => updateAppleShelfCounter());
+      }
       refreshIcons();
     }
     function renderRegionMatcher() {
@@ -2708,20 +2784,20 @@
       syncCityPills(
         ".quick-city-btn",
         searchQuery,
-        "quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-extrabold bg-blue-600 text-white border-transparent border-transparent shadow-none cursor-pointer",
-        "quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer"
+        "quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-extrabold bg-blue-600 text-white shadow-none cursor-pointer",
+        "quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer"
       );
       syncCityPills(
         ".shelter-city-btn",
         shelterQuery,
-        "shelter-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-extrabold bg-emerald-700 text-white border-transparent border-transparent shadow-none cursor-pointer",
-        "shelter-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer"
+        "shelter-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-extrabold bg-emerald-700 text-white shadow-none cursor-pointer",
+        "shelter-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer"
       );
       syncCityPills(
         ".mosque-city-btn",
         mosqueQuery,
-        "mosque-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-extrabold bg-teal-700 text-white border-transparent border-transparent shadow-none cursor-pointer",
-        "mosque-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer"
+        "mosque-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-extrabold bg-teal-700 text-white shadow-none cursor-pointer",
+        "mosque-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer"
       );
     }
 
@@ -2777,7 +2853,73 @@
       });
     }
 
+
+    const TEX_KEY = "direktori_surface_texture_v1";
+    const SURFACE_TEXTURES = [
+      { id: "glass", label: "Kaca", cls: "", toast: "Permukaan Kaca aktif" },
+      { id: "matte", label: "Matte", cls: "tex-matte", toast: "Permukaan Matte aktif" },
+      { id: "grid", label: "Kotak", cls: "tex-grid", toast: "Tekstur Kotak aktif" },
+      { id: "linen", label: "Linen", cls: "tex-linen", toast: "Tekstur Linen aktif" }
+    ];
+    let currentTexIdx = 0;
+
+    function applySurfaceTexture(idx, notify) {
+      currentTexIdx = ((idx % SURFACE_TEXTURES.length) + SURFACE_TEXTURES.length) % SURFACE_TEXTURES.length;
+      const spec = SURFACE_TEXTURES[currentTexIdx];
+      const root = document.documentElement;
+      SURFACE_TEXTURES.forEach(t => { if (t.cls) root.classList.remove(t.cls); });
+      if (spec.cls) root.classList.add(spec.cls);
+      const lbl = document.getElementById("surfaceTextureLabel");
+      if (lbl) lbl.textContent = spec.label;
+      safeSetStorage(TEX_KEY, spec.id);
+      if (notify) showToast(spec.toast);
+    }
+
+    let autoFsTriedOnGesture = false;
+    function getFullscreenRequester() {
+      const docEl = document.documentElement;
+      return docEl.requestFullscreen || docEl.webkitRequestFullscreen || docEl.mozRequestFullScreen || docEl.msRequestFullscreen || null;
+    }
+    function isCurrentlyFullscreen() {
+      return Boolean(document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement);
+    }
+    function triggerFullscreenNow() {
+      if (isCurrentlyFullscreen()) return;
+      const reqFs = getFullscreenRequester();
+      if (!reqFs) return;
+      try {
+        const p = reqFs.call(document.documentElement, { navigationUI: "hide" });
+        if (p && typeof p.catch === "function") {
+          p.catch(() => {
+            try {
+              const p2 = reqFs.call(document.documentElement);
+              if (p2 && typeof p2.catch === "function") p2.catch(() => {});
+            } catch (e2) {}
+          });
+        }
+      } catch (e) {
+        try { reqFs.call(document.documentElement); } catch (e2) {}
+      }
+    }
+    function requestAutoFullscreenOnOpen() {
+      triggerFullscreenNow();
+      if (autoFsTriedOnGesture) return;
+      autoFsTriedOnGesture = true;
+      const onFirstTap = () => {
+        if (!isCurrentlyFullscreen()) {
+          triggerFullscreenNow();
+        }
+      };
+      document.addEventListener("click", onFirstTap, { once: true });
+      document.addEventListener("pointerdown", onFirstTap, { once: true, passive: true });
+      document.addEventListener("touchstart", onFirstTap, { once: true, passive: true });
+    }
+
     function initApp() {
+      const savedTexId = safeGetStorage(TEX_KEY, "glass");
+      const foundTexIdx = SURFACE_TEXTURES.findIndex(t => t.id === savedTexId);
+      applySurfaceTexture(foundTexIdx >= 0 ? foundTexIdx : 0, false);
+      requestAutoFullscreenOnOpen();
       savedIds = new Set(safeGetStorage(STORAGE_KEY, []));
       checkedDocs = new Set(safeGetStorage(DOC_KEY, []));
       setupAppMode();
@@ -2809,6 +2951,11 @@
       });
 
       document.addEventListener("click", (e) => {
+        const popEl = document.getElementById("moreMenuPopover");
+        if (popEl && !popEl.classList.contains("hidden") && !e.target.closest("#moreMenuPopover") && !e.target.closest("#btnToggleMoreMenu")) {
+          popEl.classList.add("hidden");
+          document.getElementById("btnToggleMoreMenu")?.classList.remove("is-open");
+        }
         const iosSegBtn = e.target.closest("[data-ios-status]");
         if (iosSegBtn) {
           currentStatus = iosSegBtn.getAttribute("data-ios-status") || "ALL";
@@ -2840,7 +2987,7 @@
             const active = (b.getAttribute("data-mosque-prov") || "") === val;
             b.className = active
               ? "mosque-prov-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-bold bg-emerald-700 text-white cursor-pointer"
-              : "mosque-prov-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer";
+              : "mosque-prov-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer";
           });
           renderMosques();
           return;
@@ -2889,7 +3036,7 @@
             const active = (b.getAttribute("data-zone") || "ALL") === z;
             b.className = active
               ? "zone-tab motion-120 px-2 py-1.5 rounded-[18px] text-[11px] sm:text-xs font-bold bg-slate-900 text-white cursor-pointer"
-              : "zone-tab motion-120 px-2 py-1.5 rounded-[18px] text-[11px] sm:text-xs font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer";
+              : "zone-tab motion-120 px-2 py-1.5 rounded-[18px] text-[11px] sm:text-xs font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer";
           });
           renderCenters();
           switchMainTab("TAB_DIREKTORI");
@@ -2911,7 +3058,7 @@
             const active = b === zoneBtn;
             b.className = active
               ? "zone-tab motion-120 px-2 py-1.5 rounded-[18px] text-[11px] sm:text-xs font-bold bg-slate-900 text-white cursor-pointer"
-              : "zone-tab motion-120 px-2 py-1.5 rounded-[18px] text-[11px] sm:text-xs font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer";
+              : "zone-tab motion-120 px-2 py-1.5 rounded-[18px] text-[11px] sm:text-xs font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer";
           });
           renderCenters();
           return;
@@ -2923,10 +3070,11 @@
           document.querySelectorAll(".quick-city-btn").forEach(b => {
             const isSel = b === qcBtn;
             b.className = isSel
-              ? "quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-extrabold bg-blue-600 text-white border-transparent border-transparent shadow-none cursor-pointer"
-              : "quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer";
+              ? "quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-extrabold bg-blue-600 text-white shadow-none cursor-pointer"
+              : "quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer";
           });
           searchQuery = city;
+          pushSearchHistory(city);
           const inp = document.getElementById("searchInput");
           if (inp) inp.value = city;
           document.getElementById("btnClearSearch")?.classList.toggle("hidden", !city.trim());
@@ -2941,7 +3089,7 @@
             const active = b === kcatBtn;
             b.className = active
               ? "kamus-cat-btn motion-120 px-3 py-1.5 rounded-[18px] text-xs font-extrabold bg-slate-900 text-white cursor-pointer"
-              : "kamus-cat-btn motion-120 px-3 py-1.5 rounded-[18px] text-xs font-bold bg-white/25 text-slate-700 border-transparent border-transparent/90 cursor-pointer";
+              : "kamus-cat-btn motion-120 px-3 py-1.5 rounded-[18px] text-xs font-bold bg-white/25 text-slate-700 cursor-pointer";
           });
           renderKamus();
           return;
@@ -2954,7 +3102,7 @@
           document.querySelectorAll(".kamus-cat-btn").forEach((b, i) => {
             b.className = i === 0
               ? "kamus-cat-btn motion-120 px-3 py-1.5 rounded-[18px] text-xs font-extrabold bg-slate-900 text-white cursor-pointer"
-              : "kamus-cat-btn motion-120 px-3 py-1.5 rounded-[18px] text-xs font-bold bg-white/25 text-slate-700 border-transparent border-transparent/90 cursor-pointer";
+              : "kamus-cat-btn motion-120 px-3 py-1.5 rounded-[18px] text-xs font-bold bg-white/25 text-slate-700 cursor-pointer";
           });
           kamusQuery = kw;
           const kInp = document.getElementById("kamusSearchInput");
@@ -3031,8 +3179,8 @@
           const btn = document.getElementById("btnToggleAppleShelf");
           if (btn) {
             btn.className = isAppleShelf
-              ? "motion-120 inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-[18px] text-xs font-extrabold bg-slate-900 text-white border-transparent border-transparent cursor-pointer"
-              : "motion-120 inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-[18px] text-xs font-extrabold bg-white/30 text-slate-800 border-transparent border-transparent/90 cursor-pointer";
+              ? "motion-120 inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-[18px] text-xs font-extrabold bg-slate-900 text-white cursor-pointer"
+              : "motion-120 inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-[18px] text-xs font-extrabold bg-white/30 text-slate-800 cursor-pointer";
             btn.innerHTML = isAppleShelf
               ? '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-amber-300 shrink-0"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg><span>Mode Geser</span>'
               : '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-blue-700 shrink-0"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg><span>Mode Grid</span>';
@@ -3041,13 +3189,27 @@
           showToast(isAppleShelf ? "Mode geser kiri/kanan aktif" : "Mode grid vertikal aktif");
         } else if (e.target.closest("#btnShelfPrev")) {
           scrollAppleShelfBy(-1);
-          setTimeout(() => updateAppleShelfCounter(), 220);
         } else if (e.target.closest("#btnShelfNext")) {
           scrollAppleShelfBy(1);
-          setTimeout(() => updateAppleShelfCounter(), 220);
+        } else if (e.target.closest("#btnToggleFullscreen")) {
+          const docEl = document.documentElement;
+          const fsEl = document.fullscreenElement || document.webkitFullscreenElement;
+          if (!fsEl) {
+            const reqFs = docEl.requestFullscreen || docEl.webkitRequestFullscreen || docEl.mozRequestFullScreen || docEl.msRequestFullscreen;
+            if (reqFs) {
+              reqFs.call(docEl).then(() => showToast("Mode layar penuh aktif")).catch(() => showToast("Layar penuh diblokir browser"));
+            } else {
+              showToast("Perangkat tidak mendukung Fullscreen API");
+            }
+          } else {
+            const exitFs = document.exitFullscreen || document.webkitExitFullscreen || document.mozCancelFullScreen || document.msExitFullscreen;
+            if (exitFs) exitFs.call(document).catch(() => {});
+          }
         } else if (e.target.closest("#btnToggleGlassTone")) {
           const isTinted = document.documentElement.classList.toggle("tinted-glass");
           showToast(isTinted ? "Mode kaca kontras aktif" : "Mode kaca bening aktif");
+        } else if (e.target.closest("#btnCycleSurfaceTexture")) {
+          applySurfaceTexture(currentTexIdx + 1, true);
         } else if (e.target.closest("#btnToggleFont")) {
           const isLarge = document.documentElement.classList.toggle("large-font");
           const fontBtn = document.getElementById("btnToggleFont");
@@ -3086,6 +3248,11 @@
             const el = document.getElementById("topNextHolidayText");
             const prefix = window.__topHolOffset === 0 ? "Libur Terdekat: " : "Libur #" + (window.__topHolOffset + 1) + ": ";
             if (el) el.textContent = prefix + chosen.date + " (" + chosen.name.split(" (")[0] + ")";
+            const preview = document.getElementById("topUpcomingHolidaysPreview");
+            if (preview) {
+              const rotated = up.slice(window.__topHolOffset, window.__topHolOffset + 4);
+              preview.innerHTML = "<strong class='text-slate-900'>Libur Nasional Korea Berikutnya:</strong> " + rotated.map(h => h.date + " (" + h.name.split(" (")[0] + ")").join(" · ");
+            }
             showToast(chosen.date + " · " + chosen.name);
           }
         } else if (e.target.closest("#btnQuickCopyTopInfo")) {
@@ -3136,6 +3303,7 @@
             copyText(shareText, "Ringkasan direktori disalin!");
           }
         } else if (e.target.closest("#btnCloseTaxiModal")) {
+          document.body.style.overflow = "";
           document.getElementById("taxiModal")?.classList.add("hidden");
         } else if (e.target.closest("#btnCopyFullFromModal")) {
           const krName = document.getElementById("taxiModalKrName")?.textContent || "";
@@ -3147,7 +3315,7 @@
         } else if (e.target.closest("#btnClearSearch")) {
           searchQuery = "";
           document.querySelectorAll(".quick-city-btn").forEach(b => {
-            b.className = "quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer";
+            b.className = "quick-city-btn motion-120 shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer";
           });
           const inp = document.getElementById("searchInput");
           if (inp) inp.value = "";
@@ -3238,12 +3406,25 @@
         } else if (e.target.closest("#btnCalcMove14")) {
           const val = document.getElementById("moveDateInput")?.value;
           const res = document.getElementById("move14Result");
-          if (val && res) {
-            const [y, m, d] = val.split("-").map(Number);
-            const dt = new Date(Date.UTC(y, m - 1, d + 14));
-            const iso = dt.getUTCFullYear() + "-" + String(dt.getUTCMonth() + 1).padStart(2, "0") + "-" + String(dt.getUTCDate()).padStart(2, "0");
-            res.classList.remove("hidden");
-            res.innerHTML = "Perkiraan batas 14 hari kalender sejak tanggal pindah: <strong>" + iso + "</strong> (cek aturan resmi di 주민센터 / HiKorea).";
+          if (res) {
+            if (!val) {
+              res.classList.remove("hidden");
+              res.innerHTML = "<span class='text-rose-700'>Pilih tanggal pindah terlebih dahulu.</span>";
+            } else {
+              const [y, m, d] = val.split("-").map(Number);
+              const dt = new Date(Date.UTC(y, m - 1, d + 14));
+              const iso = dt.getUTCFullYear() + "-" + String(dt.getUTCMonth() + 1).padStart(2, "0") + "-" + String(dt.getUTCDate()).padStart(2, "0");
+              const [ty, tm, td] = getSeoulTimeParts().isoToday.split("-").map(Number);
+              const todayUtc = Date.UTC(ty, tm - 1, td);
+              const diffDays = Math.round((dt.getTime() - todayUtc) / 86400000);
+              const statusTxt = diffDays > 0
+                ? "(Sisa " + diffDays + " hari kalender dari hari ini KST)"
+                : diffDays === 0
+                  ? "(Batas terakhir hari ini KST)"
+                  : "(Sudah lewat " + Math.abs(diffDays) + " hari kalender dari hari ini KST)";
+              res.classList.remove("hidden");
+              res.innerHTML = "Perkiraan batas 14 hari kalender sejak tanggal pindah: <strong>" + iso + "</strong> " + statusTxt + " · Cek aturan resmi di 주민센터 / HiKorea.";
+            }
           }
         } else if (e.target.closest("#btnRefreshFx")) {
           fetchLiveKrwRate(true);
@@ -3281,13 +3462,14 @@
             const active = (b.getAttribute("data-mosque-prov") || "") === "";
             b.className = active
               ? "mosque-prov-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-bold bg-emerald-700 text-white cursor-pointer"
-              : "mosque-prov-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 border-transparent border-transparent/90 hover:bg-white cursor-pointer";
+              : "mosque-prov-btn motion-120 shrink-0 px-2.5 py-1 rounded-full font-semibold bg-white/25 text-slate-700 hover:bg-white cursor-pointer";
           });
           renderMosques();
           showToast("Filter masjid direset");
         } else if (e.target.closest("#btnOpenConsultFromTile")) {
           const cm = document.getElementById("consultSheetModal");
           if (cm) {
+            document.body.style.overflow = "hidden";
             cm.classList.remove("hidden");
             const inner = cm.querySelector(".sheet-open-120");
             if (inner) {
@@ -3298,6 +3480,7 @@
             refreshIcons();
           }
         } else if (e.target.closest("#btnCloseConsultSheet")) {
+          document.body.style.overflow = "";
           document.getElementById("consultSheetModal")?.classList.add("hidden");
         } else if (e.target.closest("#btnGoAllSheltersFromConsult")) {
           document.getElementById("consultSheetModal")?.classList.add("hidden");
@@ -3318,6 +3501,13 @@
           document.getElementById("btnClearMosqueSearch")?.classList.add("hidden");
           syncAllCityFilterPills();
           renderMosques();
+        } else if (e.target.closest("#btnResetVisitStats")) {
+          try {
+            localStorage.removeItem(VISIT_KEY);
+            sessionStorage.removeItem(VISIT_SESSION_KEY);
+          } catch (err) {}
+          updateVisitCounters();
+          showToast("Statistik kunjungan perangkat ini direset");
         } else if (e.target.closest("#btnBackToTop")) {
           window.scrollTo({ top: 0, behavior: "smooth" });
         }
@@ -3352,17 +3542,21 @@
 
       document.getElementById("taxiModal")?.addEventListener("click", (e) => {
         if (e.target.id === "taxiModal") {
+          document.body.style.overflow = "";
           document.getElementById("taxiModal")?.classList.add("hidden");
         }
       });
       document.getElementById("consultSheetModal")?.addEventListener("click", (e) => {
         if (e.target.id === "consultSheetModal") {
+          document.body.style.overflow = "";
           document.getElementById("consultSheetModal")?.classList.add("hidden");
         }
       });
 
       document.addEventListener("keydown", (e) => {
         if (e.key === "Escape") {
+          document.body.style.overflow = "";
+          document.getElementById("consultSheetModal")?.classList.add("hidden");
           document.getElementById("taxiModal")?.classList.add("hidden");
           document.getElementById("moreMenuPopover")?.classList.add("hidden");
           document.getElementById("btnToggleMoreMenu")?.classList.remove("is-open");
@@ -3377,6 +3571,20 @@
       ["reqFieldSelect", "reqCondSelect"].forEach(id => document.getElementById(id)?.addEventListener("change", updateReqJobText));
       document.getElementById("reqAreaInput")?.addEventListener("input", updateReqJobText);
       ["fxWonInput", "fxRateInput"].forEach(id => document.getElementById(id)?.addEventListener("input", updateFxCalc));
+      ["pesangonAvgWage", "pesangonYears", "pesangonMonths"].forEach(id => {
+        document.getElementById(id)?.addEventListener("input", () => {
+          if (!document.getElementById("pesangonResult")?.classList.contains("hidden")) {
+            document.getElementById("btnCalcPesangon")?.click();
+          }
+        });
+      });
+      ["otHourly", "otHours", "holidayHours", "nightHours"].forEach(id => {
+        document.getElementById(id)?.addEventListener("input", () => {
+          if (!document.getElementById("overtimeResult")?.classList.contains("hidden")) {
+            document.getElementById("btnCalcOvertime")?.click();
+          }
+        });
+      });
 
 
       const centersGridEl = document.getElementById("centersGrid");
@@ -3404,12 +3612,18 @@
     let showcasePlaying = true;
     let showcaseTimer = null;
 
+    function getShowcaseStep() {
+      const track = document.getElementById("showcaseTrack");
+      if (!track) return 1;
+      return (track.clientWidth || 1) + 12;
+    }
+
     function syncShowcaseCounter() {
       const track = document.getElementById("showcaseTrack");
       const counter = document.getElementById("showcaseSlideCounter");
       if (!track || !counter) return;
-      const w = track.clientWidth || 1;
-      const idx = Math.min(SHOWCASE_TOTAL - 1, Math.max(0, Math.round(track.scrollLeft / w)));
+      const step = getShowcaseStep();
+      const idx = Math.min(SHOWCASE_TOTAL - 1, Math.max(0, Math.round(track.scrollLeft / step)));
       showcaseIdx = idx;
       counter.textContent = (idx + 1) + " / " + SHOWCASE_TOTAL;
     }
@@ -3418,7 +3632,7 @@
       const track = document.getElementById("showcaseTrack");
       if (!track) return;
       showcaseIdx = ((idx % SHOWCASE_TOTAL) + SHOWCASE_TOTAL) % SHOWCASE_TOTAL;
-      track.scrollTo({ left: showcaseIdx * track.clientWidth, behavior: "smooth" });
+      track.scrollTo({ left: showcaseIdx * getShowcaseStep(), behavior: "smooth" });
       syncShowcaseCounter();
     }
 
@@ -3532,7 +3746,7 @@
     } else {
       initApp();
     }
-    window.addEventListener("load", refreshIcons);
+    window.addEventListener("load", () => { refreshIcons(); requestAutoFullscreenOnOpen(); });
   </script>
   <!-- KakaoMap-Style Floating Pill Bottom Bar + `•••` Overflow Menu (Non-Duplicated) -->
   <div id="moreMenuPopover" class="fixed bottom-24 left-3.5 right-3.5 sm:left-1/2 sm:right-auto sm:-translate-x-1/2 sm:w-[420px] max-w-full z-50 hidden bg-white/95 backdrop-blur-xl border border-slate-900/15 squircle p-3.5 shadow-none space-y-2.5">
